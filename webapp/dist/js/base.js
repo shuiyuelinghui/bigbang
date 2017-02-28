@@ -3,6 +3,20 @@ module.exports=
 {
   //配置部分
   "prjName":"bigbang",
+    "subPrj":{
+        "wz":{
+            "prjName":"wzgl",
+            "restfuls":["http://192.168.1.211:8888"]
+        },
+        "xk":{
+            "prjName":"xcky3",
+            "restfuls":["http://192.168.1.211:8888"]
+        },
+        "lib":{
+            "prjName":"lib",
+            "restfuls":["http://192.168.1.211:8888"]
+        },
+    },
   "version":"0.9.9",
   "maxTabCount":9,
   "scrollBarWidth":5,
@@ -23524,28 +23538,13 @@ window.$behavior('in-wrap',function(){
 });
 
 
-
-
-// var ops={
-//     id:'user-query-block',
-//     cls:'unready',
-//     queryRows:[
-//         [
-//             {label:'用户姓名', input:{id:'trueName',cls:'common-input',type:'text'},cls:'col-auto'},
-//             {label:'用户账号', input:'<input id="userName" type="text" class="common-input" placeholder=""/>'},
-//             {label:'角色',     input:'<dict id="dict-query-role" dict-id="query-role" dict-name="queryRole" dict-type="select" dict-root="custom" return-value="true"></dict>'}
-//         ],
-//         [{widget:'date-options',inputer:'test-date'}]
-//     ],
-//     toggleRows:[],
-//     toggle:false,
-//     dash:true,
-//     //btns:'query-btns'//['query','reset']
-// };
-//
-// $scope.set('user-query-block-ops',ops);
-//
-// $('#user-query-block').widget('query-block',ops);
+    window.extending({
+        setSubPrj:function(key){
+            var subPrj=config.subPrj[key];
+            config.prjName=subPrj.prjName;
+            config.restfuls=subPrj.restfuls||config.restfuls;
+        }
+    });
 
 
 },{}]},{},[4])

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统导航</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+    <div class="body-agent">
+        <div class="query-block">
+            <form id="xtdh-form">
+                <div class="query-condition-p">
+                    <span class="common-field w65">系统名称：</span>
+                    <input id="find-systemName" name="systemName" type="text" class="common-input w115"/>
+                    <span class="common-field w95">系统代号：</span>
+                    <input id="find-systemCode" name="systemCode" type="text" class="common-input w115"/>
+                    <!-- <span class="common-field w95">部署单位：</span>
+                    <dict dict-type="tree" dict-root="XZQHDM" id="find-systemUnit" dict-id="find-systemUnit-dict" dict-name="systemUnit" class="dict"></dict> -->
+                    <p class="fr">
+                        <b class="cm-query-btn" id="query-btn"></b>
+                        <b class="cm-reset-btn" id="reset-btn"></b>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <!--信息列表-->
+        <div id="xtdh-query-result" class="query-result mt20">
+
+            <div class="new-color-bar">
+                <span class="title">导航信息列表（共找到<span class="total-count"></span>条数据）</span>
+                <div class="bar-btn-div">
+                    <b class="cm-add-btn mr6"></b>
+                </div>
+            </div>
+
+            <div class="all-fix-wrap">
+                <table id="xtdh-info-table" class="typical-tb">
+                    <thead>
+                    <th width="5%">序号</th>
+                    <th width="13%">系统名称</th>
+                    <th width="15%">部署单位</th>
+                    <th width="10%">系统代号</th>
+                    <th width="15%">系统地址</th>
+                    <th width="15%">系统图标</th>
+                    <th width="10%">是否支持单点登陆</th>
+                    <th width="7%">显示顺序</th>
+                    <th width="10%">操作</th>
+                    </thead>
+                    <tbody tpsource="#xtdh-info-list"></tbody>
+                </table>
+            </div>
+
+            <div class="paging"></div>
+        </div>
+        <div id="xtdh-edit-div" class="hider">
+            <div class="xtdh-div">
+                <form id="edit-form">
+                    <input type="hidden" name="id" id="edit-id">
+                    <input type="hidden" name="systemCunit" id="edit-systemCunit">
+                    <p class="mt30">
+                        <span class="common-field w110"><span class="orangered">★ </span>系统名称：</span>
+                        <input id="edit-systemName" name="systemName" type="text" class="common-input w200 validate"  data-options="required:true,validType:'extLength[1,100]'"/>
+                        <span class="common-field w100"><span class="orangered">★ </span>系统代号：</span>
+                        <input id="edit-systemCode" name="systemCode" type="text" class="common-input w200 validate" data-options="required:true,validType:'extLength[1,50]'"/>
+                    </p>
+                    <div class="mt10">
+                        <!-- <span class="common-field w110"><span class="orangered">★ </span>部署单位：</span>
+                        <dict dict-type="tree" dict-root="XZQHDM" id="edit-systemUnit" dict-id="edit-systemUnit-dict" dict-name="systemUnit" class="dict validate" data-options="required:true"></dict> -->
+                        <span class="common-field w83">显示顺序：</span>
+                        <input id="edit-sort" name="sort" type="text" class="common-input w200 validate" data-options="validType:'extLength[1,50]'"/>
+                        <a id="edit-sort-last" class="sort-btn"></a>
+                    </div>
+                    <p class="mt10">
+                        <span class="common-field w110">系统地址：</span>
+                        <input id="edit-systemAddr" name="systemAddr" type="text" class="common-input w200 validate"  data-options="required:true,validType:'extLength[1,500]'"/>
+                        <span class="common-field w100">单点登录：</span>
+                        <input type="radio" value="1" id="edit-login" name="ifLogin" />是
+                        <input type="radio" value="0" id="edit-notLogin" name="ifLogin" class="ml15" checked="checked"/>否
+                    </p>
+                    <p class="mt10">
+                        <div id="edit-dddl" class="hidePlus mr-240">
+                            <span class="common-field w110"><input id="edit-ifJh" type="checkbox" class="ml15" name="ifJh" value="1"/>警号</span>
+                            <input id="edit-jhPara" name="jhPara" type="text" class="common-input w200"  data-options="required:true"/>
+                            <span class="common-field w110"><input id="edit-ifSfzh" type="checkbox" class="ml15" name="ifSfzh" value="1"/>身份证号码</span>
+                            <input id="edit-sfzhPara" name="sfzhPara" type="text" class="common-input w200" data-options="required:true"/>
+                        </div>
+                    </p>
+                </form>
+                <p class="mt10">
+                    <span class="common-field w110">系统图标：</span>
+                    <div id="edit-gallery" class="ml110 mt-20">
+                        <a>
+                            <img id="edit-img0" name="fileChecker" src="" class="xtdh-picture  picshow"  alt=""/>
+                        </a>
+                    </div>
+                    <form id="edit-form-picture" enctype='multipart/form-data' method="post" class="edit-p-file-form">
+                        <a class="cm-query-btn pretender">
+                            <input name="file" accept="image/*" type="file" id="edit-p-file" class="p-file common-input" >
+                        </a>
+                    </form>
+                </p>
+            </div>
+            <div class="xtdh-btn">
+                <p class="tcenter mb15 mt10 mr15">
+                    <b id="edit-save-btn" class="cm-save-btn mr15"></b>
+                    <b id="edit-close-btn" class="cm-cancel-btn"></b>
+                </p>
+            </div>
+        </div>
+        <div id="xtdh-add-div" class="hider">
+            <div class="xtdh-div">
+                <form id="add-form">
+                    <input type="hidden" name="systemCunit" id="add-systemCunit">
+                    <p class="mt30">
+                        <span class="common-field w110"><span class="orangered">★ </span>系统名称：</span>
+                        <input id="add-systemName" name="systemName" type="text" class="common-input w200 validate"  data-options="required:true,validType:'extLength[1,100]'"/>
+                        <span class="common-field w100"><span class="orangered">★ </span>系统代号：</span>
+                        <input id="add-systemCode" name="systemCode" type="text" class="common-input w200 validate" data-options="required:true,validType:'extLength[1,50]'"/>
+                    </p>
+                    <div class="mt10">
+                        <!-- <span class="common-field w110"><span class="orangered">★ </span>部署单位：</span>
+                        <dict dict-type="tree" dict-root="XZQHDM" id="add-systemUnit" dict-id="add-systemUnit-dict" dict-name="systemUnit" class="dict validate" data-options="required:true"></dict> -->
+                        <span class="common-field w83">显示顺序：</span>
+                        <input id="add-sort" name="sort" type="text" class="common-input w200 validate" data-options="validType:'extLength[1,50]'"/>
+                        <a id="add-sort-last" class="sort-btn"></a>
+                    </div>
+                    <p class="mt10">
+                        <span class="common-field w110"><span class="orangered">★ </span>系统地址：</span>
+                        <input id="add-systemAddr" name="systemAddr" type="text" class="common-input w200 validate"  data-options="required:true,validType:'extLength[1,500]'"/>
+                        <span class="common-field w100">单点登录：</span>
+                        <input type="radio" value="1" id="add-login" name="ifLogin" />是
+                        <input type="radio" value="0" id="add-notLogin" name="ifLogin" class="ml15" checked="checked"/>否
+                    </p>
+                    <p class="mt10">
+                    <div id="add-dddl" class="hidePlus mr-240">
+                        <span class="common-field w110"><input id="add-ifJh" type="checkbox" class="ml15" name="ifJh" value="1"/>警号</span>
+                        <input id="add-jhPara" name="jhPara" type="text" class="common-input w200"  data-options="required:true"/>
+                        <span class="common-field w110"><input id="add-ifSfzh" type="checkbox" class="ml15" name="ifSfzh" value="1"/>身份证号码</span>
+                        <input id="add-sfzhPara" name="sfzhPara" type="text" class="common-input w200" data-options="required:true"/>
+                    </div>
+                    </p>
+                </form>
+                <p class="mt10">
+                    <span class="common-field w110">系统图标：</span>
+                    <div id="gallery" class="ml110 mt-20">
+                        <a>
+                            <img id="add-img0" name="fileChecker" src="" class="xtdh-picture  picshow"  alt=""/>
+                        </a>
+                    </div>
+                    <form id="add-form-picture" enctype='multipart/form-data' method="post" class="add-p-file-form">
+                        <a class="cm-query-btn pretender">
+                            <input name="file" accept="image/*" type="file" id="add-p-file" class="p-file common-input" >
+                        </a>
+                    </form>
+                </p>
+            </div>
+            <div class="xtdh-btn">
+                <p class="tcenter mb15 mt10 mr15">
+                    <b id="add-save-btn" class="cm-save-btn mr15"></b>
+                    <b id="add-close-btn" class="cm-cancel-btn"></b>
+                </p>
+            </div>
+        </div>
+        <div id="xtdh-sort-div" class="hider">
+    <table id="xtdh-sort-table" class="typical-tb" cellpadding="3">
+        <thead>
+        <th width="25%">序号/顺序</th>
+        <th width="75%">系统名称</th>
+        </thead>
+        <tbody tpsource="#xtdh-sort-list"></tbody>
+    </table>
+</div>
+    </div>
+</body>
+<script type="text/template" id="xtdh-info-list">
+    <tr class="{$nth2}">
+        <td>{rowNum}</td>
+        <td>
+            {systemName}
+        </td>
+        <td>{systemCunit}</td>
+        <td>{systemCode}</td>
+        <td>{systemAddr}</td>
+        <td>{{photo.isNotNull && #<img name="fileChecker" src="data:image/jpg;base64,{photo}" class="xtdh-picture  picshow cpr"  alt=""/>#}}</td>
+        <td>{ifLogin.asYes}</td>
+        <td>{sort}</td>
+        <td>
+            <a class="icon-edit-btn" dataId="{id}" title="修改"></a>
+            <a class="delete-for-xtdh icon-remove-btn" dataId="{id}" name="{systemName}" title="删除"></a><br>
+        </td>
+    </tr>
+</script>
+<script type="text/template" id="xtdh-sort-list">
+    <tr class="{$nth2}">
+        <td>{rownum}</td>
+        <td>{systemName}</td>
+    </tr>
+</script>
+<script src="../../js/base.js"></script>
+<script src="../../js/sys.js?version=0.99"></script>
+<!--<script>typeof sysXtdhFn=='function' && sysXtdhFn();</script>-->
+</html>

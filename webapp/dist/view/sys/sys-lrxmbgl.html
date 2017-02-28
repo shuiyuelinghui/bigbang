@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta name="author" content="XiongYing" />
+    <meta name="date" content="2016-12-05 09:33:01" />
+    <title>录入项模板管理</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.99">
+    <link rel="stylesheet" href="../../css/sys.css?version=0.99">
+</head>
+<body>
+<div class="body-agent">
+    <div id="inputTemplate-query-result" class="query-result">
+        <!--<div class="new-color-bar">-->
+            <!--<span class="title">录入项模板列表（共找到<span class="total-count"></span>条数据）</span>-->
+            <!--<div class="bar-btn-div">-->
+                <!--<b id="add-input-template" class="cm-add-btn"></b>-->
+            <!--</div>            -->
+        <!--</div>-->
+        <div widget="query-title" data-title="录入项模板列表" data-btns="add,full"></div>
+        <div class="all-fix-wrap">
+            <table id="inputTemplate-table" class="typical-tb">
+                <thead class="need-fix">
+                <tr>
+                    <th width="5%">序号</th>
+                    <th width="15%" >案件类别</th>
+                    <th width="15%" >创建人</th>
+                    <th width="15%" >创建时间</th>
+                    <th width="15%" >修改人</th>
+                    <th width="15%" >修改时间</th>
+                    <th width="20%" >操作</th>
+                </tr>
+                </thead>
+                <tbody tpsource="#inputTemplate-list"></tbody>
+            </table>
+        </div>
+        <div class="paging"></div>
+    </div>
+    <!--修改弹窗-->
+    <div id="edit-div" class="pd10 hider input-tp-edit-div">
+		    <form id="edit-form">
+		    	<input name="id" id="edit_id" type="hidden">
+    			<p class="mt10">
+		    		<span class="common-field w120"><span class="asterisk">* </span>用户级别：</span>
+                   	<dict dict-type="radio" dict-root="YHJBDM"  dict-id="edit-user-level" dict-name="useageUserLevel" class="dict"></dict>
+		    	</p>
+		    	<p class="mt10">
+                    <span class="common-field w120"><span class="asterisk">* </span>案件类别：</span>
+                    <em id="edit-case-type"></em>
+                </p>
+                <p class="mt10">
+                    <span class="common-field w120"><span class="asterisk">* </span>是否允许修改：</span>
+                    <dict dict-type="radio" dict-root="SFDM"  dict-id="edit-allow-modify" dict-name="allowModify" class="dict"></dict>
+                </p>
+		    	<p class="mt10 mb10">
+		    		<span class="common-field w120"><span class="asterisk">* </span>是否启用：</span>
+                   	<dict dict-type="radio" dict-root="SFDM"  dict-id="edit-open-flag" dict-name="openFlag" class="dict"></dict>
+		    	</p>
+            </form>
+		        <table id="edit-input-template-tb"  class="typical-tb" cellpadding="3">
+		        	<thead class="need-fix">
+                        <tr>
+                            <th width="10%">序号</th>
+                            <th width="50%" class="hide">英文名</th>
+                            <th width="50%" >录入项</th>
+                            <th width="20%" >是否录入</th>
+                            <th width="20%" >是否必填</th>
+                        </tr>
+			         </thead>
+			         <tbody tpsource="#template-item-list-edit"></tbody>
+		        </table>
+
+		    <p class="tcenter mt15 mb10">
+		        <b id="edit-save-button" class="cm-save-btn mr15"></b>
+		        <b id="edit-cancel-button" class="cm-cancel-btn"></b>
+		    </p>
+	</div>
+    <!--新增弹窗-->
+    <div id="add-div" class="pd10 hider input-tp-add-div">
+        <form id="add-form">
+            <p class="mt10">
+                <span class="common-field w120"><span class="asterisk">* </span>用户级别：</span>
+                <dict dict-type="radio" dict-root="YHJBDM"  dict-id="add-user-level" dict-name="useageUserLevel" class="dict validate"></dict>
+            </p>
+            <p class="mt10">
+                <span class="common-field w120"><span class="asterisk">* </span>案件类别：</span>
+                <dict dict-type="tree" dict-root="AJLBDM" id="add-case-type-dict"  dict-id="add-case-type" dict-name="caseType" dict-common="true" class="dict validate"></dict>
+            </p>
+            <p class="mt10">
+                <span class="common-field w120"><span class="asterisk">* </span>是否允许修改：</span>
+                <dict dict-type="radio" dict-root="SFDM"  dict-id="add-allow-modify" dict-name="allowModify" class="dict validate"></dict>
+            </p>
+            <p class="mt10 mb10">
+                <span class="common-field w120"><span class="asterisk">* </span>是否启用：</span>
+                <dict dict-type="radio" dict-root="SFDM"  dict-id="add-open-flag" dict-name="openFlag" class="dict validate"></dict>
+            </p>
+        </form>
+        <table id="add-input-template-tb"  class="typical-tb" cellpadding="3">
+            <thead class="need-fix">
+            <tr>
+                <th width="10%">序号</th>
+                <th width="50%" class="hide">英文名</th>
+                <th width="50%" >录入项</th>
+                <th width="20%" >是否录入</th>
+                <th width="20%" >是否必填</th>
+            </tr>
+            </thead>
+            <tbody tpsource="#template-item-list-add"></tbody>
+        </table>
+
+        <p class="tcenter mt15 mb10">
+            <b id="add-save-button" class="cm-save-btn mr15"></b>
+            <b id="add-cancel-button" class="cm-cancel-btn"></b>
+        </p>
+    </div>
+</div>
+
+
+<script type="text/template" id="inputTemplate-list">
+    <tr>
+        <td>{rowNum}</td>
+        <td>{caseTypeName}</td>
+        <td>{createUser}</td>
+        <td>{createTime}</td>
+        <td>{updateUser}</td>
+        <td>{updateTime}</td>
+        <td>
+			<a class="inputTemplate-edit icon-edit-btn" param="{id}" useageUserLevel="{useageUserLevel}" caseType="{caseType}" caseTypeName="{caseTypeName}" allowModify="{allowModify}" openFlag="{openFlag}" title="修改"></a>
+            <a class="inputTemplate-delete icon-remove-btn" param="{id}" caseTypeName="{caseTypeName}" title="删除"></a>
+            <!--<a class="inputTemplate-open" href="javascript:void(0);" val="{openFlag}"><i class="icon-ban-circle orange open hideplus{openFlag}" title="禁用该模板"></i><i class="icon-play lakeblue no-open hideplus inline-block{openFlag}" title="开启该模板"></i></a>-->
+		</td>
+    </tr>
+</script>
+
+<script type="text/template" id="template-item-list-edit">
+    <tr conName="{lable}">
+        <td>{$rownum}</td>
+        <td conName="lable" class="hide">{lable}</td>
+        <td conName="name">{name}</td>
+        <td conName="isOpen"><input type="checkbox" id="edit-is-open-{$rownum}" class="switch-checkbox hide" checked{isOpen.toBol}><label for="edit-is-open-{$rownum}" class="switch-label"></label></td>
+        <td conName="must"><input type="checkbox" id="edit-is-must-{$rownum}" class="switch-checkbox hide" checked{must.toBol}><label for="edit-is-must-{$rownum}" class="switch-label"></label></td>
+    </tr>
+</script>
+<script type="text/template" id="template-item-list-add">
+    <tr conName="{lable}">
+        <td>{$rownum}</td>
+        <td conName="lable" class="hide">{lable}</td>
+        <td conName="name">{name}</td>
+        <td conName="isOpen"><input type="checkbox" id="add-is-open-{$rownum}" class="switch-checkbox hide" checked{isOpen.toBol}><label for="add-is-open-{$rownum}" class="switch-label"></label></td>
+        <td conName="must"><input type="checkbox" id="add-is-must-{$rownum}" class="switch-checkbox hide" checked{must.toBol}><label for="add-is-must-{$rownum}" class="switch-label"></label></td>
+    </tr>
+</script>
+
+
+</body>
+<script src="../../js/base.js?version=0.99"></script>
+<script src="../../js/tp-mng.js?version=0.99"></script>
+<script>
+    typeof sysLrxmbgl == 'function' && sysLrxmbgl();
+</script>
+</html>

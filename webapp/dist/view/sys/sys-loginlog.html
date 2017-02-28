@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta name="author" content="zhang meng jia" />
+    <meta name="date" content="2016-06-13 09:33:01" />
+    <title>系统登录日志</title>
+    <link rel="stylesheet" href="../../css/base.css?version=0.99">
+    <link rel="stylesheet" href="../../css/sys.css?version=0.99">
+</head>
+<body>
+<div class="body-agent">
+    <div id="loginlog-query-condition" class="query-block">
+        <div class="query-condition-p">
+            <span class="common-field w65">登录账号：</span><input id="loginName" type="text" class="common-input"/>
+            <span class="common-field w100">登录时间：</span><input id="loginDateBegin" type="text" class="query-date"/>~<input id="loginDateEnd" type="text" class="query-date"/>
+            <p class="fr">
+                <b id="loginlog-query-btn" class="cm-query-btn"></b>
+                <b id="loginlog-reset-btn" class="cm-reset-btn"></b>
+            </p>
+        </div>
+    </div>
+    <div id="loginlog-query-result" class="query-result">
+        <p replace="_temp/color-bar.htm" data-title="登录日志列表"></p>
+        <div class="all-fix-wrap">
+            <table id="loginlog-table" class="typical-tb" cellpadding="3">
+                <thead>
+                <th width="5%">序号</th>
+                <th width="15%" >登录账号</th>
+                <th width="15%" >登录人姓名</th>
+                <th width="25%" >IP地址</th>
+                <!--<th width="15%" >登录人单位</th>-->
+                <th width="20%" sort-name="LOG_TIME">登录时间</th>
+                <th width="20%" sort-name="OFF_TIME">注销时间</th>
+                </thead>
+                <tbody tpsource="#loginlog-list"></tbody>
+            </table>
+        </div>
+        <div class="paging"></div>
+    </div>
+</div>
+
+
+<script type="text/template" id="loginlog-list">
+    <tr>
+        <td>{rowNum}</td>
+        <td>{loginUser}</td>
+        <td>{loginUser}</td>
+        <td>{loginUserIp}</td>
+        <!--<td>{oprUnitCh}</td>-->
+        <td>{loginTime}</td>
+        <td>{logoutTime}</td>
+    </tr>
+</script>
+
+
+</body>
+<script src="../../js/base.js?version=0.99"></script>
+<script src="../../js/sys.js?version=0.99"></script>
+<!--<script>typeof sysLoginLogFn=='function' && sysLoginLogFn();</script>-->
+</html>

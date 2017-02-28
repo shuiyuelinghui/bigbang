@@ -1,0 +1,66 @@
+{
+  "flag": "1",
+  "totalCount": "1",
+  "msg": "",
+  "data": [
+    {
+      "rowSpan":3,
+      "rowNum": "1",
+      "investigationId": "45CCD50AF24450E3E050A8C0C90134FB",
+      "investigationNo": "K3502000000002017010018",
+      "caseType": "其他类别案件",
+      "caseRegionalism": "厦门市公安局思明分局经济犯罪侦查大队",
+      "investigationDateFrom": "2017-01-05 11:31",
+      "investigationDateTo": "2017-01-05 11:31",
+      "investigationPlace": "筼筜街道官任社区中行大厦门口",
+      "organName": "勘验单位",
+      "sceneInvestigatorId": "勘验人ID",
+      "sceneInvestigator": "张三、李四",
+      "goodsList" : [
+        {
+          "collectedGoodsId": "4028a8aa594454430159445468b40103",
+          "serialNo": "W3502000000002016120007",
+          "name": "提取物品名称",
+          "category": "物证类别(WZLBDM)",
+          "materialEvidenceTypeDict":"痕迹物证类型中文",
+          "materialEvidenceType":"痕迹物证类型代码",
+          "collectionMethod":"提取方法",
+          "collectionPosition": "提取部位",
+          "collectedPersonID": "提取人ID",
+          "collectedPerson": "王五",
+          "storageStatus":"待处理",
+          "storageStatusDict": "100000"
+        },
+        {
+          "collectedGoodsId": "4028a8aa594454430159445468b40104",
+          "serialNo": "W3502000000002016120008",
+          "name": "提取物品名称",
+          "category": "物证类别(WZLBDM)",
+          "materialEvidenceTypeDict":"痕迹物证类型中文",
+          "materialEvidenceType":"痕迹物证类型代码",
+          "collectionMethod":"提取方法",
+          "collectionPosition": "提取部位",
+          "collectedPersonID": "提取人ID",
+          "collectedPerson": "王五",
+          "storageStatus":"待处理",
+          "storageStatusDict": "100000"
+        },
+        {
+          "collectedGoodsId": "4028a8aa594454430159445468b40105",
+          "serialNo": "W3502000000002016120009",
+          "name": "提取物品名称",
+          "category": "物证类别(WZLBDM)",
+          "materialEvidenceTypeDict":"痕迹物证类型中文",
+          "materialEvidenceType":"痕迹物证类型代码",
+          "collectionMethod":"提取方法",
+          "collectionPosition": "提取部位",
+          "collectedPersonID": "提取人ID",
+          "collectedPerson": "王五",
+          "storageStatus":"待处理",
+          "storageStatusDict": "100000"
+        }
+      ]
+
+    }
+  ]
+}

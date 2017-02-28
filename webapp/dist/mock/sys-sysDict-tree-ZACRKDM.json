@@ -1,0 +1,56 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D58197E5041C7E0530100007FFC40",
+      "parentKey": "ZACRKDM",
+      "key": "10",
+      "value": "门",
+      "root": "ZACRKDM"
+    },
+    {
+      "id": "430D58197E5141C7E0530100007FFC40",
+      "parentKey": "ZACRKDM",
+      "key": "20",
+      "value": "窗",
+      "root": "ZACRKDM"
+    },
+    {
+      "id": "430D58197E5241C7E0530100007FFC40",
+      "parentKey": "ZACRKDM",
+      "key": "30",
+      "value": "阳台",
+      "root": "ZACRKDM"
+    },
+    {
+      "id": "430D58197E5341C7E0530100007FFC40",
+      "parentKey": "ZACRKDM",
+      "key": "40",
+      "value": "房顶",
+      "root": "ZACRKDM"
+    },
+    {
+      "id": "430D58197E5441C7E0530100007FFC40",
+      "parentKey": "ZACRKDM",
+      "key": "50",
+      "value": "墙洞",
+      "root": "ZACRKDM"
+    },
+    {
+      "id": "430D58197E5541C7E0530100007FFC40",
+      "parentKey": "ZACRKDM",
+      "key": "60",
+      "value": "地洞",
+      "root": "ZACRKDM"
+    },
+    {
+      "id": "430D58197E5641C7E0530100007FFC40",
+      "parentKey": "ZACRKDM",
+      "key": "90",
+      "value": "其他",
+      "root": "ZACRKDM"
+    }
+  ]
+}

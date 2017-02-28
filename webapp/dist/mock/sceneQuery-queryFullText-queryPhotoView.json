@@ -1,0 +1,71 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data":
+  {
+    "fileServerAddr": "http://172.16.0.112/",
+    "list":
+    [
+      {
+        "id": "4028a89759a6604a0159a6604a970000",
+        "version": 1484555045773,
+        "deleteFlag": "0",
+        "createUserId": "1d202a556d9d413f9f61bb777eb3c345",
+        "createTime": "2017-01-16 16:24:05",
+        "updateUserId": "1d202a556d9d413f9f61bb777eb3c345",
+        "updateTime": "2017-01-16 16:24:05",
+        "source": "XCKY",
+        "investigationId": "4028a89759a6604a0159a6604ab60002",
+        "category": "1",
+        "pictureId": "4028a89759a6604a0159a6604b880011",
+        "attachmentId": "M00/00/0E/rBAAcFh3X2SAZ2f3AAA8KT0_fXc104.jpg",
+        "materialEvidenceNo": "H3502000000002017010041",
+        "materialEvidenceName": "111",
+        "materialEvidenceTypeDict": "SYHJLXDM",
+        "materialEvidenceType": "1101",
+        "leftPosition": "1111",
+        "collectionModeDict": "ZWTQFFDM",
+        "collectionMode": "A01",
+        "collectedTime": "2017-01-12 18:50:00",
+        "feature": "11111",
+        "storageFlag": "0",
+        "description": "csmiao",
+        "sceneCollectedPerson":
+        [
+          {
+            "id": "4028a89759a6604a0159a6604bb90014",
+            "version": 1484555045817,
+            "deleteFlag": "0",
+            "createUserId": "1d202a556d9d413f9f61bb777eb3c345",
+            "createTime": "2017-01-16 16:24:05",
+            "updateUserId": "1d202a556d9d413f9f61bb777eb3c345",
+            "updateTime": "2017-01-16 16:24:05",
+            "source": "XCKY",
+            "investigationId": "4028a89759a6604a0159a6604ab60002",
+            "materialEvidenceId": "4028a89759a6604a0159a6604a970000",
+            "collectedType": "1",
+            "collectedPersonId": "20dfe0fb57b34782b7659e392df11df0",
+            "collectedPerson": "黄绍华"
+          },
+          {
+            "id": "4028a89759a6604a0159a6604bb90014",
+            "version": 1484555045817,
+            "deleteFlag": "0",
+            "createUserId": "1d202a556d9d413f9f61bb777eb3c345",
+            "createTime": "2017-01-16 16:24:05",
+            "updateUserId": "1d202a556d9d413f9f61bb777eb3c345",
+            "updateTime": "2017-01-16 16:24:05",
+            "source": "XCKY",
+            "investigationId": "4028a89759a6604a0159a6604ab60002",
+            "materialEvidenceId": "4028a89759a6604a0159a6604a970000",
+            "collectedType": "1",
+            "collectedPersonId": "20dfe0fb57b34782b7659e392df11df0",
+            "collectedPerson": "李明"
+          }
+        ]
+      }
+    ]
+  },
+  "extraRes": null
+}

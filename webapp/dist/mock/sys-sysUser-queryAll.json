@@ -1,0 +1,25 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "1d202a556d9d413f9f61bb777eb3c345",
+      "organName": "厦门市公安局",
+      "username": "admin",
+      "trueName": "管理员1"
+    },
+    {
+      "id": "1d202a556d9d413f9f61bb777eb3c346",
+      "organName": "厦门市公安局",
+      "username": "zs",
+      "trueName": "张三"
+    },
+    {
+      "id": "1d202a556d9d413f9f61bb777eb3c347",
+      "organName": "厦门市公安局",
+      "username": "ls",
+      "trueName": "李四"
+    }
+  ]
+}

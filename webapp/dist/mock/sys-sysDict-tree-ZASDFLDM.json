@@ -1,0 +1,2583 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D5819910741C7E0530100007FFC40",
+      "parentKey": "ZASDFLDM",
+      "key": "3000",
+      "value": "暴力胁迫手段",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819910841C7E0530100007FFC40",
+      "parentKey": "3000",
+      "key": "3100",
+      "value": "持枪",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819910941C7E0530100007FFC40",
+      "parentKey": "3000",
+      "key": "3200",
+      "value": "持械",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819910A41C7E0530100007FFC40",
+      "parentKey": "3200",
+      "key": "3210",
+      "value": "持锐器",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819910B41C7E0530100007FFC40",
+      "parentKey": "3200",
+      "key": "3220",
+      "value": "持钝器",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819910C41C7E0530100007FFC40",
+      "parentKey": "3200",
+      "key": "3230",
+      "value": "持绳",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819910D41C7E0530100007FFC40",
+      "parentKey": "3200",
+      "key": "3240",
+      "value": "持警械",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819910E41C7E0530100007FFC40",
+      "parentKey": "3000",
+      "key": "3300",
+      "value": "引爆",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819910F41C7E0530100007FFC40",
+      "parentKey": "3300",
+      "key": "3301",
+      "value": "点火引爆",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819911041C7E0530100007FFC40",
+      "parentKey": "3300",
+      "key": "3302",
+      "value": "投掷引爆",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819911141C7E0530100007FFC40",
+      "parentKey": "3300",
+      "key": "3303",
+      "value": "拆封引爆",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819911241C7E0530100007FFC40",
+      "parentKey": "3300",
+      "key": "3304",
+      "value": "定时引爆",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819911341C7E0530100007FFC40",
+      "parentKey": "3300",
+      "key": "3305",
+      "value": "遥控引爆",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819911441C7E0530100007FFC40",
+      "parentKey": "3300",
+      "key": "3306",
+      "value": "拉线引爆",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819911541C7E0530100007FFC40",
+      "parentKey": "3300",
+      "key": "3307",
+      "value": "通电引爆",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FBA41C7E0530100007FFC40",
+      "parentKey": "3300",
+      "key": "3308",
+      "value": "压力引爆",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FBB41C7E0530100007FFC40",
+      "parentKey": "3000",
+      "key": "3400",
+      "value": "胁迫",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FBC41C7E0530100007FFC40",
+      "parentKey": "3400",
+      "key": "3401",
+      "value": "言语胁迫",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FBD41C7E0530100007FFC40",
+      "parentKey": "3400",
+      "key": "3402",
+      "value": "书信胁迫",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FBE41C7E0530100007FFC40",
+      "parentKey": "3400",
+      "key": "3403",
+      "value": "露械胁迫",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FBF41C7E0530100007FFC40",
+      "parentKey": "3400",
+      "key": "3404",
+      "value": "供毒胁迫",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FC041C7E0530100007FFC40",
+      "parentKey": "3400",
+      "key": "3405",
+      "value": "仗势胁迫",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FC141C7E0530100007FFC40",
+      "parentKey": "3400",
+      "key": "3406",
+      "value": "引爆胁迫",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FC241C7E0530100007FFC40",
+      "parentKey": "3400",
+      "key": "3407",
+      "value": "敲砸胁迫",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FC341C7E0530100007FFC40",
+      "parentKey": "3000",
+      "key": "3500",
+      "value": "施暴",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FC441C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3501",
+      "value": "踢打",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FC541C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3502",
+      "value": "扼颈",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FC641C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3503",
+      "value": "勒颈",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FC741C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3504",
+      "value": "搜身",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FC841C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3505",
+      "value": "剪拉",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FC941C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3506",
+      "value": "扭膀",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FCA41C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3507",
+      "value": "捆绑",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FCB41C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3508",
+      "value": "捂堵",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FCC41C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3509",
+      "value": "封堵",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FCD41C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3510",
+      "value": "烧烫",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D8D41C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3511",
+      "value": "焚烧",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D8E41C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3512",
+      "value": "牙咬",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D8F41C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3513",
+      "value": "麻醉",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9041C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3514",
+      "value": "撞击",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9141C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3515",
+      "value": "注射",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9241C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3516",
+      "value": "电击",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9341C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3517",
+      "value": "撒灰",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9441C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3518",
+      "value": "高处推下",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9541C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3519",
+      "value": "推人下水",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9641C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3520",
+      "value": "施放毒气",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9741C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3521",
+      "value": "释放动物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9841C7E0530100007FFC40",
+      "parentKey": "3500",
+      "key": "3522",
+      "value": "投腐蚀剂",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9941C7E0530100007FFC40",
+      "parentKey": "3000",
+      "key": "3600",
+      "value": "劫持",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9A41C7E0530100007FFC40",
+      "parentKey": "3600",
+      "key": "3601",
+      "value": "劫机",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9B41C7E0530100007FFC40",
+      "parentKey": "3600",
+      "key": "3611",
+      "value": "劫船",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9C41C7E0530100007FFC40",
+      "parentKey": "3600",
+      "key": "3621",
+      "value": "劫车",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9D41C7E0530100007FFC40",
+      "parentKey": "3600",
+      "key": "3631",
+      "value": "劫持人质",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9E41C7E0530100007FFC40",
+      "parentKey": "3000",
+      "key": "3900",
+      "value": "其他",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197D9F41C7E0530100007FFC40",
+      "parentKey": "ZASDFLDM",
+      "key": "4000",
+      "value": "窃取手段",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DA041C7E0530100007FFC40",
+      "parentKey": "4000",
+      "key": "4100",
+      "value": "破锁开锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DA141C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4101",
+      "value": "硬物击锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DA241C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4102",
+      "value": "钳断锁梁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DA341C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4103",
+      "value": "锯锉锁梁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DA441C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4104",
+      "value": "拨弹开锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DA541C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4105",
+      "value": "撬扭挂锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DA641C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4106",
+      "value": "卸锁弹子",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DA741C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4107",
+      "value": "破锁搭扣",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DA841C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4108",
+      "value": "插片开锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DA941C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4109",
+      "value": "钻锁芯子",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DAA41C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4110",
+      "value": "用具勾锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DAB41C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4111",
+      "value": "套绳拉锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DAC41C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4112",
+      "value": "解密开锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DAD41C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4113",
+      "value": "钥匙开锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DAE41C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4114",
+      "value": "腐剂开锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DAF41C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4115",
+      "value": "卸锁体",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DB041C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4116",
+      "value": "锁内塞物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DB141C7E0530100007FFC40",
+      "parentKey": "4100",
+      "key": "4199",
+      "value": "其他",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DB241C7E0530100007FFC40",
+      "parentKey": "4000",
+      "key": "4200",
+      "value": "破盗金柜",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DB341C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4201",
+      "value": "撬金柜门",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DB441C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4202",
+      "value": "金柜挖洞",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DB541C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4203",
+      "value": "锯柜铰链",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DB641C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4204",
+      "value": "焊割金柜",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DB741C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4205",
+      "value": "砸开金柜",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DB841C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4206",
+      "value": "剥剪柜皮",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DB941C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4207",
+      "value": "炸开金柜",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DBA41C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4208",
+      "value": "钻柜锁芯",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DBB41C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4209",
+      "value": "挤顶柜门",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DBC41C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4210",
+      "value": "钻眼拨盘",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DBD41C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4211",
+      "value": "拉盘开锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DBE41C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4280",
+      "value": "搬走金柜",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DBF41C7E0530100007FFC40",
+      "parentKey": "4200",
+      "key": "4299",
+      "value": "其他",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DC041C7E0530100007FFC40",
+      "parentKey": "4000",
+      "key": "4300",
+      "value": "破橱、箱、桌",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DC141C7E0530100007FFC40",
+      "parentKey": "4300",
+      "key": "4301",
+      "value": "破坏板面",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DC241C7E0530100007FFC40",
+      "parentKey": "4300",
+      "key": "4302",
+      "value": "扩缝窃取",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DC341C7E0530100007FFC40",
+      "parentKey": "4300",
+      "key": "4399",
+      "value": "其他",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DC441C7E0530100007FFC40",
+      "parentKey": "4000",
+      "key": "4400",
+      "value": "窃包",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DC541C7E0530100007FFC40",
+      "parentKey": "4400",
+      "key": "4401",
+      "value": "拎包",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DC641C7E0530100007FFC40",
+      "parentKey": "4400",
+      "key": "4402",
+      "value": "拉包",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DC741C7E0530100007FFC40",
+      "parentKey": "4400",
+      "key": "4403",
+      "value": "割包",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DC841C7E0530100007FFC40",
+      "parentKey": "4400",
+      "key": "4404",
+      "value": "调包",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DC941C7E0530100007FFC40",
+      "parentKey": "4400",
+      "key": "4405",
+      "value": "掏包",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DCA41C7E0530100007FFC40",
+      "parentKey": "4400",
+      "key": "4499",
+      "value": "其他",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DCB41C7E0530100007FFC40",
+      "parentKey": "4000",
+      "key": "4500",
+      "value": "车船作案",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DCC41C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4501",
+      "value": "割篷作案",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DCD41C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4502",
+      "value": "运行抛物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DCE41C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4503",
+      "value": "撬船舱板",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DCF41C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4504",
+      "value": "破包掏心",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DD041C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4505",
+      "value": "运行勾物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DD141C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4506",
+      "value": "易地转运",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DD241C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4507",
+      "value": "车窗窃取",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DD341C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4508",
+      "value": "拉开车门",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DD441C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4509",
+      "value": "破车玻璃",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DD541C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4510",
+      "value": "破车门",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DD641C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4511",
+      "value": "勾拉车门",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DD741C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4512",
+      "value": "拆盗设备",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DD841C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4513",
+      "value": "车底挖洞",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DD941C7E0530100007FFC40",
+      "parentKey": "4500",
+      "key": "4599",
+      "value": "其他",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DDA41C7E0530100007FFC40",
+      "parentKey": "4000",
+      "key": "4600",
+      "value": "窃车",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DDB41C7E0530100007FFC40",
+      "parentKey": "4600",
+      "key": "4601",
+      "value": "拎扛盗车",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992BC41C7E0530100007FFC40",
+      "parentKey": "4600",
+      "key": "4602",
+      "value": "断车锁链",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992BD41C7E0530100007FFC40",
+      "parentKey": "4600",
+      "key": "4603",
+      "value": "撬砸车锁",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992C141C7E0530100007FFC40",
+      "parentKey": "4600",
+      "key": "4604",
+      "value": "搭线发车",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992C241C7E0530100007FFC40",
+      "parentKey": "4600",
+      "key": "4605",
+      "value": "钥匙开车",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992C341C7E0530100007FFC40",
+      "parentKey": "4600",
+      "key": "4606",
+      "value": "破车保险",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992C441C7E0530100007FFC40",
+      "parentKey": "4600",
+      "key": "4607",
+      "value": "换锁开车",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992C541C7E0530100007FFC40",
+      "parentKey": "4600",
+      "key": "4608",
+      "value": "拖运盗车",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992C641C7E0530100007FFC40",
+      "parentKey": "4600",
+      "key": "4609",
+      "value": "推车盗车",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992C741C7E0530100007FFC40",
+      "parentKey": "4600",
+      "key": "4699",
+      "value": "其他",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992C841C7E0530100007FFC40",
+      "parentKey": "4000",
+      "key": "4900",
+      "value": "其他窃取手段",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992C941C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4901",
+      "value": "挑勾财物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992CA41C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4902",
+      "value": "窗口窃取",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992CB41C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4903",
+      "value": "柜台窃物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992CC41C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4904",
+      "value": "柜内窃款",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992CD41C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4905",
+      "value": "取寄存物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992CE41C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4906",
+      "value": "偷晾晒物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992CF41C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4907",
+      "value": "顺手牵羊",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992D041C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4908",
+      "value": "监守自盗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992D141C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4909",
+      "value": "盗露天物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992D241C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4910",
+      "value": "盗码并机",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992D341C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4911",
+      "value": "掘墓盗物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992D441C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4912",
+      "value": "盗蚌取珠",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992D541C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4913",
+      "value": "钻管窃取",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992D641C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4914",
+      "value": "杀畜盗皮",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992D741C7E0530100007FFC40",
+      "parentKey": "4900",
+      "key": "4999",
+      "value": "其他",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992D841C7E0530100007FFC40",
+      "parentKey": "ZASDFLDM",
+      "key": "5000",
+      "value": "欺诈手段",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992D941C7E0530100007FFC40",
+      "parentKey": "5000",
+      "key": "5100",
+      "value": "冒充身份",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992DA41C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5101",
+      "value": "冒充外国人",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992DB41C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5102",
+      "value": "冒充侨胞",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992DC41C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5103",
+      "value": "冒充名人",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992DD41C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5104",
+      "value": "冒充高知",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992DE41C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5105",
+      "value": "冒充高干",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992DF41C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5106",
+      "value": "冒充子女",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992E041C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5107",
+      "value": "冒充军人",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992E141C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5108",
+      "value": "冒充民警",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992E241C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5109",
+      "value": "冒充司法人员",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992E341C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5110",
+      "value": "冒充执勤人员",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992E441C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5111",
+      "value": "冒充稽私人员",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992E541C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5112",
+      "value": "冒充医护人员",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992E641C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5113",
+      "value": "冒充税务人员",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992E741C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5114",
+      "value": "冒充市管人员",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992E841C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5115",
+      "value": "冒充服务人员",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992E941C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5116",
+      "value": "冒充记者",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933041C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5117",
+      "value": "冒充亲友 冒充同事、朋友、亲属等",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933141C7E0530100007FFC40",
+      "parentKey": "5100",
+      "key": "5118",
+      "value": "冒充经理",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933241C7E0530100007FFC40",
+      "parentKey": "5000",
+      "key": "5200",
+      "value": "冒用",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933341C7E0530100007FFC40",
+      "parentKey": "5200",
+      "key": "5201",
+      "value": "冒用支票",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933441C7E0530100007FFC40",
+      "parentKey": "5200",
+      "key": "5202",
+      "value": "冒用署名",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933541C7E0530100007FFC40",
+      "parentKey": "5200",
+      "key": "5203",
+      "value": "冒用护照",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933641C7E0530100007FFC40",
+      "parentKey": "5200",
+      "key": "5204",
+      "value": "冒用执照",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933741C7E0530100007FFC40",
+      "parentKey": "5200",
+      "key": "5205",
+      "value": "冒用证件",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933841C7E0530100007FFC40",
+      "parentKey": "5200",
+      "key": "5206",
+      "value": "冒用牌照",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933941C7E0530100007FFC40",
+      "parentKey": "5200",
+      "key": "5207",
+      "value": "冒用信用卡",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933A41C7E0530100007FFC40",
+      "parentKey": "5200",
+      "key": "5208",
+      "value": "冒用商标",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933B41C7E0530100007FFC40",
+      "parentKey": "5200",
+      "key": "5209",
+      "value": "冒用专利",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933C41C7E0530100007FFC40",
+      "parentKey": "5000",
+      "key": "5300",
+      "value": "假借名义",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933D41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5301",
+      "value": "假借交友",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819933E41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5302",
+      "value": "假借招工",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926C41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5303",
+      "value": "假借招生",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FCE41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5304",
+      "value": "假帮出境",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FCF41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5305",
+      "value": "假调房屋",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FD041C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5306",
+      "value": "假调工作",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FD141C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5307",
+      "value": "假作好事",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FD241C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5308",
+      "value": "假谈恋爱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FD341C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5309",
+      "value": "假帮办厂",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FD441C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5310",
+      "value": "假帮就医",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FD541C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5311",
+      "value": "假办托运",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FD641C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5312",
+      "value": "假证租借",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FD741C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5313",
+      "value": "假传书信",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FD841C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5314",
+      "value": "假借换汇",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FD941C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5315",
+      "value": "假代购销",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FDA41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5316",
+      "value": "假借搭车",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FDB41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5317",
+      "value": "假借搭船",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FDC41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5318",
+      "value": "假借看货",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FDD41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5319",
+      "value": "假借落难",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FDE41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5320",
+      "value": "假借引资",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FDF41C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5321",
+      "value": "假借贷款",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FE041C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5322",
+      "value": "假称同行",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FE141C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5323",
+      "value": "订假合同",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FE241C7E0530100007FFC40",
+      "parentKey": "5300",
+      "key": "5324",
+      "value": "假报出口",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FE341C7E0530100007FFC40",
+      "parentKey": "5000",
+      "key": "5400",
+      "value": "以假充真",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FE441C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5401",
+      "value": "虚设机构",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FE541C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5402",
+      "value": "虚构事实",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FE641C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5403",
+      "value": "掺杂掺假",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FE741C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5404",
+      "value": "真币掺假",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FE841C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5405",
+      "value": "假币兑真",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FE941C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5406",
+      "value": "假货充真",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FEA41C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5407",
+      "value": "以次充好",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FEB41C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5408",
+      "value": "以现充古",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FEC41C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5409",
+      "value": "以旧充新",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FED41C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5410",
+      "value": "以假换真",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FEE41C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5411",
+      "value": "虚开发票",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58198FEF41C7E0530100007FFC40",
+      "parentKey": "5400",
+      "key": "5412",
+      "value": "虚假记录",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581990E841C7E0530100007FFC40",
+      "parentKey": "5000",
+      "key": "5500",
+      "value": "引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819925941C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5501",
+      "value": "金钱引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819925A41C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5502",
+      "value": "物质引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819925B41C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5503",
+      "value": "淫物引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819925C41C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5504",
+      "value": "色情引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819925D41C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5505",
+      "value": "名誉引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819925E41C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5506",
+      "value": "出国引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819925F41C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5507",
+      "value": "获利引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926041C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5508",
+      "value": "广告引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926141C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5509",
+      "value": "敲边引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926241C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5510",
+      "value": "旅游引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926341C7E0530100007FFC40",
+      "parentKey": "5500",
+      "key": "5511",
+      "value": "灌酒引诱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926441C7E0530100007FFC40",
+      "parentKey": "5000",
+      "key": "5600",
+      "value": "行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926541C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5601",
+      "value": "名借实骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926641C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5602",
+      "value": "加工行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926741C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5603",
+      "value": "征聘行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926841C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5604",
+      "value": "单据行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926941C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5605",
+      "value": "支票行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926A41C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5606",
+      "value": "拆币行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926B41C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5607",
+      "value": "押物行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926D41C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5608",
+      "value": "借舍行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926E41C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5609",
+      "value": "设赌行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819926F41C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5610",
+      "value": "献宝行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927041C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5611",
+      "value": "调币行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927141C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5612",
+      "value": "抛物行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927241C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5613",
+      "value": "出租行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927341C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5614",
+      "value": "征兵行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927441C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5615",
+      "value": "迷信行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927541C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5616",
+      "value": "治病行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927641C7E0530100007FFC40",
+      "parentKey": "5600",
+      "key": "5617",
+      "value": "印章行骗",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927741C7E0530100007FFC40",
+      "parentKey": "5000",
+      "key": "5700",
+      "value": "伪造、变造",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927841C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5701",
+      "value": "制版",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927941C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5702",
+      "value": "雕刻",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927A41C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5703",
+      "value": "描绘",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927B41C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5704",
+      "value": "剪接",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927C41C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5705",
+      "value": "铸造",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927D41C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5706",
+      "value": "涂改",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927E41C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5707",
+      "value": "挖补",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819927F41C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5708",
+      "value": "签名",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928041C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5709",
+      "value": "揭层",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928141C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5710",
+      "value": "复印",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928241C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5711",
+      "value": "打印",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928341C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5712",
+      "value": "铅印",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928441C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5713",
+      "value": "冲改",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928541C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5714",
+      "value": "翻拍",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928641C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5715",
+      "value": "翻录",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928741C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5716",
+      "value": "复写",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928841C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5717",
+      "value": "书写",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928941C7E0530100007FFC40",
+      "parentKey": "5700",
+      "key": "5718",
+      "value": "电脑伪造",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928A41C7E0530100007FFC40",
+      "parentKey": "5000",
+      "key": "5900",
+      "value": "其他欺诈手段",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928B41C7E0530100007FFC40",
+      "parentKey": "ZASDFLDM",
+      "key": "6000",
+      "value": "妨害手段",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928C41C7E0530100007FFC40",
+      "parentKey": "6000",
+      "key": "6100",
+      "value": "侮辱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928D41C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6101",
+      "value": "调戏",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928E41C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6102",
+      "value": "猥亵",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819928F41C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6103",
+      "value": "戳胸",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929041C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6104",
+      "value": "戳臀",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929141C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6105",
+      "value": "顶臀",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929241C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6106",
+      "value": "窥视",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929341C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6107",
+      "value": "追堵",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929441C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6108",
+      "value": "剪割头发",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929541C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6109",
+      "value": "书信侮辱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929641C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6110",
+      "value": "电话侮辱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929741C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6111",
+      "value": "裸体露阴",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929841C7E0530100007FFC40",
+      "parentKey": "6100",
+      "key": "6112",
+      "value": "撕剥衣裤",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929941C7E0530100007FFC40",
+      "parentKey": "6000",
+      "key": "6200",
+      "value": "寻衅滋事",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929A41C7E0530100007FFC40",
+      "parentKey": "6200",
+      "key": "6201",
+      "value": "起哄闹事",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929B41C7E0530100007FFC40",
+      "parentKey": "6200",
+      "key": "6202",
+      "value": "无理取闹",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929C41C7E0530100007FFC40",
+      "parentKey": "6200",
+      "key": "6203",
+      "value": "行凶伤人",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929D41C7E0530100007FFC40",
+      "parentKey": "6200",
+      "key": "6204",
+      "value": "强拿硬要",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929E41C7E0530100007FFC40",
+      "parentKey": "6200",
+      "key": "6205",
+      "value": "涂抹污物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D5819929F41C7E0530100007FFC40",
+      "parentKey": "6000",
+      "key": "6300",
+      "value": "淫乱",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992A041C7E0530100007FFC40",
+      "parentKey": "6300",
+      "key": "6301",
+      "value": "嫖宿",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992A141C7E0530100007FFC40",
+      "parentKey": "6300",
+      "key": "6302",
+      "value": "同性恋",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992A241C7E0530100007FFC40",
+      "parentKey": "6300",
+      "key": "6303",
+      "value": "色情服务",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992A341C7E0530100007FFC40",
+      "parentKey": "6300",
+      "key": "6304",
+      "value": "交换对象",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992A441C7E0530100007FFC40",
+      "parentKey": "6000",
+      "key": "6400",
+      "value": "干扰",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992A541C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6401",
+      "value": "非法制造",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992A641C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6402",
+      "value": "非法贩卖",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992A741C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6403",
+      "value": "非法运输",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992A841C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6404",
+      "value": "非法转移",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992A941C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6405",
+      "value": "教唆",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992AA41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6406",
+      "value": "提供条件",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992AB41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6407",
+      "value": "泄露内幕",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992AC41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6408",
+      "value": "通风报信",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992AD41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6409",
+      "value": "提供伪证",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581992AE41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6410",
+      "value": "编造谣言",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581990F841C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6411",
+      "value": "挑拨是非",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D581991F941C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6412",
+      "value": "毁损财物",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DDC41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6413",
+      "value": "围攻",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DDD41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6414",
+      "value": "逃检抗拒",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DDE41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6415",
+      "value": "高利转贷",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DDF41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6416",
+      "value": "低售国资",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DE041C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6417",
+      "value": "非法投寄",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DE141C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6418",
+      "value": "非法张贴",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DE241C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6419",
+      "value": "非法散发",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DE341C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6420",
+      "value": "非法演讲",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DE441C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6421",
+      "value": "非法呼喊",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DE541C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6422",
+      "value": "非法悬挂",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DE641C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6423",
+      "value": "非法传真",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DE741C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6424",
+      "value": "非法递交",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DE841C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6425",
+      "value": "非法删改",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DE941C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6426",
+      "value": "非法播放",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DEA41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6427",
+      "value": "非法电脑传播",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DEB41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6428",
+      "value": "非法口头传播",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DEC41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6429",
+      "value": "修改计算机功能",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DED41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6430",
+      "value": "删除计算机功能",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DEE41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6431",
+      "value": "干扰计算机功能",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DEF41C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6432",
+      "value": "瞒报",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DF041C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6433",
+      "value": "虚报",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DF141C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6434",
+      "value": "私放",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DF241C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6435",
+      "value": "闯关",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DF341C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6436",
+      "value": "武装掩护",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DF441C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6437",
+      "value": "卖汇",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DF541C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6438",
+      "value": "避关",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DF641C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6439",
+      "value": "非法存汇",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DF741C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6440",
+      "value": "强迫交易",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DF841C7E0530100007FFC40",
+      "parentKey": "6400",
+      "key": "6441",
+      "value": "逃避商检",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DF941C7E0530100007FFC40",
+      "parentKey": "6000",
+      "key": "6900",
+      "value": "其他妨害手段",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DFA41C7E0530100007FFC40",
+      "parentKey": "ZASDFLDM",
+      "key": "7000",
+      "value": "伪装灭迹手段",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DFB41C7E0530100007FFC40",
+      "parentKey": "7000",
+      "key": "7100",
+      "value": "伪装",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DFC41C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7101",
+      "value": "男扮女装",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DFD41C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7102",
+      "value": "女扮男装",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DFE41C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7103",
+      "value": "化装",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197DFF41C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7104",
+      "value": "蒙面",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0041C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7105",
+      "value": "戴眼镜",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0141C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7106",
+      "value": "戴口罩",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0241C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7107",
+      "value": "戴手套",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0341C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7108",
+      "value": "手贴胶布",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0441C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7109",
+      "value": "鞋底包布",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0541C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7110",
+      "value": "换鞋",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0641C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7111",
+      "value": "套鞋",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0741C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7112",
+      "value": "穿袜包布",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0841C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7113",
+      "value": "用物铺地",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0941C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7114",
+      "value": "整容",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0A41C7E0530100007FFC40",
+      "parentKey": "7100",
+      "key": "7115",
+      "value": "语音伪装",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0B41C7E0530100007FFC40",
+      "parentKey": "7000",
+      "key": "7200",
+      "value": "毁灭痕迹",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0C41C7E0530100007FFC40",
+      "parentKey": "7200",
+      "key": "7201",
+      "value": "扫擦灭迹",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0D41C7E0530100007FFC40",
+      "parentKey": "7200",
+      "key": "7202",
+      "value": "冲洗灭迹",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0E41C7E0530100007FFC40",
+      "parentKey": "7200",
+      "key": "7203",
+      "value": "纵火灭迹",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E0F41C7E0530100007FFC40",
+      "parentKey": "7200",
+      "key": "7204",
+      "value": "破坏嗅源",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1041C7E0530100007FFC40",
+      "parentKey": "7200",
+      "key": "7205",
+      "value": "碎尸",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1141C7E0530100007FFC40",
+      "parentKey": "7200",
+      "key": "7206",
+      "value": "移尸",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1241C7E0530100007FFC40",
+      "parentKey": "7200",
+      "key": "7207",
+      "value": "爆炸灭迹",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1341C7E0530100007FFC40",
+      "parentKey": "7200",
+      "key": "7208",
+      "value": "撒物灭迹",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1441C7E0530100007FFC40",
+      "parentKey": "7000",
+      "key": "7300",
+      "value": "夹带",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1541C7E0530100007FFC40",
+      "parentKey": "7300",
+      "key": "7301",
+      "value": "人体夹带",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1641C7E0530100007FFC40",
+      "parentKey": "7300",
+      "key": "7302",
+      "value": "随身夹带",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1741C7E0530100007FFC40",
+      "parentKey": "7300",
+      "key": "7303",
+      "value": "动物夹带",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1841C7E0530100007FFC40",
+      "parentKey": "7300",
+      "key": "7304",
+      "value": "车辆夹带",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1941C7E0530100007FFC40",
+      "parentKey": "7300",
+      "key": "7305",
+      "value": "船只夹带",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1A41C7E0530100007FFC40",
+      "parentKey": "7300",
+      "key": "7306",
+      "value": "包裹夹带",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197E1B41C7E0530100007FFC40",
+      "parentKey": "7300",
+      "key": "7307",
+      "value": "飞机夹带",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197F0E41C7E0530100007FFC40",
+      "parentKey": "7000",
+      "key": "7400",
+      "value": "藏匿",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197F0F41C7E0530100007FFC40",
+      "parentKey": "7400",
+      "key": "7401",
+      "value": "地下藏匿",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197F1041C7E0530100007FFC40",
+      "parentKey": "7400",
+      "key": "7402",
+      "value": "树林藏匿",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197F1141C7E0530100007FFC40",
+      "parentKey": "7400",
+      "key": "7403",
+      "value": "水下藏匿",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197F1241C7E0530100007FFC40",
+      "parentKey": "7400",
+      "key": "7404",
+      "value": "洞穴藏匿",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197F1341C7E0530100007FFC40",
+      "parentKey": "7400",
+      "key": "7405",
+      "value": "壁内藏匿",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197F1441C7E0530100007FFC40",
+      "parentKey": "7000",
+      "key": "7900",
+      "value": "其他伪装灭迹手段",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197F1541C7E0530100007FFC40",
+      "parentKey": "ZASDFLDM",
+      "key": "8000",
+      "value": "利用计算机手段",
+      "root": "ZASDFLDM"
+    },
+    {
+      "id": "430D58197F1641C7E0530100007FFC40",
+      "parentKey": "ZASDFLDM",
+      "key": "9000",
+      "value": "其他作案手段",
+      "root": "ZASDFLDM"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义案件类别分组</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.99">
+    <link rel="stylesheet" href="../../css/sys.css?version=0.99">
+</head>
+<body>
+<div class="body-agent">
+    <div id="add-case-type-block" class="pr">
+        <div class="query-block-row">
+            <span class="qc-label-xs">分组名称：</span>
+            <input id="group-name" name="groupName" type="text" class="common-input validate" data-options="required:true,validType:'extLength[0,100]'"/>
+        </div>
+        <div class="query-block-row">
+            <span class="qc-label-xs fl">案件类别：</span>
+            <div dict-id="ajlb" dict-name="caseType" dict-type="tree" dict-root="AJLBDM" dict-default="false" dict-common="true" dict-multiple="true" class="require-tips dict unready inline-block ml5 -w90"></div>
+        </div>
+        <div class="query-block-row">
+            <span class="qc-label-xs fl">分组说明：</span>
+            <textarea id="case-group-desc" class="common-textarea case-group-desc validate" data-options="required:true,validType:'extLength[0,500]'"></textarea>
+        </div>
+        <b id="add-to-group" class="add-to-group">添加为分组</b>
+    </div>
+    <div id="cs-case-type-qr" class="query-result">
+        <div class="new-color-bar">
+            <span class="title">
+                <i class="icon-search pr5 gray"></i>
+                共<span class="total-count">0</span>条自定义案件类别分组数据
+            </span>
+        </div>
+        <table id="cs-case-type-tb" class="typical-tb"></table>
+        <div class="paging"></div>
+    </div>
+</div>
+<div id="case-type-edit-block" class="pd20 hider">
+    <input groupId type="hidden" value="{groupId}"/>
+    <div class="query-block-row">
+        <span class="qc-label-xs">分组名称：</span>
+        <input id="edit-group-name" name="groupName" type="text" class="common-input validate" data-options="required:true,validType:'extLength[0,100]'" value="{groupName}"/>
+    </div>
+    <div class="query-block-row">
+        <span class="qc-label-xs fl">案件类别：</span>
+        <div id="edit-ajlb-dict" dict-id="edit-ajlb" dict-name="caseType" dict-type="tree" dict-root="AJLBDM" dict-default="false" dict-common="true" dict-multiple="true" class="require-tips dict unready inline-block ml5 -w90"></div>
+    </div>
+    <div class="query-block-row">
+        <span class="qc-label-xs fl">分组说明：</span>
+        <textarea id="edit-group-desc" class="common-textarea case-group-desc validate" data-options="required:true,validType:'extLength[0,500]'">{groupDesc}</textarea>
+    </div>
+    <p class="win-fix-bar">
+        <b id="edit-save-btn" class="cm-save-btn"></b>
+        <b class="cm-cancel-btn"></b>
+    </p>
+</div>
+</body>
+<script src="../../js/base.js?version=0.99"></script>
+<!--<script src="../../js/sys.js?version=0.99"></script>-->
+<script>
+    importing('dict', function(){
+        var queryAct = makeAct('sys/sysCustomCaseType/pagequery'),//查询action
+                addAct = makeAct('sys/sysCustomCaseType/add'),//新增保存action
+                delAct = makeAct('sys/sysCustomCaseType/delete'),//删除action
+                modifyAct = makeAct('sys/sysCustomCaseType/update');//修改action
+
+        var columns = [
+            {title:'分组名称',     map:'groupName',  cls:'mem6'},
+            {title:'包含案件类别', map:'caseTypeCN', cls:'mem20'},
+            {title:'更新时间',     map:'updateTime.asCnDate', cls:'mem10'},
+            {title:'操作',         map:'groupId.caseTypeOpt',    cls:'mem4'}
+        ];
+
+        $('.dict').dict();
+
+        //操作栏filter
+        $filter('caseTypeOpt', function(item){
+            var str =  '<a class="into-edit icon-edit-btn mr10" groupId="{groupId}" href="javascript:void(0);" title="编辑"></a>' +
+                    '<a class="into-del icon-remove-btn {cls}" groupId="{groupId}" href="javascript:void(0);" title="删除"></a>';
+            return str.format({
+                groupId:item.groupId,
+                cls: item.systemFlag == '1' ? 'hidden' : ''
+            });
+        });
+        function timing(){
+            var timer = setInterval(function(){
+                if($('.unready').length == 0){
+                    clearInterval(timer);
+                    clearInput();
+                }
+            }, 10);
+        }
+        //初始化页面html
+        function clearInput(){
+            $('#add-case-type-block').find('.validate').removeClass('validatebox-invalid');
+            $(':checkbox').prop('checked', false);
+            $(':text, textarea').val('');
+            $('#ajlb').val('').attr('data-chval','');
+            $('[dict-id="ajlb"]').addClass('require-tips');
+        }
+        //查询结果列表
+        function queryForList(){
+            var $qr = $('#cs-case-type-qr');
+            $qr.pagingList({
+                action:queryAct,
+                currentPage:$qr.children().data('currentPage'),
+                jsonObj:{},
+                callback:function(data){
+                    $('#cs-case-type-tb').table({
+                        data:data,
+                        cols:columns,
+                        helper:function(item){
+
+                        }
+                    });
+                }
+            });
+        }
+
+        timing();
+        queryForList();
+
+        $('#add-to-group').on('click', function(){
+            $('#add-case-type-block .validate').validatebox();
+            if($('#add-case-type-block .validatebox-invalid').length > 0 || $('#add-case-type-block .require-tips').length > 0){
+                return false;
+            }
+            $post(addAct, {
+                groupName:$('#group-name').val(),
+                groupDesc:$('#case-group-desc').val(),
+                caseType:$('#ajlb').val()
+            }, function(res){
+                queryForList();
+                clearInput();
+                toast('保存成功！').ok();
+            });
+        });
+
+        $('#cs-case-type-qr').on('click', '.into-del', function(){
+            var groupId = $(this).attr('groupId');
+
+            $get(delAct+'/'+groupId, {}, function(res){
+                toast('删除成功！').ok();
+                queryForList();
+            });
+        }).on('click', '.into-edit', function(){
+            $open('#case-type-edit-block', {width: 800, title:'修改'});
+            var data = $(this).closest('tr').data('currentData');
+            $('#case-type-edit-block')
+                    .template(data)
+                    .find('.validate').removeClass('validatebox-invalid');
+            $('#edit-ajlb-dict').dict(function(){
+                data.caseType.split(',').forEach(function(item,i){
+                    $('#case-type-edit-block [dict-id]>[value="{0}"]'.format(item)).click();
+                });
+            });
+        });
+
+        $('#case-type-edit-block').on('click', '#edit-save-btn', function(){
+            $('#case-type-edit-block .validate').validatebox();
+            if($('#case-type-edit-block .validatebox-invalid').length > 0 || $('#case-type-edit-block .require-tips').length > 0){
+                return false;
+            }
+            $post(modifyAct,{
+                groupId:$('#case-type-edit-block [groupId]').val(),
+                groupName:$('#edit-group-name').val(),
+                groupDesc:$('#edit-group-desc').val(),
+                caseType:$('#edit-ajlb').val()
+            },function(res){
+                queryForList();
+                $('#case-type-edit-block').$close();
+                toast('保存成功！').ok();
+            });
+        });
+
+        $('body').on('ex-change', function(e,selector,key, value){
+            if(key==null || key == ''){
+                $(selector).addClass('require-tips');
+            }else{
+                $(selector).removeClass('require-tips');
+            }
+        });
+    });
+</script>
+</html>

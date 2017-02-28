@@ -1,0 +1,112 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "4028a8aa5915dbf5015915dbf6ce0063",
+      "parentKey": "XCHJWZLBDM",
+      "key": "1",
+      "value": "手印",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6d00064",
+      "parentKey": "XCHJWZLBDM",
+      "key": "2",
+      "value": "足迹",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6d20065",
+      "parentKey": "XCHJWZLBDM",
+      "key": "3",
+      "value": "工具",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6d40066",
+      "parentKey": "XCHJWZLBDM",
+      "key": "4",
+      "value": "枪弹",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6d50067",
+      "parentKey": "XCHJWZLBDM",
+      "key": "5",
+      "value": "特殊",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6d50070",
+      "parentKey": "XCHJWZLBDM",
+      "key": "6",
+      "value": "生物",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6d50071",
+      "parentKey": "XCHJWZLBDM",
+      "key": "7",
+      "value": "毒化",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6d70068",
+      "parentKey": "XCHJWZLBDM",
+      "key": "8",
+      "value": "理化",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6d80069",
+      "parentKey": "XCHJWZLBDM",
+      "key": "9",
+      "value": "文检",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6da006a",
+      "parentKey": "XCHJWZLBDM",
+      "key": "10",
+      "value": "电子",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6db006b",
+      "parentKey": "XCHJWZLBDM",
+      "key": "11",
+      "value": "视频",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6dd006c",
+      "parentKey": "XCHJWZLBDM",
+      "key": "12",
+      "value": "其它",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6de006d",
+      "parentKey": "XCHJWZLBDM",
+      "key": "13",
+      "value": "基站",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6e0006e",
+      "parentKey": "XCHJWZLBDM",
+      "key": "14",
+      "value": "摄像头",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "id": "4028a8aa5915dbf5015915dbf6e1006f",
+      "parentKey": "XCHJWZLBDM",
+      "key": "15",
+      "value": "WIFI",
+      "root": "XCHJWZLBDM"
+    }
+  ]
+}

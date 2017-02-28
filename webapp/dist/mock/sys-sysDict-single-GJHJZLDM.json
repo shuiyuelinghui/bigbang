@@ -1,0 +1,42 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "A",
+      "value": "撬压",
+      "root": "GJHJZLDM"
+    },
+    {
+      "key": "B",
+      "value": "打击",
+      "root": "GJHJZLDM"
+    },
+    {
+      "key": "C",
+      "value": "擦划",
+      "root": "GJHJZLDM"
+    },
+    {
+      "key": "D",
+      "value": "钳剪",
+      "root": "GJHJZLDM"
+    },
+    {
+      "key": "E",
+      "value": "刺切",
+      "root": "GJHJZLDM"
+    },
+    {
+      "key": "F",
+      "value": "割削",
+      "root": "GJHJZLDM"
+    },
+    {
+      "key": "O",
+      "value": "其他",
+      "root": "GJHJZLDM"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "方位",
+      "root": "XCZPZLDM"
+    },
+    {
+      "key": "2",
+      "value": "概貌",
+      "root": "XCZPZLDM"
+    },
+    {
+      "key": "3",
+      "value": "重点部位",
+      "root": "XCZPZLDM"
+    },
+    {
+      "key": "4",
+      "value": "细目",
+      "root": "XCZPZLDM"
+    },
+    {
+      "key": "9",
+      "value": "其它",
+      "root": "XCZPZLDM"
+    }
+  ]
+}

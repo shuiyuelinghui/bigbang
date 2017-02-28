@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <title>刑事技术一体化综合应用系统-标准版</title>
+</head>
+<body style="visibility: hidden">
+<div id="header" class="header">
+    <div class="header-content">
+        <div class="logo">
+            <img src-bf="img/national-emblem.png" class="hide"/>
+            <div class="title">
+                <h1 style="display: inline-block">刑事技术一体化综合应用系统-标准版</h1>
+            </div>
+        </div>
+        <div class="icon">
+            <span class="fa fa-check-square-o" title="运行环境检查"></span>
+            <span class="fa fa-video-camera" title="视频演示"></span>
+        </div>
+    </div>
+</div>
+
+<div id="login_content" class="login-content">
+    <div class="slick-container">
+        <div class="slider">
+            <div><img src-bf="img/pic_04.jpg" class="hide"/></div>
+            <div><img src-bf="img/pic_03.jpg" class="hide"/></div>
+        </div>
+
+        <div id="login-container" class="login-container">
+            <h1 class="form-title">用户登录</h1>
+            <div class="form-container">
+                <form id="login-form">
+                    <div class="form-row username">
+                        <input id="username" name="username" type="text" placeholder="请输入用户名" required="required" autocomplete="on" autofocus="autofocus"/>
+                    </div>
+                    <div class="form-row password">
+                        <input id="password" name="password" type="password" placeholder="请输入密码" required="required"/>
+                    </div>
+                    <input type="button" class="btn-login" value="立即登录">
+                </form>
+            </div>
+        </div>
+
+        <div id="browser_download" class="browser-download">
+            <h2>平台不支持IE及其它浏览器，请下载专用浏览器登录平台。<a id="download-link" href="#">点击下载</a> 专用浏览器</h2>
+        </div>
+    </div>
+</div>
+
+<div id="footer" class="footer">
+    <div class="footer-content">
+        <img src-bf="img/hisign.png" class="hide"/>
+        <p>北京海鑫科金高科技股份有限公司<br />版权所有 &copy; 海鑫科金 2016-2020 All rights reserved.</p>
+    </div>
+</div>
+<p id="error"><i class="icon-warning-sign"></i> <span></span></p>
+</body>
+<script>
+    var localTestPath='http://localhost:8080/xcky';
+    var isLocal=(location.protocol=='file:' || location.protocol=='chrome-extension:' || location.href.indexOf('webapp/dist/')>-1);
+
+    function createLink(src){
+        var link=document.createElement("link");
+        link.rel="stylesheet";
+        link.href=src+'?version='+window.version;
+        document.head.appendChild(link);
+    }
+    
+    function createScript(src,cb){
+        var tag=document.createElement("script");
+        var bol=false;
+        tag.type="text/javascript";
+        tag.src=src+'?version='+window.version;
+        tag.onload=tag.onreadystatechange=function(){
+            if(!bol&&(!tag.readyState||tag.readyState=="loaded"||tag.readyState=="complete")){
+                bol=true;
+                tag.onload=tag.onreadystatechange=null;
+                cb&&cb.call(tag);
+            }
+        };
+        document.head.appendChild(tag);
+    }
+    
+    function addTags(prefix){
+        createLink(prefix+'css/base.css');
+        createLink(prefix+'css/login.css');
+        createScript(prefix+'js/base.js',function(){
+            //base.js加载好后就可以使用importing了
+            importing('login.js');
+
+            //TODO 显示原来隐藏的图片,从login.html移到login.js中 传prefix
+            var imgEl = Array.prototype.slice.call(document.getElementsByTagName('img'),0);
+            imgEl.forEach(function (el) {
+                el.src=prefix+$(el).attr('src-bf');
+                $(el).removeClass('hide');
+            });
+        });
+    }
+
+    function loginInit(){
+        if(!Array.isArray){
+             // createLink(location.pathname.replace(/^\/$/,'')+'/dist/css/login.css');
+             // document.body.style.visibility = 'visible';
+             // document.getElementById('browser_download').style.display='block';
+             // getUploadPath(initPageAction,replaceLink);
+        }else{
+            if(isLocal){
+                if(typeof require=='function'){
+                    window.nwConfig=require('../package.json');
+                    window.path=nwConfig.serverPath;
+                    window.version=nwConfig.version;
+                    addTags('');
+                }else{
+                    window.path=localTestPath;
+                    window.version='localTest';
+                    addTags('');
+                }
+            }else{
+            	window.path=location.pathname.replace(/^\/$/,'').replace('dist/login.html','').replace(location.search,'');//.replace(/^\//,'');path=='/' && (path='');
+                window.version='0.99';//gulp-replace
+                addTags(path+'/dist/');
+            }
+        }
+    }
+
+    loginInit();
+
+</script>
+</html>

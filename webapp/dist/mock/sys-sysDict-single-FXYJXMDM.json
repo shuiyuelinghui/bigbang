@@ -1,0 +1,57 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "选择对象",
+      "root": "FXYJXMDM"
+    },
+    {
+      "key": "2",
+      "value": "选择处所",
+      "root": "FXYJXMDM"
+    },
+    {
+      "key": "3",
+      "value": "作案时机",
+      "root": "FXYJXMDM"
+    },
+    {
+      "key": "4",
+      "value": "作案入口",
+      "root": "FXYJXMDM"
+    },
+    {
+      "key": "5",
+      "value": "作案出口",
+      "root": "FXYJXMDM"
+    },
+    {
+      "key": "6",
+      "value": "作案手段",
+      "root": "FXYJXMDM"
+    },
+    {
+      "key": "7",
+      "value": "侵入方式",
+      "root": "FXYJXMDM"
+    },
+    {
+      "key": "8",
+      "value": "作案特点",
+      "root": "FXYJXMDM"
+    },
+    {
+      "key": "9",
+      "value": "作案动机目的",
+      "root": "FXYJXMDM"
+    },
+    {
+      "key": "10",
+      "value": "作案人数",
+      "root": "FXYJXMDM"
+    }
+  ]
+}

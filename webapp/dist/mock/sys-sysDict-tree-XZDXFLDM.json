@@ -1,0 +1,847 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D5819920341C7E0530100007FFC40",
+      "parentKey": "XZDXFLDM",
+      "key": "100",
+      "value": "病残孕人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920441C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "101",
+      "value": "残肢人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920541C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "102",
+      "value": "瘫痪人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920641C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "103",
+      "value": "聋哑人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920741C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "104",
+      "value": "盲人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920841C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "105",
+      "value": "呆傻人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920941C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "106",
+      "value": "精神病人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920A41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "107",
+      "value": "病人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920B41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "108",
+      "value": "孕妇",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920C41C7E0530100007FFC40",
+      "parentKey": "XZDXFLDM",
+      "key": "200",
+      "value": "对象来源",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920D41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "201",
+      "value": "本地",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920E41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "202",
+      "value": "外地",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819920F41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "203",
+      "value": "港澳台",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921041C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "204",
+      "value": "国外",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921141C7E0530100007FFC40",
+      "parentKey": "XZDXFLDM",
+      "key": "300",
+      "value": "对象性别年龄",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921241C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "301",
+      "value": "老年男子",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921341C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "302",
+      "value": "老年妇女",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921441C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "303",
+      "value": "中年男子",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921541C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "304",
+      "value": "中年妇女",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921641C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "305",
+      "value": "男青年",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921741C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "306",
+      "value": "女青年",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921841C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "307",
+      "value": "少男",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921941C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "308",
+      "value": "少女",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921A41C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "309",
+      "value": "幼儿",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921B41C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "310",
+      "value": "幼女",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921C41C7E0530100007FFC40",
+      "parentKey": "XZDXFLDM",
+      "key": "400",
+      "value": "对象特别身份",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921D41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "401",
+      "value": "人大代表",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921E41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "402",
+      "value": "政协委员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819921F41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "403",
+      "value": "外交官员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922041C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "404",
+      "value": "高级公务员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922141C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "405",
+      "value": "知名人士",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922241C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "406",
+      "value": "民主人士",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922341C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "407",
+      "value": "高知",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922441C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "408",
+      "value": "现役军人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922541C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "409",
+      "value": "部队职工",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922641C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "410",
+      "value": "武装警察",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922741C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "411",
+      "value": "警察",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922841C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "412",
+      "value": "司法人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922941C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "413",
+      "value": "保安人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922A41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "414",
+      "value": "联防人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922B41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "415",
+      "value": "治保人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922C41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "416",
+      "value": "港澳台人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922D41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "417",
+      "value": "华侨",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922E41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "418",
+      "value": "外国人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819922F41C7E0530100007FFC40",
+      "parentKey": "XZDXFLDM",
+      "key": "500",
+      "value": "对象一般身份",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923041C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "501",
+      "value": "科研人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923141C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "502",
+      "value": "技术人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923241C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "503",
+      "value": "医务人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923341C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "504",
+      "value": "金融人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923441C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "505",
+      "value": "财会人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923541C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "506",
+      "value": "工商人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923641C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "507",
+      "value": "税务人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923741C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "508",
+      "value": "海关人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923841C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "509",
+      "value": "律师",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923941C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "510",
+      "value": "教师",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923A41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "511",
+      "value": "摄影师",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923B41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "512",
+      "value": "文艺工作者",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923C41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "513",
+      "value": "体育工作者",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923D41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "514",
+      "value": "宗教职业者",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923E41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "515",
+      "value": "记者",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819923F41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "516",
+      "value": "作家",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924041C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "517",
+      "value": "编辑",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924141C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "518",
+      "value": "翻译",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924241C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "519",
+      "value": "考古人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924341C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "520",
+      "value": "文物人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924441C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "521",
+      "value": "公务员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924541C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "522",
+      "value": "邮政人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924641C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "523",
+      "value": "董事长",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924741C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "524",
+      "value": "总经理",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924841C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "525",
+      "value": "经理",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924941C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "526",
+      "value": "厂长",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924A41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "527",
+      "value": "企业管理人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924B41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "528",
+      "value": "电信人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924C41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "529",
+      "value": "营业员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924D41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "530",
+      "value": "售货员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924E41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "531",
+      "value": "采购员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819924F41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "532",
+      "value": "供销员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819925041C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "533",
+      "value": "信托收购员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819925141C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "534",
+      "value": "废品收购员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819925241C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "535",
+      "value": "服务员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819925341C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "536",
+      "value": "售票员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819925441C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "537",
+      "value": "理发员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819925541C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "538",
+      "value": "厨师",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819925641C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "539",
+      "value": "炊事员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819925741C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "540",
+      "value": "保育员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819925841C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "541",
+      "value": "家庭服务人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819915941C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "542",
+      "value": "洗染织补人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819915A41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "543",
+      "value": "公勤人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819915B41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "544",
+      "value": "殡葬人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819915C41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "545",
+      "value": "园林工作人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819915D41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "546",
+      "value": "导游员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819915E41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "547",
+      "value": "机电产品修理员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819915F41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "548",
+      "value": "生活用品修理员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916041C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "549",
+      "value": "信息业人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916141C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "550",
+      "value": "农民",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916241C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "551",
+      "value": "乡镇企业人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916341C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "552",
+      "value": "经商农民",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916441C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "553",
+      "value": "民工",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916541C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "554",
+      "value": "林业人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916641C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "555",
+      "value": "牧业人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916741C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "556",
+      "value": "渔业人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916841C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "557",
+      "value": "船民",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916941C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "558",
+      "value": "猎民",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916A41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "559",
+      "value": "船员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916B41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "560",
+      "value": "驾驶员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916C41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "561",
+      "value": "出租车司机",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916D41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "562",
+      "value": "三轮车夫",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916E41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "563",
+      "value": "私营业主",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819916F41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "564",
+      "value": "个体户",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819917041C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "565",
+      "value": "工人",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819934B41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "566",
+      "value": "学生",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819917141C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "567",
+      "value": "离退休人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819917241C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "568",
+      "value": "下岗人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819917341C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "569",
+      "value": "无业人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819917441C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "570",
+      "value": "家务",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819917541C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "571",
+      "value": "外企员工",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819917641C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "572",
+      "value": "三资企业员工",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819917741C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "573",
+      "value": "特行人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819917841C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "574",
+      "value": "物业管理人员",
+      "root": "XZDXFLDM"
+    },
+    {
+      "id": "430D5819917941C7E0530100007FFC40",
+      "parentKey": "XZDXFLDM",
+      "key": "900",
+      "value": "其他",
+      "root": "XZDXFLDM"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "B01",
+      "value": "直接照相",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B02",
+      "value": "静电/照相",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B03",
+      "value": "制模/照相",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B04",
+      "value": "显现/照相",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B05",
+      "value": "其他/照相",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B06",
+      "value": "即时贴提取",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B01",
+      "value": "直接照相",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B02",
+      "value": "静电/照相",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B03",
+      "value": "制模/照相",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B04",
+      "value": "显现/照相",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B05",
+      "value": "其他/照相",
+      "root": "ZJTQFFDM"
+    },
+    {
+      "key": "B06",
+      "value": "即时贴提取",
+      "root": "ZJTQFFDM"
+    }
+  ]
+}

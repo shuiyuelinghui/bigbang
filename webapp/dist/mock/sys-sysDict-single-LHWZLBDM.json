@@ -1,0 +1,87 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "4001",
+      "value": "火工品",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4002",
+      "value": "助燃剂",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4003",
+      "value": "金属类",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4004",
+      "value": "织物、纤维",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4005",
+      "value": "枪击残留物",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4006",
+      "value": "酸、碱",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4007",
+      "value": "涂料、油漆",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4008",
+      "value": "橡胶、塑料",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4009",
+      "value": "钥匙再配",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4010",
+      "value": "粘合剂",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4011",
+      "value": "泥土、砖头",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4012",
+      "value": "钢印号码显现",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4013",
+      "value": "各类附着物",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4014",
+      "value": "各类不明粉末",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4015",
+      "value": "各类不明液体",
+      "root": "LHWZLBDM"
+    },
+    {
+      "key": "4016",
+      "value": "其它载体",
+      "root": "LHWZLBDM"
+    }
+  ]
+}

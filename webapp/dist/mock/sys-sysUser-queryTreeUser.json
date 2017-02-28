@@ -1,0 +1,38 @@
+{
+  "flag": 1,
+  "totalCount": 6,
+  "msg": null,
+  "data": [
+    {
+      "key": "111",
+      "parentKey": "666",
+      "value": "人员1"
+    },
+    {
+      "key": "222",
+      "parentKey": "666",
+      "value": "人员2"
+    },
+    {
+      "key": "333",
+      "parentKey": "666",
+      "value": "人员3"
+    },
+    {
+      "key": "444",
+      "parentKey": "666",
+      "value": "人员4"
+    },
+    {
+      "key": "555",
+      "parentKey": "666",
+      "value": "人员5"
+    },
+    {
+      "key": "666",
+      "parentKey": "000",
+      "value": "某单位"
+    }
+
+  ]
+}

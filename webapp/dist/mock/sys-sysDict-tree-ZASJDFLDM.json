@@ -1,0 +1,322 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D5819806F41C7E0530100007FFC40",
+      "parentKey": "ZASJDFLDM",
+      "key": "10",
+      "value": "天气",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D5819807041C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "11",
+      "value": "雨天",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D5819807141C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "12",
+      "value": "雪天",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D5819807241C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "13",
+      "value": "雾天",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D5819807341C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "14",
+      "value": "晴天",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D5819807441C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "15",
+      "value": "风天",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E1C41C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "16",
+      "value": "阴天",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E1D41C7E0530100007FFC40",
+      "parentKey": "ZASJDFLDM",
+      "key": "20",
+      "value": "日期",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E1E41C7E0530100007FFC40",
+      "parentKey": "20",
+      "key": "21",
+      "value": "公假日",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E1F41C7E0530100007FFC40",
+      "parentKey": "20",
+      "key": "22",
+      "value": "周末",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2041C7E0530100007FFC40",
+      "parentKey": "20",
+      "key": "23",
+      "value": "双休日",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2141C7E0530100007FFC40",
+      "parentKey": "20",
+      "key": "24",
+      "value": "工作日",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2241C7E0530100007FFC40",
+      "parentKey": "20",
+      "key": "25",
+      "value": "发薪日",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2341C7E0530100007FFC40",
+      "parentKey": "20",
+      "key": "26",
+      "value": "上旬",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2441C7E0530100007FFC40",
+      "parentKey": "20",
+      "key": "27",
+      "value": "中旬",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2541C7E0530100007FFC40",
+      "parentKey": "20",
+      "key": "28",
+      "value": "下旬",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2641C7E0530100007FFC40",
+      "parentKey": "ZASJDFLDM",
+      "key": "30",
+      "value": "时间",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2741C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "31",
+      "value": "昼",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2841C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "32",
+      "value": "夜",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2941C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "41",
+      "value": "清晨",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2A41C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "42",
+      "value": "上午",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2B41C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "43",
+      "value": "中午",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2C41C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "44",
+      "value": "下午",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2D41C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "45",
+      "value": "傍晚",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2E41C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "46",
+      "value": "上半夜",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E2F41C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "47",
+      "value": "午夜",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3041C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "48",
+      "value": "下半夜",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3141C7E0530100007FFC40",
+      "parentKey": "ZASJDFLDM",
+      "key": "50",
+      "value": "潮汐",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3241C7E0530100007FFC40",
+      "parentKey": "50",
+      "key": "51",
+      "value": "涨潮",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3341C7E0530100007FFC40",
+      "parentKey": "50",
+      "key": "52",
+      "value": "退潮",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3441C7E0530100007FFC40",
+      "parentKey": "ZASJDFLDM",
+      "key": "60",
+      "value": "机会",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3541C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "61",
+      "value": "拥挤时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3641C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "62",
+      "value": "放影时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3741C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "63",
+      "value": "寒假时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3841C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "64",
+      "value": "暑假时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3941C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "65",
+      "value": "上班时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3A41C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "66",
+      "value": "下班时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3B41C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "67",
+      "value": "交接班时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3C41C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "68",
+      "value": "上学时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3D41C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "69",
+      "value": "放学时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3E41C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "70",
+      "value": "取款时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E3F41C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "71",
+      "value": "送款时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E4041C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "72",
+      "value": "押款时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E4141C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "73",
+      "value": "混乱时",
+      "root": "ZASJDFLDM"
+    },
+    {
+      "id": "430D58197E4241C7E0530100007FFC40",
+      "parentKey": "ZASJDFLDM",
+      "key": "99",
+      "value": "其他时机",
+      "root": "ZASJDFLDM"
+    }
+  ]
+}

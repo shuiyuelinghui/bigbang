@@ -1,0 +1,27 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "公安",
+      "root": "SXTLXDM"
+    },
+    {
+      "key": "2",
+      "value": "政府",
+      "root": "SXTLXDM"
+    },
+    {
+      "key": "3",
+      "value": "民用",
+      "root": "SXTLXDM"
+    },
+    {
+      "key": "4",
+      "value": "不确定",
+      "root": "SXTLXDM"
+    }
+  ]
+}

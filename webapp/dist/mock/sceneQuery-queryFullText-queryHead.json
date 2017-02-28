@@ -1,0 +1,191 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data":
+  [
+    {
+      "unitName": "本地",
+      "solrAddress": "null",
+      "unitCode": ""
+    },
+    {
+      "cityList":
+      [
+        {
+          "key": "110000",
+          "value": "全部"
+        },
+        {
+          "key": "110001",
+          "value": "海淀"
+        }
+      ],
+      "unitName": "北京市局",
+      "solrAddress": "null",
+      "unitCode": "110000"
+    },
+    {
+      "unitName": "天津市局",
+      "solrAddress": "null",
+      "unitCode": "120000"
+    },
+    {
+      "unitName": "河北省厅",
+      "solrAddress": "null",
+      "unitCode": "130000"
+    },
+    {
+      "cityList":
+      [
+        {
+          "key": "110000",
+          "value": "全部"
+        },
+        {
+          "key": "110001",
+          "value": "太原"
+        }
+      ],
+      "unitName": "山西省厅",
+      "solrAddress": "http://10.94.65.102:8983/solr",
+      "unitCode": "140000",
+      "xckyUrl": "http://10.94.65.103:8986/xcky"
+    },
+    {
+      "unitName": "内蒙古自治区省厅",
+      "solrAddress": "null",
+      "unitCode": "150000"
+    },
+    {
+      "unitName": "辽宁省厅",
+      "solrAddress": "null",
+      "unitCode": "210000"
+    },
+    {
+      "unitName": "吉林省厅",
+      "solrAddress": "null",
+      "unitCode": "220000"
+    },
+    {
+      "unitName": "黑龙江省厅",
+      "solrAddress": "null",
+      "unitCode": "230000"
+    },
+    {
+      "unitName": "上海市局",
+      "solrAddress": "null",
+      "unitCode": "310000"
+    },
+    {
+      "unitName": "江苏省厅",
+      "solrAddress": "null",
+      "unitCode": "320000"
+    },
+    {
+      "unitName": "浙江省厅",
+      "solrAddress": "null",
+      "unitCode": "330000"
+    },
+    {
+      "unitName": "安徽省厅",
+      "solrAddress": "null",
+      "unitCode": "340000"
+    },
+    {
+      "unitName": "福建省厅",
+      "solrAddress": "null",
+      "unitCode": "350000"
+    },
+    {
+      "unitName": "江西省厅",
+      "solrAddress": "null",
+      "unitCode": "360000"
+    },
+    {
+      "unitName": "山东省厅",
+      "solrAddress": "null",
+      "unitCode": "370000"
+    },
+    {
+      "unitName": "河南省厅",
+      "solrAddress": "null",
+      "unitCode": "410000"
+    },
+    {
+      "unitName": "湖北省厅",
+      "solrAddress": "null",
+      "unitCode": "420000"
+    },
+    {
+      "unitName": "广东省厅",
+      "solrAddress": "null",
+      "unitCode": "440000"
+    },
+    {
+      "unitName": "广西壮族自治区",
+      "solrAddress": "null",
+      "unitCode": "450000"
+    },
+    {
+      "unitName": "海南省厅",
+      "solrAddress": "null",
+      "unitCode": "460000"
+    },
+    {
+      "unitName": "重庆市局",
+      "solrAddress": "null",
+      "unitCode": "500000"
+    },
+    {
+      "unitName": "四川省厅",
+      "solrAddress": "null",
+      "unitCode": "510000"
+    },
+    {
+      "unitName": "贵州省厅",
+      "solrAddress": "null",
+      "unitCode": "520000"
+    },
+    {
+      "unitName": "云南省厅",
+      "solrAddress": "null",
+      "unitCode": "530000"
+    },
+    {
+      "unitName": "西藏",
+      "solrAddress": "null",
+      "unitCode": "540000"
+    },
+    {
+      "unitName": "陕西省厅",
+      "solrAddress": "null",
+      "unitCode": "610000"
+    },
+    {
+      "unitName": "甘肃省厅",
+      "solrAddress": "null",
+      "unitCode": "620000"
+    },
+    {
+      "unitName": "青海省厅",
+      "solrAddress": "null",
+      "unitCode": "630000"
+    },
+    {
+      "unitName": "宁夏回族自治区",
+      "solrAddress": "null",
+      "unitCode": "640000"
+    },
+    {
+      "unitName": "新疆",
+      "solrAddress": "null",
+      "unitCode": "650000"
+    },
+    {
+      "unitName": "新疆兵团",
+      "solrAddress": "null",
+      "unitCode": "660000"
+    }
+  ]
+}

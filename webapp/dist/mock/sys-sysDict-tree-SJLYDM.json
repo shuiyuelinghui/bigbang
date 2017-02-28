@@ -1,0 +1,49 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "4028a8aa598b68a601598b68a92901e0",
+      "parentKey": "SJLYDM",
+      "key": "XCKY",
+      "value": "现勘系统",
+      "root": "SJLYDM"
+    },
+    {
+      "id": "4028a8aa598b68a601598b68a92b01e1",
+      "parentKey": "SJLYDM",
+      "key": "BZPB",
+      "value": "标准平板",
+      "root": "SJLYDM"
+    },
+    {
+      "id": "4028a8aa598b68a601598b68a92b01e2",
+      "parentKey": "SJLYDM",
+      "key": "PCSPB",
+      "value": "派出所的平板",
+      "root": "SJLYDM"
+    },
+    {
+      "id": "4028a8aa598b68a601598b68a92c01e3",
+      "parentKey": "SJLYDM",
+      "key": "SCSB",
+      "value": "手持设备",
+      "root": "SJLYDM"
+    },
+    {
+      "id": "4028a8aa598b68a601598b68a92d01e4",
+      "parentKey": "SJLYDM",
+      "key": "XKAPP",
+      "value": "现勘APP",
+      "root": "SJLYDM"
+    },
+    {
+      "id": "4028a8aa598b68a601598b68a92e01e5",
+      "parentKey": "SJLYDM",
+      "key": "QT",
+      "value": "其他",
+      "root": "SJLYDM"
+    }
+  ]
+}

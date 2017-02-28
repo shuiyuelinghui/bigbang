@@ -1,0 +1,47 @@
+{
+  "flag": 1,
+  "msg": "请求结果描述",
+  "totalCount": 111,
+  "data": {
+    "sceneInvestigationDispatch": {
+      "id": "接勘信息ID",
+      "investigationId": "勘验信息ID",
+      "alarmSystemRelateFlag": "是否关联警综系统(SFDM)",
+      "alarmSystemId": "警综系统案件信息ID",
+      "caseType": "案件类别(AJLBDM)",
+      "alarmAcceptNo": "接警受理号",
+      "alarmNo": "接警编号",
+      "caseNo": "案件编号",
+      "caseNature":"案件性质（AJXZDM）",
+      "caseName":"案件名称",
+      "crimeTimeBegin": "2016-12-09",
+      "crimeTimeEnd": "2016-12-23",
+      "alarmTime": "2016-12-10",
+      "dispatchTime": "2016-12-15",
+      "caseRegionalism": "发案区划(关联单位表)",
+      "caseLocation": "发案地点",
+      "alarmReceiver": "接警人",
+      "assignMethod": "指派方式(XCKYJJFSDM)",
+      "assignMethodDesc": "指派方式描述",
+      "assignPerson": "指派/报告单位",
+      "assignReason": "勘验事由",
+      "criminalFlag": "是否刑案",
+      "murderFlag": "是否命案",
+      "woundedAmount": "受伤人数",
+      "deadAmount": "死亡人数",
+      "caseBrief": "简要案情(案件发现过程)",
+      "sceneOffender": [
+        {
+          "id": "人员信息ID",
+          "investigationId": "勘验信息ID",
+          "type": "类型（SARYLBDM）",
+          "name": "姓名",
+          "gender": "性别",
+          "age": "年龄",
+          "idCardNo": "身份证号",
+          "phone": "电话"
+        }
+      ]
+    }
+  }
+}

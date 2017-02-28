@@ -1,0 +1,52 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "A01",
+      "value": "直接照相",
+      "root": "ZWTQFFDM"
+    },
+    {
+      "key": "A02",
+      "value": "粉末/胶带纸",
+      "root": "ZWTQFFDM"
+    },
+    {
+      "key": "A03",
+      "value": "粉末/照相",
+      "root": "ZWTQFFDM"
+    },
+    {
+      "key": "A04",
+      "value": "502/照相",
+      "root": "ZWTQFFDM"
+    },
+    {
+      "key": "A05",
+      "value": "DFO/照相",
+      "root": "ZWTQFFDM"
+    },
+    {
+      "key": "A06",
+      "value": "茚三酮/照相",
+      "root": "ZWTQFFDM"
+    },
+    {
+      "key": "A07",
+      "value": "硝酸银/照相",
+      "root": "ZWTQFFDM"
+    },
+    {
+      "key": "A08",
+      "value": "碘熏/照相",
+      "root": "ZWTQFFDM"
+    },
+    {
+      "key": "A09",
+      "value": "其他/照相",
+      "root": "ZWTQFFDM"
+    }
+  ]
+}

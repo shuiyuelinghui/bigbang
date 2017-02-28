@@ -1,0 +1,57 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "01",
+      "value": "东风",
+      "root": "XCFXDM"
+    },
+    {
+      "key": "02",
+      "value": "南风",
+      "root": "XCFXDM"
+    },
+    {
+      "key": "03",
+      "value": "西风",
+      "root": "XCFXDM"
+    },
+    {
+      "key": "04",
+      "value": "北风",
+      "root": "XCFXDM"
+    },
+    {
+      "key": "05",
+      "value": "东南风",
+      "root": "XCFXDM"
+    },
+    {
+      "key": "06",
+      "value": "西南风",
+      "root": "XCFXDM"
+    },
+    {
+      "key": "07",
+      "value": "西北风",
+      "root": "XCFXDM"
+    },
+    {
+      "key": "08",
+      "value": "东北风",
+      "root": "XCFXDM"
+    },
+    {
+      "key": "09",
+      "value": "无风",
+      "root": "XCFXDM"
+    },
+    {
+      "key": "99",
+      "value": "其他",
+      "root": "XCFXDM"
+    }
+  ]
+}

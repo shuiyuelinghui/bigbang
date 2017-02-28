@@ -1,0 +1,25 @@
+<div class="query-result panel panel-default {cls}">
+    <div class="panel-heading query-title">
+        <span class="panel-icon"><i class="icon-search"></i></span>
+        <span class="panel-title">{title}<em class="{emcls}">共找到<i class="total-count">0</i>条符合的记录</em></span>
+
+            <span class="panel-controls">
+                <!--<a href="#" class="panel-control-loader"></a>-->
+                <a href="javascript:;" class="panel-control-color hide{colorLimit}"></a>
+                <a href="javascript:;" class="icon-resize-full full-ctrl-btn hide{fullLimit}" title="最大化显示"></a>
+            </span>
+
+            <div class="bar-btn-div">
+                <b class="cm-add-btn hide{addLimit}"></b>
+                <b class="cm-remove-btn hide{removeLimit}"></b>
+                <b class="cm-send-btn hide{sendLimit}"></b>
+                <b class="cm-excel-btn hide{excelLimit}"></b>
+                {otherbtn}
+            </div>
+    </div>
+    <div class="all-fix-wrap">
+        <table id="{table}" class="typical-tb qr-tb {tablecls}"></table>
+    </div>
+
+    <div class="paging"></div>
+</div>

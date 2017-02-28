@@ -1,0 +1,27 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "C01",
+      "value": "直接照相",
+      "root": "GJHJTQFFDM"
+    },
+    {
+      "key": "C02",
+      "value": "原物提取",
+      "root": "GJHJTQFFDM"
+    },
+    {
+      "key": "C03",
+      "value": "制模",
+      "root": "GJHJTQFFDM"
+    },
+    {
+      "key": "C09",
+      "value": "其他",
+      "root": "GJHJTQFFDM"
+    }
+  ]
+}

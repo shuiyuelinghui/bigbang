@@ -1,0 +1,90 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data":
+  [
+    {
+      "id": "430D58197EEB41C7E0530100007FFC40",
+      "rootKey": "XZQHDM",
+      "dictKey": "350100",
+      "parentKey": "350000",
+      "dictValue": "福建省福州市",
+      "dictSort": 1349,
+      "amount": "0"
+    },
+    {
+      "id": "430D581984AB41C7E0530100007FFC40",
+      "rootKey": "XZQHDM",
+      "dictKey": "350200",
+      "parentKey": "350000",
+      "dictValue": "福建省厦门市",
+      "dictSort": 1363,
+      "amount": "0"
+    },
+    {
+      "id": "430D581984B241C7E0530100007FFC40",
+      "rootKey": "XZQHDM",
+      "dictKey": "350300",
+      "parentKey": "350000",
+      "dictValue": "福建省莆田市",
+      "dictSort": 1370,
+      "amount": "0"
+    },
+    {
+      "id": "430D581984B841C7E0530100007FFC40",
+      "rootKey": "XZQHDM",
+      "dictKey": "350400",
+      "parentKey": "350000",
+      "dictValue": "福建省三明市",
+      "dictSort": 1376,
+      "amount": "0"
+    },
+    {
+      "id": "430D581984C541C7E0530100007FFC40",
+      "rootKey": "XZQHDM",
+      "dictKey": "350500",
+      "parentKey": "350000",
+      "dictValue": "福建省泉州市",
+      "dictSort": 1389,
+      "amount": "0"
+    },
+    {
+      "id": "430D581984D241C7E0530100007FFC40",
+      "rootKey": "XZQHDM",
+      "dictKey": "350600",
+      "parentKey": "350000",
+      "dictValue": "福建省漳州市",
+      "dictSort": 1402,
+      "amount": "0"
+    },
+    {
+      "id": "430D581984DF41C7E0530100007FFC40",
+      "rootKey": "XZQHDM",
+      "dictKey": "350700",
+      "parentKey": "350000",
+      "dictValue": "福建省南平市",
+      "dictSort": 1415,
+      "amount": "0"
+    },
+    {
+      "id": "430D581984EA41C7E0530100007FFC40",
+      "rootKey": "XZQHDM",
+      "dictKey": "350800",
+      "parentKey": "350000",
+      "dictValue": "福建省龙岩市",
+      "dictSort": 1426,
+      "amount": "0"
+    },
+    {
+      "id": "430D581984F241C7E0530100007FFC40",
+      "rootKey": "XZQHDM",
+      "dictKey": "352200",
+      "parentKey": "350000",
+      "dictValue": "福建省宁德市",
+      "dictSort": 1434,
+      "amount": "0"
+    }
+  ]
+}
+

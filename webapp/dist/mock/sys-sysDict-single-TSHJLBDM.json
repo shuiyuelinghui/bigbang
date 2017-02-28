@@ -1,0 +1,57 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1501",
+      "value": "牙齿痕迹",
+      "root": "TSHJLBDM"
+    },
+    {
+      "key": "1502",
+      "value": "唇纹痕迹",
+      "root": "TSHJLBDM"
+    },
+    {
+      "key": "1503",
+      "value": "肤纹痕迹",
+      "root": "TSHJLBDM"
+    },
+    {
+      "key": "1504",
+      "value": "纺织品痕迹",
+      "root": "TSHJLBDM"
+    },
+    {
+      "key": "1505",
+      "value": "车辆轮胎痕迹",
+      "root": "TSHJLBDM"
+    },
+    {
+      "key": "1506",
+      "value": "牲畜蹄迹",
+      "root": "TSHJLBDM"
+    },
+    {
+      "key": "1507",
+      "value": "玻璃破碎痕迹",
+      "root": "TSHJLBDM"
+    },
+    {
+      "key": "1508",
+      "value": "整体分离痕迹",
+      "root": "TSHJLBDM"
+    },
+    {
+      "key": "1509",
+      "value": "开锁和破锁痕迹",
+      "root": "TSHJLBDM"
+    },
+    {
+      "key": "1599",
+      "value": "其他特殊痕迹",
+      "root": "TSHJLBDM"
+    }
+  ]
+}

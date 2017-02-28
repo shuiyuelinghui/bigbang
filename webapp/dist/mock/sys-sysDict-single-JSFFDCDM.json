@@ -1,0 +1,32 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "加强防范工作",
+      "root": "JSFFDCDM"
+    },
+    {
+      "key": "2",
+      "value": "加强巡逻伏击",
+      "root": "JSFFDCDM"
+    },
+    {
+      "key": "3",
+      "value": "加装监控",
+      "root": "JSFFDCDM"
+    },
+    {
+      "key": "4",
+      "value": "安装放到报警器",
+      "root": "JSFFDCDM"
+    },
+    {
+      "key": "5",
+      "value": "其他",
+      "root": "JSFFDCDM"
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+@charset "utf-8";
+#dictFrame>div{
+    padding:10px 10px 5px 5px;
+}
+#dictFrame>div button {
+    margin-right: 5px;
+    padding: 1px 5px;
+    font-size: 13px;
+}
+.window.dict-window-wrap{
+    /*padding: 3px;*/
+    padding:0;
+    background:rgba(203, 216, 230, 0.97);
+}
+.treeButton {
+    margin-left: 2px;
+    cursor: pointer;
+    background-image: url("./img/dictselect.gif");
+    background-repeat: no-repeat;
+}
+
+#dictTreeDiv{
+    display: inline-block;
+    width: 50%;
+}
+#commonDict{
+    float: right;
+    width: 50%;
+    font-size: 14px;
+    color: #556;
+    /*padding: 20px!important;*/
+}
+#dictFrame{
+    position:relative;
+    height:465px;
+}
+#dictFrame .dict-wrapper{
+    height:370px;
+    overflow:auto;
+}
+#dictFrame .dict-btn{
+    width:100%;
+    position: absolute;
+    bottom:0;
+    background: #fbfbfb;
+    padding: 6px;
+    border-top: 1px solid #e6e6e6;
+}
+#dictFrame > div {
+    padding: 10px 10px 5px 10px;
+}
+#dictFrame > div button {
+    margin-right: 5px;
+    padding: 1px 5px;
+    font-size: 13px;
+}
+#dictFrame .commonDictPos{
+    width:300px;
+    position:absolute;
+    right:20px;
+    top:70px;
+    overflow:auto;
+    overflow-x: hidden;
+}
+
+#dictFrame .dictOk{
+    width:60px;
+    position:absolute;
+    right:90px;
+}
+
+#dictFrame .dictEmpty{
+    width:60px;
+    position:absolute;
+    right:20px;
+}
+
+#dictFrame .dictQueryHeader {
+    height: 25px;
+    font-weight: normal;
+    display: none;
+    background-color: #dcf0ff;
+    font-size: 15px!important;
+}
+
+#dictFrame .dictButton{
+    margin-top:5px;
+    padding-top:2px;
+    border:1px solid #8e9fb0;
+    /*background:url(../webapp/scripts/dict/img/input_button.gif) no-repeat!important;*/
+    background: #f0f0f0;
+    height: 20px;
+    width:60px;
+    border-radius: 3px;
+}
+#dictFrame .borderLine{
+    border-bottom: 1px dashed #8e9fb0;
+}
+div#rMenu {
+    position:absolute;
+    visibility:hidden;
+    top:0;
+    background-color: #EEEEEE;
+    text-align: left;
+    padding: 2px;
+}
+div#rMenu ul li{
+    margin: 1px;
+    cursor: pointer;
+    list-style: none outside none;
+    background-color: #ffffff;
+    height: 20px;
+    padding: 2px 4px;
+    width: 70px;
+}
+#intoMgn,
+#outMgn{
+    margin-left: 10px;
+}
+#opertionSpan{
+    display: none;
+    text-align: left;
+    margin-top: 5px;
+    padding-left: 5px;
+    height: 20px;
+    line-height: 20px;
+    background-color: rgb(238, 238, 238);
+}
+.dict-title {
+    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0px 1px 4px #ccc;
+}
+.dict-title .dict-style {
+    padding-left: 5px;
+    border-left: 5px solid rgb(90, 173, 238);
+    margin-right: 15px;
+    font-size: 14px;
+}
+.dict-title .dict-opt{
+    display: inline-block;
+    /*margin-left: 125px;*/
+    text-align: right;
+    background: #ffffff;
+}
+.dict-title .dict-opt>b{
+    height: 25px;
+    line-height: 25px;
+}
+.dict-title .cm-save-btn:before{
+    content: '';
+}
+.dict-title .cm-save-btn:after{
+    content: '确 定';
+}
+.dict-title .cm-cancel-btn:before{
+    content: '';
+}
+.dict-title .cm-cancel-btn:after{
+    content: '选择空值';
+}
+.dict-title .dict-select {
+    height: 25px;
+    color: #555;
+}
+.dict-title .dict-select:hover,
+.dict-title .dict-select:focus{
+    border-color: #ffa334;
+}
+#selectedValues{
+    margin: 0;
+    width: 410px;
+    height: 27px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+#multipleDiv .clean-selected-dict{
+    margin-left: 5px;
+    color: #4682b4;
+    font-weight: bold;
+}
+#dictList{
+    text-align: left;
+    padding-top: 5px;
+}
+#commonDict .dict-mng{
+    margin-left: 10px;
+    color:gray;
+}
+.dict-add-group:hover,
+.dict-add-common:hover{
+    color: red;
+}
+#m_rename:hover,
+#m_del:hover{
+    background: #D1E7F6;
+}
+#dictQueryDiv table{
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+#dictQueryDiv .icon-share-alt{
+    transform: rotate(180deg);
+    color: #79A8D0;
+}
+#dictQueryDiv table th{
+    text-align: center;
+}
+#dictQueryDiv table td{
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+label{
+    font-weight: normal;
+}
+.dict-tree-more-btn{
+    display: inline-block;
+}
+.dict-radio {
+    display: none;
+}
+.dict-radio:checked+label {
+    position: relative;
+    color: #4A89DC;
+    font-weight: bold;
+}
+.dict-radio+label:before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    vertical-align: -3px;
+    margin-right: 3px;
+}
+.dict-radio:checked+label:before {
+    border-color:#4A89DC;
+}
+.dict-radio:checked+label:after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #4A89DC;
+    position: absolute;
+    /*top: 10px;*/
+    top: 50%;
+    -webkit-transform:translateY(-50%);
+    transform: translateY(-50%);
+    left: 4px;
+    border-radius: 8px;
+}
+.dict-checkbox+label {
+    display: inline-block;
+    padding: 0 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+.dict-checkbox:checked+label {
+    background: #4A89DC;
+    color: #fff;
+}
+
+.dict-checkbox {
+    display: none;
+}
+.dict-radio+label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 22px;
+}
+input + label {
+    line-height: 30px;
+}
+
+/* 用到ztree的模块自定义了ztree的样式，会影响字典的ztree样式，故重新设置*/
+#dictFrame .ztree *{
+    font-size: 14px!important;
+    font-family: "微软雅黑"!important;
+}
+#dictFrame .ztree li,
+#dictFrame .ztree li a.curSelectedNode,
+#dictFrame .ztree li span{
+    line-height: 22px!important;
+}
+#dictFrame .ztree li a.curSelectedNode{
+    height: 16px!important;
+}
+.dict-title b:hover{
+    transform: none;
+}
+
+.dict-window-wrap .ztree li span.level0.button.roots_open,
+.dict-window-wrap .ztree li span.level0.button.roots_close,
+.dict-window-wrap .ztree li span.level0.button.root_open,
+.dict-window-wrap .ztree li span.level0.button.root_close,
+.dict-window-wrap .ztree li span.level0.button.center_open,
+.dict-window-wrap .ztree li span.level0.button.center_close {
+    background-position: -144px 1px;
+    vertical-align: middle;
+}
+
+.dict-window-wrap .ztree li span.button.ico_docu{
+    background-position: -128px -49px;
+    vertical-align: middle;
+}
+/*.ztree li a.curSelectedNode {*/
+    /*!*padding-top: 0px;*!*/
+    /*background-color: #4A89DC;*/
+    /*color: #fff;*/
+    /*!*height: 16px;*!*/
+     /*border: 1px solid transparent;*/
+     /*opacity: 1;*/
+/*}*/
+/*.ztree li a.curSelectedNode>span.ico_docu{*/
+    /*background-position: -60px -69px;*/
+/*}*/
+.like-select{
+    position: relative;
+}
+.like-select >a{
+    position: absolute;
+    right: 6px;
+    top: 1px;
+    width: 90%;
+    text-align: right;
+    color: #666;
+}

@@ -1,0 +1,47 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "Q01",
+      "value": "直接照相",
+      "root": "QDHJTQFFDM"
+    },
+    {
+      "key": "Q02",
+      "value": "提取原物",
+      "root": "QDHJTQFFDM"
+    },
+    {
+      "key": "Q03",
+      "value": "提取残留物",
+      "root": "QDHJTQFFDM"
+    },
+    {
+      "key": "Q09",
+      "value": "其他",
+      "root": "QDHJTQFFDM"
+    },
+    {
+      "key": "Q01",
+      "value": "直接照相",
+      "root": "QDHJTQFFDM"
+    },
+    {
+      "key": "Q02",
+      "value": "提取原物",
+      "root": "QDHJTQFFDM"
+    },
+    {
+      "key": "Q03",
+      "value": "提取残留物",
+      "root": "QDHJTQFFDM"
+    },
+    {
+      "key": "Q09",
+      "value": "其他",
+      "root": "QDHJTQFFDM"
+    }
+  ]
+}

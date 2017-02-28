@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta name="author" content="XiongYing" />
+    <meta name="date" content="2016-12-08 09:33:01" />
+    <title>文本信息模板管理</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.99">
+    <link rel="stylesheet" href="../../css/sys.css?version=0.99">
+</head>
+<body>
+<div class="body-agent">
+    <div class="query-block cq-condition">
+            <div class="query-block-row">
+                <div>
+                    <span class="qc-label-xs">模板类型：</span>
+                    <dict dict-type="radio" dict-root="WBMBLXDM" dict-id="query-template-type" dict-name="templateType" class="dict" empty="true"></dict>
+                    <!--<span class="option">-->
+                        <!--<u class="default">不限</u>-->
+                    <!--</span>-->
+                </div>
+                <div class="qc-group-m">
+                    <span class="qc-label-xs">模板名称：</span>
+                    <input name="templateName" type="text" class="cm-input">
+                </div>
+                <div class="qc-group-xs">
+                    <span class="qc-label-xs">是否启用：</span>
+                    <dict dict-type="radio" dict-root="SFDM" dict-id="query-open-flag" dict-name="openFlag" class="dict" empty="true"></dict>
+                </div>
+            </div>
+            <hr class="cm-dash" />
+            <p class="query-reset pb10">
+                <b class="cm-query-btn" id="wbxxmbgl-query-btn"></b>
+                <b class="cm-reset-btn" id="wbxxmbgl-reset-btn"></b>
+            </p>
+        </div>
+    <div id="textTemplate-query-result" class="query-result">
+        <div widget="query-title" data-title="大文本模版列表" data-btns="add,full"></div>
+        <div class="all-fix-wrap">
+            <table id="textTemplate-table" class="typical-tb">
+                <thead>
+                <th width="5%">序号</th>
+                <th width="20%" >模板名称</th>
+                <th width="15%" >模板类型</th>
+                <th width="10%" >案件类别</th>
+                <th width="10%" >是否所有人可用</th>
+                <th width="10%" >是否所有案别通用</th>
+                <th width="10%" >是否允许修改</th>
+                <th width="10%" >是否启用</th>
+                <th width="10%" >操作</th>
+                </thead>
+                <tbody tpsource="#textTemplate-list"></tbody>
+            </table>
+        </div>
+        <div class="paging"></div>
+    </div>
+    <!--修改弹窗-->
+    <div id="edit-div" class="pd10 hider wrap-win">
+        <form id="edit-form">
+            <input type="hidden" name="id" id="edit-id">
+            <div class="qc-group-xl mt10">
+                <span class="qc-label-xl"><span class="asterisk">*</span>模板名称：</span>
+                <input id="edit-template-name" name="templateName" class="common-input validate" type="text" data-options="required:true"/>
+            </div>
+            <div class="qc-group-cus mt10">
+                <span class="qc-label-xl"><span class="asterisk">* </span>模板类型：</span>
+                <dict dict-type="radio" dict-root="WBMBLXDM" dict-id="edit-template-type" dict-name="templateType" class="dict" empty="false"></dict>
+            </div>
+            <div class="qc-group-xl fl">
+                <span class="qc-label-xl"><span class="asterisk">* </span>所有案别通用：</span>
+                <dict dict-type="radio" dict-root="SFDM"  dict-id="edit-common-flag" dict-name="commonFlag" class="dict" empty="false"></dict>
+            </div>
+            <div class="qc-group-xl fl">
+                <span class="qc-label-xl"><span class="asterisk">* </span>所有人可用：</span>
+                <dict dict-type="radio" dict-root="SFDM"  dict-id="edit-all-available" dict-name="allAvailable" class="dict" empty="false"></dict>
+            </div>
+            <div class="qc-group-cus clear hider ajlb-wrap">
+                <span class="qc-label-xl"><span class="asterisk">* </span>案件类别：</span>
+                <dict dict-type="tree" dict-root="AJLBDM"  dict-id="edit-case-type" dict-name="caseType" class="dict" dict-common="true" empty="false"></dict>
+            </div>
+            <div class="qc-group-xl fl">
+                <span class="qc-label-xl"><span class="asterisk">* </span>是否允许修改：</span>
+                <dict dict-type="radio" dict-root="SFDM"  dict-id="edit-allow-modify" dict-name="allowModify" class="dict" empty="false"></dict>
+            </div>
+            <div class="qc-group-xl fl">
+                <span class="qc-label-xl"><span class="asterisk">* </span>是否启用：</span>
+                <dict dict-type="radio" dict-root="SFDM"  dict-id="edit-open-flag" dict-name="openFlag" class="dict" empty="false"></dict>
+            </div>
+            <div class="clear pt20">
+                <div class="new-color-bar tp-content-label">
+                    <span class="title"><span class="asterisk">* </span>模板内容</span>
+                    <em>（单击或拖动下方标签至模板内容区，即可将其添加至模板内容。）</em>
+                </div>
+                <div id="edit-content" class="tp-content validate" contenteditable="true"></div>
+                <div id="edit-label-wrap" class="label-wrap" tpsource="#text-tp-label-tp"></div>
+            </div>
+        </form>
+        <p replace="_temp/win-fix-bar.htm" data-btn="edit-save-button"></p>
+	</div>
+    <!--新增弹窗-->
+    <div id="add-div" class="pd10 hider wrap-win">
+        <form id="add-form">
+            <div class="qc-group-xl mt10">
+                <span class="qc-label-xl"><span class="asterisk">* </span>模板名称：</span>
+                <input id="add-template-name" name="templateName" class="common-input validate" type="text" data-options="required:true"/>
+            </div>
+            <div class="qc-group-cus mt10">
+                <span class="qc-label-xl"><span class="asterisk">* </span>模板类型：</span>
+                <dict dict-type="radio" dict-root="WBMBLXDM" dict-id="add-template-type" dict-name="templateType" class="dict" empty="false"></dict>
+            </div>
+            <div class="qc-group-xl fl">
+                <span class="qc-label-xl"><span class="asterisk">* </span>所有案别通用：</span>
+                <dict dict-type="radio" dict-root="SFDM"  dict-id="add-common-flag" dict-name="commonFlag" class="dict" empty="false"></dict>
+            </div>
+            <div class="qc-group-xl fl">
+                <span class="qc-label-xl"><span class="asterisk">* </span>所有人可用：</span>
+                <dict dict-type="radio" dict-root="SFDM"  dict-id="add-all-available" dict-name="allAvailable" class="dict" empty="false"></dict>
+            </div>
+            <div class="qc-group-xl clear hider ajlb-wrap">
+                <span class="qc-label-xl"><span class="asterisk">* </span>案件类别：</span>
+                <dict dict-type="tree" dict-root="AJLBDM"  dict-id="add-case-type" dict-name="caseType" class="dict" dict-common="true" empty="false"></dict>
+            </div>
+            <div class="qc-group-xl fl">
+                <span class="qc-label-xl"><span class="asterisk">* </span>是否允许修改：</span>
+                <dict dict-type="radio" dict-root="SFDM"  dict-id="add-allow-modify" dict-name="allowModify" class="dict" empty="false"></dict>
+            </div>
+            <div class="qc-group-xl fl">
+                <span class="qc-label-xl"><span class="asterisk">* </span>是否启用：</span>
+                <dict dict-type="radio" dict-root="SFDM"  dict-id="add-open-flag" dict-name="openFlag" class="dict" empty="false"></dict>
+            </div>
+            <div class="clear pt20">
+                <div class="new-color-bar tp-content-label">
+                    <span class="title"><span class="asterisk">* </span>模板内容</span>
+                    <em>（单击或拖动下方标签至模板内容区，即可将其添加至模板内容。）</em>
+                </div>
+                <div id="add-content" class="tp-content validate" contenteditable="true"></div>
+                <div id="add-label-wrap" class="label-wrap" tpsource="#text-tp-label-tp"></div>
+            </div>
+        </form>
+        <p class="win-fix-bar">
+            <b id="add-save-button" class="cm-save-btn mr15"></b>
+            <b id="add-cancel-button" class="cm-cancel-btn"></b>
+        </p>
+    </div>
+</div>
+<script type="text/template" id="text-tp-label-tp">
+    <em val="{lable}" draggable="true" contenteditable="false">{name}</em>
+</script>
+<script type="text/template" id="textTemplate-list">
+    <tr>
+        <td>{rowNum}</td>
+        <td class="template-name">{templateName}</td>
+        <td class="template-type">{templateTypeName}</td>
+		<td class="caseType-name">{caseTypeName}</td>
+        <td class="all-available">{allAvailable.toSfCh}</td>
+        <td class="common-flag">{commonFlag.toSfCh}</td>
+        <td class="allow-modify">{allowModify.toSfCh}</td>
+        <td class="open-flag">{openFlag.toSfCh}</td>
+        <td>
+			<a class="textTemplate-edit icon-edit-btn" param="{id}" openFlag="{openFlag}" allowModify="{allowModify}" commonFlag="{commonFlag}" caseType="{caseType}" caseTypeName="{caseTypeName}" content="{content}" templateName="{templateName}" templateType="{templateType}" allAvailable="{allAvailable}" title="修改"></a>
+            <a class="textTemplate-delete icon-remove-btn" param="{id}" tpName="{templateName}" title="删除"></a><br>
+		</td>
+    </tr>
+</script>
+
+</body>
+<script src="../../js/base.js?version=0.99"></script>
+<script src="../../js/tp-mng.js?version=0.99"></script>
+<script>
+    typeof sysWbxxmbgl == 'function' && sysWbxxmbgl();
+</script>
+</html>

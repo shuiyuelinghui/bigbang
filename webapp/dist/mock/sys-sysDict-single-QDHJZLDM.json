@@ -1,0 +1,37 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1401",
+      "value": "枪支",
+      "root": "QDHJZLDM"
+    },
+    {
+      "key": "1402",
+      "value": "弹头",
+      "root": "QDHJZLDM"
+    },
+    {
+      "key": "1403",
+      "value": "弹壳",
+      "root": "QDHJZLDM"
+    },
+    {
+      "key": "1404",
+      "value": "弹着痕迹",
+      "root": "QDHJZLDM"
+    },
+    {
+      "key": "1405",
+      "value": "射击残留物",
+      "root": "QDHJZLDM"
+    },
+    {
+      "key": "1499",
+      "value": "其他",
+      "root": "QDHJZLDM"
+    }
+  ]
+}

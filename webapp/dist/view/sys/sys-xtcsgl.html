@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统参数管理</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/sys.css"/>
+</head>
+<body>
+    <div class="body-agent">
+        <ul id="param-config-ul" tpsource="#param-config-list"></ul>
+        <div id="query-result" class="query-result">
+            <div class="new-color-bar">
+                <span class="title">系统参数列表</span>
+                <div class="bar-btn-div">
+                    <!--<button class="s-dark-btn" id="add-btn">新 增</button>-->
+                    <!--<button class="s-orange-btn" id="save-btn">保 存</button>-->
+                    <b class="cm-add-btn" id="add-btn"></b>
+                    <b class="cm-save-btn" id="save-btn"></b>
+                </div>
+            </div>
+            <form id="param-form">
+                <table id="param-list-table" class="typical-tb no-custom">
+                    <thead>
+                    <th>序号</th>
+                    <th>参数名</th>
+                    <th>参数值</th>
+                    </thead>
+                    <tbody tpsource="#param-list"></tbody>
+                </table>
+            </form>
+            <div class="paging"></div>
+        </div>
+        <div id="add-param-block" class="hide pd5">
+    <form id="add-param-form">
+        <div class="add-content">
+            <p>
+                <span class="common-field"><span class="orangered">★ </span>参数中文名称：</span><input id="param-chineseName" type="text" class="common-input param-name" name="name" data-options="required:true,validType:'extLength[0,75]'"/>
+                <span class="common-field"><span class="orangered">★ </span>参数英文名称：</span><input id="param-englishName" type="text" class="common-input param-name" name="key" data-options="required:true,validType:'english',validType:'extLength[0,50]'"/>
+            </p>
+            <p>
+                <span class="common-field">参数值：</span><input id="param-value" type="text" class="common-input param-name" name="value" data-options="validType:'extLength[0,4000]'"/>
+                <span class="common-field">参数默认值：</span><input id="param-default" type="text" class="common-input param-name" data-options="validType:'extLength[0,75]'"/>
+            </p>
+            <p>
+                <span class="common-field">是否隐藏：</span>
+                <dict id="hideFlag" dict-id="param-hideFlag" dict-name="showFlag" dict-type="select" dict-root="SFDM" class="dict" empty="false"></dict>
+                <span class="common-field">页面排序：</span>
+                <input id="param-paramSort" type="text" class="common-input param-name" name="sort" data-options="validType:'extLength[0,50]',validType:'num'"/>
+            </p>
+            <p>
+                <!-- <span class="common-field">是否允许修改：</span>
+                <dict id="paramType" dict-id="param-allowModify" dict-name="allowModify" dict-type="select" dict-root="SFDM" class="dict" empty="false"></dict> -->
+                <span class="common-field">参数类型：</span>
+                <dict id="paramType" dict-id="param-paramType" dict-name="paramType" dict-type="select" dict-root="CSLXDM" class="dict" empty="false"></dict>
+                <span class="common-field">所属模块：</span>
+                <select name="type" id="param-configId" class="common-select">
+                </select>
+            </p>
+            <p id="param-dict-type" class="hide">
+                <span class="common-field">字典类型：</span>
+                <input id="param-dictType" type="text" class="common-input"  name="dictType"   data-options="required:true,validType:'extLength[0,50]'"/>
+            </p>
+            <p>
+                <span class="common-field fl">备注：</span><textarea id="param-remark" name="remark" class="param-name" data-options="validType:'extLength[0,150]'"></textarea>
+            </p>
+            <input id="param-editId" type="text" class="common-input hide" name="id"/>
+        </div>
+    </form>
+    <div class="btn-div">
+        <b id="save-add-param" class="cm-save-btn"></b>
+        <b id="save-edit-param" class="cm-save-btn hide"></b>
+        <b id="close-add-param" class="cm-close-btn ml15"></b>
+    </div>
+</div>
+    </div>
+</body>
+<script type="text/template" id="param-config-list">
+    <li id="{id}" class="ellipsis pr" title="{dictValue}">{dictValue} <div class="param-arrow"></div></li>
+</script>
+<script type="text/template" id="param-list">
+    <tr class="{$nth2}">
+        <td>{rownum}</td>
+        <td><a class="into-edit-param" paramId="{id}" href="javascript:void(0)">{name}</a></td>
+        <td class="tleft pl30">
+            {{paramType.showInput && #<input type="text" value="{value}" name="{key}" class="common-input param-name-edit" data-options="validType:'extLength[0,4000]'"/>#}}
+            {{paramType.showInputL && #<input type="text" value="{value}" name="{key}" class="common-input param-name-edit input-long" data-options="validType:'extLength[0,4000]'"/>#}}
+            {{paramType.showTa && #<textarea name="{key}" class="common-textarea param-name-edit" data-options="validType:'extLength[0,4000]'">{value}</textarea>#}}
+            {{paramType.showDict && #<dict value="{value}" dict-name="{key}" dict-type="select" dict-root="{dictType}" class="paramDict" id="paramDict1" empty="false"></dict>#}}
+            {{paramType.showDate && #<input type="text" value="{value}" name="{key}" class="query-date param-date paramDates">#}}
+            {{paramType.showSingle && #<dict dict-id="{key}" dict-name="{key}" dict-type="tree" dict-root="{dictType}" value="{value}" class="paramDict"></dict>#}}
+            {{paramType.showMultiple && #<dict dict-id="{key}" dict-name="{key}" dict-type="tree" dict-root="{dictType}" value="{value}" class="paramDict" dict-multiple="true"></dict>#}}
+            <span class="pl5 hide{remark} pr param-remark">{remark}</span>
+        </td>
+    </tr>
+</script>
+<script src="../../js/base.js"></script>
+<script src="../../js/sys.js"></script>
+<!--<script>typeof sysXtcsglHtml=='function' && sysXtcsglHtml()</script>-->
+</html>

@@ -1,0 +1,14 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "2c91809b5a21a239015a21a239b20000",
+      "investigatorId": "1d202a556d9d413f9f61bb777eb3c345",
+      "investigatorName": "管理员1",
+      "duty": "0",
+      "isOpen": "0"
+    }
+  ]
+}

@@ -1,0 +1,938 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D58198A8B41C7E0530100007FFC40",
+      "parentKey": "XZCSFLXLDM",
+      "key": "100",
+      "value": "繁华地段",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A8C41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "110",
+      "value": "贸易市场",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A8D41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "120",
+      "value": "商业区",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A8E41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "130",
+      "value": "广场",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A8F41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "140",
+      "value": "居民小区",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9041C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "199",
+      "value": "其他繁华地段",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9141C7E0530100007FFC40",
+      "parentKey": "XZCSFLXLDM",
+      "key": "300",
+      "value": "偏僻地段",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9241C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "301",
+      "value": "田野",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9341C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "320",
+      "value": "树林",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9441C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "330",
+      "value": "深山",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9541C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "340",
+      "value": "洞穴",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9641C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "350",
+      "value": "结合部",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9741C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "360",
+      "value": "废弃场地",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9841C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "399",
+      "value": "其他偏僻地段",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9941C7E0530100007FFC40",
+      "parentKey": "XZCSFLXLDM",
+      "key": "1100",
+      "value": "公路",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9A41C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "1101",
+      "value": "高速公路",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9B41C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "1102",
+      "value": "城市高架路",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9C41C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "1103",
+      "value": "环城路",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9D41C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "1104",
+      "value": "国道",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9E41C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "1105",
+      "value": "省道",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A9F41C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "1106",
+      "value": "一般公路",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2341C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "1107",
+      "value": "乡村公路",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2441C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "1108",
+      "value": "街巷",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2541C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "1199",
+      "value": "其他公路",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2641C7E0530100007FFC40",
+      "parentKey": "XZCSFLXLDM",
+      "key": "1200",
+      "value": "铁路",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2741C7E0530100007FFC40",
+      "parentKey": "1200",
+      "key": "1210",
+      "value": "地铁",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2841C7E0530100007FFC40",
+      "parentKey": "1200",
+      "key": "1220",
+      "value": "轻轨铁路",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2941C7E0530100007FFC40",
+      "parentKey": "1200",
+      "key": "1299",
+      "value": "其他铁路",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2A41C7E0530100007FFC40",
+      "parentKey": "XZCSFLXLDM",
+      "key": "1600",
+      "value": "文化部门",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2B41C7E0530100007FFC40",
+      "parentKey": "1600",
+      "key": "1601",
+      "value": "影剧院",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2C41C7E0530100007FFC40",
+      "parentKey": "1600",
+      "key": "1602",
+      "value": "图书馆",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2D41C7E0530100007FFC40",
+      "parentKey": "1600",
+      "key": "1603",
+      "value": "展览馆",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2E41C7E0530100007FFC40",
+      "parentKey": "1600",
+      "key": "1604",
+      "value": "博物馆",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A2F41C7E0530100007FFC40",
+      "parentKey": "1600",
+      "key": "1605",
+      "value": "寺庙",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3041C7E0530100007FFC40",
+      "parentKey": "1600",
+      "key": "1699",
+      "value": "其他文化部门",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3141C7E0530100007FFC40",
+      "parentKey": "XZCSFLXLDM",
+      "key": "1700",
+      "value": "娱乐部门",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3241C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1701",
+      "value": "游艺场",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3341C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1702",
+      "value": "电子游艺室",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3441C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1703",
+      "value": "歌舞厅",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3541C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1704",
+      "value": "卡拉OK厅",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3641C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1705",
+      "value": "录像厅",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3741C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1706",
+      "value": "夜总会",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3841C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1707",
+      "value": "公园",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3941C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1708",
+      "value": "旅游景区",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3A41C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1709",
+      "value": "网吧",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3B41C7E0530100007FFC40",
+      "parentKey": "1709",
+      "key": "170901",
+      "value": "办公区",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3C41C7E0530100007FFC40",
+      "parentKey": "1709",
+      "key": "170902",
+      "value": "上网区",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3D41C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1710",
+      "value": "弹子房",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3E41C7E0530100007FFC40",
+      "parentKey": "1700",
+      "key": "1799",
+      "value": "其他娱乐部门",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A3F41C7E0530100007FFC40",
+      "parentKey": "XZCSFLXLDM",
+      "key": "1800",
+      "value": "体育部门",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4041C7E0530100007FFC40",
+      "parentKey": "1800",
+      "key": "1801",
+      "value": "体育场馆",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4141C7E0530100007FFC40",
+      "parentKey": "1800",
+      "key": "1802",
+      "value": "高尔夫球场",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4241C7E0530100007FFC40",
+      "parentKey": "1800",
+      "key": "1803",
+      "value": "保龄球馆",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4341C7E0530100007FFC40",
+      "parentKey": "1800",
+      "key": "1804",
+      "value": "溜冰场",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4441C7E0530100007FFC40",
+      "parentKey": "1800",
+      "key": "1805",
+      "value": "游泳池",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4541C7E0530100007FFC40",
+      "parentKey": "1800",
+      "key": "1806",
+      "value": "健身房",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4641C7E0530100007FFC40",
+      "parentKey": "1800",
+      "key": "1899",
+      "value": "其他体育部门",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4741C7E0530100007FFC40",
+      "parentKey": "XZCSFLXLDM",
+      "key": "2100",
+      "value": "交通运输部门",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4841C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2101",
+      "value": "地铁站",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4941C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2102",
+      "value": "火车站",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4A41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2103",
+      "value": "汽车站",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4B41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2104",
+      "value": "码头",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4C41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2105",
+      "value": "机场",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4D41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2106",
+      "value": "停车场",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4E41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2107",
+      "value": "存车处",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A4F41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2108",
+      "value": "出租汽车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5041C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2109",
+      "value": "公共汽车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5141C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2110",
+      "value": "长途汽车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5241C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2111",
+      "value": "无轨电车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5341C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2112",
+      "value": "火车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5441C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2113",
+      "value": "轮船",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5541C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2114",
+      "value": "飞机",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5641C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2115",
+      "value": "私家汽车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5741C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2116",
+      "value": "单位汽车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5841C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2117",
+      "value": "轻轨站",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5941C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2118",
+      "value": "地铁列车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5A41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2119",
+      "value": "轻轨列车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5B41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2120",
+      "value": "摩托车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5C41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2121",
+      "value": "助动车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5D41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2122",
+      "value": "自行车",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5E41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2199",
+      "value": "其他交通运输部门",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A5F41C7E0530100007FFC40",
+      "parentKey": "XZCSFLXLDM",
+      "key": "2200",
+      "value": "服务部门",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6041C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2201",
+      "value": "宾馆",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6141C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2202",
+      "value": "旅馆",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6241C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2203",
+      "value": "招待所",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6341C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2204",
+      "value": "车马店",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6441C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2205",
+      "value": "出租屋",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6541C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2206",
+      "value": "餐馆",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6641C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2207",
+      "value": "食堂",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6741C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2208",
+      "value": "茶馆",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6841C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2209",
+      "value": "冷热饮店",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6941C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2210",
+      "value": "咖啡厅",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6A41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2211",
+      "value": "酒吧",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6B41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2212",
+      "value": "氧吧",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6C41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2213",
+      "value": "桑拿馆",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6D41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2214",
+      "value": "超市",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6E41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2215",
+      "value": "商场",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A6F41C7E0530100007FFC40",
+      "parentKey": "2215",
+      "key": "221501",
+      "value": "办公室、财务室、实验室、其他办公区",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7041C7E0530100007FFC40",
+      "parentKey": "2215",
+      "key": "221502",
+      "value": "营业区",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7141C7E0530100007FFC40",
+      "parentKey": "2215",
+      "key": "221503",
+      "value": "其他部位",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7241C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2216",
+      "value": "商店",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7341C7E0530100007FFC40",
+      "parentKey": "2216",
+      "key": "221601",
+      "value": "底商类",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7441C7E0530100007FFC40",
+      "parentKey": "2216",
+      "key": "221602",
+      "value": "门脸房",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7541C7E0530100007FFC40",
+      "parentKey": "2216",
+      "key": "221603",
+      "value": "其他类",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7641C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2217",
+      "value": "地下商场",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7741C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2218",
+      "value": "粮店",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7841C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2219",
+      "value": "菜场",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7941C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2220",
+      "value": "售货摊亭",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7A41C7E0530100007FFC40",
+      "parentKey": "2220",
+      "key": "222001",
+      "value": "报刊亭",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7B41C7E0530100007FFC40",
+      "parentKey": "2220",
+      "key": "222002",
+      "value": "公厕",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7C41C7E0530100007FFC40",
+      "parentKey": "2220",
+      "key": "222003",
+      "value": "其他部位",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7D41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2221",
+      "value": "珠宝店",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D58198A7E41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2222",
+      "value": "保险公司",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D581998DB41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2223",
+      "value": "药店",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D581998DC41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2224",
+      "value": "邮电局",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D581998DD41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2225",
+      "value": "医院",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D581998DE41C7E0530100007FFC40",
+      "parentKey": "2225",
+      "key": "222501",
+      "value": "财务室、更衣室、门诊",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D581998DF41C7E0530100007FFC40",
+      "parentKey": "2225",
+      "key": "222502",
+      "value": "病房区",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D581998E041C7E0530100007FFC40",
+      "parentKey": "2225",
+      "key": "222503",
+      "value": "其他部位",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D581998E141C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2226",
+      "value": "疗养所",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D581998E241C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2227",
+      "value": "浴室（洗浴中心）",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819999841C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2228",
+      "value": "美容美发厅",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819999741C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2229",
+      "value": "发廊",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819998C41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2230",
+      "value": "废品收购店",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819998D41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2231",
+      "value": "修理行",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819998E41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2233",
+      "value": "加油站",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819998F41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2234",
+      "value": "液化气站",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819999041C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2235",
+      "value": "书店",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819999141C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2299",
+      "value": "其他服务部门",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819999241C7E0530100007FFC40",
+      "parentKey": "XZCSFLXLDM",
+      "key": "9900",
+      "value": "其他处所",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819999341C7E0530100007FFC40",
+      "parentKey": "9900",
+      "key": "9909",
+      "value": "胡同",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819999441C7E0530100007FFC40",
+      "parentKey": "9900",
+      "key": "9911",
+      "value": "路旁",
+      "root": "XZCSFLXLDM"
+    },
+    {
+      "id": "430D5819999541C7E0530100007FFC40",
+      "parentKey": "9900",
+      "key": "9999",
+      "value": "其他处所",
+      "root": "XZCSFLXLDM"
+    }
+  ]
+}

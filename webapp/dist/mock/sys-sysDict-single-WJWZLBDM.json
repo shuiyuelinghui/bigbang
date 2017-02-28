@@ -1,0 +1,47 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "5001",
+      "value": "金融票证",
+      "root": "WJWZLBDM"
+    },
+    {
+      "key": "5002",
+      "value": "有价票证",
+      "root": "WJWZLBDM"
+    },
+    {
+      "key": "5003",
+      "value": "发票",
+      "root": "WJWZLBDM"
+    },
+    {
+      "key": "5004",
+      "value": "文件",
+      "root": "WJWZLBDM"
+    },
+    {
+      "key": "5005",
+      "value": "会计凭证、账簿、报表",
+      "root": "WJWZLBDM"
+    },
+    {
+      "key": "5006",
+      "value": "保险单",
+      "root": "WJWZLBDM"
+    },
+    {
+      "key": "5007",
+      "value": "印章",
+      "root": "WJWZLBDM"
+    },
+    {
+      "key": "5008",
+      "value": "商标标识",
+      "root": "WJWZLBDM"
+    }
+  ]
+}

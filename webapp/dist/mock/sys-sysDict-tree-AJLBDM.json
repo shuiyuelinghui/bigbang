@@ -1,0 +1,4200 @@
+{
+  "flag": 1,
+  "totalCount": null,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D581999AD41C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "111001",
+      "value": "病死",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D581999AE41C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "111002",
+      "value": "猝死",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BD841C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030151",
+      "value": "生产、销售不符合安全标准的产品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BD941C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030161",
+      "value": "生产销售不符合卫生标准的化妆品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BDA41C7E0530100007FFC40",
+      "parentKey": "030000",
+      "key": "030200",
+      "value": "走私案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BDB41C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030201",
+      "value": "走私武器、弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BDC41C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030210",
+      "value": "走私核材料案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BDD41C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030220",
+      "value": "走私文物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BDE41C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030230",
+      "value": "走私假币案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BDF41C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030240",
+      "value": "走私贵重金属案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BE041C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030241",
+      "value": "走私黄金案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BE141C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030242",
+      "value": "走私白银案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BE241C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030250",
+      "value": "走私珍贵动物及其制品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BE341C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030260",
+      "value": "走私珍稀植物及其制品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BE441C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030270",
+      "value": "走私淫秽物品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BE541C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030280",
+      "value": "走私一般货物物品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BE641C7E0530100007FFC40",
+      "parentKey": "030200",
+      "key": "030290",
+      "value": "走私固体废物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BE741C7E0530100007FFC40",
+      "parentKey": "030000",
+      "key": "030300",
+      "value": "妨害对公司、企业管理秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BE841C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030301",
+      "value": "虚报注册资本案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BE941C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030311",
+      "value": "虚假出资案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BEA41C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030312",
+      "value": "抽资出逃案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BEB41C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030321",
+      "value": "欺诈发行股票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BEC41C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030322",
+      "value": "欺诈发行债券案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BED41C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030331",
+      "value": "提供虚假财会报告案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BEE41C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030332",
+      "value": "妨害清算案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BEF41C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030340",
+      "value": "国有公司、企业、事业单位人员失职、滥用职权",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BF041C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030341",
+      "value": "公司、企业人员受贿案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BF141C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030342",
+      "value": "对公司、企业人员行贿案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BF241C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030351",
+      "value": "非法经营同类营业案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BF341C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030352",
+      "value": "为亲友非法牟利案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BF441C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030361",
+      "value": "签订、履行合同失职被骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AF241C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060412",
+      "value": "非法向外国人赠送珍贵文物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AF341C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060421",
+      "value": "倒卖文物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AF441C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060422",
+      "value": "非法出售文物藏品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AF541C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060423",
+      "value": "非法私赠文物藏品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AF641C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060431",
+      "value": "故意损毁名胜古迹案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AF741C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060441",
+      "value": "盗掘古文化遗址案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AF841C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060442",
+      "value": "盗掘古墓葬案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AF941C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060443",
+      "value": "盗掘古人类化石、古脊椎动物化石案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AFA41C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060451",
+      "value": "抢夺国有档案案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AFB41C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060452",
+      "value": "窃取国有档案案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AFC41C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060453",
+      "value": "擅自出卖国家档案案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AFD41C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060454",
+      "value": "擅自转让国家档案案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AFE41C7E0530100007FFC40",
+      "parentKey": "060000",
+      "key": "060500",
+      "value": "危害公共卫生案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AFF41C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060501",
+      "value": "妨害传染病防治案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0041C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060510",
+      "value": "传染病菌种、毒种扩散案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0141C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060520",
+      "value": "妨害国境卫生检疫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0241C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060530",
+      "value": "非法组织卖血案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0341C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060531",
+      "value": "强迫卖血案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0441C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060532",
+      "value": "非法采集、供应血液案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0541C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060533",
+      "value": "非法制作、供应血液制品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0641C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060534",
+      "value": "采集、供应血液事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0741C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060535",
+      "value": "制作、供应血液制品事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0841C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060540",
+      "value": "医疗事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0941C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060550",
+      "value": "非法行医案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0A41C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060560",
+      "value": "非法进行节育手术案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0B41C7E0530100007FFC40",
+      "parentKey": "060500",
+      "key": "060570",
+      "value": "逃避动植物检疫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0C41C7E0530100007FFC40",
+      "parentKey": "060000",
+      "key": "060600",
+      "value": "破坏环境资源保护案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0D41C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060601",
+      "value": "重大环境污染事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0E41C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060602",
+      "value": "非法处置进口固体废物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B0F41C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060603",
+      "value": "擅自进口固体废物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1041C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060611",
+      "value": "非法猎捕、杀害珍贵、濒危野生动物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1141C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060612",
+      "value": "非法收购珍贵、濒危野生动物及其制品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1241C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060613",
+      "value": "非法运输珍贵、濒危野生动物及其制品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1341C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060614",
+      "value": "非法出售珍贵、濒危野生动物及其制品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1441C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060621",
+      "value": "非法采伐、毁坏珍贵树木案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1541C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060622",
+      "value": "盗伐林木案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1641C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060623",
+      "value": "滥伐林木案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1741C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060624",
+      "value": "非法收购盗伐、滥伐的林木案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1841C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060631",
+      "value": "非法捕捞水产品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1941C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060632",
+      "value": "非法狩猎案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1A41C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060633",
+      "value": "非法占用耕地案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1B41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "070100",
+      "value": "阻碍军人执行职务案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1C41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "070200",
+      "value": "阻碍军事行动案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1D41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "070300",
+      "value": "破坏武器装备案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1E41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "070400",
+      "value": "破坏军事设施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B1F41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "070500",
+      "value": "破坏军事通信案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2041C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "070600",
+      "value": "故意提供不合格武器装备案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2141C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "070700",
+      "value": "故意提供不合格军事设施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2241C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "070800",
+      "value": "过失提供不合格武器装备案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2341C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "070900",
+      "value": "过失提供不合格军事设施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2441C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "071000",
+      "value": "聚众冲击军事禁区案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2541C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "071100",
+      "value": "聚众扰乱军事管理区秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2641C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "071200",
+      "value": "冒充军人招摇撞骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2741C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "071300",
+      "value": "煽动军人逃离部队案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2841C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "071400",
+      "value": "雇用逃离部队军人案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2941C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "071500",
+      "value": "接送不合格兵员案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2A41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "071600",
+      "value": "伪造、变造、买卖部队公文、证件、印章案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2B41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "071700",
+      "value": "盗窃部队公文、证件、印章案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2C41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "071800",
+      "value": "抢夺部队公文、证件、印章案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2D41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "072000",
+      "value": "非法生产、买卖军用标志案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2E41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "072100",
+      "value": "战时拒绝、逃避征召案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B2F41C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "072200",
+      "value": "战时拒绝、逃避军事训练案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3041C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "072300",
+      "value": "战时拒绝、逃避服役案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3141C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "072400",
+      "value": "战时故意提供虚假敌情案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3241C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "072500",
+      "value": "战时造谣惑众扰乱军心案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3341C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "072600",
+      "value": "战时窝藏逃离部队军人案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3441C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "072700",
+      "value": "战时拒绝军事订货案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3541C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "072800",
+      "value": "战时延误军事订货案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3641C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "072900",
+      "value": "战时拒绝军事征用案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3741C7E0530100007FFC40",
+      "parentKey": "070000",
+      "key": "079900",
+      "value": "其他危害国防利益案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3841C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "111000",
+      "value": "服毒",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3941C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "112000",
+      "value": "缢死",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3A41C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "113000",
+      "value": "高坠",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3B41C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "114000",
+      "value": "溺水",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3C41C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "115000",
+      "value": "割颈",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3D41C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "116000",
+      "value": "电击",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3E41C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "117000",
+      "value": "注射",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B3F41C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "080000",
+      "value": "贪污贿赂案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B4041C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "090000",
+      "value": "渎职案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B4141C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "100000",
+      "value": "军人违反职责案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B4241C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "900000",
+      "value": "其他类别案件",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B4E41C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030371",
+      "value": "徇私舞弊造成破产案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B4F41C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030372",
+      "value": "徇私舞弊造成亏损案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5041C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030373",
+      "value": "徇私舞弊低价折股国有资产案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5141C7E0530100007FFC40",
+      "parentKey": "030300",
+      "key": "030374",
+      "value": "徇私舞弊低价出售国有资产案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5241C7E0530100007FFC40",
+      "parentKey": "030000",
+      "key": "030400",
+      "value": "破坏金融管理秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5341C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030401",
+      "value": "伪造货币案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5441C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030411",
+      "value": "出售假币案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5541C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030415",
+      "value": "购买假币案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5641C7E0530100007FFC40",
+      "parentKey": "040000",
+      "key": "040400",
+      "value": "妨害婚姻家庭权利案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5741C7E0530100007FFC40",
+      "parentKey": "020300",
+      "key": "020313",
+      "value": "劫持汽车案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5841C7E0530100007FFC40",
+      "parentKey": "020300",
+      "key": "020331",
+      "value": "暴力危及飞行安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5941C7E0530100007FFC40",
+      "parentKey": "020000",
+      "key": "020400",
+      "value": "非法制造，买卖，运输，邮寄，储存枪支弹药，爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5A41C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020401",
+      "value": "非法制造枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5B41C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020402",
+      "value": "非法买卖枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5C41C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020403",
+      "value": "非法运输枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5D41C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020404",
+      "value": "非法邮寄枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5E41C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020405",
+      "value": "非法储存枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B5F41C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020406",
+      "value": "非法制造爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6041C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020407",
+      "value": "非法买卖爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6141C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020408",
+      "value": "非法运输爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6241C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020409",
+      "value": "非法邮寄爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6341C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020410",
+      "value": "非法储存爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6441C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020411",
+      "value": "非法买卖核材料案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6541C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020412",
+      "value": "非法运输核材料案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6641C7E0530100007FFC40",
+      "parentKey": "020400",
+      "key": "020413",
+      "value": "非法携带爆炸物品",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6741C7E0530100007FFC40",
+      "parentKey": "020000",
+      "key": "020500",
+      "value": "违反枪支弹药管理案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6841C7E0530100007FFC40",
+      "parentKey": "020500",
+      "key": "020501",
+      "value": "企业违规制造枪支案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6941C7E0530100007FFC40",
+      "parentKey": "020500",
+      "key": "020502",
+      "value": "企业违规销售枪支案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6A41C7E0530100007FFC40",
+      "parentKey": "020500",
+      "key": "020511",
+      "value": "非法持有枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6B41C7E0530100007FFC40",
+      "parentKey": "020500",
+      "key": "020512",
+      "value": "非法私藏枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6C41C7E0530100007FFC40",
+      "parentKey": "020500",
+      "key": "020521",
+      "value": "非法出借枪支案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6D41C7E0530100007FFC40",
+      "parentKey": "020500",
+      "key": "020522",
+      "value": "非法出租枪支案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6E41C7E0530100007FFC40",
+      "parentKey": "020500",
+      "key": "020531",
+      "value": "丢失枪支不报案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B6F41C7E0530100007FFC40",
+      "parentKey": "020500",
+      "key": "020541",
+      "value": "非法携带枪支弹药危及公共安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7041C7E0530100007FFC40",
+      "parentKey": "020000",
+      "key": "020600",
+      "value": "违反危险物品管理案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7141C7E0530100007FFC40",
+      "parentKey": "020600",
+      "key": "020601",
+      "value": "非法携带管制刀具危及公共安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7241C7E0530100007FFC40",
+      "parentKey": "020600",
+      "key": "020602",
+      "value": "非法携带危险品危及公共安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7341C7E0530100007FFC40",
+      "parentKey": "020000",
+      "key": "020700",
+      "value": "重大责任事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7441C7E0530100007FFC40",
+      "parentKey": "020700",
+      "key": "020701",
+      "value": "重大飞行事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7541C7E0530100007FFC40",
+      "parentKey": "020700",
+      "key": "020702",
+      "value": "铁路运营安全事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7641C7E0530100007FFC40",
+      "parentKey": "020700",
+      "key": "020703",
+      "value": "交通肇事案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7741C7E0530100007FFC40",
+      "parentKey": "020700",
+      "key": "020711",
+      "value": "重大劳动安全事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7841C7E0530100007FFC40",
+      "parentKey": "020700",
+      "key": "020712",
+      "value": "危险物品肇事案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7941C7E0530100007FFC40",
+      "parentKey": "020700",
+      "key": "020713",
+      "value": "工程重大安全事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7A41C7E0530100007FFC40",
+      "parentKey": "020700",
+      "key": "020714",
+      "value": "教育设施重大安全事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7B41C7E0530100007FFC40",
+      "parentKey": "020700",
+      "key": "020715",
+      "value": "消防责任事故案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7C41C7E0530100007FFC40",
+      "parentKey": "020000",
+      "key": "020800",
+      "value": "抢劫枪支、弹药、爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7D41C7E0530100007FFC40",
+      "parentKey": "020800",
+      "key": "020810",
+      "value": "抢劫枪支、弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7E41C7E0530100007FFC40",
+      "parentKey": "020800",
+      "key": "020811",
+      "value": "抢劫国家机关枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B7F41C7E0530100007FFC40",
+      "parentKey": "020800",
+      "key": "020812",
+      "value": "抢劫军、警、民兵枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8041C7E0530100007FFC40",
+      "parentKey": "020800",
+      "key": "020820",
+      "value": "抢劫爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8141C7E0530100007FFC40",
+      "parentKey": "020800",
+      "key": "020821",
+      "value": "抢劫国家机关爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8241C7E0530100007FFC40",
+      "parentKey": "020800",
+      "key": "020822",
+      "value": "抢劫军、警、民兵爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8341C7E0530100007FFC40",
+      "parentKey": "020000",
+      "key": "020900",
+      "value": "盗窃、抢夺枪支、弹药、爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8441C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020910",
+      "value": "盗窃枪支、弹药、爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8541C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020911",
+      "value": "盗窃枪支、弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8641C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020912",
+      "value": "盗窃国家机关枪支、弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8741C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020913",
+      "value": "盗窃军、警、民兵枪支、弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8841C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020914",
+      "value": "盗窃爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0741C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040110",
+      "value": "绑架案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0841C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040111",
+      "value": "偷盗婴幼儿勒索案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0941C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040112",
+      "value": "拐卖妇女、儿童案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0A41C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040113",
+      "value": "收买被拐卖的妇女、儿童案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0B41C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040114",
+      "value": "聚众阻碍解救被收买的妇女、儿童案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0C41C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040115",
+      "value": "暴力阻碍解救被收买的妇女、儿童案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0D41C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040116",
+      "value": "强迫职工劳动案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0E41C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040117",
+      "value": "非法搜查案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0F41C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040118",
+      "value": "非法侵入住宅案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1041C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040119",
+      "value": "诬告陷害案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1141C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040120",
+      "value": "侮辱案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1241C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040121",
+      "value": "诽谤案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1341C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040122",
+      "value": "刑讯逼供案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1441C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040123",
+      "value": "暴力取证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1541C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040124",
+      "value": "虐待被监管人员案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1641C7E0530100007FFC40",
+      "parentKey": "040000",
+      "key": "040200",
+      "value": "侵犯民主权利案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1741C7E0530100007FFC40",
+      "parentKey": "040200",
+      "key": "040210",
+      "value": "侵犯通讯自由案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1841C7E0530100007FFC40",
+      "parentKey": "040200",
+      "key": "040220",
+      "value": "私拆邮件案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1941C7E0530100007FFC40",
+      "parentKey": "040200",
+      "key": "040230",
+      "value": "隐匿邮件电报案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1A41C7E0530100007FFC40",
+      "parentKey": "040200",
+      "key": "040240",
+      "value": "毁弃邮件电报案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1B41C7E0530100007FFC40",
+      "parentKey": "040200",
+      "key": "040250",
+      "value": "报复陷害案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1C41C7E0530100007FFC40",
+      "parentKey": "040200",
+      "key": "040260",
+      "value": "打击报复会计人员案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1D41C7E0530100007FFC40",
+      "parentKey": "040200",
+      "key": "040270",
+      "value": "打击报复统计人员案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1E41C7E0530100007FFC40",
+      "parentKey": "040200",
+      "key": "040280",
+      "value": "破坏选举案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D1F41C7E0530100007FFC40",
+      "parentKey": "040000",
+      "key": "040300",
+      "value": "破坏民族平等、宗教信仰案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D2041C7E0530100007FFC40",
+      "parentKey": "040300",
+      "key": "040310",
+      "value": "煽动民族仇恨、民族歧视案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D2141C7E0530100007FFC40",
+      "parentKey": "040300",
+      "key": "040320",
+      "value": "出版歧视、侮辱少数民族作品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D2241C7E0530100007FFC40",
+      "parentKey": "040300",
+      "key": "040330",
+      "value": "非法剥夺公民宗教信仰自由案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D2341C7E0530100007FFC40",
+      "parentKey": "040300",
+      "key": "040340",
+      "value": "侵犯少数民族风俗习惯案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3341C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050223",
+      "value": "盗窃汽车案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3441C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050224",
+      "value": "盗窃摩托车案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3541C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050227",
+      "value": "盗窃自行车案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3641C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050230",
+      "value": "盗窃保险柜案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3741C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050235",
+      "value": "盗用他人通讯设施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3841C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050236",
+      "value": "盗接通信线路案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3941C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050237",
+      "value": "盗窃牲畜案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3A41C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050240",
+      "value": "扒窃案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3B41C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050248",
+      "value": "其他盗窃案件",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3C41C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "050300",
+      "value": "诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3D41C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "050400",
+      "value": "抢夺案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3E41C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "050500",
+      "value": "侵占案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C3F41C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "050600",
+      "value": "职务侵占案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4041C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "050700",
+      "value": "挪用特定款物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4141C7E0530100007FFC40",
+      "parentKey": "050700",
+      "key": "050710",
+      "value": "挪用资金案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4241C7E0530100007FFC40",
+      "parentKey": "050700",
+      "key": "050720",
+      "value": "挪用公款案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4341C7E0530100007FFC40",
+      "parentKey": "050700",
+      "key": "050730",
+      "value": "挪用救灾、抢险、防汛款物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4441C7E0530100007FFC40",
+      "parentKey": "050700",
+      "key": "050740",
+      "value": "挪用优抚款物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4541C7E0530100007FFC40",
+      "parentKey": "050700",
+      "key": "050750",
+      "value": "挪用扶贫、移民救济款物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4641C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "050800",
+      "value": "敲诈勒索案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4741C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "050900",
+      "value": "故意毁坏财物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4841C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "051000",
+      "value": "破坏生产经营案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4941C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "051100",
+      "value": "聚众哄抢案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4A41C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "059000",
+      "value": "其他侵犯财产案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4B41C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "060000",
+      "value": "妨害社会管理秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4C41C7E0530100007FFC40",
+      "parentKey": "060000",
+      "key": "060100",
+      "value": "扰乱公共秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4D41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060101",
+      "value": "阻碍执行职务案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AA641C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060133",
+      "value": "聚众冲击国家机关案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AA741C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020203",
+      "value": "破坏电力设备案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AA841C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020204",
+      "value": "破坏燃气设备案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AA941C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020205",
+      "value": "破坏易燃易爆设备案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AAA41C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020206",
+      "value": "破坏广播电视设施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AAB41C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020207",
+      "value": "破坏公用电信设施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AAC41C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020221",
+      "value": "过失损坏交通工具案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AAD41C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020222",
+      "value": "过失损坏交通设施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AAE41C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020223",
+      "value": "过失损坏电力设备案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AAF41C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020224",
+      "value": "过失损坏燃气设备案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AB041C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020225",
+      "value": "过失损坏易燃易爆设备案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AB141C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020226",
+      "value": "过失损坏广播电视设施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AB241C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020227",
+      "value": "过失损坏公用电信设施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AB341C7E0530100007FFC40",
+      "parentKey": "020000",
+      "key": "020300",
+      "value": "实施恐怖、劫持案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AB441C7E0530100007FFC40",
+      "parentKey": "020300",
+      "key": "020301",
+      "value": "组织、领导参加恐怖组织案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AB541C7E0530100007FFC40",
+      "parentKey": "020300",
+      "key": "020311",
+      "value": "劫持航空器案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AB641C7E0530100007FFC40",
+      "parentKey": "020300",
+      "key": "020312",
+      "value": "劫持船只案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AB741C7E0530100007FFC40",
+      "parentKey": "040400",
+      "key": "040410",
+      "value": "暴力干涉婚姻自由案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AB841C7E0530100007FFC40",
+      "parentKey": "040400",
+      "key": "040420",
+      "value": "重婚案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AB941C7E0530100007FFC40",
+      "parentKey": "040400",
+      "key": "040430",
+      "value": "破坏军婚案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ABA41C7E0530100007FFC40",
+      "parentKey": "040400",
+      "key": "040440",
+      "value": "虐待案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ABB41C7E0530100007FFC40",
+      "parentKey": "040400",
+      "key": "040450",
+      "value": "遗弃案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ABC41C7E0530100007FFC40",
+      "parentKey": "040400",
+      "key": "040460",
+      "value": "拐骗儿童案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ABD41C7E0530100007FFC40",
+      "parentKey": "040000",
+      "key": "049900",
+      "value": "其他侵犯公民人身权利，民主权利案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ABE41C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "050000",
+      "value": "侵犯财产案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ABF41C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "050100",
+      "value": "抢劫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AC041C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050101",
+      "value": "入户抢劫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AC141C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050102",
+      "value": "拦路抢劫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AC241C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050103",
+      "value": "在公共交通工具上抢劫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AC341C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050110",
+      "value": "抢劫银行或其他金融机构案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AC441C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050111",
+      "value": "抢劫珠宝店案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AC541C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050112",
+      "value": "抢劫提（送）款员案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AC641C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050113",
+      "value": "抢劫运钞车案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AC741C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050120",
+      "value": "抢劫出租汽车案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AC841C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050130",
+      "value": "抢劫军用物资案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AC941C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050131",
+      "value": "抢劫抢险、救灾、救济物资案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ACA41C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050132",
+      "value": "抢劫牲畜案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ACB41C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050140",
+      "value": "抢劫精神药物和麻醉药品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ACC41C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050150",
+      "value": "冒充军警持枪抢劫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ACD41C7E0530100007FFC40",
+      "parentKey": "050100",
+      "key": "050160",
+      "value": "持枪抢劫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ACE41C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "050200",
+      "value": "盗窃案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ACF41C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050201",
+      "value": "入室盗窃案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AD041C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050202",
+      "value": "盗窃精神药物和麻醉药品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AD141C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050203",
+      "value": "盗窃易制毒化学品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AD241C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050204",
+      "value": "盗窃金融机构案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AD341C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050210",
+      "value": "盗窃运输物资案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AD441C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050211",
+      "value": "盗窃铁路器材案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AD541C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050212",
+      "value": "盗窃珍贵文物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AD641C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050216",
+      "value": "盗窃电脑芯片案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AD741C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050220",
+      "value": "盗窃货物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AD841C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050221",
+      "value": "盗窃旅财案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AD941C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050222",
+      "value": "盗窃路财案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ADA41C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060222",
+      "value": "窝藏、包庇案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ADB41C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060223",
+      "value": "拒绝提供间谍犯罪证据案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ADC41C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060224",
+      "value": "窝藏、转移、收购、销售赃物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ADD41C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060231",
+      "value": "拒不执行判决、裁定案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ADE41C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060241",
+      "value": "非法处置查封、扣押、冻结财产案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197ADF41C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060251",
+      "value": "破坏监管秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AE041C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060252",
+      "value": "脱逃案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AE141C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060253",
+      "value": "劫夺被押解人员案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AE241C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060254",
+      "value": "组织越狱案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AE341C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060255",
+      "value": "暴动越狱案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AE441C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060256",
+      "value": "聚众持械劫狱案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AE541C7E0530100007FFC40",
+      "parentKey": "060000",
+      "key": "060300",
+      "value": "妨害国（边）境管理案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AE641C7E0530100007FFC40",
+      "parentKey": "060300",
+      "key": "060310",
+      "value": "偷越国（边）境案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AE741C7E0530100007FFC40",
+      "parentKey": "060300",
+      "key": "060320",
+      "value": "组织他人偷越国（边）境案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AE841C7E0530100007FFC40",
+      "parentKey": "060300",
+      "key": "060330",
+      "value": "运送他人偷越国（边）境案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AE941C7E0530100007FFC40",
+      "parentKey": "060300",
+      "key": "060340",
+      "value": "骗取出境证件案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AEA41C7E0530100007FFC40",
+      "parentKey": "060300",
+      "key": "060350",
+      "value": "提供伪造、变造的出入境证件案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AEB41C7E0530100007FFC40",
+      "parentKey": "060300",
+      "key": "060360",
+      "value": "出售出入境证件案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AEC41C7E0530100007FFC40",
+      "parentKey": "060300",
+      "key": "060370",
+      "value": "破坏界碑、界桩案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AED41C7E0530100007FFC40",
+      "parentKey": "060300",
+      "key": "060380",
+      "value": "破坏永久性测量标志案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AEE41C7E0530100007FFC40",
+      "parentKey": "060000",
+      "key": "060400",
+      "value": "妨害文物管理案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AEF41C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060401",
+      "value": "故意损毁文物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AF041C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060402",
+      "value": "过失损毁文物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AF141C7E0530100007FFC40",
+      "parentKey": "060400",
+      "key": "060411",
+      "value": "非法向外国人出售珍贵文物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3341C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030420",
+      "value": "运输假币案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3441C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030421",
+      "value": "金融工作人员购买假币以假币换取货币案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3541C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030440",
+      "value": "持有、使用假币案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3641C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030441",
+      "value": "变造货币案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3741C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030442",
+      "value": "伪造、变造国库券案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3841C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030443",
+      "value": "伪造、变造国家其他有价证券案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3941C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030444",
+      "value": "伪造、变造股票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3A41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030445",
+      "value": "伪造、变造公司企业债券案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3B41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030446",
+      "value": "伪造、变造金融票证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3C41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030447",
+      "value": "伪造、变造、转让金融机构经营许可证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A3D41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030451",
+      "value": "擅自设立金融机构案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A4A41C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "010000",
+      "value": "危害国家安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A4B41C7E0530100007FFC40",
+      "parentKey": "010000",
+      "key": "010100",
+      "value": "背叛、分裂国家案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A4C41C7E0530100007FFC40",
+      "parentKey": "010100",
+      "key": "010110",
+      "value": "背叛国家案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A4D41C7E0530100007FFC40",
+      "parentKey": "010100",
+      "key": "010120",
+      "value": "分裂国家案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A4E41C7E0530100007FFC40",
+      "parentKey": "010100",
+      "key": "010130",
+      "value": "煽动分裂国家案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A4F41C7E0530100007FFC40",
+      "parentKey": "010100",
+      "key": "010140",
+      "value": "武装叛乱、暴乱案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5041C7E0530100007FFC40",
+      "parentKey": "010100",
+      "key": "010150",
+      "value": "策动武装暴乱案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5141C7E0530100007FFC40",
+      "parentKey": "010100",
+      "key": "010160",
+      "value": "颠覆国家政权案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5241C7E0530100007FFC40",
+      "parentKey": "010100",
+      "key": "010170",
+      "value": "煽动颠履国家政权案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5341C7E0530100007FFC40",
+      "parentKey": "010100",
+      "key": "010180",
+      "value": "资助危害国家安全犯罪活动案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5441C7E0530100007FFC40",
+      "parentKey": "010000",
+      "key": "010200",
+      "value": "叛变、叛逃案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5541C7E0530100007FFC40",
+      "parentKey": "010200",
+      "key": "010210",
+      "value": "投敌叛变案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5641C7E0530100007FFC40",
+      "parentKey": "010200",
+      "key": "010220",
+      "value": "叛逃案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5741C7E0530100007FFC40",
+      "parentKey": "010000",
+      "key": "010300",
+      "value": "间谍、资敌案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5841C7E0530100007FFC40",
+      "parentKey": "010300",
+      "key": "010310",
+      "value": "间谍案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5941C7E0530100007FFC40",
+      "parentKey": "010300",
+      "key": "010320",
+      "value": "资敌案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5A41C7E0530100007FFC40",
+      "parentKey": "010000",
+      "key": "010400",
+      "value": "为境外窃取、刺探、收买、非法提供国家秘密情报案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5B41C7E0530100007FFC40",
+      "parentKey": "010400",
+      "key": "010410",
+      "value": "为境外窃取国家秘密情报案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5C41C7E0530100007FFC40",
+      "parentKey": "010400",
+      "key": "010420",
+      "value": "为境外刺探国家秘密情报案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5D41C7E0530100007FFC40",
+      "parentKey": "010400",
+      "key": "010430",
+      "value": "为境外收买国家秘密情报案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5E41C7E0530100007FFC40",
+      "parentKey": "010400",
+      "key": "010440",
+      "value": "为境外非法提供国家秘密情报案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A5F41C7E0530100007FFC40",
+      "parentKey": "010000",
+      "key": "019900",
+      "value": "其他危害国家安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6041C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "020000",
+      "value": "危害公共安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6141C7E0530100007FFC40",
+      "parentKey": "020000",
+      "key": "020100",
+      "value": "以危险方法危害公共安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6241C7E0530100007FFC40",
+      "parentKey": "020100",
+      "key": "020101",
+      "value": "放火案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6341C7E0530100007FFC40",
+      "parentKey": "020100",
+      "key": "020102",
+      "value": "决水案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6441C7E0530100007FFC40",
+      "parentKey": "020100",
+      "key": "020103",
+      "value": "爆炸案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6541C7E0530100007FFC40",
+      "parentKey": "020100",
+      "key": "020104",
+      "value": "投毒案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6641C7E0530100007FFC40",
+      "parentKey": "020100",
+      "key": "020109",
+      "value": "以其他危险方法危害公共安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6741C7E0530100007FFC40",
+      "parentKey": "020100",
+      "key": "020111",
+      "value": "失火案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6841C7E0530100007FFC40",
+      "parentKey": "020100",
+      "key": "020112",
+      "value": "过失决水案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6941C7E0530100007FFC40",
+      "parentKey": "020100",
+      "key": "020113",
+      "value": "过失爆炸案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6A41C7E0530100007FFC40",
+      "parentKey": "020100",
+      "key": "020114",
+      "value": "过失投毒案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6B41C7E0530100007FFC40",
+      "parentKey": "020100",
+      "key": "020119",
+      "value": "过失以其他危险方法危害公共安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6C41C7E0530100007FFC40",
+      "parentKey": "020000",
+      "key": "020200",
+      "value": "危害交通运输、公用设备安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6D41C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020201",
+      "value": "破坏交通工具案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6E41C7E0530100007FFC40",
+      "parentKey": "020200",
+      "key": "020202",
+      "value": "破坏交通设施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A6F41C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060634",
+      "value": "非法采矿案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7041C7E0530100007FFC40",
+      "parentKey": "060600",
+      "key": "060635",
+      "value": "破坏性采矿案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7141C7E0530100007FFC40",
+      "parentKey": "060000",
+      "key": "060700",
+      "value": "走私、贩卖、运输、制造毒品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7241C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060701",
+      "value": "走私毒品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7341C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060702",
+      "value": "贩卖毒品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7441C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060703",
+      "value": "运输毒品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7541C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060704",
+      "value": "制造毒品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7641C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060710",
+      "value": "非法持有毒品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7741C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060720",
+      "value": "包庇毒品犯罪分子案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7841C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060721",
+      "value": "窝藏、转移、隐瞒毒品、毒赃案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7941C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060722",
+      "value": "走私制毒物品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7A41C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060730",
+      "value": "非法买卖制毒物品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7B41C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060731",
+      "value": "非法种植毒品原植物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7C41C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060732",
+      "value": "非法买卖毒品原植物种苗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7D41C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060733",
+      "value": "非法运输毒品原植物种苗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7E41C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060734",
+      "value": "非法携带毒品原植物种苗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A7F41C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060735",
+      "value": "非法持有毒品原植物种苗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8041C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060736",
+      "value": "非法运输携带制毒物品进出境案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8141C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060740",
+      "value": "引诱、教唆、强迫他人吸毒案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8241C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060741",
+      "value": "引诱他人吸毒案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8341C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060742",
+      "value": "教唆他人吸毒案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8441C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060743",
+      "value": "欺骗他人吸毒案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8541C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060744",
+      "value": "强迫他人吸毒案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8641C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060745",
+      "value": "容留他人吸毒案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8741C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060750",
+      "value": "非法提供麻醉药品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8841C7E0530100007FFC40",
+      "parentKey": "060700",
+      "key": "060760",
+      "value": "非法提供精神药品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8941C7E0530100007FFC40",
+      "parentKey": "060000",
+      "key": "060800",
+      "value": "组织、强迫、引诱、容留、介绍卖淫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8A41C7E0530100007FFC40",
+      "parentKey": "060800",
+      "key": "060801",
+      "value": "组织卖淫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8B41C7E0530100007FFC40",
+      "parentKey": "060800",
+      "key": "060802",
+      "value": "原卖淫嫖宿案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8C41C7E0530100007FFC40",
+      "parentKey": "060800",
+      "key": "060810",
+      "value": "强迫卖淫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8D41C7E0530100007FFC40",
+      "parentKey": "060800",
+      "key": "060820",
+      "value": "协助组织卖淫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8E41C7E0530100007FFC40",
+      "parentKey": "060800",
+      "key": "060830",
+      "value": "引诱卖淫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A8F41C7E0530100007FFC40",
+      "parentKey": "060800",
+      "key": "060840",
+      "value": "引诱幼女卖淫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9041C7E0530100007FFC40",
+      "parentKey": "060800",
+      "key": "060850",
+      "value": "容留卖淫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9141C7E0530100007FFC40",
+      "parentKey": "060800",
+      "key": "060860",
+      "value": "介绍卖淫案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9241C7E0530100007FFC40",
+      "parentKey": "060800",
+      "key": "060870",
+      "value": "传播性病案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9341C7E0530100007FFC40",
+      "parentKey": "060800",
+      "key": "060880",
+      "value": "嫖宿幼女案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9441C7E0530100007FFC40",
+      "parentKey": "060000",
+      "key": "060900",
+      "value": "制作、复制、出版、贩卖、传播淫秽物品牟利案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9541C7E0530100007FFC40",
+      "parentKey": "060900",
+      "key": "060910",
+      "value": "制作淫秽物品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9641C7E0530100007FFC40",
+      "parentKey": "060900",
+      "key": "060920",
+      "value": "复制淫秽物品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9741C7E0530100007FFC40",
+      "parentKey": "060900",
+      "key": "060930",
+      "value": "出版淫秽物品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9841C7E0530100007FFC40",
+      "parentKey": "060900",
+      "key": "060940",
+      "value": "贩卖淫秽物品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9941C7E0530100007FFC40",
+      "parentKey": "060900",
+      "key": "060949",
+      "value": "传播淫秽物品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9A41C7E0530100007FFC40",
+      "parentKey": "060900",
+      "key": "060950",
+      "value": "提供书号出版淫秽书刊案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9B41C7E0530100007FFC40",
+      "parentKey": "060900",
+      "key": "060970",
+      "value": "组织播放淫秽音像制品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9C41C7E0530100007FFC40",
+      "parentKey": "060900",
+      "key": "060980",
+      "value": "组织淫秽表演案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9D41C7E0530100007FFC40",
+      "parentKey": "060000",
+      "key": "069900",
+      "value": "其他妨害社会管理秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9E41C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "070000",
+      "value": "危害国防利益案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197A9F41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060126",
+      "value": "利用计算机盗窃案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AA041C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060127",
+      "value": "利用计算机贪污案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AA141C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060128",
+      "value": "利用计算机挪用公款案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AA241C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060129",
+      "value": "利用计算机窃取国家机密案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AA341C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060130",
+      "value": "利用计算机实施其他犯罪案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AA441C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060131",
+      "value": "扰乱无线电通讯管理秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197AA541C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060132",
+      "value": "聚众扰乱社会秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8941C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020915",
+      "value": "盗窃国家机关爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8A41C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020916",
+      "value": "盗窃军、警、民兵爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8B41C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020920",
+      "value": "抢夺枪支弹药、爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8C41C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020921",
+      "value": "抢夺枪支、弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8D41C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020922",
+      "value": "抢夺国家机关枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197B8E41C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020923",
+      "value": "抢夺军、警、民兵枪支弹药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BA741C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060104",
+      "value": "阻碍安全机关、公安机关执行职务案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BA841C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060105",
+      "value": "煽动暴力抗拒法律实施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BA941C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060106",
+      "value": "招摇撞骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BAA41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060107",
+      "value": "冒充国家工作人员招摇撞骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BAB41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060108",
+      "value": "冒充警察招摇撞骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BAC41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060109",
+      "value": "伪造、变造公文、证件、印章案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BAD41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060110",
+      "value": "买卖公文、证件、印章案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BAE41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060111",
+      "value": "盗窃、抢夺公文、证件、印章案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BAF41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060112",
+      "value": "毁灭公文、证件、印章案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BB041C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060113",
+      "value": "伪造、变造居民身份证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BB141C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060114",
+      "value": "非法生产警服、警用标志、警械案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BB241C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060115",
+      "value": "非法买卖警服、警用标志、警械案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BB341C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060116",
+      "value": "非法获取国家秘密案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BB441C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060117",
+      "value": "非法持有国家绝密、机密文件、资料、物品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BB541C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060118",
+      "value": "非法生产、销售间谍专用器材案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BB641C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060119",
+      "value": "非法使用窃听器材案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BB741C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060120",
+      "value": "非法使用窃照器材案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BB841C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060121",
+      "value": "非法侵入计算机信息系统案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BB941C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060122",
+      "value": "破坏计算机信息系统案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BBA41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060123",
+      "value": "破坏计算机信息系统数据和应用程序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BBB41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060124",
+      "value": "故意制作传播计算机破坏性程序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BBC41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060125",
+      "value": "利用计算机金融诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BC641C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020924",
+      "value": "抢夺爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BC741C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020925",
+      "value": "抢夺国家机关爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BC841C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020926",
+      "value": "抢夺军、警、民兵爆炸物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BC941C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020927",
+      "value": "盗窃抢夺危险物品",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BCA41C7E0530100007FFC40",
+      "parentKey": "020900",
+      "key": "020928",
+      "value": "抢劫危险物品",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BCB41C7E0530100007FFC40",
+      "parentKey": "020000",
+      "key": "029900",
+      "value": "其他危害公共安全案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BCC41C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "030000",
+      "value": "破坏社会主义市场经济秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BCD41C7E0530100007FFC40",
+      "parentKey": "030000",
+      "key": "030100",
+      "value": "生产、销售伪劣商品(产品)案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BCE41C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030101",
+      "value": "生产、销售伪劣产品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BCF41C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030102",
+      "value": "生产、销售假药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BD041C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030103",
+      "value": "生产、销售劣药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BD141C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030104",
+      "value": "生产、销售伪劣兽药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BD241C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030105",
+      "value": "生产、销售伪劣农药案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BD341C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030111",
+      "value": "生产销售伪劣化肥案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BD441C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030121",
+      "value": "生产销售伪劣种子案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BD541C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030131",
+      "value": "生产、销售不符合卫生标准的食品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BD641C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030132",
+      "value": "生产、销售有毒、有害食品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197BD741C7E0530100007FFC40",
+      "parentKey": "030100",
+      "key": "030141",
+      "value": "生产、销售不符合标准的医用器材案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4E41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060102",
+      "value": "阻碍人大代表执行职务案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C4F41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060103",
+      "value": "阻碍红十字会依法覆行职责案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58198A2241C7E0530100007FFC40",
+      "parentKey": "050000",
+      "key": "051200",
+      "value": "电信诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D581997AA41C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "110000",
+      "value": "非正常死亡案（事）件",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D581997AE41C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050225",
+      "value": "盗窃车内财物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D581997AF41C7E0530100007FFC40",
+      "parentKey": "050200",
+      "key": "050234",
+      "value": "盗窃电缆线案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D581990BC41C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "119000",
+      "value": "其他",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D581990BD41C7E0530100007FFC40",
+      "parentKey": "110000",
+      "key": "118000",
+      "value": "烧死",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CE541C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030801",
+      "value": "损害商业信誉案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CE641C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030802",
+      "value": "损害商品声誉案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CE741C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030803",
+      "value": "虚假广告案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CE841C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030804",
+      "value": "串通投标案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CE941C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030805",
+      "value": "合同诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CEA41C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030806",
+      "value": "非法经营案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CEB41C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030807",
+      "value": "强迫交易案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CEC41C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030811",
+      "value": "伪造车票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CED41C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030812",
+      "value": "伪造船票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CEE41C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030813",
+      "value": "伪造邮票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CEF41C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030819",
+      "value": "伪造其他有价票证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CF041C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030821",
+      "value": "倒卖伪造车票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CF141C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030822",
+      "value": "倒卖伪造船票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CF241C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030823",
+      "value": "倒卖伪造邮票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CF341C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030829",
+      "value": "倒卖伪造其他有价票证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CF441C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030831",
+      "value": "倒卖车票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CF541C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030832",
+      "value": "倒卖船票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CF641C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030841",
+      "value": "非法转让土地使用权案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CF741C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030842",
+      "value": "非法倒卖土地使用权案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CF841C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030851",
+      "value": "中介组织人员提供虚假证明文件案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CF941C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030852",
+      "value": "中介组织人员出具证明文件重大失实案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CFA41C7E0530100007FFC40",
+      "parentKey": "030800",
+      "key": "030861",
+      "value": "逃避商检案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CFB41C7E0530100007FFC40",
+      "parentKey": "030000",
+      "key": "039900",
+      "value": "其他破坏社会主义市场经济秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CFC41C7E0530100007FFC40",
+      "parentKey": "AJLBDM",
+      "key": "040000",
+      "value": "侵犯公民人身权利、民主权利案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CFD41C7E0530100007FFC40",
+      "parentKey": "040000",
+      "key": "040100",
+      "value": "侵犯人身权利案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CFE41C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040101",
+      "value": "故意杀人案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CFF41C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040102",
+      "value": "过失致人死亡案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0041C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040103",
+      "value": "故意伤害案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0141C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040104",
+      "value": "过失致人重伤案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0241C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040105",
+      "value": "强奸案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0341C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040106",
+      "value": "奸淫幼女案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0441C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040107",
+      "value": "强制猥亵、侮辱妇女案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0541C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040108",
+      "value": "猥亵儿童案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197D0641C7E0530100007FFC40",
+      "parentKey": "040100",
+      "key": "040109",
+      "value": "非法拘禁案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C7C41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060134",
+      "value": "聚众扰乱公共场所秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C7D41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060135",
+      "value": "聚众扰乱交通秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C7E41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060136",
+      "value": "聚众斗殴案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C7F41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060137",
+      "value": "寻衅滋事案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8041C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060138",
+      "value": "传授犯罪方法案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8141C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060139",
+      "value": "组织、领导黑社会性质组织案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8241C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060140",
+      "value": "参加黑社会性质组织案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8341C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060141",
+      "value": "入境发展黑社会组织案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8441C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060142",
+      "value": "包庇、纵容黑社会性质组织案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8541C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060143",
+      "value": "非法集会、游行、示威案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8641C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060146",
+      "value": "非法携带武器参加集会、游行、示威案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8741C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060150",
+      "value": "非法携带管制刀具参加集会、游行、示威案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8841C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060154",
+      "value": "非法携带爆炸物参加集会、游行、示威案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8941C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060158",
+      "value": "破坏集会、游行、示威案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8A41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060160",
+      "value": "侮辱国旗、国徽案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8B41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060165",
+      "value": "组织和利用会道门、邪教组织或者利用迷信破坏法律实施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8C41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060166",
+      "value": "组织和利用会道门破坏法律实施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8D41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060167",
+      "value": "组织和利用邪教组织破坏法律实施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8E41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060168",
+      "value": "组织和利用迷信破坏法律实施案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C8F41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060170",
+      "value": "组织和利用会道门、邪教组织或者利用迷信致人死亡案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9041C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060171",
+      "value": "组织和利用会道门致人死亡案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9141C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060172",
+      "value": "组织和利用邪教组织致人死亡案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9241C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060173",
+      "value": "组织和利用迷信致人死亡案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9341C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060180",
+      "value": "组织和利用会道门、邪教组织或者利用迷信奸淫妇女或诈骗钱财案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9441C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060181",
+      "value": "组织和利用会道门、邪教组织或者利用迷信奸淫妇女案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9541C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060182",
+      "value": "组织和利用会道门奸淫妇女案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9641C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060183",
+      "value": "组织和利用邪教组织奸淫妇女案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9741C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060184",
+      "value": "组织和利用迷信奸淫妇女案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9841C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060185",
+      "value": "组织和利用会道门、邪教组织或者利用迷信诈骗钱财案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9941C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060186",
+      "value": "组织和利用会道门诈骗钱财案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9A41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060187",
+      "value": "组织和利用邪教级诈骗钱财案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9B41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060188",
+      "value": "组织和利用迷信诈骗钱财案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9C41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060190",
+      "value": "聚众淫乱案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9D41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060193",
+      "value": "引诱未成年人聚众淫乱案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9E41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060196",
+      "value": "盗窃、侮辱尸体案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197C9F41C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060197",
+      "value": "赌博案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CA041C7E0530100007FFC40",
+      "parentKey": "060100",
+      "key": "060198",
+      "value": "故意延误投递邮件案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CA141C7E0530100007FFC40",
+      "parentKey": "060000",
+      "key": "060200",
+      "value": "妨害司法案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CA241C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060201",
+      "value": "伪证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CA341C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060211",
+      "value": "辩护人、诉讼代理人毁灭、伪造证据案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CA441C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060212",
+      "value": "帮助毁灭、伪造证据案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CA541C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060213",
+      "value": "司法人员毁灭、伪造证据案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CA641C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060214",
+      "value": "妨害作证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CA741C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060215",
+      "value": "打击报复证人案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CA841C7E0530100007FFC40",
+      "parentKey": "060200",
+      "key": "060221",
+      "value": "扰乱法庭秩序案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CA941C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030452",
+      "value": "转让金融机构许可证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CAA41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030453",
+      "value": "高利转贷案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CAB41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030454",
+      "value": "非法吸收公众存款案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CAC41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030455",
+      "value": "擅自发行股票、公司企业债券案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CAD41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030456",
+      "value": "内幕交易、泄露内幕信息案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CAE41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030457",
+      "value": "编造并传播证券交易虚假信息案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CAF41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030458",
+      "value": "诱骗投资者买卖证券案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CB041C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030459",
+      "value": "操纵证券交易价格案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CB141C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030460",
+      "value": "保险公司人员虚假理赔案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CB241C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030461",
+      "value": "金融机构人员受贿案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CB341C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030462",
+      "value": "违法发放贷款案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CB441C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030463",
+      "value": "违法向关系人发放货款案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CB541C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030464",
+      "value": "用帐外客户资金非法拆借、发放贷款案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CB641C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030466",
+      "value": "非法出具金融票证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CB741C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030471",
+      "value": "对违法票据承兑付款、保证案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CB841C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030474",
+      "value": "逃汇案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CB941C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030475",
+      "value": "套汇案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CBA41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030476",
+      "value": "骗汇案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CBB41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030477",
+      "value": "洗钱案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CBC41C7E0530100007FFC40",
+      "parentKey": "030400",
+      "key": "030478",
+      "value": "非法买卖外汇案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CBD41C7E0530100007FFC40",
+      "parentKey": "030000",
+      "key": "030500",
+      "value": "金融诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CBE41C7E0530100007FFC40",
+      "parentKey": "030500",
+      "key": "030510",
+      "value": "集资诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CBF41C7E0530100007FFC40",
+      "parentKey": "030500",
+      "key": "030520",
+      "value": "贷款诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CC041C7E0530100007FFC40",
+      "parentKey": "030500",
+      "key": "030530",
+      "value": "票据诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CC141C7E0530100007FFC40",
+      "parentKey": "030500",
+      "key": "030540",
+      "value": "金融凭证诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CC241C7E0530100007FFC40",
+      "parentKey": "030500",
+      "key": "030550",
+      "value": "信用证诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CC341C7E0530100007FFC40",
+      "parentKey": "030500",
+      "key": "030560",
+      "value": "信用卡诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CC441C7E0530100007FFC40",
+      "parentKey": "030500",
+      "key": "030570",
+      "value": "有价证券诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CC541C7E0530100007FFC40",
+      "parentKey": "030500",
+      "key": "030580",
+      "value": "保险诈骗案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CC641C7E0530100007FFC40",
+      "parentKey": "030000",
+      "key": "030600",
+      "value": "危害税收征管案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CC741C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030601",
+      "value": "偷税案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CC841C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030602",
+      "value": "抗税案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CC941C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030603",
+      "value": "逃避追缴欠税案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CCA41C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030604",
+      "value": "骗取出口退税案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CCB41C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030605",
+      "value": "骗取国家出口免征税款案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CCC41C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030611",
+      "value": "虚开增值税专用发票用于骗取出口退税、抵扣税款发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CCD41C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030612",
+      "value": "伪造增值税专用发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CCE41C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030613",
+      "value": "出售伪造的增值税专用发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CCF41C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030621",
+      "value": "非法出售增值税专用发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CD041C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030622",
+      "value": "非法购买增值税专用发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CD141C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030623",
+      "value": "购买伪造的增值税专用发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CD241C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030631",
+      "value": "非法制造用于骗取出口退税、抵扣税款发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CD341C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030632",
+      "value": "出售非法制造的用于骗取出口退税、抵扣税款发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CD441C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030633",
+      "value": "非法制造发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CD541C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030641",
+      "value": "出售非法制造的发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CD641C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030651",
+      "value": "非法出售用于骗取出口退税、抵扣税款发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CD741C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030661",
+      "value": "非法出售发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CD841C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030662",
+      "value": "盗窃增值税专用发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CD941C7E0530100007FFC40",
+      "parentKey": "030600",
+      "key": "030663",
+      "value": "盗窃退税,抵扣税款专用发票案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CDA41C7E0530100007FFC40",
+      "parentKey": "030000",
+      "key": "030700",
+      "value": "侵犯知识产权案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CDB41C7E0530100007FFC40",
+      "parentKey": "030700",
+      "key": "030701",
+      "value": "假冒注册商标案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CDC41C7E0530100007FFC40",
+      "parentKey": "030700",
+      "key": "030710",
+      "value": "销售假冒注册商标的商品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CDD41C7E0530100007FFC40",
+      "parentKey": "030700",
+      "key": "030720",
+      "value": "非法制造的注册商标标识案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CDE41C7E0530100007FFC40",
+      "parentKey": "030700",
+      "key": "030730",
+      "value": "非法出版物案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CDF41C7E0530100007FFC40",
+      "parentKey": "030700",
+      "key": "030740",
+      "value": "销售非法制造的注册商标标识案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CE041C7E0530100007FFC40",
+      "parentKey": "030700",
+      "key": "030750",
+      "value": "假冒专利案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CE141C7E0530100007FFC40",
+      "parentKey": "030700",
+      "key": "030760",
+      "value": "侵犯著作权案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CE241C7E0530100007FFC40",
+      "parentKey": "030700",
+      "key": "030770",
+      "value": "销售侵权复制品案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CE341C7E0530100007FFC40",
+      "parentKey": "030700",
+      "key": "030780",
+      "value": "侵犯商业秘密案",
+      "root": "AJLBDM"
+    },
+    {
+      "id": "430D58197CE441C7E0530100007FFC40",
+      "parentKey": "030000",
+      "key": "030800",
+      "value": "扰乱市场秩序案",
+      "root": "AJLBDM"
+    }
+  ]
+}

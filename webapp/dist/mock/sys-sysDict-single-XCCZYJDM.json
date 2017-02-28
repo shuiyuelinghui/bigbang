@@ -1,0 +1,22 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "不保留",
+      "root": "XCCZYJDM"
+    },
+    {
+      "key": "2",
+      "value": "保留，待复勘",
+      "root": "XCCZYJDM"
+    },
+    {
+      "key": "3",
+      "value": "其他",
+      "root": "XCCZYJDM"
+    }
+  ]
+}

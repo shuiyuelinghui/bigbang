@@ -1,0 +1,27 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "设立警戒带，划定禁行区域",
+      "root": "BHCSDM"
+    },
+    {
+      "key": "2",
+      "value": "专人看护现场，防止他人进入",
+      "root": "BHCSDM"
+    },
+    {
+      "key": "3",
+      "value": "被害人自行保护",
+      "root": "BHCSDM"
+    },
+    {
+      "key": "4",
+      "value": "其他措施",
+      "root": "BHCSDM"
+    }
+  ]
+}

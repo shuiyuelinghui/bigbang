@@ -1,0 +1,27 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "单人",
+      "root": "ZARSLDM"
+    },
+    {
+      "key": "3",
+      "value": "两人",
+      "root": "ZARSLDM"
+    },
+    {
+      "key": "2",
+      "value": "多人",
+      "root": "ZARSLDM"
+    },
+    {
+      "key": "4",
+      "value": "不确定",
+      "root": "ZARSLDM"
+    }
+  ]
+}

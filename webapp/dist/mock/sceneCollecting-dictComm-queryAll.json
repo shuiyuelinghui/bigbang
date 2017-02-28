@@ -1,0 +1,21 @@
+{
+  "flag": 1,
+  "totalCount": null,
+  "msg": null,
+  "data": [
+    {
+      "id": "43088D694CD82F6CE0530100007F441F",
+      "dictId": "430D58197ACF41C7E0530100007FFC40",
+      "dictType": "AJLBDM",
+      "dictKey":"050201",
+      "dictValue":"入室盗窃案"
+    },
+    {
+      "id": "43088D694CD82F6CE0530100007F441G",
+      "dictId": "430D58197AC041C7E0530100007FFC40",
+      "dictType": "AJLBDM",
+      "dictKey":"050100",
+      "dictValue":"入户抢劫案"
+    }
+  ]
+}

@@ -1,0 +1,721 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D5819800841C7E0530100007FFC40",
+      "parentKey": "ZATDFLDM",
+      "key": "100",
+      "value": "组织形式",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806841C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "569",
+      "value": "先藏后取",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801041C7E0530100007FFC40",
+      "parentKey": "ZATDFLDM",
+      "key": "200",
+      "value": "勾结形式",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801441C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "204",
+      "value": "外来勾结",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801841C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "302",
+      "value": "就近作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801A41C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "304",
+      "value": "沿线作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801E41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "402",
+      "value": "持条寻人",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802241C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "406",
+      "value": "电话试探",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802641C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "503",
+      "value": "重复作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802A41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "507",
+      "value": "尾随作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802E41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "511",
+      "value": "选卷帘门",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803241C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "515",
+      "value": "异物阻车",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803641C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "519",
+      "value": "现场进食",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803A41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "523",
+      "value": "切断电话",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803E41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "527",
+      "value": "放音作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804241C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "531",
+      "value": "反锁房门",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804641C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "535",
+      "value": "就地取材",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804A41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "539",
+      "value": "翻动衣袋",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804C41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "541",
+      "value": "盗证住宿",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805041C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "545",
+      "value": "贴胶砸窗",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805441C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "549",
+      "value": "耍恶作剧",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805841C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "553",
+      "value": "抓住弱点",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805C41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "557",
+      "value": "伪造现场",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806041C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "561",
+      "value": "奸淫女尸",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806441C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "565",
+      "value": "五毒俱全",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819800C41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "122",
+      "value": "团伙作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819800941C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "110",
+      "value": "单独作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819800D41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "123",
+      "value": "集团作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801141C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "201",
+      "value": "内部勾结",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801541C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "205",
+      "value": "境外勾结",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801941C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "303",
+      "value": "跨区作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801B41C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "305",
+      "value": "越境作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801F41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "403",
+      "value": "假留便条",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802341C7E0530100007FFC40",
+      "parentKey": "ZATDFLDM",
+      "key": "500",
+      "value": "行为特点",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802741C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "504",
+      "value": "返回作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802B41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "508",
+      "value": "男女搭挡",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802F41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "512",
+      "value": "目标特定",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803341C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "516",
+      "value": "左手作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803741C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "520",
+      "value": "拉帘作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803B41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "524",
+      "value": "破坏报警器",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803F41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "528",
+      "value": "酒后作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804341C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "532",
+      "value": "锁芯塞物",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804741C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "536",
+      "value": "丢弃新具",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804B41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "540",
+      "value": "见物就拿",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804D41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "542",
+      "value": "盗销一体",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805141C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "546",
+      "value": "拆开情侣",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805541C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "550",
+      "value": "接应联络",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805941C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "554",
+      "value": "案后挪窝",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805D41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "558",
+      "value": "现场留条",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806141C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "562",
+      "value": "行为变态",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806541C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "566",
+      "value": "撬更衣箱",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806B41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "572",
+      "value": "租船作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819800A41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "120",
+      "value": "共同作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803C41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "525",
+      "value": "麻痹报警",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806C41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "573",
+      "value": "望风作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806941C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "570",
+      "value": "先抛后取",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806641C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "567",
+      "value": "撬集装箱",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806241C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "563",
+      "value": "盗收内衣",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805E41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "559",
+      "value": "上瘾作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805A41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "555",
+      "value": "先找买主",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805641C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "551",
+      "value": "手法多变",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805241C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "547",
+      "value": "先奸后卖",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804E41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "543",
+      "value": "制贩一体",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804841C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "537",
+      "value": "床上攫取",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804441C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "533",
+      "value": "调换挂锁",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804041C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "529",
+      "value": "赌输作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803841C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "521",
+      "value": "卸下灯泡",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803441C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "517",
+      "value": "赤足作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803041C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "513",
+      "value": "盗具运赃",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802C41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "509",
+      "value": "雇佣他人",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802841C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "505",
+      "value": "潜回原籍",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802441C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "501",
+      "value": "流窜作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802041C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "404",
+      "value": "敲门试探",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801C41C7E0530100007FFC40",
+      "parentKey": "ZATDFLDM",
+      "key": "400",
+      "value": "试探方式",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801641C7E0530100007FFC40",
+      "parentKey": "ZATDFLDM",
+      "key": "300",
+      "value": "作案范围",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801241C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "202",
+      "value": "内外勾结",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819800E41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "124",
+      "value": "组织作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803D41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "526",
+      "value": "噪音掩护",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819800B41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "121",
+      "value": "结伙作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803941C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "522",
+      "value": "切断电源",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806741C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "568",
+      "value": "粘堵门镜",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803541C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "518",
+      "value": "现场排便",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805341C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "548",
+      "value": "奸后摧残",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819803141C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "514",
+      "value": "飞车作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805F41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "560",
+      "value": "武装作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802D41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "510",
+      "value": "选防盗门",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804F41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "544",
+      "value": "专选热销",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802941C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "506",
+      "value": "首车赶回",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806A41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "571",
+      "value": "租车作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802541C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "502",
+      "value": "连续作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804941C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "538",
+      "value": "翻箱倒柜",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819802141C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "405",
+      "value": "投物试探",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805B41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "556",
+      "value": "奸抢结合",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801D41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "401",
+      "value": "借口寻问",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804541C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "534",
+      "value": "多具同撬",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801741C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "301",
+      "value": "内部作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806341C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "564",
+      "value": "放烟脱逃",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819801341C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "203",
+      "value": "跨区勾结",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819804141C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "530",
+      "value": "设置障碍",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819800F41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "130",
+      "value": "单位作案",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819805741C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "552",
+      "value": "随季变换",
+      "root": "ZATDFLDM"
+    },
+    {
+      "id": "430D5819806D41C7E0530100007FFC40",
+      "parentKey": "ZATDFLDM",
+      "key": "900",
+      "value": "其它作案特点",
+      "root": "ZATDFLDM"
+    }
+  ]
+}

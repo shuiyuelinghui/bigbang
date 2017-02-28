@@ -1,0 +1,67 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1301",
+      "value": "刀具",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1302",
+      "value": "钳类",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1303",
+      "value": "剪刀",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1304",
+      "value": "撬棒",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1305",
+      "value": "螺丝刀",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1306",
+      "value": "钻头",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1307",
+      "value": "锉刀",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1308",
+      "value": "气割",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1309",
+      "value": "插片",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1310",
+      "value": "自行车撑脚",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1311",
+      "value": "麻醉品",
+      "root": "GJTDZLDM"
+    },
+    {
+      "key": "1399",
+      "value": "其他",
+      "root": "GJTDZLDM"
+    }
+  ]
+}

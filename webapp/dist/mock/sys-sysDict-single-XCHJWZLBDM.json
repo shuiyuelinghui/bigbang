@@ -1,0 +1,82 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "手印",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "2",
+      "value": "足迹",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "3",
+      "value": "工具",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "4",
+      "value": "枪弹",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "5",
+      "value": "特殊",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "6",
+      "value": "生物",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "7",
+      "value": "毒化",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "8",
+      "value": "理化",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "9",
+      "value": "文检",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "10",
+      "value": "电子",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "11",
+      "value": "视频",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "12",
+      "value": "其它",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "13",
+      "value": "基站",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "14",
+      "value": "摄像头",
+      "root": "XCHJWZLBDM"
+    },
+    {
+      "key": "15",
+      "value": "WIFI",
+      "root": "XCHJWZLBDM"
+    }
+  ]
+}

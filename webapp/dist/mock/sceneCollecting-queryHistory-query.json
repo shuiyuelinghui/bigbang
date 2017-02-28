@@ -1,0 +1,17 @@
+{
+  "flag": "1",
+  "totalCount": "",
+  "msg": "",
+  "data": [
+    {
+      "id": "444BE7CAF7D4CC81E050A8C0C901795F",
+      "queryType": "1",
+      "queryContent": "{\"queryStr\":{\"bsCollectFlag\":\"1\"},\"config\":[{\"title\":\"现场范围：\",\"content\":\"个人\"},{\"title\":\"现场状态：\",\"content\":\"已提交\"},{\"title\":\"是否制作笔录：\",\"content\":\"是\"},{\"title\":\"警情编号：\",\"content\":\"J1bgbgbg23456789\"}]}"
+    },
+    {
+      "id": "444BE7CAF7D4CC81E050A8C0C901795G",
+      "queryType": "1",
+      "queryContent": "{\"queryStr\":{\"bsCollectFlag\":\"1\"},\"config\":[{\"title\":\"现场范围：\",\"content\":\"个人\"},{\"title\":\"现场状态：\",\"content\":\"已提交\"},{\"title\":\"是否制作笔录：\",\"content\":\"是\"},{\"title\":\"警情编号：\",\"content\":\"J123456789\"}]}"
+    }
+  ]
+}

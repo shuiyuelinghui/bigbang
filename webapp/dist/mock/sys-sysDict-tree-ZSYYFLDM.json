@@ -1,0 +1,168 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D58197FD141C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "010",
+      "value": "大失血",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FD241C7E0530100007FFC40",
+      "parentKey": "010",
+      "key": "011",
+      "value": "颅脑损伤",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FD341C7E0530100007FFC40",
+      "parentKey": "010",
+      "key": "012",
+      "value": "创伤性休克",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FD441C7E0530100007FFC40",
+      "parentKey": "010",
+      "key": "013",
+      "value": "多脏器损伤",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FD541C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "020",
+      "value": "窒息",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FD641C7E0530100007FFC40",
+      "parentKey": "020",
+      "key": "021",
+      "value": "机械性窒息",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FD741C7E0530100007FFC40",
+      "parentKey": "020",
+      "key": "022",
+      "value": "吸入性窒息",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FD841C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "030",
+      "value": "溺水",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FD941C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "040",
+      "value": "中毒",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FDA41C7E0530100007FFC40",
+      "parentKey": "040",
+      "key": "041",
+      "value": "氰化物中毒",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FDB41C7E0530100007FFC40",
+      "parentKey": "040",
+      "key": "042",
+      "value": "一氧化碳中毒",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FDC41C7E0530100007FFC40",
+      "parentKey": "040",
+      "key": "043",
+      "value": "农药中毒",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FDD41C7E0530100007FFC40",
+      "parentKey": "040",
+      "key": "044",
+      "value": "毒品中毒",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FDE41C7E0530100007FFC40",
+      "parentKey": "040",
+      "key": "045",
+      "value": "食物中毒",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FDF41C7E0530100007FFC40",
+      "parentKey": "040",
+      "key": "046",
+      "value": "其他中毒",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FE041C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "050",
+      "value": "猝死",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FE141C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "060",
+      "value": "挤压综合症",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FE241C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "070",
+      "value": "电击",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FE341C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "080",
+      "value": "冻饿",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FE441C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "090",
+      "value": "烧死",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FE541C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "100",
+      "value": "烫死",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FE641C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "110",
+      "value": "遗弃",
+      "root": "ZSYYFLDM"
+    },
+    {
+      "id": "430D58197FE741C7E0530100007FFC40",
+      "parentKey": "ZSYYFLDM",
+      "key": "990",
+      "value": "不明原因",
+      "root": "ZSYYFLDM"
+    }
+  ]
+}

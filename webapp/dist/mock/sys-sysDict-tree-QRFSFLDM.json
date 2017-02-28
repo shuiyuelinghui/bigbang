@@ -1,0 +1,987 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D5819971E41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2150",
+      "value": "门（必填）",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819971F41C7E0530100007FFC40",
+      "parentKey": "2150",
+      "key": "215001",
+      "value": "木门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997F41C7E0530100007FFC40",
+      "parentKey": "QRFSFLDM",
+      "key": "2100",
+      "value": "从门侵入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819972241C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2151",
+      "value": "锁（必填）",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819972441C7E0530100007FFC40",
+      "parentKey": "2151",
+      "key": "215102",
+      "value": "暗锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963441C7E0530100007FFC40",
+      "parentKey": "2150",
+      "key": "215006",
+      "value": "铁门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819972041C7E0530100007FFC40",
+      "parentKey": "2150",
+      "key": "215002",
+      "value": "防盗门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819972141C7E0530100007FFC40",
+      "parentKey": "2150",
+      "key": "215003",
+      "value": "玻璃门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819972341C7E0530100007FFC40",
+      "parentKey": "2151",
+      "key": "215101",
+      "value": "挂锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998EB41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2133",
+      "value": "技术开锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819962A41C7E0530100007FFC40",
+      "parentKey": "2151",
+      "key": "215106",
+      "value": "链锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819962B41C7E0530100007FFC40",
+      "parentKey": "2150",
+      "key": "215004",
+      "value": "卷帘门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998EA41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2132",
+      "value": "捅门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998241C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2103",
+      "value": "撬门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819962941C7E0530100007FFC40",
+      "parentKey": "2151",
+      "key": "215105",
+      "value": "U型锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963341C7E0530100007FFC40",
+      "parentKey": "2150",
+      "key": "215005",
+      "value": "栅栏门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998EF41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2135",
+      "value": "房门掏洞",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998141C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2102",
+      "value": "踹门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998841C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2109",
+      "value": "溜门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963A41C7E0530100007FFC40",
+      "parentKey": "2151",
+      "key": "215107",
+      "value": "电子锁、磁性锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998EE41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2134",
+      "value": "由窗开门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997CA41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2119",
+      "value": "门上挖洞",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997CC41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2121",
+      "value": "破门玻璃",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963541C7E0530100007FFC40",
+      "parentKey": "2150",
+      "key": "215007",
+      "value": "铝合金、塑钢门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998041C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2101",
+      "value": "撞门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998341C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2104",
+      "value": "劈门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998441C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2105",
+      "value": "砸门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998541C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2106",
+      "value": "炸门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998641C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2107",
+      "value": "割门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998741C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2108",
+      "value": "卸门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998941C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2110",
+      "value": "顶门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998A41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2111",
+      "value": "拽门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819998B41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2112",
+      "value": "翻门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997C441C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2113",
+      "value": "掰门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997C541C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2114",
+      "value": "撬撞开门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997C641C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2115",
+      "value": "撬踹开门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997C741C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2116",
+      "value": "拆砖开门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963F41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "221720",
+      "value": "楼道",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997C841C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2117",
+      "value": "刀削门框",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996641C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "221710",
+      "value": "楼外",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997C941C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2118",
+      "value": "拨开门闩",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819981A41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2202",
+      "value": "窗口钻入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997CB41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2120",
+      "value": "门上烧洞",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997CD41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2122",
+      "value": "卸门玻璃",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997CE41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2123",
+      "value": "窗口开门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997CF41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2124",
+      "value": "门缝钻入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997D041C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2125",
+      "value": "尾随入门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997D141C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2126",
+      "value": "骗开房门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581997D241C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2127",
+      "value": "撬卷帘门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819981641C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2128",
+      "value": "破坏门锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819981741C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2199",
+      "value": "其他从门侵入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819981841C7E0530100007FFC40",
+      "parentKey": "QRFSFLDM",
+      "key": "2200",
+      "value": "从窗侵入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996C41C7E0530100007FFC40",
+      "parentKey": "2100",
+      "key": "2131",
+      "value": "其他",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819981941C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2201",
+      "value": "天窗钻入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819981B41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2203",
+      "value": "气窗钻入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819981C41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2204",
+      "value": "窗栅钻入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819981D41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2205",
+      "value": "破坏窗框",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819981E41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2206",
+      "value": "破坏窗栅",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819981F41C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2207",
+      "value": "破护窗网",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982041C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2208",
+      "value": "破窗玻璃",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982141C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2209",
+      "value": "卸窗玻璃",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982241C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2210",
+      "value": "拆砖开窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982341C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2211",
+      "value": "勾窗插销",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982441C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2212",
+      "value": "破窗插销",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982541C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2213",
+      "value": "拨钩气窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982641C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2214",
+      "value": "窗未关好",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982741C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2215",
+      "value": "爬防盗窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982841C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2216",
+      "value": "撬过道窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982941C7E0530100007FFC40",
+      "parentKey": "2200",
+      "key": "2199",
+      "value": "其他从窗侵入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982A41C7E0530100007FFC40",
+      "parentKey": "QRFSFLDM",
+      "key": "2300",
+      "value": "攀登侵入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982B41C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2301",
+      "value": "登物攀爬",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819983241C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2302",
+      "value": "搬物攀爬 借助搬来的砖石、梯子等物品攀爬",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982D41C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2303",
+      "value": "绳索攀爬",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819982E41C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2304",
+      "value": "攀爬阳台",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997B41C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2305",
+      "value": "攀脚手架",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997141C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2306",
+      "value": "登肩越墙",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997341C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2307",
+      "value": "攀爬越墙",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997441C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2308",
+      "value": "攀爬跨墙",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997541C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2309",
+      "value": "攀登倒挂",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997641C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2310",
+      "value": "攀爬水管",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997741C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2311",
+      "value": "攀爬空调架",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997841C7E0530100007FFC40",
+      "parentKey": "2300",
+      "key": "2399",
+      "value": "其他攀登侵入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997941C7E0530100007FFC40",
+      "parentKey": "QRFSFLDM",
+      "key": "2400",
+      "value": "洞口侵入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997A41C7E0530100007FFC40",
+      "parentKey": "2400",
+      "key": "2401",
+      "value": "钻洞入室",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819997D41C7E0530100007FFC40",
+      "parentKey": "2400",
+      "key": "2402",
+      "value": "拆钻篱芭",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998F241C7E0530100007FFC40",
+      "parentKey": "2400",
+      "key": "2403",
+      "value": "地下挖洞",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996341C7E0530100007FFC40",
+      "parentKey": "2400",
+      "key": "2404",
+      "value": "墙上挖洞",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996441C7E0530100007FFC40",
+      "parentKey": "2400",
+      "key": "2405",
+      "value": "房顶开洞",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D58199CDF41C7E0530100007FFC40",
+      "parentKey": "2400",
+      "key": "2406",
+      "value": "钻排风口",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D58199CE041C7E0530100007FFC40",
+      "parentKey": "2400",
+      "key": "2407",
+      "value": "天棚侵入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D58199CED41C7E0530100007FFC40",
+      "parentKey": "2400",
+      "key": "2499",
+      "value": "其他洞口侵入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996D41C7E0530100007FFC40",
+      "parentKey": "QRFSFLDM",
+      "key": "2700",
+      "value": "不明手段",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D58199CEE41C7E0530100007FFC40",
+      "parentKey": "QRFSFLDM",
+      "key": "2900",
+      "value": "其它侵入手段",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819950941C7E0530100007FFC40",
+      "parentKey": "QRFSFLDM",
+      "key": "2800",
+      "value": "和平进入现场",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996541C7E0530100007FFC40",
+      "parentKey": "221710",
+      "key": "221713",
+      "value": "破坏玻璃钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996941C7E0530100007FFC40",
+      "parentKey": "221820",
+      "key": "221822",
+      "value": "楼外攀爬钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996A41C7E0530100007FFC40",
+      "parentKey": "221820",
+      "key": "221823",
+      "value": "楼外跨越钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996B41C7E0530100007FFC40",
+      "parentKey": "221830",
+      "key": "221832",
+      "value": "楼顶系物钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998F041C7E0530100007FFC40",
+      "parentKey": "2135",
+      "key": "213510",
+      "value": "掏洞开门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998F141C7E0530100007FFC40",
+      "parentKey": "2135",
+      "key": "213520",
+      "value": "钻洞入室",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998E741C7E0530100007FFC40",
+      "parentKey": "2103",
+      "key": "210310",
+      "value": "撬挂锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998E841C7E0530100007FFC40",
+      "parentKey": "2103",
+      "key": "210320",
+      "value": "撬暗锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998E941C7E0530100007FFC40",
+      "parentKey": "2103",
+      "key": "210330",
+      "value": "撬撞开门",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963041C7E0530100007FFC40",
+      "parentKey": "2103",
+      "key": "210340",
+      "value": "撬捅锁芯",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963141C7E0530100007FFC40",
+      "parentKey": "2103",
+      "key": "210350",
+      "value": "扩缝撬压",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963241C7E0530100007FFC40",
+      "parentKey": "2103",
+      "key": "210360",
+      "value": "抜锁芯",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963641C7E0530100007FFC40",
+      "parentKey": "2133",
+      "key": "213360",
+      "value": "锁芯情况",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819962D41C7E0530100007FFC40",
+      "parentKey": "2133",
+      "key": "213330",
+      "value": "锁内填充物",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963841C7E0530100007FFC40",
+      "parentKey": "2103",
+      "key": "210370",
+      "value": "卸门轴",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963941C7E0530100007FFC40",
+      "parentKey": "2103",
+      "key": "210380",
+      "value": "卸门把手",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819962E41C7E0530100007FFC40",
+      "parentKey": "2133",
+      "key": "213340",
+      "value": "拔挑弹子",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996D341C7E0530100007FFC40",
+      "parentKey": "221830",
+      "key": "221831",
+      "value": "楼顶攀爬钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819962F41C7E0530100007FFC40",
+      "parentKey": "2133",
+      "key": "213350",
+      "value": "开磁性锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963741C7E0530100007FFC40",
+      "parentKey": "213360",
+      "key": "213361",
+      "value": "一字锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998EC41C7E0530100007FFC40",
+      "parentKey": "2133",
+      "key": "213310",
+      "value": "锁具丢失",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819962C41C7E0530100007FFC40",
+      "parentKey": "213360",
+      "key": "213362",
+      "value": "十字锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581998ED41C7E0530100007FFC40",
+      "parentKey": "2133",
+      "key": "213320",
+      "value": "钌铞完好",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996D141C7E0530100007FFC40",
+      "parentKey": "221810",
+      "key": "221813",
+      "value": "楼道天井钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819972541C7E0530100007FFC40",
+      "parentKey": "2133",
+      "key": "213370",
+      "value": "钥匙开锁",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819972741C7E0530100007FFC40",
+      "parentKey": "213330",
+      "key": "213332",
+      "value": "锡纸",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996D241C7E0530100007FFC40",
+      "parentKey": "221820",
+      "key": "221821",
+      "value": "破坏护栏钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819962741C7E0530100007FFC40",
+      "parentKey": "213330",
+      "key": "213335",
+      "value": "502胶",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819962641C7E0530100007FFC40",
+      "parentKey": "213330",
+      "key": "213334",
+      "value": "塑料类",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996D441C7E0530100007FFC40",
+      "parentKey": "213330",
+      "key": "213333",
+      "value": "口香糖",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996D541C7E0530100007FFC40",
+      "parentKey": "210310",
+      "key": "210311",
+      "value": "撬锁鼻",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963C41C7E0530100007FFC40",
+      "parentKey": "213330",
+      "key": "213338",
+      "value": "硅胶",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996D641C7E0530100007FFC40",
+      "parentKey": "210310",
+      "key": "210312",
+      "value": "撬钌铞",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996D741C7E0530100007FFC40",
+      "parentKey": "213330",
+      "key": "213331",
+      "value": "橡皮泥",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819963B41C7E0530100007FFC40",
+      "parentKey": "213330",
+      "key": "213337",
+      "value": "牙签",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819962841C7E0530100007FFC40",
+      "parentKey": "213330",
+      "key": "213336",
+      "value": "其他",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996CC41C7E0530100007FFC40",
+      "parentKey": "221710",
+      "key": "221711",
+      "value": "楼外攀爬钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996CF41C7E0530100007FFC40",
+      "parentKey": "221810",
+      "key": "221811",
+      "value": "破坏护栏钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996D041C7E0530100007FFC40",
+      "parentKey": "221810",
+      "key": "221812",
+      "value": "直接钻窗侵入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996CD41C7E0530100007FFC40",
+      "parentKey": "221710",
+      "key": "221712",
+      "value": "破坏护栏钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996841C7E0530100007FFC40",
+      "parentKey": "221710",
+      "key": "221732",
+      "value": "楼顶系物钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D581996CE41C7E0530100007FFC40",
+      "parentKey": "221720",
+      "key": "221721",
+      "value": "由楼道窗钻入",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819996741C7E0530100007FFC40",
+      "parentKey": "221710",
+      "key": "221731",
+      "value": "楼顶攀爬钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819971B41C7E0530100007FFC40",
+      "parentKey": "221720",
+      "key": "221722",
+      "value": "钻门头窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819971D41C7E0530100007FFC40",
+      "parentKey": "221720",
+      "key": "221724",
+      "value": "破坏护栏钻窗",
+      "root": "QRFSFLDM"
+    },
+    {
+      "id": "430D5819971C41C7E0530100007FFC40",
+      "parentKey": "221720",
+      "key": "221723",
+      "value": "楼道天井钻窗",
+      "root": "QRFSFLDM"
+    }
+  ]
+}

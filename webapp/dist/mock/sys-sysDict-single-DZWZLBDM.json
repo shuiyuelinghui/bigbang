@@ -1,0 +1,27 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "6001",
+      "value": "电子设备",
+      "root": "DZWZLBDM"
+    },
+    {
+      "key": "6002",
+      "value": "电子部件",
+      "root": "DZWZLBDM"
+    },
+    {
+      "key": "6003",
+      "value": "电子设备中存储的数据",
+      "root": "DZWZLBDM"
+    },
+    {
+      "key": "6004",
+      "value": "电子设备传输的电子信息",
+      "root": "DZWZLBDM"
+    }
+  ]
+}

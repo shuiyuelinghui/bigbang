@@ -1,0 +1,371 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D5819966E41C7E0530100007FFC40",
+      "parentKey": "TBTSBJDM",
+      "key": "100",
+      "value": "生理标记",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819966F41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "110",
+      "value": "痣",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819967041C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "111",
+      "value": "毛痣",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819967141C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "112",
+      "value": "大痣",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819967241C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "120",
+      "value": "记",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819967341C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "130",
+      "value": "疤",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819967441C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "131",
+      "value": "烫伤疤",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819969441C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "132",
+      "value": "刀伤疤",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819969541C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "133",
+      "value": "枪伤疤",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819969641C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "134",
+      "value": "疮疤",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819969741C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "140",
+      "value": "瘤",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819969841C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "150",
+      "value": "疣",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819969941C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "160",
+      "value": "白斑",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819969A41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "198",
+      "value": "未知",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819969B41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "199",
+      "value": "其他",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996D841C7E0530100007FFC40",
+      "parentKey": "TBTSBJDM",
+      "key": "200",
+      "value": "文身",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996D941C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "210",
+      "value": "文兽",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996DA41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "211",
+      "value": "龙",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996DB41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "212",
+      "value": "虎",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996DC41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "213",
+      "value": "豹",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996DD41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "220",
+      "value": "文禽",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996DE41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "221",
+      "value": "鹰",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996DF41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "222",
+      "value": "凤",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996E041C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "223",
+      "value": "文孔雀",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996E141C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "230",
+      "value": "文虫",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996E241C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "231",
+      "value": "蝎子",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996E341C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "232",
+      "value": "蜈蚣",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996E441C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "233",
+      "value": "蛇",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996E541C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "240",
+      "value": "文花果",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996E641C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "241",
+      "value": "桃",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996E741C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "242",
+      "value": "梅花",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996E841C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "243",
+      "value": "牡丹",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996E941C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "244",
+      "value": "荷花",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996EA41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "250",
+      "value": "文兵器",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996EB41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "260",
+      "value": "文文字",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996EC41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "261",
+      "value": "富",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996ED41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "262",
+      "value": "寿",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996EE41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "263",
+      "value": "忍",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996EF41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "270",
+      "value": "文人像",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996F041C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "271",
+      "value": "天使",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996F141C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "272",
+      "value": "罗汉",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996F241C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "273",
+      "value": "如来佛",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581996F341C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "274",
+      "value": "观音",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D5819971A41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "280",
+      "value": "文符号",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581999BA41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "290",
+      "value": "文景物",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581999BB41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "291",
+      "value": "太阳",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581999BC41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "292",
+      "value": "月亮",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581999BD41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "293",
+      "value": "文图",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581999BE41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "294",
+      "value": "蛇缠剑",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581999BF41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "298",
+      "value": "未知",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581999C041C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "299",
+      "value": "其他",
+      "root": "TBTSBJDM"
+    },
+    {
+      "id": "430D581999C141C7E0530100007FFC40",
+      "parentKey": "TBTSBJDM",
+      "key": "900",
+      "value": "其他",
+      "root": "TBTSBJDM"
+    }
+  ]
+}

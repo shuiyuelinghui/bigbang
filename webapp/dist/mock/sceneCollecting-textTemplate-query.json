@@ -1,0 +1,60 @@
+{
+  "flag": 1,
+  "msg": null,
+  "totalCount": 4,
+  "data": [
+    {
+      "id": "2c91808e58fb24cc0158fb29a74e0004",
+      "rowNum": 1,
+      "templateType": "2",
+      "templateTypeName": "案件发现过程",
+      "templateName": "案件发现过程",
+      "caseType": "AJLBDM",
+      "content": "方式$#alarmAcceptNo#$房多多点点滴滴",
+      "allAvailable": "1",
+      "commonFlag": "1",
+      "allowModify": "1",
+      "openFlag": "1"
+    },
+    {
+      "id": "2c91808e58fb24cc0158fb27e3210003",
+      "rowNum": 2,
+      "templateType": "1",
+      "templateTypeName": "勘验检查情况",
+      "templateName": "勘验检查情况",
+      "caseType": "AJLBDM",
+      "content": "$#sceneCondition#$方式$#caseLon#$方式",
+      "allAvailable": "1",
+      "commonFlag": "1",
+      "allowModify": "1",
+      "openFlag": "1"
+    },
+    {
+      "id": "2c91808e58fb24cc0158fb2617230002",
+      "rowNum": 3,
+      "templateType": "5",
+      "templateTypeName": "现场处置意见",
+      "templateName": "减肥看电视了",
+      "caseType": "AJLBDM",
+      "content": "减肥看电视了$#suggestion3#$\t",
+      "allAvailable": "1",
+      "commonFlag": "1",
+      "allowModify": "1",
+      "openFlag": "1"
+    },
+    {
+      "id": "2c91808e58fb24cc0158fb25a5110001",
+      "rowNum": 4,
+      "templateType": "4",
+      "templateTypeName": "勘验事由",
+      "templateName": "勘验事由",
+      "caseType": "050000",
+      "caseTypeName": "侵犯财产案",
+      "content": "$#caseLon#$方式$#alarmAcceptNo#$方式$#sceneCondition#$范德萨多付所所多付多多多多",
+      "allAvailable": "1",
+      "commonFlag": "0",
+      "allowModify": "1",
+      "openFlag": "1"
+    }
+  ]
+}

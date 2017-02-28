@@ -1,0 +1,1267 @@
+{
+  "flag": 1,
+  "totalCount": null,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D58197C7241C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "100",
+      "value": "盗窃案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C7341C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "101",
+      "value": "撬防盗门入室盗窃案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C7441C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "102",
+      "value": "攀爬入室盗窃案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C7541C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "103",
+      "value": "技术性开锁盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C7641C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "104",
+      "value": "利用口香糖塞锁芯盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C7741C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "105",
+      "value": "卸防盗门锁芯盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C7841C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "106",
+      "value": "攀爬落水管入室盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C7941C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "107",
+      "value": "盗窃工业材料、氧气瓶案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C7A41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "108",
+      "value": "撬保险箱盗窃案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C7B41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "109",
+      "value": "千斤顶盗窃案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B8F41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "110",
+      "value": "插片入室盗窃案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9041C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "111",
+      "value": "盗窃宾馆案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9141C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "112",
+      "value": "盗窃电脑及配件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9241C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "113",
+      "value": "盗窃工业缝纫机头",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9341C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "114",
+      "value": "在ATM机上设置障碍盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9441C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "115",
+      "value": "盗窃家禽家畜案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9541C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "116",
+      "value": "盗窃摩托车案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9641C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "117",
+      "value": "盗窃汽车案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9741C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "118",
+      "value": "盗窃翻斗车案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9841C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "119",
+      "value": "盗窃电动自行车案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9941C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "120",
+      "value": "盗窃自行车案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9A41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "121",
+      "value": "盗窃车内物品",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9B41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "122",
+      "value": "空心管戳汽车轮胎拎包案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9C41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "123",
+      "value": "割汽车油管盗窃车内物品",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9D41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "124",
+      "value": "用钢珠弹弓弹车玻璃盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9E41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "125",
+      "value": "盗窃挖掘机电脑板",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197B9F41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "126",
+      "value": "盗窃电缆线及电力设备",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BA041C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "127",
+      "value": "溜门政府机关办公室盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BA141C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "128",
+      "value": "溜门医院病房盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BA241C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "129",
+      "value": "盗窃汽车轮胎",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BA341C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "130",
+      "value": "利用色情盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BA441C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "131",
+      "value": "盗窃药店贵重药品",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BA541C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "132",
+      "value": "万能钥匙开锁盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BF541C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "133",
+      "value": "驾驶汽车“白日闯”盗窃案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BF641C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "134",
+      "value": "盗窃枪支弹药",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BF741C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "199",
+      "value": "其他盗窃案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BF841C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "200",
+      "value": "诈骗案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BF941C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "201",
+      "value": "兑换外币诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BFA41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "202",
+      "value": "兑换旧人民币、国库券诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BFB41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "203",
+      "value": "迷信诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BFC41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "204",
+      "value": "掼包丢物诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BFD41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "205",
+      "value": "“金元宝”等假金属物诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BFE41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "206",
+      "value": "假文物、古董诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197BFF41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "207",
+      "value": "假药诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0041C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "208",
+      "value": "“化工原料”诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0141C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "209",
+      "value": "假冒高科技材料诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0241C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "210",
+      "value": "“猪饲料”冒充高科技产品诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0341C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "211",
+      "value": "收购头发为名诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0441C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "212",
+      "value": "以收购黄鼠狼皮为名诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0541C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "213",
+      "value": "以收购鳗鱼苗为名诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0641C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "214",
+      "value": "假报凶信诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0741C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "215",
+      "value": "邮票诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0841C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "216",
+      "value": "易拉罐中奖诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0941C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "217",
+      "value": "手机短信中奖诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0A41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "218",
+      "value": "飞牌、象棋设赌诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0B41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "219",
+      "value": "假冒名牌大学生诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0C41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "220",
+      "value": "诈骗手机",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0D41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "221",
+      "value": "假手机诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0E41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "222",
+      "value": "假奥运金牌诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C0F41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "223",
+      "value": "收购毛主席像章诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1041C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "224",
+      "value": "抵押信用卡诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1141C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "225",
+      "value": "以介绍工作为名诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1241C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "226",
+      "value": "调换存折诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1341C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "227",
+      "value": "白纸变钱、小钱变大钱诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1441C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "228",
+      "value": "诈骗烟酒店香烟",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1541C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "229",
+      "value": "征婚诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1641C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "230",
+      "value": "利用色像诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1741C7E0530100007FFC40",
+      "parentKey": "800",
+      "key": "803",
+      "value": "抢劫强奸",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1841C7E0530100007FFC40",
+      "parentKey": "800",
+      "key": "899",
+      "value": "其他强奸案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1941C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "900",
+      "value": "其他案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1A41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "231",
+      "value": "诈骗托运货物",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1B41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "232",
+      "value": "防“非典”名诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1C41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "233",
+      "value": "以配载为名诈骗信息费",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1D41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "234",
+      "value": "以招揽工程、谈生意为名设局诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1E41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "235",
+      "value": "假冒亲戚、朋友、熟人诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C1F41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "236",
+      "value": "假冒领导诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2041C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "237",
+      "value": "假劳力士表诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2141C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "238",
+      "value": "以借开名义诈骗摩托车",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2241C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "239",
+      "value": "改秤称重诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2341C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "240",
+      "value": "“纳米布”诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2441C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "241",
+      "value": "拾物平分诈骗案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2541C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "242",
+      "value": "秘鲁币、巴西币诈骗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2641C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "243",
+      "value": "“邮寄刮刮卡中奖”诈骗案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2741C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "299",
+      "value": "其他诈骗案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2841C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "300",
+      "value": "敲诈勒索案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2941C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "301",
+      "value": "以赌博为名敲诈出租车司机",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2A41C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "302",
+      "value": "制造假车祸敲诈",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2B41C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "303",
+      "value": "盗窃车牌敲诈",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2C41C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "304",
+      "value": "放置爆炸物进行敲诈",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2D41C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "305",
+      "value": "敲诈党政领导",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2E41C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "306",
+      "value": "携带艾滋病敲诈、抢劫",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C2F41C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "307",
+      "value": "夹有子弹敲诈信案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C3041C7E0530100007FFC40",
+      "parentKey": "300",
+      "key": "399",
+      "value": "其他敲诈勒索案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C3141C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "400",
+      "value": "抢劫案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C3241C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "401",
+      "value": "拦路抢劫案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5041C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "402",
+      "value": "麻醉抢劫案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5141C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "403",
+      "value": "入室抢劫案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5241C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "404",
+      "value": "抢劫出租车司机案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5341C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "405",
+      "value": "宾馆抢劫案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5441C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "406",
+      "value": "尾随银行取款人抢劫",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5541C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "407",
+      "value": "利用色情抢劫",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5641C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "408",
+      "value": "麻醉抢劫运货司机",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5741C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "409",
+      "value": "抢劫坐台女",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5841C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "410",
+      "value": "抢劫陪聊女",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5941C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "411",
+      "value": "敲头(打闷棍)抢劫案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5A41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "412",
+      "value": "以卖黄碟片为名进行敲诈抢劫",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5B41C7E0530100007FFC40",
+      "parentKey": "400",
+      "key": "499",
+      "value": "其他抢劫案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5C41C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "500",
+      "value": "抢夺案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5D41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "501",
+      "value": "飞车抢夺案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5E41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "502",
+      "value": "异物塞车抢夺",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C5F41C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "503",
+      "value": "以制造交通事故为由、实施飞车抢夺",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6041C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "504",
+      "value": "尾随银行取款人抢夺",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6141C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "505",
+      "value": "盗剪、抢夺小孩颈上金项链",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6241C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "506",
+      "value": "十字路口拉车门抢夺",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6341C7E0530100007FFC40",
+      "parentKey": "500",
+      "key": "599",
+      "value": "其他抢夺案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6441C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "600",
+      "value": "杀人案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6541C7E0530100007FFC40",
+      "parentKey": "600",
+      "key": "601",
+      "value": "财杀",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6641C7E0530100007FFC40",
+      "parentKey": "600",
+      "key": "602",
+      "value": "盗窃杀人",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6741C7E0530100007FFC40",
+      "parentKey": "600",
+      "key": "603",
+      "value": "抢劫杀人",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6841C7E0530100007FFC40",
+      "parentKey": "600",
+      "key": "604",
+      "value": "仇杀",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6941C7E0530100007FFC40",
+      "parentKey": "600",
+      "key": "605",
+      "value": "矛盾激化",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6A41C7E0530100007FFC40",
+      "parentKey": "600",
+      "key": "606",
+      "value": "强奸杀人",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6B41C7E0530100007FFC40",
+      "parentKey": "600",
+      "key": "607",
+      "value": "奸情杀人",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6C41C7E0530100007FFC40",
+      "parentKey": "600",
+      "key": "608",
+      "value": "驾车杀人",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6D41C7E0530100007FFC40",
+      "parentKey": "600",
+      "key": "609",
+      "value": "杀人分尸",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6E41C7E0530100007FFC40",
+      "parentKey": "600",
+      "key": "699",
+      "value": "其他杀人案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C6F41C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "700",
+      "value": "涉枪案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D58197C7041C7E0530100007FFC40",
+      "parentKey": "700",
+      "key": "701",
+      "value": "持枪杀人",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819956341C7E0530100007FFC40",
+      "parentKey": "11",
+      "key": "1114",
+      "value": "钻楼道窗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819956441C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "10",
+      "value": "盗反光镜",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998B541C7E0530100007FFC40",
+      "parentKey": "900",
+      "key": "903",
+      "value": "拐卖妇女",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998B641C7E0530100007FFC40",
+      "parentKey": "900",
+      "key": "904",
+      "value": "拐卖儿童",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998B741C7E0530100007FFC40",
+      "parentKey": "900",
+      "key": "905",
+      "value": "爆炸案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998B841C7E0530100007FFC40",
+      "parentKey": "900",
+      "key": "906",
+      "value": "劫持案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998B941C7E0530100007FFC40",
+      "parentKey": "900",
+      "key": "907",
+      "value": "投放危险物质案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998BA41C7E0530100007FFC40",
+      "parentKey": "900",
+      "key": "908",
+      "value": "绑架案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998BB41C7E0530100007FFC40",
+      "parentKey": "900",
+      "key": "909",
+      "value": "放火案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998BC41C7E0530100007FFC40",
+      "parentKey": "900",
+      "key": "910",
+      "value": "故意伤害案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998BD41C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "1100",
+      "value": "涉车盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998BE41C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "1",
+      "value": "砸车玻璃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998BF41C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "2",
+      "value": "解码器、干扰器",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998C041C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "3",
+      "value": "技术快开",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998C141C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "4",
+      "value": "盗窃燃油",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998C241C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "5",
+      "value": "盗窃轮胎",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998C341C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "6",
+      "value": "撬后备箱",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998C441C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "1200",
+      "value": "入室盗窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998C541C7E0530100007FFC40",
+      "parentKey": "1200",
+      "key": "11",
+      "value": "钻窗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998C641C7E0530100007FFC40",
+      "parentKey": "11",
+      "key": "1111",
+      "value": "爬楼钻窗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998C741C7E0530100007FFC40",
+      "parentKey": "11",
+      "key": "1112",
+      "value": "平房钻窗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998C841C7E0530100007FFC40",
+      "parentKey": "11",
+      "key": "1113",
+      "value": "破坏护栏钻窗",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998C941C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "251",
+      "value": "盗窃变压器案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998CA41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "252",
+      "value": "盗窃变压器案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998CB41C7E0530100007FFC40",
+      "parentKey": "1200",
+      "key": "12",
+      "value": "技术开锁",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998CC41C7E0530100007FFC40",
+      "parentKey": "12",
+      "key": "2222",
+      "value": "锡纸开锁",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998CD41C7E0530100007FFC40",
+      "parentKey": "12",
+      "key": "2223",
+      "value": "插片开锁",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998CE41C7E0530100007FFC40",
+      "parentKey": "12",
+      "key": "2224",
+      "value": "工具开锁",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998CF41C7E0530100007FFC40",
+      "parentKey": "1200",
+      "key": "13",
+      "value": "溜门",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998D041C7E0530100007FFC40",
+      "parentKey": "1200",
+      "key": "14",
+      "value": "盗别墅",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998D141C7E0530100007FFC40",
+      "parentKey": "1200",
+      "key": "15",
+      "value": "撬门",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998D241C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "1300",
+      "value": "盗窃保险柜",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998D341C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "1400",
+      "value": "盗窃自行车",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998D441C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "7",
+      "value": "溜车门",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998D541C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "8",
+      "value": "拍车门",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998D641C7E0530100007FFC40",
+      "parentKey": "1100",
+      "key": "9",
+      "value": "撬锁眼",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998D741C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "1500",
+      "value": "盗窃工地、仓库",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998D841C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "1600",
+      "value": "盗窃门店",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998D941C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "1700",
+      "value": "盗窃电缆线",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D581998DA41C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "1800",
+      "value": "扒窃",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984441C7E0530100007FFC40",
+      "parentKey": "700",
+      "key": "702",
+      "value": "持枪伤害",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984541C7E0530100007FFC40",
+      "parentKey": "700",
+      "key": "703",
+      "value": "持枪绑架",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984641C7E0530100007FFC40",
+      "parentKey": "700",
+      "key": "704",
+      "value": "持枪抢劫",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984741C7E0530100007FFC40",
+      "parentKey": "700",
+      "key": "705",
+      "value": "持枪抢劫金融场所",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984841C7E0530100007FFC40",
+      "parentKey": "700",
+      "key": "706",
+      "value": "持枪抢劫机动车",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984941C7E0530100007FFC40",
+      "parentKey": "700",
+      "key": "707",
+      "value": "持枪强奸",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984A41C7E0530100007FFC40",
+      "parentKey": "700",
+      "key": "799",
+      "value": "其他涉枪案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984B41C7E0530100007FFC40",
+      "parentKey": "AJXZDM",
+      "key": "800",
+      "value": "强奸案件",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984C41C7E0530100007FFC40",
+      "parentKey": "800",
+      "key": "801",
+      "value": "入室强奸",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984D41C7E0530100007FFC40",
+      "parentKey": "800",
+      "key": "802",
+      "value": "拦路强奸",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984E41C7E0530100007FFC40",
+      "parentKey": "900",
+      "key": "901",
+      "value": "武装走私",
+      "root": "AJXZDM"
+    },
+    {
+      "id": "430D5819984F41C7E0530100007FFC40",
+      "parentKey": "900",
+      "key": "902",
+      "value": "武装贩毒",
+      "root": "AJXZDM"
+    }
+  ]
+}

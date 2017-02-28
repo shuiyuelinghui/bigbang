@@ -1,0 +1,483 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D58197E5841C7E0530100007FFC40",
+      "parentKey": "ZADJMDDM",
+      "key": "100",
+      "value": "动机",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D581990F941C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "101",
+      "value": "报复",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E5941C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "102",
+      "value": "图财",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E5A41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "103",
+      "value": "淫欲",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E5B41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "104",
+      "value": "嫉妒",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E5C41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "105",
+      "value": "厌世",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E5D41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "106",
+      "value": "义愤",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E5E41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "107",
+      "value": "虚荣",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E5F41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "108",
+      "value": "义气",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6041C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "109",
+      "value": "好奇",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6141C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "110",
+      "value": "模仿",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6241C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "111",
+      "value": "逞强",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6341C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "112",
+      "value": "称霸",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6441C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "113",
+      "value": "激情",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6541C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "114",
+      "value": "反社会",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6641C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "115",
+      "value": "灭口",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6741C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "116",
+      "value": "畏罪避责",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6841C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "117",
+      "value": "政治投机",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6941C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "118",
+      "value": "猜疑",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6A41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "119",
+      "value": "嫌弃",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6B41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "120",
+      "value": "变态心理",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6C41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "121",
+      "value": "性变态",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6D41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "122",
+      "value": "泄私愤",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6E41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "123",
+      "value": "敌视社会",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E6F41C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "124",
+      "value": "对现实政策不满",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7041C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "125",
+      "value": "对领导人不满",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7141C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "126",
+      "value": "寻求刺激",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7241C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "127",
+      "value": "恶作剧",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7341C7E0530100007FFC40",
+      "parentKey": "100",
+      "key": "190",
+      "value": "其他",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7441C7E0530100007FFC40",
+      "parentKey": "ZADJMDDM",
+      "key": "200",
+      "value": "因素",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7541C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "201",
+      "value": "心战宣传",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7641C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "202",
+      "value": "精神病",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7741C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "203",
+      "value": "罪迹败露",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7841C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "204",
+      "value": "隐私败露",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7941C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "205",
+      "value": "奸情败露",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7A41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "206",
+      "value": "婚恋纠纷",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7B41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "207",
+      "value": "家庭纠纷",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7C41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "208",
+      "value": "邻里纠纷",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7D41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "209",
+      "value": "经济纠纷",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197E7E41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "210",
+      "value": "土地纠纷",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6241C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "211",
+      "value": "水利纠纷",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6341C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "212",
+      "value": "资源纠纷",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6441C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "213",
+      "value": "劳资纠纷",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6541C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "214",
+      "value": "琐事口角",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6641C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "215",
+      "value": "名誉受损",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6741C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "216",
+      "value": "对职级奖惩不满",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6841C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "217",
+      "value": "对工作调整不满",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6941C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "218",
+      "value": "受人唆使",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6A41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "219",
+      "value": "受人雇佣",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6B41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "220",
+      "value": "淫物刺激",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6C41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "221",
+      "value": "酗酒",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6D41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "222",
+      "value": "吸毒",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6E41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "223",
+      "value": "过失",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F6F41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "224",
+      "value": "赌博输款",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7041C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "225",
+      "value": "生意赔本",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7141C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "226",
+      "value": "欠款负债",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7241C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "227",
+      "value": "生活困难",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7341C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "228",
+      "value": "追求享乐",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7441C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "229",
+      "value": "灾害事故",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7541C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "230",
+      "value": "工资问题",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7641C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "231",
+      "value": "物价问题",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7741C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "232",
+      "value": "集资引发",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7841C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "233",
+      "value": "股票引发",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7941C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "234",
+      "value": "税收引发",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7A41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "235",
+      "value": "计生引发",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7B41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "236",
+      "value": "征地搬迁引发",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7C41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "237",
+      "value": "民族宗教引发",
+      "root": "ZADJMDDM"
+    },
+    {
+      "id": "430D58197F7D41C7E0530100007FFC40",
+      "parentKey": "200",
+      "key": "290",
+      "value": "其他",
+      "root": "ZADJMDDM"
+    }
+  ]
+}

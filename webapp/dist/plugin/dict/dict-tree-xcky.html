@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字典树更多类型</title>
+    <link rel="stylesheet" href="../../css/base-plus.css">
+    <link rel="stylesheet" href="../../css/set-common-configration.css">
+</head>
+<body>
+<div class="dict-tree-xcky-block set-common-use-block">
+    <div class="scub-ztree-wrap">
+        <!--<h4 class="scub-ztree-title">案件类别</h4>-->
+        <div class="outside-border">
+            <div class="scub-ztree-div">
+                <!--<div class="scub-ztree-search">-->
+                    <!--&lt;!&ndash;<a href="javascript:void(0);" class="icon-search seek"></a>&ndash;&gt;-->
+                    <!--<input type="text" id="scub-seek" class="seek">-->
+                    <!--<i class="icon-search icon-seek"></i>-->
+                <!--</div>-->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="icon-search icon-seek"></i></span>
+                    <input id="scub-seek" type="text" class="form-control">
+                </div>
+                <ul id="dict-ztree-xcky" class="ztree scub-ztree"></ul>
+            </div>
+        </div>
+    </div>
+    <hr class="scub-btns clear"/>
+    <div class="type-in-group save-btn" >
+        <b class="cm-query-btn"></b>
+        <b class="cm-reset-btn "></b>
+    </div>
+</div>
+</body>
+<script src="../../js/base.js"></script>
+<script>
+    importing('ztree',function () {
+        window.dictType = queryParse().dictType;
+        dictType = dictType == 'undefined'?undefined:dictType;
+        window.dictId = queryParse().dictId;
+        window.checkedValue = queryParse().checkedValue;
+        window.isMultiple = queryParse().dictMulti == 'true'?true:false;
+        checkedValue= isMultiple?checkedValue.split(','):checkedValue;
+
+        var $body = $(document.body);
+        var pDoc = parent.document;
+        var pBody = pDoc.body;
+        var treeDataName = dictType?'sys/sysDict/tree/{0}'.format(dictType):'sysDictTree{0}'.format(dictId);
+        var getTreeDataAction = makeAct(treeDataName);
+//            saveCommonUseDataAction = makeAct('sceneCollecting/dictComm/addBatch'),
+//            getCommonUseDataAction = makeAct('sceneCollecting/dictComm/queryAll');
+//        var commonP = '<p id="{0}" tId="{2}">{1}</p>';
+
+        var wheel = function(event){
+            var treeUl = byid('dict-ztree-xcky');
+            var scrollTop = treeUl.scrollTop;
+
+            if((scrollTop<=1 && event.wheelDeltaY>0) || (scrollTop>=treeUl.scrollHeight-treeUl.clientHeight-2 && event.wheelDeltaY<0)){
+                event.preventDefault();
+            }
+        };
+        var bodyWheel = function (e) {
+            e.preventDefault();
+            return false;
+        };
+
+        if(dictType=='caseRegionalism'){
+            treeDataName = 'sys/sysOrganization/dict_unit';
+            getTreeDataAction = makeAct(treeDataName);
+        }
+
+        function init() {
+            getTreeData();
+//            getCommonUseData();
+        }
+        function getTreeData() {
+            var treeData = localData.get(treeDataName);
+            if(treeData && treeData.length){
+                initDictZtree(dictType,treeData);
+            }else if(dictType){
+                $get(getTreeDataAction,{},function(res){
+                    var data = res.data;
+                    localData.set(treeDataName,data);
+                    initDictZtree(dictType,data);
+                });
+            }else{
+                treeData = window.parent.$('[dict-id="{0}"]'.format(dictId)).data('customData');
+                localData.set(treeDataName,treeData);
+                initDictZtree(dictType,treeData);
+            }
+        }
+        function initDictZtree(root, data) {
+            var setting = {
+                data: {
+                    key: {
+                        id: 'key',
+                        name: 'value'
+                    },
+                    simpleData: {
+                        enable: true,
+                        idKey: "key",
+                        pIdKey: "parentKey",
+                        rootPId: 0
+                    }
+                },
+                check:{
+                    enable: true,
+                    chkStyle: "radio",
+                    radioType: "all"
+                },
+                callback: {
+                    onDblClick: function (event, treeId, treeNode) { //鼠标双击选中
+                        if (treeNode.isParent) {//currentDictConfig.treeLeaf &&
+                            zTreeObj.expandNode(treeNode, true, false, true);
+                            return;
+                        }
+                        var key = treeNode.key;
+                        var value = treeNode.value;
+//                        selectQueryDict(key, value);
+
+                    },
+                    onClick: function (event, treeId, treeNode) { //鼠标单击展开
+                        var tKey = treeNode.key;
+                        var perFlag = treeNode.personFlag;
+                        zTreeObj.expandNode(treeNode, true, false, true);
+//                        $('.curSelectedNodeBack:not(.curSelectedNode)').removeClass('curSelectedNodeBack');
+                        if (!treeNode.isParent && perFlag != '0') {//currentDictConfig.treeLeaf &&
+                            zTreeObj.checkNode(treeNode);
+//                            treeNode.checked && $('#'+treeNode.tId).find('.curSelectedNode').addClass('curSelectedNodeBack');
+//                            checkCommonUse(treeNode);
+                        }
+
+//                        if (treeNode.isParent) {//currentDictConfig.treeLeaf &&
+//                            window.currentDictNode = null;
+//                        } else {
+//                            window.currentDictNode = treeNode;
+//                        }
+                    },
+                    onCheck: function (event, treeId, treeNode) {
+                        var perFlag = treeNode.personFlag;
+                        if (!treeNode.isParent && perFlag != '0') {
+                            checkCommonUse(treeNode);
+                        }
+                    }
+                },
+                view: {
+                    showIcon: true,
+                    showLine: true,
+                    dblClickExpand: false,
+                    addDiyDom: addDiyDom
+                }
+            };
+            isMultiple && (setting.check.chkStyle='checkbox');
+            window.zTreeObj = $.ztree.init($('#dict-ztree-xcky'), setting, data);
+            checkByCheckedValue();
+            if (root && root.toUpperCase() === 'GXSDM1') {
+                var nodes = zTreeObj.getNodes();
+                zTreeObj.expandNode(nodes[0]);
+            }
+        }
+        function checkCommonUse(treeNode,isAdd,i) {
+            var $dict = parent.$('[dict-id="{0}"]'.format(dictId));
+            if(!treeNode){
+                var $dictInput = $dict.children('input');
+                var $fstChild = $dictInput.first();
+//                var $target = $fstChild.val() ? $dict.children('input:checked') : $fstChild;
+                $dict.children('input:checked').trigger('click');
+                return true;
+            }
+            var tKey = treeNode.key;
+            var tValue = treeNode.value;
+
+            var name = $dict.children('input').first().attr('name');
+            var _value = $dict.attr('return-value') ? '{value}' : '{key}';
+            var forId = '';
+            var inputHTML = '<input id="{2}" name="{4}" type="{1}" value="{0}" class="dict-{1}" ><label for="{2}">{3}</label>';
+            var addHTML = '';
+            var $checkbox = $dict.children('input:checkbox[value="{0}"]'.format(tKey));
+            var $radio = $dict.children('input:radio').prop('checked',false).filter('input:radio[value="{0}"]'.format(tKey));
+            var $moreBtn = $dict.children('.dict-tree-more-btn');
+            var hasMoreBtn = $moreBtn.length;
+            if(isMultiple){
+                if($checkbox.length){
+//                    $checkbox.prop('checked',treeNode.checked);
+                }else if(!$checkbox.length && isAdd){
+                    forId = name + (Date.now() + i);
+                    addHTML = inputHTML.format(tKey,'checkbox',forId,tValue,name);
+                    hasMoreBtn?$moreBtn.before(addHTML):$dict.append(addHTML);
+                }
+//                $dict.children('input:checkbox').trigger('change');
+                checkedValue.push(tKey);
+            }else{
+                if($radio.length){
+//                    $radio.prop('checked',treeNode.checked);
+                }else if(!$radio.length && isAdd){
+                    forId = name + (Date.now() + 1);
+                    addHTML = inputHTML.format(tKey,'radio',forId,tValue,name);
+                    hasMoreBtn?$moreBtn.before(addHTML):$dict.append(addHTML);
+                }
+                checkedValue = tKey;
+            }
+            forId ? parent.$('#'+forId).trigger('click'): ($checkbox.prop('checked') || $checkbox.trigger('click'));
+        }
+        function checkByCheckedValue() {
+            var checkNode = {};
+            if(checkedValue.forEach){
+                checkedValue.forEach(function (ele){
+                    checkNode = zTreeObj.getNodeByParam("key",ele);
+                    if(checkNode){
+                        zTreeObj.checkNode(checkNode);
+//                        zTreeObj.selectNode(checkNode,true);
+//                        $('#'+checkNode.tId).children('.curSelectedNode').addClass('curSelectedNodeBack');
+                    }
+                });
+            }else{
+                checkNode = zTreeObj.getNodeByParam("key",checkedValue);
+                if(checkNode){
+                    zTreeObj.checkNode(checkNode);
+//                    zTreeObj.selectNode(checkNode);
+//                    $('#'+checkNode.tId).children('.curSelectedNode').addClass('curSelectedNodeBack');
+                }
+            }
+        }
+        //节点名太长用省略号替换
+        function addDiyDom(treeId, treeNode) {
+            var spantxt = $("#" + treeNode.tId + "_span").html();
+            if (spantxt.length > 13) {
+                // spantxt=spantxt.substring(0,13)+"...";
+                spantxt = spantxt.substring(0, 8) + "...." + spantxt.substring(spantxt.length - 5, spantxt.length);
+                $("#" + treeNode.tId + "_span").html(spantxt);
+            }
+        }
+        function seekTreeData() {
+            var dataArr = localData.get(treeDataName).where('o=>o.value.match(/.*?{0}.*?/g)'.format($('#scub-seek').val()));
+            initDictZtree(dictType,dataArr);
+        }
+        $('.set-common-use-block').on('click','.icon-seek',function () {//点击搜索按钮
+            seekTreeData();
+        }).on('keyup','#scub-seek',function () {//输入触发搜索
+            seekTreeData();
+        });
+        $('.cm-reset-btn').on('click',function () {
+            parent.$('.webui-popover').remove();
+        });
+        $('.cm-query-btn').on('click',function () {
+            var checked = zTreeObj.getCheckedNodes(true);
+            var checkedLen = checked.length;
+            var checkedVal = '';
+            var checkedChVal = '';
+            var checkedArr = [];
+            var checkedChArr = [];
+
+            if(checkedLen==1 && checked[0].personFlag !='0'){
+                checkedVal = checked[0].key;
+                checkedChVal = checked[0].value;
+                checkCommonUse(checked[0],true,1);
+            }else if(checkedLen>1){
+                checked.forEach(function (ele,i) {
+                    if(ele.personFlag !='0'){
+                        checkedArr.push(ele.key);
+                        checkedChArr.push(ele.value);
+                        checkCommonUse(ele,true,i);
+                    }
+                });
+                checkedVal = checkedArr.join(',');
+                checkedChVal = checkedChArr.join(',');
+            }else if(checkedLen==0){
+                checkCommonUse();
+            }
+
+            parent.$(pBody).find('#{0}'.format(dictId))
+                .val(checkedVal)
+                .attr('data-chval',checkedChVal);
+
+            parent.$(pBody).trigger('ex-change',['[dict-id="{0}"]'.format(dictId),checkedVal,checkedChVal]);
+//            $(window.parent).off('scroll',window.parent.disabledScroll);
+//            log(window.parent.disMouseWheel)
+//            pDoc.removeEventListener('mousewheel',parent.disMouseWheel);
+            parent.$('.webui-popover').remove();
+        });
+//        parent.$(pBody).one('click',function (e) {
+//            var checked = zTreeObj.getCheckedNodes(true);
+//            var checkedLen = checked.length;
+//            var checkedVal = '';
+//            var checkedChVal = '';
+//            var checkedArr = [];
+//            var checkedChArr = [];
+//
+//            if(checkedLen==1 && checked[0].personFlag !='0'){
+//                checkedVal = checked[0].key;
+//                checkedChVal = checked[0].value;
+//                checkCommonUse(checked[0],true,1);
+//            }else if(checkedLen>1){
+//                checked.forEach(function (ele,i) {
+//                    if(ele.personFlag !='0'){
+//                        checkedArr.push(ele.key);
+//                        checkedChArr.push(ele.value);
+//                        checkCommonUse(ele,true,i);
+//                    }
+//                });
+//                checkedVal = checkedArr.join(',');
+//                checkedChVal = checkedChArr.join(',');
+//            }
+//
+//            $(this).find('#{0}'.format(dictId))
+//                .val(checkedVal)
+//                .attr('data-chval',checkedChVal);
+//
+//            parent.$(pBody).trigger('ex-change',['[dict-id="{0}"]'.format(dictId),checkedVal,checkedChVal]);
+////            $(window.parent).off('scroll',window.parent.disabledScroll);
+////            log(window.parent.disMouseWheel)
+//            pDoc.removeEventListener('mousewheel',parent.disMouseWheel);
+//            $(e.target).is($('.dict-tree-xcky-block,a')) || $(this).find('.webui-popover').remove();
+//        });
+
+        //点击空白处remove窗口时 放置鼠标滚动页面消失
+        $('#dict-ztree-xcky').on('mouseenter',function () {
+            $body[0].removeEventListener( 'mousewheel', bodyWheel);
+        });
+        $('#dict-ztree-xcky').on('mouseleave',function () {
+            $body[0].addEventListener( 'mousewheel', bodyWheel);
+        });
+
+        $body[0].addEventListener( 'mousewheel', wheel);
+
+        init();
+    });
+</script>
+</html>

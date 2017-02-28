@@ -1,0 +1,434 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "id": "430D581993C241C7E0530100007FFC40",
+      "parentKey": "QZDYZLDM",
+      "key": "10",
+      "value": "手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993C341C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "11",
+      "value": "五一式手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993C441C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "12",
+      "value": "五二式公安手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993C541C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "13",
+      "value": "五四式手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993C641C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "14",
+      "value": "五九式手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581986DF41C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "15",
+      "value": "六四式手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993C741C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "16",
+      "value": "六七式微声手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993C841C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "17",
+      "value": "七七式手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993C941C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "18",
+      "value": "八??式自动手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993CA41C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "19",
+      "value": "八四式手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993CB41C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "20",
+      "value": "小口径手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993CC41C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "21",
+      "value": "汽手枪 运动手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993CD41C7E0530100007FFC40",
+      "parentKey": "10",
+      "key": "29",
+      "value": "其他手枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993CE41C7E0530100007FFC40",
+      "parentKey": "QZDYZLDM",
+      "key": "30",
+      "value": "步枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993CF41C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "31",
+      "value": "五三式步枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993D041C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "32",
+      "value": "五六式半自动步枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993D141C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "33",
+      "value": "六三式步枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993D241C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "34",
+      "value": "七九式半自动阻击枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993D341C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "35",
+      "value": "八一式自动步枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993D441C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "36",
+      "value": "自动步枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993D541C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "37",
+      "value": "小口径步枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993D641C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "38",
+      "value": "汽步枪 运动用枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993D741C7E0530100007FFC40",
+      "parentKey": "30",
+      "key": "39",
+      "value": "其他步枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993D841C7E0530100007FFC40",
+      "parentKey": "QZDYZLDM",
+      "key": "40",
+      "value": "冲锋枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993D941C7E0530100007FFC40",
+      "parentKey": "40",
+      "key": "41",
+      "value": "五??式冲锋枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993DA41C7E0530100007FFC40",
+      "parentKey": "40",
+      "key": "42",
+      "value": "五四式冲锋枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993DB41C7E0530100007FFC40",
+      "parentKey": "40",
+      "key": "43",
+      "value": "五六式冲锋枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993DC41C7E0530100007FFC40",
+      "parentKey": "40",
+      "key": "44",
+      "value": "六四式微声冲锋枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993DD41C7E0530100007FFC40",
+      "parentKey": "40",
+      "key": "45",
+      "value": "七九式冲锋枪（轻型）",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993DE41C7E0530100007FFC40",
+      "parentKey": "40",
+      "key": "46",
+      "value": "八五式冲锋枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993DF41C7E0530100007FFC40",
+      "parentKey": "40",
+      "key": "49",
+      "value": "其他冲锋枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993E041C7E0530100007FFC40",
+      "parentKey": "QZDYZLDM",
+      "key": "50",
+      "value": "机枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993E141C7E0530100007FFC40",
+      "parentKey": "50",
+      "key": "51",
+      "value": "五三式轻机枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993E241C7E0530100007FFC40",
+      "parentKey": "50",
+      "key": "52",
+      "value": "五六式班用机枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993E341C7E0530100007FFC40",
+      "parentKey": "50",
+      "key": "53",
+      "value": "五八式连用机枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993E441C7E0530100007FFC40",
+      "parentKey": "50",
+      "key": "54",
+      "value": "六七式轻重两用机枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993E541C7E0530100007FFC40",
+      "parentKey": "50",
+      "key": "55",
+      "value": "八一式轻机枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993E641C7E0530100007FFC40",
+      "parentKey": "50",
+      "key": "59",
+      "value": "其他机枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993E741C7E0530100007FFC40",
+      "parentKey": "QZDYZLDM",
+      "key": "60",
+      "value": "狩猎用枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993E841C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "61",
+      "value": "火药枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993E941C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "62",
+      "value": "单管霰雾弹枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993EA41C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "63",
+      "value": "双管霰雾弹枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581993EB41C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "64",
+      "value": "唧筒式霰雾弹枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992EA41C7E0530100007FFC40",
+      "parentKey": "60",
+      "key": "69",
+      "value": "其他狩猎用枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992EB41C7E0530100007FFC40",
+      "parentKey": "QZDYZLDM",
+      "key": "70",
+      "value": "特殊用枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992EC41C7E0530100007FFC40",
+      "parentKey": "70",
+      "key": "71",
+      "value": "麻醉枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992ED41C7E0530100007FFC40",
+      "parentKey": "70",
+      "key": "72",
+      "value": "特种枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992EE41C7E0530100007FFC40",
+      "parentKey": "70",
+      "key": "73",
+      "value": "防暴枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992EF41C7E0530100007FFC40",
+      "parentKey": "70",
+      "key": "79",
+      "value": "其他特殊用枪",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992F041C7E0530100007FFC40",
+      "parentKey": "QZDYZLDM",
+      "key": "80",
+      "value": "弹药",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992F141C7E0530100007FFC40",
+      "parentKey": "80",
+      "key": "81",
+      "value": "枪弹",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992F241C7E0530100007FFC40",
+      "parentKey": "80",
+      "key": "82",
+      "value": "枪榴弹",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992F341C7E0530100007FFC40",
+      "parentKey": "80",
+      "key": "83",
+      "value": "特种弹",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992F441C7E0530100007FFC40",
+      "parentKey": "80",
+      "key": "84",
+      "value": "防暴弹",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992F541C7E0530100007FFC40",
+      "parentKey": "80",
+      "key": "85",
+      "value": "信号弹",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992F641C7E0530100007FFC40",
+      "parentKey": "80",
+      "key": "86",
+      "value": "手榴弹",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992F741C7E0530100007FFC40",
+      "parentKey": "80",
+      "key": "87",
+      "value": "炮弹",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992F841C7E0530100007FFC40",
+      "parentKey": "80",
+      "key": "88",
+      "value": "自制弹药",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992F941C7E0530100007FFC40",
+      "parentKey": "80",
+      "key": "89",
+      "value": "其他弹药",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581986E241C7E0530100007FFC40",
+      "parentKey": "80",
+      "key": "90",
+      "value": "其他管制武器",
+      "root": "QZDYZLDM"
+    },
+    {
+      "id": "430D581992FA41C7E0530100007FFC40",
+      "parentKey": "QZDYZLDM",
+      "key": "99",
+      "value": "其他枪支弹药",
+      "root": "QZDYZLDM"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "自然光",
+      "root": "XCKYGZTJDM"
+    },
+    {
+      "key": "2",
+      "value": "灯光",
+      "root": "XCKYGZTJDM"
+    },
+    {
+      "key": "3",
+      "value": "特种光",
+      "root": "XCKYGZTJDM"
+    }
+  ]
+}

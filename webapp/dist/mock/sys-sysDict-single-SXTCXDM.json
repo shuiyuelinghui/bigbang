@@ -1,0 +1,47 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "东",
+      "root": "SXTCXDM"
+    },
+    {
+      "key": "2",
+      "value": "南",
+      "root": "SXTCXDM"
+    },
+    {
+      "key": "3",
+      "value": "西",
+      "root": "SXTCXDM"
+    },
+    {
+      "key": "4",
+      "value": "北",
+      "root": "SXTCXDM"
+    },
+    {
+      "key": "5",
+      "value": "东南",
+      "root": "SXTCXDM"
+    },
+    {
+      "key": "6",
+      "value": "西南",
+      "root": "SXTCXDM"
+    },
+    {
+      "key": "7",
+      "value": "西北",
+      "root": "SXTCXDM"
+    },
+    {
+      "key": "8",
+      "value": "东北",
+      "root": "SXTCXDM"
+    }
+  ]
+}

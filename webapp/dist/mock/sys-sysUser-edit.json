@@ -1,0 +1,81 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": {
+    "roleList": [
+      {
+        "id": null,
+        "status": 0,
+        "createAccount": "unkown",
+        "createTime": 1482575147101,
+        "lastModifyTime": 1482896714644,
+        "lastModifyAccount": "unkown",
+        "lastTerminal": "0.0.0.0",
+        "lastSys": "unkown",
+        "rowNum": 0,
+        "roleId": "a685c570c8024511909424a184f10c75",
+        "roleName": "qqqq",
+        "superId": null,
+        "type": 0,
+        "note": null,
+        "systemId": "XCKY",
+        "activeStatus": 1,
+        "roleEnName": "administrator"
+      },
+      {
+        "id": null,
+        "status": 0,
+        "createAccount": "unkown",
+        "createTime": 1482916711145,
+        "lastModifyTime": null,
+        "lastModifyAccount": null,
+        "lastTerminal": "0.0.0.0",
+        "lastSys": "unkown",
+        "rowNum": 0,
+        "roleId": "f3fc2a6a37f84976a754f53481fa2c02",
+        "roleName": "sysManager",
+        "superId": null,
+        "type": 0,
+        "note": null,
+        "systemId": "XCKY",
+        "activeStatus": 1,
+        "roleEnName": "sysManager"
+      },
+      {
+        "id": null,
+        "status": 0,
+        "createAccount": "unkown",
+        "createTime": 1482455911052,
+        "lastModifyTime": 1482479694039,
+        "lastModifyAccount": "unkown",
+        "lastTerminal": "0.0.0.0",
+        "lastSys": "unkown",
+        "rowNum": 0,
+        "roleId": "d7333b678f454d04be40093cd741f13d",
+        "roleName": "勘查员",
+        "superId": null,
+        "type": 0,
+        "note": "勘查员",
+        "systemId": "XCKY",
+        "activeStatus": 1,
+        "roleEnName": "investigator"
+      }
+    ],
+    "sysUser": {
+      "id": "327889bf5821468d848fcae3bd2359a3",
+      "organId": "f1a3176de3c64dad935b6637cddf2643",
+      "organName": "福州市公安局鼓东派出所",
+      "username": "吴奇行",
+      "password": "E10ADC3949BA59ABBE56E057F20F883E",
+      "trueName": "吴奇行",
+      "gender": "1",
+      "idCardNo": "350302198905080013",
+      "policeNo": "110877",
+      "openFlag": "1",
+      "organCode": "350102770000",
+      "roleName": ""
+    },
+    "sysUserRoleIds": ""
+  }
+}

@@ -1,0 +1,63 @@
+
+    <div id="edit-person-block" class="win-pos mt-15 pd10">
+        <form id="edit-form">
+            <input id="edit-id" name="id" type="hidden"/>
+            <p class="mt30">
+                <span class="common-field w110"><span class="orangered">★ </span>姓名：</span>
+                <input id="edit-trueName" name="trueName" type="text" class="common-input w140 validate"  data-options="required:true,validType:'extLength[1,50]'"/>
+                <span class="common-field w100"><span class="orangered">★ </span>单位：</span>
+                <dict dict-type="tree" id="edit-organId" dict-id="edit-organId-dict" dict-name="organId" class="pl5 validate" data-options="required:true"></dict>
+                <input type="hidden" name="organName" id="edit-organ">
+            </p>
+            <p class="mt10">
+                <span class="common-field w110"><span class="orangered">★ </span>警号：</span>
+                <input id="edit-policeNo" name="policeNo" type="text" class="common-input w140 validate" data-options="required:true,validType:'number'"/>
+                <span class="common-field w100">身份证号码：</span>
+                <input id="edit-idCardNo" name="idCardNo" type="text" class="common-input w140 ml5 validate"/>
+            </p>
+            <p class="mt10">
+                <span class="common-field w110">性别：</span>
+                <dict dict-type="select" dict-root="XBDM" id="add-gender" dict-id="edit-gender-dict" dict-name="gender" class="dict" empty="false"></dict>
+            </p>
+            <p class="mt10 mr-240">
+                <span class="common-field w100">手机：</span>
+                <input id="edit-mobilephoneNo" name="mobileNo" type="text" class="common-input w140 ml5 validate" data-options="validType:'mobile'" />
+                <span class="common-field w100">电话：</span>
+                <input id="edit-telephoneNo" name="telNo" type="text" class="common-input w140 validate" data-options="validType:'contact'"/>
+            </p>            
+            <p class="mt10">
+	        	<!-- <span class="common-field  w110">用户级别：</span>
+	            <dict dict-type="select"  dict-id="add-yhjb-dict" dict-name="userLevel" dict-type="select" dict-root="YHJBDM" class="dict" empty="false"></dict> -->
+	        	<span class="common-field  w100">是否启用：</span>
+	            <dict dict-type="select"  dict-id="edit-openFlag" dict-name="openFlag" dict-type="select" dict-root="QYZTDM" class="dict" empty="false"></dict>
+	        </p>
+            <!-- <p class="mt10 mr-240">
+                <span class="common-field w110 fl">备注：</span>
+                <textarea name="remark" id="edit-remark" class="common-textarea validate" data-options="validType:'extLength[0,300]'"></textarea>
+            </p> -->
+        </form>
+            <!-- <div id="person-photo" class="mt-25">
+                <div id="gallery">
+                    <a id="href">
+                        <img id="img0" name="fileChecker" src="" class="person-picture picshow"  alt=""/>
+                    </a>
+                </div>
+                <form id="edit-form-picture" enctype='multipart/form-data' method="post" class="p-file-form">
+                    <a class="cm-query-btn pretender fixed">
+                        <input name="upLoadFile" type="file" id="p-file" onchange="changeSrc(this)" class="p-file common-input mr15">
+                    </a>
+                </form>
+            </div> -->
+    </div>
+    <p class="mt10 mb15 tcenter" id="hid-edit-div">
+        <b id="person-edit-save-btn" class="cm-save-btn mr15"></b>
+        <b id="person-edit-cancel-btn" class="cm-cancel-btn"></b>
+    </p>
+    <div id="edit-tree" class="hide">
+    <div class="note-send-tree w305">
+        <ul id="edit-person-tree" class="ztree"></ul>
+    </div>
+    <div class="tcenter mb15 mt15">
+        <b id="edit-save-tree-btn" class="cm-save-btn w120"></b>
+    </div>
+</div>

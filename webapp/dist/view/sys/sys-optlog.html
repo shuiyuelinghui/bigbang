@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta name="author" content="zhang meng jia" />
+    <meta name="date" content="2016-06-13 09:33:01" />
+    <title>系统操作日志</title>
+    <link rel="stylesheet" href="../../css/base.css?version=0.99">
+    <link rel="stylesheet" href="../../css/sys.css?version=0.99">
+</head>
+<body>
+    <div class="body-agent">
+        <div id="optlog-query-condition" class="query-block">
+            <div class="query-condition-p">
+                <span class="common-field w65">操作用户：</span><input id="optUser" type="text" class="common-input"/>
+                <span class="common-field w100">操作时间：</span><input id="optTimeBegin" type="text" class="query-date"/>~<input id="optTimeEnd" type="text" class="query-date"/>
+                <p class="fr">
+                    <b id="optlog-query-btn" class="cm-query-btn"></b>
+                    <b id="optlog-reset-btn" class="cm-reset-btn"></b>
+                </p>
+            </div>
+        </div>
+        <div id="optlog-query-result" class="query-result">
+    <!--<div class="new-color-bar">-->
+        <!--<span class="title">操作日志列表（共找到<span class="total-count"></span>条数据）</span>-->
+    <!--</div>-->
+    <p replace="_temp/color-bar.htm" data-title="操作日志列表"></p>
+    <div class="all-fix-wrap">
+        <table id="optlog-table" class="typical-tb tleft" cellpadding="3">
+            <thead>
+            <th class="em8">序号</th>
+            <th class="em10">操作用户</th>
+            <th class="em10">请求类型</th>
+            <th class="em12" >IP地址</th>
+            <th class="em14" sort-name="LOG_TIME">操作时间</th>
+            <th class="mem12" sort-name="OFF_TIME">资源路径</th>
+            </thead>
+            <tbody tpsource="#optlog-list"></tbody>
+        </table>
+    </div>
+
+    <div class="paging"></div>
+</div>
+    </div>
+</body>
+<script type="text/template" id="optlog-list">
+    <tr>
+        <td>{rowNum}</td>
+        <td>{optUser}</td>
+        <td>{optType}</td>
+        <td>{optUserIp}</td>
+        <td>{optTime}</td>
+        <td>{optUrl}</td>
+    </tr>
+</script>
+<script src="../../js/base.js?version=0.99"></script>
+<script src="../../js/sys.js?version=0.99"></script>
+<!--<script>typeof sysOptLogFn=='function' && sysOptLogFn();</script>-->
+</html>

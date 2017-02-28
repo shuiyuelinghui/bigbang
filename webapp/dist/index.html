@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>::全国公安机关现场勘验信息系统::</title>
+    <meta name="description" content="Index 主框架页">
+    <meta name="author" content="Evan Yao">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/icon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/base-plus.css?version=0.92">
+    <link rel="stylesheet" type="text/css" href="./css/index.css?version=0.92">
+</head>
+
+<body>
+<div id="admin-design-main" class="body-agent">
+    <header class="navbar navbar-fixed-top" id="root-nav">
+        <div class="navbar-branding">
+            <!--<a class="navbar-brand" href="#"> <b id="left-head-txt">Criminal</b>  <span class="fs16"> Tech <small>&copy;</small></span></a>-->
+            <span id="toggle_sidemenu_l" class="icon-reorder"></span>
+        </div>
+        <div id="head-txt-wrap">
+            <img src="./img/national-emblem.png" alt=""/>
+            <h1 id="head-txt">刑事技术一体化综合应用系统-标准版</h1>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <!--<li title=" 消息 ">-->
+                <!--<a id="msg-count-wrap" class="btn btn-sm" href="javascript:void(0);">-->
+                    <!--<span class="fa fa-envelope fs18"></span>-->
+                    <!--<span id="msg-count" class="badge badge-danger"></span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <li title=" 全屏 ">
+                <a href="#" class=" btn btn-sm request-fullscreen" data-toggle="button">
+                    <span class="ad ad-screen-full fs18"></span>
+                </a>
+            </li>
+            <li title=" 注销 " class="of-h">
+                <a href="#" class="btn btn-sm " id="login-out">
+                    <span class="fa fa-power-off pr5 fs18"></span>
+                </a>
+            </li>
+            <!--<li title="锁定">-->
+            <!--<a href="#" class="topbar-menu-toggle btn btn-sm" id="lock-off-btn">-->
+            <!--<span class="fa fa-lock fs18"></span>-->
+            <!--</a>-->
+            <!--</li>-->
+
+            <!--<li class="dropdown" id="admin-info-area">-->
+            <!--<a href="#" class="dropdown-toggle fw600" data-toggle="dropdown" id="avatar-wrap-link"> <img src="./img/pc-avatar.png" alt="avatar" >-->
+            <!--<span id="user-name">管理员</span>-->
+            <!--<span class="caret caret-tp hidden-xs"></span>-->
+            <!--</a>-->
+            <!--<ul class="dropdown-menu dropdown-persist pn w100 bg-white" role="menu">-->
+            <!--<li class="of-h">-->
+            <!--<a href="javascript:void(0);"  class="fw600 p12 animated animated-short fadeInDown">-->
+            <!--<span class="fa fa-gear pr5"></span> 个人设置 </a>-->
+            <!--</li>-->
+            <!--<li class="of-h">-->
+            <!--<a href="javascript:void(0);"  class="fw600 p12 animated animated-short fadeInDown">-->
+            <!--<span class="fa fa-lock pr5 fs15"></span>  修改密码 </a>-->
+            <!--</li>-->
+            <!--<li class="br-t of-h">-->
+            <!--<a href="#" class="fw600 p12 animated animated-short fadeInDown" id="login-out">-->
+            <!--<span class="fa fa-power-off pr5"></span> 注销 </a>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+        </ul>
+    </header>
+
+
+    <aside id="sidebar_left">
+        <header class="sidebar-header tcenter">
+            <div class="sidebar-img"><img src="img/touxiang.jpg" class="img-responsive" id="user-avatar"></div>
+            <div class="author-widget mb5">
+                <div class="fs14" id="user-name" ></div>
+                <div>
+                    <span class="text-muted fs10" id="organ"></span>
+                    <span class="text-muted fs10" id="post"></span>
+                </div>
+            </div>
+            <div class="mb20">
+                <div>
+                    <button class="btn btn-dark btn-sm" id="personal-settings">
+                        <i class="icon-cog"></i>  个人设置
+                    </button>
+                    <button class="btn btn-dark btn-sm " id="modified-pwd">
+                        <i class="icon-lock"></i>  修改密码
+                    </button>
+                </div>
+            </div>
+        </header>
+        <ul id="root-menu" class="nav sidebar-menu stp-hide">
+            <li sec-count="{items.length}"  default-into="{defaultInto}"  mol-no="{molNo}" page-no="{pageNo}"  title="{name}" class="{name.fixOffsetClass}">
+                <a class="accordion-toggle" href="#"  direct="{direct}">
+                    <span class="{name.iconClass}"></span>
+                    <span class="sidebar-title">{name}</span>
+                    <span class="caret stp-hide{items.length}"></span>
+                </a>
+                <ul class="nav sub-nav stp-hide{items.length}">
+                    {{items:#main-sidemenu-sec-tp}}
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+
+    <div id="content_wrapper">
+        <div id="main-wrap" title="当前模块:首页" data-options="closable:false">
+            <iframe id="main-frame" class="tab-content-frame" src="" x-sandbox="allow-same-origin allow-top-navigation allow-forms allow-scripts"></iframe>
+            <div id="main-div" class="tab-content-frame hide-plus"></div>
+        </div>
+    </div>
+
+
+    <div id="top-mask" class="mask"></div>
+    <div id="left-mask" class="mask"></div>
+    <div id="right-mask" class="mask"></div>
+</div><!-- end: Main -->
+<div id="edit-pwd-block" class="hide">
+    <div class="edit-div">
+        <span class="common-field"><span class="orangered">★ </span>原密码：</span><input id="old-pwd" class="common-input mt10 pwd-validate" type="password" data-options="required:true,validType:'length[3,20]'">
+        <span class="common-field"><span class="orangered">★ </span>新密码：</span><input id="new-pwd" class="common-input mt10 pwd-validate" type="password" data-options="required:true,validType:['length[3,20]','noChinese']">
+        <span class="common-field"><span class="orangered">★ </span>确认新密码：</span><input id="confirm-new-pwd" class="common-input mt10 pwd-validate" type="password" data-options="required:true,validType:['length[3,20]','noChinese']">
+        <!--<div id="pwd-error"></div>-->
+        <p>注：密码长度在3~20个字符之间，不能包含中文。</p>
+    </div>
+    <div class="btn-div">
+        <b id="save-edit-pwd" class="cm-save-btn"></b>
+        <b id="close-edit-pwd" class="cm-close-btn ml15"></b>
+    </div>
+</div>
+<div id="client-update-block" class="hide">
+    <div class="edit-div">
+        <p>检测到有新版本需要更新！是否立即更新？</p>
+    </div>
+    <div class="btn-div">
+        <b id="update-now-btn" class="cm-ok-btn"></b>
+        <b id="update-cancel-btn" class="cm-cancel-btn"></b>
+    </div>
+</div>
+<div id="confirm-logout" class="hide">
+    <img id="confirm-logout-img" src="img/touxiang.jpg"/>
+    <p class="tips">确认退出吗？</p>
+    <p class="tcenter pd10">
+        <b id="logout-ok" class="cm-ok-btn mr15"></b>
+        <b id="logout-cancel" class="cm-cancel-btn"></b>
+    </p>
+</div>
+</body>
+<script type="text/template" id="main-sidemenu-sec-tp">
+    <li class="grade2" sec-count="{items.length}"  default-into="{defaultInto}"  mol-no="{molNo}" page-no="{pageNo}" title="{name}">
+        <a href="javascript:;"  direct="{direct}" class="accordion-toggle">
+            <span class="fa fa-dot-circle-o"></span>
+            <span class="sidebar-sub-title">{name}</span>
+            <span class="caret stp-hide{items.length}"></span>
+        </a>
+        <ul class="nav sub-nav stp-hide{items.length}">
+            {{items:#<li mol-no="{molNo}" page-no="{pageNo}" title="{name}" class="grade3"><a href="javascript:;" direct="{direct}">{name}</a></li>#}}
+        </ul>
+    </li>
+</script>
+<script src="./js/base.js?version=0.92"></script>
+<script src="./js/index.js?version=0.92"></script>
+</html>

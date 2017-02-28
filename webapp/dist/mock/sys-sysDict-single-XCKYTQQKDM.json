@@ -1,0 +1,32 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": [
+    {
+      "key": "1",
+      "value": "阴",
+      "root": "XCKYTQQKDM"
+    },
+    {
+      "key": "2",
+      "value": "晴",
+      "root": "XCKYTQQKDM"
+    },
+    {
+      "key": "3",
+      "value": "雨",
+      "root": "XCKYTQQKDM"
+    },
+    {
+      "key": "4",
+      "value": "雪",
+      "root": "XCKYTQQKDM"
+    },
+    {
+      "key": "5",
+      "value": "雾",
+      "root": "XCKYTQQKDM"
+    }
+  ]
+}

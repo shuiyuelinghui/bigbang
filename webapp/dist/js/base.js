@@ -22240,7 +22240,7 @@ $.fn.table=function(config){
     var table;
     var html='<thead class="{0}">{1}</thead><tbody>{2}</tbody>'.format(config.fixHead!==false?'need-fix':'',thtp,$compile(tdtp,data,helper,allowHTML));
     if(the.is('table')){
-        table=the.addClass('typical-tb stp-table '+ (config.cls||'')).template(html,data).data('table-config',config);
+        table=the.addClass('typical-tb stp-table '+ (config.cls||'')).template(html,null,null,data).data('table-config',config);
     }else{
         table=the.html('<table class="typical-tb stp-table {1}">{0}</table>'.format(html,config.cls||'')).children();
     }

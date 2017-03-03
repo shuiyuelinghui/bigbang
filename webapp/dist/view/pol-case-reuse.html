@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>现勘-警情复用</title>
+    <link rel="stylesheet" href="../css/base-plus.css">
+    <link rel="stylesheet" href="../css/pol-case-reuse.css">
+</head>
+<body>
+    <div class="body-agent">
+        <!--<div class="common-panel-heading">-->
+            <!--<ul class="clearfix">-->
+                <!--<li class="active">查询条件</li>-->
+                <!--<li>已保存条件</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <div class="query-block query-block-inner" behavior="query-block">
+            <div class="query-block-row">
+                <div class="fl qc-group-m">
+                    <span class="qc-label-xs">接警编号：</span>
+                    <input id="aqxx-alarm-no" name="alarmNo" type="text" class="cm-input">
+                </div>
+                <div class="fl qc-group-l">
+                    <span class="qc-label-l">案件编号：</span>
+                    <input id="aqxx-case-no" name="caseNo" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-condition-hide hider">
+                <div class="query-block-row">
+                    <div class="fl qc-group scope">
+                        <span name="sfzp" class="qc-label-xs">发案区划：</span>
+                        <dict dict-type="tree" dict-root="GXSDM" dict-common="true" dict-name="caseRegionalism" dict-id="case-regionalism" class="dict" empty="true"></dict>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div class="fl qc-group scope">
+                        <span name="sfzp" class="qc-label-xs">案件类别：</span>
+                        <dict dict-type="tree" dict-root="AJLBDM" dict-common="true" dict-name="caseType" dict-id="case-type" class="dict" empty="true"></dict>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div class="fl qc-group-m">
+                        <span class="qc-label-xs">接警时间：</span>
+                        <div class="text-time">
+                            <input name="alarmTime" type="text" class="cm-input cm-input-time">
+                            <i class="icon-calendar icon-time"></i>
+                        </div>
+                    </div>
+                    <div class="fl qc-group-l">
+                        <span class="qc-label-l">发案时间：</span>
+                        <div class="text-time">
+                            <input name="crimeTime" type="text" class="cm-input cm-input-range-time" placeholder="起始时间-结束时间">
+                            <i class="icon-calendar icon-time"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div class="fl qc-group-xxl">
+                        <span class="qc-label-xs">发案地点：</span>
+                        <input id="aqxx-case-location" name="caseLocation" type="text" class="cm-input cl-input">
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div class="fl qc-group-l">
+                        <span class="qc-label-xs">接警人：</span>
+                        <input id="aqxx-alarm-receiver" name="alarmReceiver" type="text" class="cm-input">
+                    </div>
+                </div>
+            </div>
+            <hr class="cm-dash" />
+            <p class="query-reset">
+                <b class="cm-query-btn" id="pcr-query-btn"></b>
+                <b class="cm-reset-btn" id="pcr-reset-btn"></b>
+            </p>
+            <!--<div class="cq-condition al-save-condition"></div>-->
+        </div>
+        <div widget="more-condition"></div>
+        <!--<div class="more-condition" title="展开查询条件栏"><i class="icon-angle-up icon-angle-down"></i></div>-->
+        <div id="pc-reuse-query-result" class="query-result">
+            <div class="new-color-bar">
+                <span class="title"><i class="icon-search pr10 fs14"></i>警情复用列表<span class="result-count-desc">共找到<span class="total-count"></span>条符合的记录</span></span>
+            </div>
+            <table id="pc-reuse-table" class="typical-tb mem"></table>
+            <div class="paging"></div>
+        </div>
+    </div>
+</body>
+<script type="text/template" id="pc-reuse-table-opt">
+    <a class="pc-reuse-link" href="javascript:void(0);" paramid="{id}">复用</a>
+</script>
+<script src="../js/base.js"></script>
+<script src="../js/scene-mng.js"></script>
+<script>
+    typeof polCaseReuse == 'function' && polCaseReuse();
+</script>
+</html>

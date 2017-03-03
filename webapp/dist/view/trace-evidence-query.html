@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>现勘-痕迹物证查询列表</title>
+    <link rel="stylesheet" href="../css/base-plus.css">
+    <link rel="stylesheet" href="../css/pol-case-reuse.css">
+</head>
+<body>
+<div class="body-agent">
+    <div class="query-block query-block-inner" behavior="query-block">
+        <div class="query-condition-hide hider">
+            <div class="query-block-row">
+                <div class="fl qc-group-full">
+                    <span class="qc-label-m">送检状态：</span>
+                    <dict id="inspect-status" dict-type="radio" dict-root="SFDM" dict-name="storageFlag" empty="true"></dict>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group scope">
+                    <span name="sfzp" class="qc-label-m">案件类别：</span>
+                    <dict dict-type="tree" dict-root="AJLBDM" dict-common="true" dict-name="caseType" dict-id="case-type" class="dict" empty="true"></dict>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group scope">
+                    <span name="sfzp" class="qc-label-m">发案区划：</span>
+                    <dict dict-type="tree" dict-root="GXSDM" dict-common="true" dict-name="caseRegionalism" dict-id="case-regionalism" class="dict" empty="true"></dict>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-xxl">
+                    <span class="qc-label-m">勘验地点：</span>
+                    <input name="investigationPlace" type="text" class="cm-input cl-input">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div widget="date-options2"  data-label="勘验时间" data-input="query-investigation-date" data-name="investigationDate" data-select="query-kysj" data-default="week"></div>
+            </div>
+            <div class="query-block-row">
+                <div widget="date-options2"  data-label="发案时间" data-input="query-crime-time" data-name="crimeTime" data-select="query-fasj" data-default="week"></div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-l">
+                    <span class="qc-label-m">现场勘验号：</span>
+                    <input name="investigationNo" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <p widget="query-btns"></p>
+    </div>
+    <p widget="more-condition"></p>
+    <div id="teq-query-result" class="query-result">
+        <div class="new-color-bar">
+            <span class="title"><i class="icon-search pr10 fs14"></i>现场数据列表<span class="result-count-desc">共找到<span class="total-count"></span>条符合的记录</span></span>
+        </div>
+        <table id="trace-evidence-table" class="typical-tb mem">
+            <thead class="need-fix">
+                <tr>
+                    <th class="cell-xs need-fix">序号</th>
+                    <th class="mem18 need-fix">现场勘验号</th>
+                    <th class="mem18">痕迹物证编号</th>
+                    <th class="mem12">物证名称</th>
+                    <th class="mem8">物证类别</th>
+                    <th class="mem8">遗留部位</th>
+                    <th class="mem6">提取方法</th>
+                    <th class="mem8">案件类别</th>
+                    <th class="mem20">发案区划</th>
+                    <th class="mem18">勘验时间</th>
+                    <th class="mem20">勘验地点</th>
+                    <th class="mem12">勘验人</th>
+                    <th class="mem6">提取人</th>
+                    <th class="mem6">送检状态</th>
+                    <th class="mem4 need-fix-end">操作</th>
+                </tr>
+            </thead>
+            <tbody tpsource="#trace-evidence-list-tp"></tbody>
+        </table>
+        <div class="paging"></div>
+    </div>
+</div>
+</body>
+<script type="text/template" id="trace-evidence-list-tp">
+    <tr class="white f9{bg}">
+        <td rowspan="{rowspan}" class="hide{rowspan}">
+            {{rowspan && #{rowNum}#}}
+        </td>
+        <td rowspan="{rowspan}" class="hide{rowspan}">
+            {{rowspan && #<input id="{investigationNo}" type="checkbox" class="hider{investigationNo}"><label for="{investigationNo}">{investigationNo}</label>#}}
+        </td>
+        <td><input id="{materialEvidenceNo}" type="checkbox" class="hider{materialEvidenceNo}"><label for="{materialEvidenceNo}">{materialEvidenceNo}</label></td>
+        <td>{materialEvidenceName}</td>
+        <td>{category}</td>
+        <td>{leftPosition}</td>
+        <td>{collectionMode}</td>
+        <td>{caseType}</td>
+        <td>{caseRegionalism}</td>
+        <td>{investigationDateFrom.asDate16} <em class="hider{investigationDateTo}">~</em> {investigationDateTo.asDate16}</td>
+        <td>{investigationPlace}</td>
+        <td>{sceneInvestigator}</td>
+        <td>{sceneCollectedPerson}</td>
+        <td>{storageFlag}</td>
+        <td rowspan="{rowspan}" class="hide{rowspan}">
+            {{rowspan && #<a class="teq-inspect-link" href="javascript:void(0);" paramid="{id}">送检</a>#}}
+        </td>
+    </tr>
+</script>
+<script src="../js/base.js"></script>
+<script src="../js/inspection-appraisal.js"></script>
+<script>
+//    config.mock=1
+    typeof traceEvidenceQuery == 'function' && traceEvidenceQuery();
+</script>
+</html>

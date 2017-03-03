@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta name="author" content="Xiong Ying" />
+    <meta name="date" content="2016-10-28 13:42:44" />
+    <title>现勘-现场查询</title>
+    <!--<link rel="stylesheet" href="../css/base.css?version=0.91">-->
+    <link rel="stylesheet" type="text/css" href="../css/base-plus.css?version=0.92">
+    <link rel="stylesheet" href="../css/scene-query.css">
+</head>
+<body>
+<div class="query-scene body-agent">
+
+    <ul x-temp id="scene-tab-stat" behavior="hide-more-condition" data-selector=">li"  class="title-list clearfix">
+        <li>
+            <h5>全部 <em x-map="allCount.allCount.toString"></em></h5>
+            <p>单位：<em x-map="allCount.allOrganCount.toString"></em> 个人：<em x-map="allCount.allPersonCount.toString"></em></p>
+        </li>
+        <li val="1">
+            <h5>已提交 <em x-map="submitCount.allCount.toString"></em></h5>
+            <p>单位：<em x-map="submitCount.allOrganCount.toString"></em> 个人：<em x-map="submitCount.allPersonCount.toString"></em></p>
+        </li>
+        <li val="0">
+            <h5>暂存 <em x-map="saveCount.allCount.toString"></em></h5>
+            <p>单位：<em x-map="saveCount.allOrganCount.toString"></em> 个人：<em x-map="saveCount.allPersonCount.toString"></em></p>
+        </li>
+        <li val="2">
+            <h5>不合格 <em x-map="unQualityCount.allCount.toString"></em></h5>
+            <p>单位：<em x-map="unQualityCount.allOrganCount.toString"></em> 个人：<em x-map="unQualityCount.allPersonCount.toString"></em></p>
+        </li>
+        <li val="3">
+            <h5>关注 <em x-map="followCount.allCount.toString"></em></h5>
+        </li>
+        <li val="wgl">
+            <h5>未关联 <em x-map="unConnectCount.allCount.toString"></em></h5>
+            <p>单位：<em x-map="unConnectCount.allOrganCount.toString"></em> 个人：<em x-map="unConnectCount.allPersonCount.toString"></em></p>
+        </li>
+    </ul>
+    <!--<ul id="scene-tab-stat" class="title-list clearfix x-temp">
+        <li behavior="hide-more-condition">
+            <h5>全部 <em class="hider">{allCount.allCount.toString}</em></h5>
+            <p>单位：<em class="hider">{allCount.allOrganCount.toString}</em> 个人：<em class="hider">{allCount.allPersonCount.toString}</em></p>
+        </li>
+        <li  behavior="hide-more-condition" val="1">
+            <h5>已提交 <em class="hider">{submitCount.allCount.toString}</em></h5>
+            <p>单位：<em class="hider">{submitCount.allOrganCount.toString}</em> 个人：<em class="hider">{submitCount.allPersonCount.toString}</em></p>
+        </li>
+        <li  behavior="hide-more-condition" val="0">
+            <h5>暂存 <em class="hider">{saveCount.allCount.toString}</em></h5>
+            <p>单位：<em class="hider">{saveCount.allOrganCount.toString}</em> 个人：<em class="hider">{saveCount.allPersonCount.toString}</em></p>
+        </li>
+        <li  behavior="hide-more-condition" val="2">
+            <h5>不合格 <em class="hider">{unQualityCount.allCount.toString}</em></h5>
+            <p>单位：<em class="hider">{unQualityCount.allOrganCount.toString}</em> 个人：<em class="hider">{unQualityCount.allPersonCount.toString}</em></p>
+        </li>
+        <li behavior="hide-more-condition" val="3">
+            <h5>关注 <em class="hider">{followCount.allCount.toString}</em></h5>
+        </li>
+        <li  behavior="hide-more-condition" val="wgl">
+            <h5>未关联 <em class="hider">{unConnectCount.allCount.toString}</em></h5>
+            <p>单位：<em class="hider">{unConnectCount.allOrganCount.toString}</em> 个人：<em class="hider">{unConnectCount.allPersonCount.toString}</em></p>
+        </li>
+
+    </ul>-->
+
+    <div class="query-block-tabs mt10" id="query-scene">
+        <div>
+            <div widget="common-panel-heading"></div>
+
+            <div x-form class="query-block cq-condition">
+                <div class="query-condition-hide hider">
+
+                    <div class="query-block-row">
+                        <div widget="inline-select" id="query-xcfw" data-name="sceneArea" data-label="现场范围" data-ops="不限:,个人:0,本单位:1" data-default=""></div>
+                    </div>
+
+                    <div class="query-block-row">
+                        <div widget="inline-select" id="query-xczt" data-name="sceneStatus" data-label="现场状态" data-ops="不限:,暂存:0,已提交:1,不合格:2,关注:3" data-default=""></div>
+                    </div>
+
+                    <!--<div widget="date-options"  data-label="勘验时间"   data-inputer="query-investigationDate" data-name="investigationDate" data-fname="investigationDateFrom" data-tname="investigationDateTo" data-selecter="query-kysj" data-default="empty"></div>-->
+                    <div widget="date-options" id="query-kysj"  data-label="勘验时间" data-name="investigationDate" data-bname="investigationDateFrom" data-ename="investigationDateTo" data-default="empty"></div>
+
+                    <div class="query-block-row">
+                        <div widget="inline-select" id="query-sfgl" data-name="relateFlag" data-label="是否关联" data-ops="不限:,未关联:0,已关联:1" data-default=""></div>
+                    </div>
+
+                    <div class="query-block-row">
+                        <div>
+                            <span class="qc-label-m fl">案件类别：</span>
+                            <div behavior="dict" dict-id="query-ajlb" dict-name="caseType" dict-type="tree" dict-root="AJLBDM" dict-common="true" empty="true" class="dict unready option inline-block -w120 ml5"></div>
+                        </div>
+                    </div>
+
+                    <div class="query-block-row">
+                        <div>
+                            <span class="qc-label-m fl">发案区划：</span>
+                            <div behavior="dict" data-act="sysOrgDict" id="query-dict-faqh" dict-id="query-faqh" dict-name="caseRegionalism" dict-type="tree" dict-common="true" empty="true" class="dict unready option inline-block -w120 ml5"></div>
+                        </div>
+                    </div>
+
+                    <div class="query-block-row">
+                        <div>
+                            <span class="qc-label-m fl">勘验检查人员：</span>
+                            <div behavior="kyjcry-picker" id="query-kyjcry-dict" dict-id="query-kyjcry" dict-name="sceneInvestigatorId" dict-type="tree" dict-multiple="false"  empty="true" class="dict inline-block unready option -w120 ml5"></div>
+                        </div>
+                    </div>
+
+                    <div class="query-block-row">
+                        <div class="fl qc-group-m">
+                            <span class="qc-label-m">勘验编号：</span>
+                            <input id="query-kybh" x-name="investigationNo" type="text" class="cm-input">
+                        </div>
+                        <div class="fl qc-group-l">
+                            <span class="qc-label-l">勘验地点：</span>
+                            <input id="query-kydd" x-name="investigationPlace" type="text" class="cm-input">
+                        </div>
+                    </div>
+
+                    <div class="query-block-row">
+                        <div class="fl qc-group-m">
+                            <span class="qc-label-m">案件编号：</span>
+                            <input id="query-ajbh" x-name="caseNo" type="text" class="cm-input">
+                        </div>
+                        <div class="fl qc-group-l">
+                            <span class="qc-label-l">警情编号：</span>
+                            <input id="query-jqbh" x-name="alarmNo" type="text" class="cm-input">
+                        </div>
+                    </div>
+
+                    <div class="query-block-row">
+                        <div widget="inline-select" id="query-bl" class="fl qc-group-l" data-name="noteMadeFlag" data-label="是否制作笔录" data-ops="不限:,是:1,否:0" data-default=""></div>
+                        <div widget="inline-select" id="query-jz" class="fl qc-group-m" data-name="bsCollectFlag" data-label="是否已采基站" data-ops="不限:,是:1,否:0" data-default=""></div>
+                    </div>
+                </div>
+                <p widget="query-btns"></p>
+            </div>
+        </div>
+        <p widget="more-condition" behavior="in-wrap info-childNodes"></p>
+    </div>
+
+    <div id="scene-query-result" class="query-result">
+        <div class="new-color-bar">
+            <span class="title"><i class="icon-search pr10 fs14"></i>现场信息列表<span class="result-count-desc">共找到<span class="total-count"></span>条符合的记录</span></span>
+            <div class="function-icon mr30">
+                <a class="into-add-scene icon-plus fs16" title="新增现场"></a>
+                <!--<a class="batch-attention icon-star fs16"></a>-->
+                <a class="batch-set-edit icon-magic fs16 hideplus" title="批量设为可修改"></a>
+                <a class="batch-del icon-remove fs16" title="批量删除"></a>
+                <a class="export-excel icon-file-alt fs16" title="excel导出"></a>
+            </div>
+        </div>
+
+        <table x-table behavior="in-wrap" id="scene-table" class="typical-tb has-checkbox"></table>
+
+        <div class="paging"></div>
+    </div>
+
+</div>
+
+<div id="export-form-div" class="hide-plus">
+    <form id="export-form">
+        <input name="sceneArea"/>
+        <input name="sceneStatus"/>
+        <input name="investigationDateFrom"/>
+        <input name="investigationDateTo"/>
+        <input name="caseType"/>
+        <input name="caseRegionalism"/>
+        <input name="sceneInvestigatorId"/>
+        <input name="investigationNo"/>
+        <input name="investigationPlace"/>
+        <input name="caseNo"/>
+        <input name="alarmNo"/>
+        <input name="noteMadeFlag"/>
+        <input name="bsCollectFlag"/>
+        <input name="colName"/>
+    </form>
+</div>
+
+</body>
+<script type="text/template" id="q-b-kyr-input-tp">
+    <div class="query-kyr-input inline-block pr">
+        <input id="query-kyjcry-input-hidden" type="hidden"/>
+        <input id="query-kyjcry-input" class="cm-input" placeholder="请输入人员姓名进行查询"/>
+        <ul class="kyr-res xtp-hide">
+            {{data: #<li paramId="{id}" username="{username}">{trueName}</li>#}}
+        </ul>
+    </div>
+</script>
+
+<script type="text/template" id="q-r-table-opt">
+    <div class="tleft w-100">
+        <a class="into-link icon-link fs16" paramId="{id}" saveFlag="{saveFlag}" href="javascript:void(0);" title="关联现场"></a>
+        <a class="into-attention {gzClass} fs16" paramId="{id}" attentionFlag="{followId}" href="javascript:void(0);" title="{gzTitle}"></a>
+        <a class="into-set-edit icon-magic fs16 hideplus{allowSetEdit} {setClass}" paramId="{id}" href="javascript:void(0);" title="{setEditTitle}"></a>
+        <a class="into-edit icon-edit fs16 hideplus{allowEdit}" investigationNo="{investigationNo}"  paramId="{id}" data-casetype="{caseType}" data-casenature="{caseNature}" href="javascript:void(0);" title="修改"></a>
+        <a class="into-iteration icon-copy fs16 hideplus{allowIteration}" paramId="{id}" data-casetype="{caseType}" data-casenature="{caseNature}" href="javascript:void(0);" title="复勘"></a>
+        <a class="into-del icon-remove fs16 hideplus{allowDel}" paramId="{id}" href="javascript:void(0);" title="删除"></a>
+    </div>
+</script>
+<script type="text/template" id="q-r-no-detail">
+    <div class="no-show-detail hider">
+        <p class="square"></p>
+        <p class="no">{0}</p>
+    </div>
+</script>
+<script src="../js/base.js?version=0.91"></script>
+<script src="../js/scene-mng.js?version=0.91"></script>
+<script>
+    typeof sceneQueryFn == 'function' && sceneQueryFn();
+</script>
+</html>

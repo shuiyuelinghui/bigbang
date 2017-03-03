@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>现勘-配置常用项</title>
+    <link rel="stylesheet" href="../css/base-plus.css">
+    <link rel="stylesheet" href="../css/set-common-configration.css">
+</head>
+<body>
+<!--配置常用项-->
+<div class="set-common-use-block">
+    <div class="scub-ztree-wrap">
+        <h4 class="scub-ztree-title"></h4>
+        <div class="outside-border">
+            <div class="scub-ztree-div">
+                <!--<div class="scub-ztree-search">-->
+                    <!--&lt;!&ndash;<a href="javascript:void(0);" class="icon-search seek"></a>&ndash;&gt;-->
+                    <!--<input type="text" id="scub-seek" class="seek">-->
+                    <!--<i class="icon-search icon-seek"></i>-->
+                <!--</div>-->
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="icon-search icon-seek"></i></span>
+                    <input id="scub-seek" type="text" class="form-control">
+                </div>
+                <ul id="scub-ztree" class="ztree scub-ztree"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="scub-move-btn-wrap">
+        <b class="scub-right-btn icon-arrow-right"></b>
+        <b class="scub-left-btn icon-arrow-left"></b>
+    </div>
+    <div class="scub-common-use-wrap ">
+        <div class="scub-common-use-title-wrap">
+            <h4 class="scub-common-use-title">常用项</h4>
+            <h5 class="icon-trash scub-common-use-empty"> 清空</h5>
+        </div>
+        <div class="scub-common-use outside-border commonly clear">
+            <div class="scub-choose-default hide">
+            </div>
+        </div>
+    </div>
+    <hr class="scub-btns clear"/>
+    <div class="type-in-group save-btn" >
+        <b class="cm-query-btn"></b>
+        <b class="cm-reset-btn "></b>
+    </div>
+</div>
+</body>
+<script src="../js/base.js"></script>
+<script>
+    importing('ztree',function () {
+        window.dictType = queryParse().dictType;
+        window._type = queryParse().type;
+        window.linkId = queryParse().linkId;
+        window.caseType = queryParse().caseType;
+
+        var treeDataName = 'sys/sysDict/tree/{0}'.format(dictType);
+        var getTreeDataAction = makeAct(treeDataName),
+            saveCommonUseDataAction = makeAct('sceneCollecting/dictComm/addBatch'),
+            getCommonUseDataAction = makeAct('sceneCollecting/dictComm/queryAll');
+
+        if(_type=='kcz' || _type=='zhry'){
+            treeDataName = 'sys/sysUser/queryTreeUser';
+            getTreeDataAction = makeAct(treeDataName);
+            saveCommonUseDataAction = makeAct('sceneCollecting/investigatorHistory/addBatch');
+            getCommonUseDataAction = makeAct('sceneCollecting/investigatorHistory/queryAll');
+        }
+        if(dictType=='caseRegionalism'){
+            treeDataName = 'sys/sysOrganization/dict_unit';
+            getTreeDataAction = makeAct(treeDataName);
+        }
+
+        var commonP = '<p id="{0}" tId="{2}" duty="{4}"><u>{1}</u>{3}</p>';
+        var iconA = '<i class="icon-group"></i><i class="icon-remove"></i>';
+        function init() {
+            var dictTitle = '';
+            getTreeData();
+            getCommonUseData();
+            if(_type=='kcz' || _type=='recommend'){
+                $('.scub-choose-default').removeClass('hide');
+//                    .addClass('cm-use-checked');
+//                $('.scub-common-use').addClass('cm-use');
+            }
+            if(_type=='recommend'){
+                $('.scub-common-use').addClass('sys-recommend');
+            }
+            $('.scub-ztree-title').html(decodeURIComponent(queryParse().dictTitle || ''));
+        }
+        function getTreeData() {
+            var treeData = localData.get(treeDataName);
+            var mType = (_type=='kcz'||_type=='zhry')?'$post':'$get';
+            if(treeData  && treeData.length){
+                initDictZtree(dictType,treeData);
+            }
+            else{
+                window[mType](getTreeDataAction,null,function(res){
+//                    log(res.data)
+                    var data = res.data;
+                    localData.set(treeDataName,data);
+                    initDictZtree(dictType,data);
+                });
+            }
+        }
+        function getCommonUseData() {
+            var param = {"dictType":dictType};
+            var cmUseData = [];
+            _type=='kcz' && (param = {"duty":"0"});
+            _type=='zhry' && (param = {"duty":"1"});
+            (_type == 'recommend' && dictType == 'AJXZDM') && (param.caseType = caseType);
+            $post(getCommonUseDataAction,param,function(res){
+                var $ztreeA = $('#scub-ztree').find('a');
+                var $cmUse = $('.scub-common-use');
+                var $deCmUse = $('.scub-choose-default');
+                $deCmUse.html('');
+                $cmUse.children('p').remove();
+                cmUseData = res.data;
+                cmUseData.forEach(function (ele) {
+                    var commonPStr = '';
+                    switch(_type){
+                        case 'kcz':commonPStr = commonP.format(ele.investigatorId,ele.investigatorName,'',iconA,ele.duty);break;
+                        case 'zhry':commonPStr = commonP.format(ele.investigatorId,ele.investigatorName,'','',ele.duty);break;
+                        default:commonPStr = commonP.format(ele.dictId,ele.dictValue,'','');
+                    }
+                    if(ele.isOpen == '1' || (!ele.isOpen && ele.createUserId && _type=='recommend')){
+                        $deCmUse.append(commonPStr);
+                    }else{
+                        $cmUse.append(commonPStr);
+                    }
+                    $ztreeA.each(function (i,el) {
+                        var $el = $(el);
+                        ($el.attr('title')==ele.dictValue) && $el.addClass('forbidden-set');
+                    });
+                });
+            });
+            return cmUseData;
+        }
+        function initDictZtree(root, data) {
+            var setting = {
+                data: {
+                    key: {
+                        id: 'key',
+                        name: 'value'
+                    },
+                    simpleData: {
+                        enable: true,
+                        idKey: "key",
+                        pIdKey: "parentKey",
+                        rootPId: 0
+                    }
+                },
+                callback: {
+                    onDblClick: function (event, treeId, treeNode) { //鼠标双击选中
+                        if (treeNode.isParent) {//currentDictConfig.treeLeaf &&
+                            zTreeObj.expandNode(treeNode, true, false, true);
+                            return;
+                        }
+                        var key = treeNode.key;
+                        var value = treeNode.value;
+//                        selectQueryDict(key, value);
+
+                    },
+                    onClick: function (event, treeId, treeNode) { //鼠标单击展开
+                        zTreeObj.expandNode(treeNode, true, false, true);
+                        toggleForbiddenSetColor(treeNode.tId,'addClass');
+                        $('.curSelectedNodeBack').removeClass('curSelectedNodeBack');
+                        if(!treeNode.isParent){
+                            $('#'+treeNode.tId).find('.curSelectedNode').addClass('curSelectedNodeBack');
+                        }
+//                        if (treeNode.isParent) {//currentDictConfig.treeLeaf &&
+//                            window.currentDictNode = null;
+//                        } else {
+//                            window.currentDictNode = treeNode;
+//                        }
+                    },
+                    onExpand: function (event, treeId, treeNode) {
+                        toggleForbiddenSetColor(treeNode.tId,'addClass');
+                    }
+                },
+                view: {
+                    showIcon: true,
+                    showLine: true,
+                    dblClickExpand: false,
+                    addDiyDom: addDiyDom
+                }
+            };
+            window.zTreeObj = $.ztree.init($('#scub-ztree'), setting, data);
+            if (root && root.toUpperCase() === 'GXSDM1') {
+                var nodes = zTreeObj.getNodes();
+                zTreeObj.expandNode(nodes[0]);
+            }
+        }
+//        function addForbiddenSetColor(treeNode) {
+//            var $ztreeA = $('#{0}'.format(treeNode.tId)).children('ul').find('a');
+//            var $cmUseP = $('.scub-common-use').children('p');
+//            $cmUseP.each(function (index,ele) {
+//                $ztreeA.each(function (i,el) {
+//                    var $el = $(el);
+//                    ($el.attr('title')==ele.innerHTML) && $el.addClass('forbidden-set');
+//                });
+//            });
+//        }
+        function toggleForbiddenSetColor(treeId,operType) {
+            var $ztreeA = $('#{0}'.format(treeId)).find('a');
+            var $cmUseP = $('.scub-common-use').find('p');
+            $cmUseP.each(function (index,ele) {
+                $ztreeA.each(function (i,el) {
+                    var $el = $(el);
+                    ($el.attr('title')==$(ele).children('u').html()) && $el[operType]('forbidden-set');
+                });
+            });
+        }
+        //添加常用项
+        function addCommDict() {
+            //var baseTreeObj = $.fn.zTree.getZTreeObj("baseTree");//字典树
+            var selectNodeArr = zTreeObj.getSelectedNodes();//选中的节点
+//            log(selectNodeArr)
+//            var groupNode = commonBaseTreeObj.getSelectedNodes();//选中的分组
+            if (selectNodeArr.length == 0) {
+                setTimeout(function () {
+                    toast("请从左侧树形字典中选中要设置成常用项的节点").warn();
+                }, 500);
+            } else {
+                var selectNode = selectNodeArr[0];
+//                var key = selectNode[0].key;
+//                log(selectNode);
+                var name = selectNode.value;
+                var id = selectNode.id || selectNode.key;
+                var tId = selectNode.tId;
+                var $cmP = $('.scub-common-use').find('p');
+                var appendBol = true;
+                $cmP.each(function (i,ele) {
+                    ($(ele).children('u').html() == selectNode.value) && (appendBol = false);
+                });
+                if(appendBol && !selectNode.isParent && selectNode.personFlag!='0'){
+                    var commonPStr = _type=='kcz'?commonP.format(id,name,tId,iconA,''):commonP.format(id,name,tId,'','');
+                    $('#{0}'.format(selectNode.tId)).children('a').addClass('forbidden-set');
+                    _type == 'recommend' ? $('.scub-choose-default').append(commonPStr) : $('.scub-common-use').append(commonPStr);
+                }else if(!appendBol){
+                    toast('该常用项已添加！').warn();
+                }else if(selectNode.isParent){
+                    toast('父项不能添加！').warn();
+                }else if(selectNode.personFlag=='0'){
+                    toast('单位不能添加！').warn();
+                }
+//                var parentNode = null;
+//                if (groupNode.length) {
+//                    parentNode = groupNode[0];
+//                    //取出选中的常用项分组
+//                    if (!parentNode.isParent) {
+//                        parentNode = groupNode[0].getParentNode();
+//                    }
+//                }
+                //判断要加入常用项的节点是否在当前分组中
+//                if (parentNode != null) {
+//                    var nodes = commonBaseTreeObj.getNodesByParam("name", name, parentNode);
+//                    if (nodes != null && nodes.length > 0) {
+//                        setTimeout(function () {
+//                            toast("当前组中已经存在同名字典", toastTime).warn();
+//                        }, 500);
+//                        return;
+//                    }
+//                } else {
+//                    var rootNode = commonBaseTreeObj.getNodesByParam("pId", null);
+//                    for (var i = 0; i < rootNode.length; i++) {
+//                        if (!(rootNode[i].isParent) && rootNode[i].name == name) {
+//                            setTimeout(function () {
+//                                toast("常用项中已经存在同名字典", toastTime).warn();
+//                            }, 500);
+//                            return;
+//                        }
+//                    }
+//                }
+//                $get(saveCommonUseDataAction, {
+//                    rootKey: commonRootKey,
+//                    dictKey: key,
+//                    groupId: parentNode ? parentNode.id : ''
+//                }, function (res) {
+//                    if (res.data == '' || res.data == 'null' || res.flag == 0) {
+//                        setTimeout(function () {
+//                            toast("该字典已经存在常用项中", toastTime).warn();
+//                        }, 500);
+//                    } else {
+//                        commonBaseTreeObj.addNodes(parentNode, {id: res.data, name: name, key: key, value: name});
+//                    }
+//                }, false, false);
+            }
+        }
+        //节点名太长用省略号替换
+        function addDiyDom(treeId, treeNode) {
+            var spantxt = $("#" + treeNode.tId + "_span").html();
+            if (spantxt.length > 13) {
+                // spantxt=spantxt.substring(0,13)+"...";
+                spantxt = spantxt.substring(0, 8) + "...." + spantxt.substring(spantxt.length - 5, spantxt.length);
+                $("#" + treeNode.tId + "_span").html(spantxt);
+            }
+        }
+        function seekTreeData() {
+            var dataArr = localData.get(treeDataName).where('o=>o.value.match(/.*?{0}.*?/g)'.format($('#scub-seek').val()));
+            initDictZtree(dictType,dataArr);
+        }
+        function removeCommonUse($cmP) {
+            $cmP = $cmP || $('.scub-common-use').find('p.active');
+
+            if($cmP.parent().is('.sys-recommend')){
+                return false;
+            }
+
+            $('#scub-ztree').find('a').each(function (i,el) {
+                var $el = $(el);
+                ($el.attr('title')==$cmP.children('u').html()) && $el.removeClass('forbidden-set');
+            });
+            $cmP.remove();
+        }
+        $('.set-common-use-block').on('click','.cm-reset-btn',function () {//取消
+            parent.$('#edit-case-type-block').children('.transparent-mask').addClass('hider');
+            parent.$('.webui-popover').remove();
+        }).on('click','.scub-right-btn',function () {//移入常用项
+            addCommDict();
+        }).on('click','.scub-left-btn',function () {//移出常用项
+            removeCommonUse();
+        }).on('click','.scub-common-use p',function () {//常用项点击事件
+            var $this = $(this);
+            var act = $this.hasClass('active')?'removeClass':'addClass';
+            $('.scub-common-use').find('p.active').removeClass('active');
+            $this[act]('active');
+//            $(this).toggleClass('active').siblings().removeClass('active');
+        }).on('click','.scub-common-use>p>.icon-group',function (e) {//加入默认选中组
+            e.stopPropagation();
+            $(this).parent().appendTo('.scub-choose-default');
+        }).on('click','.scub-common-use p>.icon-remove',function () {//非默认组移出常用项
+            removeCommonUse($(this).parent());
+        }).on('click','.scub-choose-default>p>.icon-group',function (e) {//移出默认组
+            e.stopPropagation();
+            $(this).parent().appendTo('.scub-common-use');
+        }).on('click','.scub-common-use-empty',function () {//清空
+            toggleForbiddenSetColor('scub-ztree','removeClass');
+            $('.scub-common-use').find('p').remove();
+        }).on('click','.icon-seek',function () {//点击搜索按钮
+            seekTreeData();
+        }).on('keyup','#scub-seek',function () {//输入触发搜索
+            seekTreeData();
+        }).on('click','.cm-query-btn',function () {//保存
+            var cmArr = [];
+            (_type=='recommend') || $('.scub-common-use').children('p').each(function (i,ele) {
+                var $ele = $(ele);
+                var duty = '';
+                if(_type=='kcz' || _type=='zhry'){
+                    duty = $ele.attr('duty') || (_type=='kcz'?'0':'1');
+                    cmArr.push({
+                        "investigatorId": ele.id,
+                        "investigatorName": $ele.children('u').html(),
+                        "duty": duty,
+                        "isOpen":0
+                    });
+                }else{
+                    cmArr.push({
+                        dictId:ele.id,
+                        dictType: dictType,
+                        sort: i+1
+                    });
+                }
+            });
+            $('.scub-choose-default').children('p').each(function (i,ele) {
+                var $ele = $(ele);
+                debugger
+                if(dictType == 'AJXZDM'){
+                    cmArr.push({
+                        dictId:ele.id,
+                        dictType: dictType,
+                        sort: i+1,
+                        caseType:caseType
+                    });
+                }else if(dictType == 'AJLBDM'){
+                    cmArr.push({
+                        dictId:ele.id,
+                        dictType: dictType,
+                        sort: i+1
+                    });
+                }else{
+                    cmArr.push({
+                        "investigatorId": ele.id,
+                        "investigatorName": $ele.children('u').html(),
+                        "duty": $ele.attr('duty') || '0',
+                        "isOpen":1
+                    });
+                }
+            });
+            $post(saveCommonUseDataAction,cmArr,function () {
+                toast('保存成功！',function () {
+                    var $dict = parent.$('#'+linkId).closest('.form-field,.type-in-group').children('[dict-type]');
+                    if(queryParse().isAnalysis=='true'){
+                        parent.$('#'+linkId).closest('.mcb-form').find('[dict-root="{0}"]'.format(dictType)).dict();
+                        parent.$('.webui-popover').remove();
+                    }else if(_type=='kcz'){
+                        cmArr = cmArr.select('o => {dictKey: o.investigatorId, dictValue: o.investigatorName,isOpen:o.isOpen}');
+                        $dict.dict(localData.get(treeDataName),cmArr,function () {
+                            parent.defaultSel();
+                        });
+                        parent._kyry = cmArr;
+                        parent.$('.webui-popover').remove();
+                    }else if(dictType=='AJXZDM'){//系统推荐(目前有案件类别/案件性质)
+                        parent.getCaseNatureByCaseType(caseType,function (data) {
+                            parent.$('#ectb-case-nature-dict').dict(null,data);
+                            parent.$('#edit-case-type-block').children('.transparent-mask').addClass('hider');
+                            parent.$('.webui-popover').remove();
+                        });
+                    }else{
+                        $dict.dict();
+                        parent.$('#edit-case-type-block').children('.transparent-mask').addClass('hider');
+                        parent.$('.webui-popover').remove();
+                    }
+                }).ok();
+            });
+        });
+        init();
+    });
+</script>
+</html>

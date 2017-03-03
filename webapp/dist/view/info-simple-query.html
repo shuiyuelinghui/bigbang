@@ -1,0 +1,345 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>现勘-简单查询</title>
+    <link rel="stylesheet" type="text/css" href="../css/base-plus.css?version=0.92">
+    <link rel="stylesheet" type="text/css" href="../css/info-query.css?version=0.92">
+</head>
+<body>
+<div class="body-agent">
+    <div x-form  x-outside="#show-way" class="query-block" behavior="query-block"  data-selector="b" data-all="true">
+        <div class="query-block-row">
+            <div>
+                <span class="qc-label-l">常用查询：</span>
+                <ul id="usual-search" class="clearfix"></ul>
+            </div>
+        </div>
+        <div class="query-condition-hide hider">
+            <hr class="cm-dash">
+            <!--<div class="query-block-row">
+                <div>
+                    <span class="qc-label-l">查询结果排序：</span>
+                    <span dict-name="" class="option">
+                    </span>
+                </div>
+            </div>-->
+            <div class="query-block-row">
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">现场勘验号：</label>
+                    <input x-name="investigationNo"  class="cm-input">
+
+                </div>
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">案件编号：</label>
+                    <input x-name="caseNo"  class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">案(事)件受理号：</label>
+                    <input x-name="alarmAcceptNo"  class="cm-input">
+                </div>
+                <div class="fl qc-group-l pr">
+                    <label class="qc-label-l">勘验人员：</label>
+                    <select x-name="duty" id="duty" class="cm-select mr10">
+                        <option value="">不限</option>
+                        <option value="2">主勘</option>
+                        <option value="11">辅勘</option>
+                    </select>
+                    <input id="investigator" x-name="investigatorId"  class="cm-input" style="width: 148px">
+                    <ul id="kyry" class="kyry hider"></ul>
+                    <!--<span><u>主堪</u><u>辅勘</u></span>-->
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">案件类别：</label>
+                    <dict behavior="dict" class="unready" dict-id="query-ajlb" dict-multiple="true" dict-name="caseType" dict-type="tree" dict-root="AJLBDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <!--<div class="fl qc-group-l">
+                    <span class="qc-label-l">是否破案：</span>
+                    <span dict-name="" class="option">
+                    </span>
+                </div>-->
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">是否刑案：</label>
+                    <dict behavior="dict" class="unready" dict-name="criminalFlag" dict-type="radio" dict-root="SFDM" empty="true"></dict>
+                </div>
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">是否命案：</label>
+                    <dict behavior="dict" class="unready" dict-name="murderFlag" dict-type="radio" dict-root="SFDM" empty="true"></dict>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">现场录入时间：</label>
+                    <input x-name="createTime" behavior="date-range" data-timepicker="true" >
+                </div>
+                <div class="fl qc-group-l">
+                    <span class="qc-label-l">发案时间：</span>
+                    <input x-name="crimeTime"  behavior="date-range" data-timepicker="true" data-bname="crimeTimeBeginStr" data-ename="crimeTimeTimeEndStr">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">勘验时间：</label>
+                    <input x-name="investigationDate"  behavior="date-range" data-timepicker="true">
+                </div>
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">提交时间：</label>
+                    <input x-name="lastSubmitDatetime" behavior="date-range" data-timepicker="true">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">发案区划：</label>
+                    <dict behavior="dict" data-act="sysOrgDict" class="unready" id="faqh" dict-id="query-faqh" dict-multiple="true" dict-name="caseRegionalism" dict-type="tree" dict-root="caseRegionalism" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">案件性质：</label>
+                    <dict behavior="dict" class="unready" dict-id="query-ajxz" dict-multiple="true" dict-name="caseNature" dict-type="tree" dict-root="AJXZDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">选择对象：</label>
+                    <dict behavior="dict" class="unready"  dict-id="query-xzdx" dict-multiple="true" dict-name="chooseObject" dict-type="tree" dict-root="XZDXFLDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">选择处所：</label>
+                    <dict behavior="dict" class="unready"  dict-id="query-xzcs" dict-multiple="true" dict-name="choosePlace" dict-type="tree" dict-root="XZCSFLXLDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">作案进出口：</label>
+                    <dict behavior="dict" class="unready" dict-id="query-zajck" dict-multiple="true" dict-name="crimeInOut" dict-type="tree" dict-root="ZACRKDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">作案时机：</label>
+                    <dict behavior="dict" class="unready" dict-id="query-zasj" dict-multiple="true" dict-name="crimeTime" dict-type="tree" dict-root="ZASJDFLDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">侵入方式：</label>
+                    <dict behavior="dict" class="unready"  dict-id="query-jrfs" dict-multiple="true" dict-name="invasionType" dict-type="tree" dict-root="QRFSFLDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">作案特点：</label>
+                    <dict behavior="dict" class="unready"   dict-id="query-zatd" dict-multiple="true" dict-name="crimeFeature" dict-type="tree" dict-root="ZATDFLDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">作案手段：</label>
+                    <dict behavior="dict" class="unready"   dict-id="query-zasd" dict-multiple="true" dict-name="crimeType" dict-type="tree" dict-root="ZASDFLDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">数据来源：</label>
+                    <dict behavior="dict" class="unready"  dict-id="query-sjly" dict-multiple="true" dict-name="source" dict-type="tree" dict-root="SJLYDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">是否已采集基站：</label>
+                    <dict behavior="dict" class="unready" dict-name="bsCollectFlag" dict-type="radio" dict-root="SFDM" empty="true"></dict>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">经度：</label>
+                    <input x-name="caseLon"  class="cm-input">
+                </div>
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">维度：</label>
+                    <input x-name="caseLat"  class="cm-input">
+                </div>
+                <div class="fl qc-group-l">
+                    <label class="qc-label-l">半径：</label>
+                    <input x-name="radius"  class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div>
+                    <label class="qc-label-l">痕迹物证情况：</label>
+                    <dict behavior="dict" class="unready" dict-id="query-hjwz" dict-multiple="true" dict-name="evidenceType" dict-type="tree" dict-root="XCHJWZLBDM" dict-common="true" empty="true" ></dict>
+                    <em>(可多选)</em>
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash">
+        <div class="cm-selected-condition">
+            <label class="mb0" style="height: 24px; line-height: 24px">已选条件：</label>
+            <ul id="yxtj-ul" class="yxtj-ul clearfix"></ul>
+        </div>
+        <p class="query-reset">
+            <b class="cm-query-btn"></b>
+            <b class="cm-reset-btn"></b>
+            <b class="cm-save-btn" id="scene-save-btn"></b>
+        </p>
+        <!--<p widget="query-btns"></p>-->
+    </div>
+    <p widget="more-condition"></p>
+
+
+    <!--<img width="20" x-bind="testSrc" class="img-responsive" id="user-avatar">-->
+
+    <div class="query-result">
+        <div class="new-color-bar">
+            <span class="title"><i class="icon-search pr10 fs14"></i>委托查询结果<span class="result-count-desc">共找到<span class="total-count"></span>条符合的记录</span></span>
+            <div class="title-r fr mr10 pr">
+                <select x-name="category" id="show-way">
+                    <option value="">默认</option>
+                </select>
+                <span class="ept-l" id="export"><i class="icon-file"></i> 导出 </span>
+                <span class="ept-r"><i class="icon-caret-down"></i>&nbsp;</span>
+                <div class="setting-ept cur-p hider"><i class="icon-cogs" style="color: #999;"></i> 设置导出列</div>
+            </div>
+        </div>
+        <div class="all-fix-wrap">
+            <table id="res-table" class="typical-tb has-checkbox"></table>
+        </div>
+        <div class="mt20" style="overflow-x: auto">
+            <ul id="pic-ul" class="pic-ul clearfix hider"></ul>
+        </div>
+        <div class="paging"></div>
+    </div>
+</div>
+
+
+<!--常用查询添加-->
+<div class="alert-window hider" id="save-usual-search">
+    <div class="query-block-row">
+        <div>
+            <span class="qc-label-l">名称：</span>
+            <input x-name="queryName"  class="cm-input">
+        </div>
+    </div>
+    <div class="query-block-row">
+        <div>
+            <span class="qc-label-l">备注：</span>
+            <textarea x-name="remark"  class="cm-input" style="height: 60px; vertical-align: top;line-height: 20px;"></textarea>
+        </div>
+    </div>
+    <hr class="cm-dash">
+    <div class="save-box clear" >
+        <button class="btn btn-save save">保存</button>
+        <button class="btn cancel">取消</button>
+    </div>
+</div>
+<!--设置导出列窗口-->
+<div class="alert-window hider" id="setting-opt">
+    <div class="input-group">
+        <input  class="form-control export-seach">
+        <span class="input-group-addon"><i class="icon-search"></i></span>
+    </div>
+    <div id="setting-opt-result"></div>
+    <div class="save-btn clear" >
+        <button class="btn btn-save save">保存</button>
+        <button class="btn cancel">取消</button>
+    </div>
+</div>
+<!--导出项模板-->
+<script type="text/template" id="export-div">
+    <div class="query-block-row">
+        <span class="letter fl pl40 pr20">{firstPy}</span>
+        <ul class="letter-ul fl">
+            {{arr: #export-li}}
+        </ul>
+    </div>
+</script>
+<script type="text/template" id="export-li">
+    <li>
+        <input id="{fieldPy}" type="checkbox" {{checked && #checked#}}>
+        <label for="{fieldPy}">{field}</label>
+    </li>
+</script>
+<!--关联模板-->
+<script type="text/template" id="q-r-no-detail">
+    <span class="icon-ok-sign number-exist"></span>
+    <div class="no-show-detail hider">
+        <p class="square"></p>
+        <p class="no">{value}</p>
+    </div>
+</script>
+<!--常用查询模板-->
+<script type="text/template" id="usual-search-li">
+    <li data-id="{id}">
+        <span>{queryName}</span>
+        <div class="comment hider">{remark}</div>
+        <i class="icon-remove"></i>
+    </li>
+</script>
+<!--查询结果以图片显示的模板-->
+<script type="text/template" id="pic-li">
+    <li>
+        <div>
+            <img src="{fileServerPath.getFullPath}" alt="{materialEvidenceName}">
+        </div>
+        <p class="file-name">{materialEvidenceName}</p>
+        <p class="xcky-num"><a href="javascript:;" data-id="{investigationId}" data-caseTypeCn="{caseTypeCn}" data-caseNatureCn="{caseNatureCn}">{investigationNo}</a></p>
+    </li>
+</script>
+<!--查询结果图片放大后下半部分的模板-->
+<script type="text/template" id="express-pic">
+    <div class="fts-preview-pro">
+        <label>物证名称：</label><span>{materialEvidenceName}</span><br>
+        <label>提取方法：</label><span>{collectionModeCn}</span><br>
+        <label>基本特征：</label><span>{feature}</span>
+    </div>
+    <div class="fts-preview-pro">
+        <label>遗留部位：</label><span>{leftPosition}</span><br>
+        <label>提取人：</label><span>{collectedPerson}</span>
+    </div>
+    <div class="fts-preview-pro">
+        <label>物证类型：</label><span>{materialEvidenceTypeCn}</span><br>
+        <label>提取日期：</label><span>{collectedTime}</span>
+    </div>
+</script>
+<!--已选条件模板-->
+<script type="text/template" id="yxtj-li">
+    <li data-key="{key}" data-root="{root}"><span >{value}</span><em></em></li>
+</script>
+<!--通用li模板-->
+<script type="text/template" id="util-li">
+    <li>{value}</li>
+</script>
+<!--通用option模板-->
+<script type="text/template" id="util-option">
+    <option value="{key}">{value}</option>
+</script>
+</body>
+<script src="../js/base.js"></script>
+<script src="../js/info-query.js"></script>
+<script>
+    typeof infoSimpleQuery == 'function' && infoSimpleQuery();
+</script>
+</html>

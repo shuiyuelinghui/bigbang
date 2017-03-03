@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>现勘-资料制作</title>
+    <link rel="stylesheet" type="text/css" href="../css/base-plus.css?version=0.92">
+    <link rel="stylesheet" href="../css/scene-query.css">
+</head>
+<body>
+<div class="body-agent">
+    <div class="query-block-tabs">
+        <div widget="common-panel-heading" data-saved="hide"></div>
+        <div class="query-block cq-condition">
+            <div class="query-condition-hide hider">
+                <div class="query-block-row">
+                    <div widget="inline-select" id="query-xcfw" data-name="sceneArea" data-label="现场范围" data-ops="不限:,个人:0,本单位:1" data-default=""></div>
+                    <!--<div>
+                        <span class="qc-label-m">现场范围：</span>
+                        <span id="query-xcfw" data-name="sceneArea" class="option">
+                            <u class="active default">不限</u>
+                            <u val="0">个人</u>
+                            <u val="1">本单位</u>
+                        </span>
+                    </div>-->
+                </div>
+                <div class="query-block-row">
+                    <div>
+                        <span class="qc-label-m">现场勘验号：</span>
+                        <input id="query-kybh" data-name="investigationNo" type="text" class="cm-input"/>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div widget="inline-select" id="query-bl" data-name="noteMadeFlag" data-label="是否制作笔录" data-ops="不限:,是:1,否:0" data-default=""></div>
+                    <!--<div class="fl">
+                        <span class="qc-label-m">是否制作笔录：</span>
+                        <span id="query-bl" data-name="noteMadeFlag" class="option">
+                            <u class="active default">不限</u>
+                            <u val="1">是</u>
+                            <u val="0">否</u>
+                        </span>
+                    </div>-->
+                </div>
+                <div class="query-block-row">
+                    <div>
+                        <span class="qc-label-m fl">发案区划：</span>
+                        <div id="query-dict-faqh" dict-id="query-faqh" dict-name="caseRegionalism" data-name="caseRegionalism" dict-type="tree" dict-common="true" empty="true" class="dict unready option inline-block -w125 ml5"></div>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div>
+                        <span class="qc-label-m fl">案件类别：</span>
+                        <div dict-id="query-ajlb" dict-name="caseType" data-name="caseType" dict-type="tree" dict-root="AJLBDM" dict-common="true" empty="true" class="dict unready option inline-block -w125 ml5"></div>
+                    </div>
+                </div>
+                <div widget="date-options"  data-label="勘验时间" data-labelcls="qc-label-m"  data-input="query-investigationDate" data-name="investigationDate" data-bname="investigationDateFrom" data-ename="investigationDateTo" data-select="query-kysj" data-default="month"></div>
+                <div class="query-block-row">
+                    <div>
+                        <span class="qc-label-m">勘验地点：</span>
+                        <input id="query-kydd" data-name="investigationPlace" type="text" class="cm-input"/>
+                    </div>
+                </div>
+            </div>
+            <p widget="query-btns"></p>
+        </div>
+        <div widget="more-condition"></div>
+    </div>
+    <div widget="query-result"
+         id="doc-make-query-result"
+         data-title="结果列表"
+         data-table="doc-make-tb"
+         data-btns="color,full">
+    </div>
+</div>
+</body>
+<script type="text/template" id="doc-make-table-opt">
+    <a class="into-make icon-leaf fs16 hideplus{_doBtn}" investigationId="{id}" href="javascript:void(0);" title="制作"></a>
+    <a class="into-download icon-download fs16 hideplus{_download}" filepath="{fileServicePath}" investigationNo="{investigationNo}" href="javascript:void(0);" title="下载"></a>
+</script>
+<script src="../js/base.js?version=0.91"></script>
+<script src="../js/scene-mng.js?version=0.91"></script>
+<script>
+    typeof docMakeFn == 'function' && docMakeFn();
+</script>
+</html>

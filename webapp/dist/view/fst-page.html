@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/base-plus.css?version=0.92">
+    <!--<link rel="stylesheet" href="../css/fst-page.css?version=0.92">-->
+    <style>
+        pre{
+            padding: 10px 0 0 0;
+            margin: 45px 0 0 0;
+            line-height: 1;
+            overflow: hidden;
+        }
+        h2{
+            width: 250px;
+            padding: 0px 0  0px 20px;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="body-agent">
+    <div class="mg15">-----------------</div>
+    <h2 class="tooltips"  title="hehe,提示增强插件而已">widget 组件实例:</h2>
+    <pre>
+    < p replace="_temp/notice.htm" data-ps="come on :) ">< /p>
+    </pre>
+    <p replace="_temp/notice.htm" data-ps="come on :) "></p>
+
+
+    <pre>
+    < p widget="date-options" data-label="测试时间" data-name="testTime">< /p>
+    </pre>
+    <p widget="date-options" data-label="选择日期" data-name="testTime"></p>
+    <div class="query-block-row pl15"><label for="">选择时间</label><input class="cm-input" id="dt-test"></div>
+    <div class="query-block-row pl15"><label for="">选择时间</label><input class="cm-input" id="dt-test2"></div>
+
+    <pre>
+    < p widget="query-result" id="user-result"  data-btns="add,remove" data-table="user-tb">< /p>
+    </pre>
+    <p widget="query-result" id="user-result"  data-btns="color,full" data-table="user-tb"></p>
+
+    <div widget="query-result"
+         data-id="fep-result"
+         data-cls="panel-primary"
+         data-title="前端人员列表"
+         data-table="fep-table"
+         data-btns="send,excel,color,full">
+    </div>
+
+
+
+    <p widget="query-result"   data-btns="add,remove,send,excel,color,full" data-table="fuza-tb" data-tablecls="xtp-hide" data-tablehtml="#fuzatb-tp"></p>
+
+    <p include="_part/btns.htm"></p>
+
+</div>
+</body>
+
+<script id="fuzatb-tp" type="text/html">
+    <thead>
+        <tr>
+            <th>呵呵</th> <th>哈哈</th> <th>不错</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>{hehe}</td> <td>{heha}</td> <td>{id}</td>
+        </tr>
+    </tbody>
+</script>
+
+<script src="../js/base.js"></script>
+<script>
+    importing('tooltips','bootstrap-js','datetimepicker',function(){
+        config.mock=1;
+        $filter('asCnSex',function(){return this==1?'男':'女';});
+        $filter('asNick',function(p){return this.slice(this.length-1)+ (p.sex?'哥':this.slice(this.length-1))});
+
+        var columns=[
+            {title:'序号',  map:'$rowspanNum',      cls:'cell-xs', rowspan:true},
+            {title:'部门',  map:'dept',         cls:'cell-m', rowspan:true},
+            {title:'籍贯',  map:'native',       cls:'cell-m'},
+            {title:'姓名',  map:'name',         cls:'cell-m'},
+            {title:'绰号',  map:'name.asNick', cls:'linkblue' ,hide:false},
+            {title:'性别',  map:'sex.asCnSex', cls:'cell-s'},
+            {title:'年龄',  map:'age',          cls:'cell-s'}
+        ];
+
+        var data=[
+            {rowNum:11,name:'姚益丰', sex:1, age:18,dept:'研发3部',native:'江苏',rowspan:2},
+            {rowNum:12,name:'熊鹰', sex:0, age:24,dept:'研发3部',native:'江西',rowspan:0},
+            {rowNum:13,name:'李浪', sex:1, age:29,dept:'研发2部',native:'湖北',rowspan:1},
+            {rowNum:14,name:'张梦佳', sex:0, age:24,dept:'研发3部',native:'浙江',rowspan:4},
+            {rowNum:15,name:'金浩杰', sex:1, age:47,dept:'研发3部',native:'浙江',rowspan:0},
+            {rowNum:16,name:'杨波', sex:1, age:27,dept:'研发3部',native:'浙江',rowspan:0},
+            {rowNum:17,name:'游培丹', sex:0, age:16,dept:'研发3部',native:'河北',rowspan:0}
+        ];
+        //data=data.concat(data);data=data.concat(data);data=data.concat(data);
+
+        $('#fep-table').table({
+            data:data,
+            cols:columns,
+            check:true,
+            fixCols:{ left:1, right:1},
+            cls:'no-nth',
+            //helper:function(item){item.fakeAge=item.age+100;}
+        });
+
+
+
+        $('#fep-result').trigger('up-count',data.length);
+
+
+
+
+        //pagingList demo------------------------------------------------------------
+
+        //预定义filter
+        $filter('asEditDelBtn',function(item){
+            var html = '<a class="into-user-edit icon-edit-btn mr5" param="{id}" title="修改"></a>'+
+                       '<a class="delete-for-user icon-remove-btn" param="{id}" paramName="{username}" title="删除"></a><br>';
+            return html.format({
+                id:this.valueOf(),
+                username:item.username
+            })
+        });
+
+        //准备数据源
+        var sysUserAct = makeAct('sys/sysUser/pagequery');
+
+        //准备配置项
+        var usercols=[
+            {title:'序号',  map:'rowNum',      cls:'em6'},
+            {title:'账号',  map:'username',    cls:'mem8', sort:'username'},
+            {title:'姓名',  map:'trueName',    cls:'mem8', sort:'trueName'},
+            {title:'角色',  map:'roleName',    cls:''},
+            {title:'状态',  map:'openFlag.asEnable',  cls:'em6'},
+            {title:'操作',  map:'id.asEditDelBtn',    cls:'em6'}
+        ];
+
+        //发动
+        $('#user-result').pagingList({
+            action:sysUserAct,
+            jsonObj:{
+                username:$('#userName').val2(),
+                trueName:$('#trueName').val2(),
+                roleName:$('#query-role').val2()
+            },
+            callback:function(data){
+                $('#user-tb').table({
+                    data:data,
+                    cols:usercols,
+                    cls:'tleft',
+                    allowHTML:true
+                });
+                //info([$('#user-tb').find('tr'),$('#user-tb').find('>tbody>tr').eq(1).data('current-data')])
+            }
+        });
+
+
+        $('#dt-test').datetimepicker();
+
+        $('#dt-test2').daterangepicker({
+            timePicker:true
+        });
+
+
+        $('.tooltips').tooltipster({
+            //theme: 'tooltipster-borderless',
+            position: 'right'
+        });
+
+// all options
+//        $('.tooltips').tooltipster({
+//            animation: 'fade',
+//            arrow: true,
+//            arrowColor: '',
+//            content: '',
+//            delay: 200,
+//            fixedWidth: 0,
+//            maxWidth: 0,
+//            functionBefore: function(origin, continueTooltip) {
+//                continueTooltip();
+//            },
+//            functionReady: function(origin, tooltip) {},
+//            functionAfter: function(origin) {},
+//            icon: '(?)',
+//            iconDesktop: false,
+//            iconTouch: false,
+//            iconTheme: '.tooltipster-icon',
+//            interactive: false,
+//            interactiveTolerance: 350,
+//            offsetX: 0,
+//            offsetY: 0,
+//            onlyOne: true,
+//            position: 'top',
+//            speed: 350,
+//            timer: 0,
+//            theme: '.tooltipster-default',
+//            touchDevices: true,
+//            trigger: 'hover',
+//            updateAnimation: true
+//        });
+    })
+
+</script>
+</html>

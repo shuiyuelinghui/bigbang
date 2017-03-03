@@ -1,0 +1,2724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>现勘-新增现场</title>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta name="author" content="Xiong Ying" />
+    <meta name="date" content="2016-12-01 19:35:44" />
+    <link rel="stylesheet" type="text/css" href="../css/base-plus.css?version=0.92">
+    <link rel="stylesheet" href="../css/add-scene.css">
+</head>
+<body>
+<div class="body-agent unready">
+    <div class="main-content xtp-hide">
+        <div id="add-scene-aqxx" data-bigfield="sceneInvestigationDispatch" titles="案情信息" class="main-content-block">
+            <div class="mcb-header">
+                <h2 class="fl">案情信息</h2>
+                <u id="investigation-no"></u>
+                <b class="edit add-scene-fr-btn hider"><i class="icon-edit"></i>编辑</b>
+                <b class="save add-scene-fr-btn hider"><i class="icon-edit"></i>保存</b>
+                <b id="aqxx-pol-case-reuse" class="add-scene-fr-btn hider isedit"><i class="icon-copy orange"></i>复用警情</b>
+            </div>
+            <div class="mcb-form aqxx-mcb-form pr">
+                <div class="type-in-group form-field hide{caseType}" data-field="caseType">
+                    <span class="type-in-label-m"><em class="asterisk hide{caseTypem}">*</em>案件类别:</span>
+                    <span class="cus-vl-invalid{caseTypem.exNum}{caseTypeValue}">
+                        <em id="aqxx-ajlb-em" class="form-txt" data-val="{caseTypeKey}">{caseTypeValue}</em>
+                        <a href="javascript:void(0);" id="aqxx-ajlb" class="icon-edit fs16" title="修改案件类别"></a>
+                    </span>
+                </div>
+                <div class="type-in-group form-field hide{caseNature}" data-field="caseNature">
+                    <span class="type-in-label-m"><em class="asterisk hide{caseNaturem}">*</em>案件性质:</span>
+                    <span class="cus-vl-invalid{caseNaturem.exNum}{caseNatureValue}">
+                        <em class="form-txt" data-val="{caseNatureKey}">{caseNatureValue}</em>
+                        <a href="javascript:void(0);" id="aqxx-ajxz" class="icon-edit fs16" title="修改案件性质"></a>
+                    </span>
+                </div>
+                <div class="type-in-group form-field hide{alarmNo}" data-field="alarmNo">
+                    <span class="type-in-label-m"><em class="asterisk hide{alarmNom}">*</em>接警编号:</span><input type="text" id="aqxx-alarm-no" class="cm-input" data-options="required:true{alarmNom.exNum}">
+                </div>
+                <div class="type-in-group form-field hide{alarmAcceptNo}" data-field="alarmAcceptNo">
+                    <span class="type-in-label-m"><em class="asterisk hide{alarmAcceptNom}">*</em>案(事)件受理号:</span><input type="text" class="cm-input" data-options="required:true{alarmAcceptNom.exNum}">
+                </div>
+                <div class="form-field hide{caseNo}" data-field="caseNo">
+                    <span class="type-in-label-m"><em class="asterisk hide{caseNom}">*</em>案件编号:</span><input type="text" id="aqxx-case-no" class="cm-input" data-options="required:true{caseNom.exNum}">
+                </div>
+                <div class="type-in-group form-field hide{crimeTimeBegin}" data-field="crimeTimeBegin">
+                    <span class="type-in-label-m"><em class="asterisk hide{crimeTimeBeginm}">*</em>发案开始时间:</span><input type="text" class="cm-input cm-input-date" data-options="required:true{crimeTimeBeginm.exNum}"><i class="icon-calendar"></i>
+                </div>
+                <div class="type-in-group form-field hide{crimeTimeEnd}" data-field="crimeTimeEnd">
+                    <span class="type-in-label-m"><em class="asterisk hide{crimeTimeEndm}">*</em>发案结束时间:</span><input type="text" class="cm-input cm-input-date" data-options="required:true{crimeTimeEndm.exNum}"><i class="icon-calendar"></i>
+                </div>
+                <div class="type-in-group form-field hide{alarmTime}" data-field="alarmTime">
+                    <span class="type-in-label-m"><em class="asterisk hide{alarmTimem}">*</em>接勘时间:</span><input type="text" class="cm-input cm-input-date" data-options="required:true{alarmTimem.exNum}"><i class="icon-calendar"></i>
+                </div>
+                <div class="type-in-group form-field hide{dispatchTime}" data-field="dispatchTime">
+                    <span class="type-in-label-m"><em class="asterisk hide{dispatchTimem}">*</em>出警时间:</span><input type="text" class="cm-input cm-input-date" data-options="required:true{dispatchTimem.exNum}"><i class="icon-calendar"></i>
+                </div>
+                <div class="type-in-group form-field width100 clear hide{caseRegionalism}" data-field="caseRegionalism">
+                    <span class="type-in-label-m"><em class="asterisk hide{caseRegionalismm}">*</em>发案区划:</span>
+                    <dict dict-root="caseRegionalism" dict-default="false" dict-type="tree" dict-name="caseRegionalism" id="aqxx-case-regionalism-dict" dict-id="aqxx-case-regionalism" dict-common="true" class="unready pzcy-line dict-validate{caseRegionalismm.exNum}"></dict>
+                    <i id="aqxx-common-use" class="icon-cog aqxx-common-use"><span>配置常用项</span></i>
+                </div>
+                <div class="form-field clear hide{caseLocation}" data-field="caseLocation">
+                    <span class="type-in-label-m"><em class="asterisk hide{caseLocationm}">*</em>发案地点:</span><input type="text" id="aqxx-case-location" class="cm-input" data-options="required:true{caseLocationm.exNum}">
+                </div>
+                <div class="form-field hide{alarmReceiver}" data-field="alarmReceiver">
+                    <span class="type-in-label-m"><em class="asterisk hide{alarmReceiverm}">*</em>接警人:</span><input type="text" id="aqxx-alarm-receiver" class="cm-input" data-options="required:true{alarmReceiverm.exNum}">
+                </div>
+                <div class="type-in-group type-in-group-100 form-field hide{assignMethod}" data-field="assignMethodDesc">
+                    <span class="type-in-label-m"><em class="asterisk hide{assignMethodm}">*</em>指派方式:</span><input type="text" class="cm-input-s mr10" data-options="required:true{assignMethodm.exNum}">
+                    <dict dict-root="XCKYJJFSDM" dict-type="radio" dict-name="assignMethod" class="unready dict form-field" data-field="assignMethod"></dict>
+                    <!--<input type="radio" name="zpfs" id="aqxx-zpfs-dh" checked="checked">
+                    <label for="aqxx-zpfs-dh" class="active">电话</label>
+                    <input type="radio" name="zpfs" id="aqxx-zpfs-bg">
+                    <label for="aqxx-zpfs-bg">报告</label>-->
+                </div>
+                <div class="type-in-group type-in-group-100 form-field hide{assignPerson}" data-field="assignPerson">
+                    <span class="type-in-label-m"><em class="asterisk hide{assignPersonm}">*</em>指派/报告单位:</span><input type="text" name="zpbgdw" id="aqxx-zpbgdw" class="cm-input-s" value="110指挥中心" data-options="required:true{assignPersonm.exNum}"><u class="options"><u class="active">110指挥中心</u><u>110值班室</u></u>
+                </div>
+                <div class="form-field hide{assignReason} overhide clear mt10 mb10" data-field="assignReason">
+                    <span class="type-in-label-m fl"><em class="asterisk hide{assignReasonm}">*</em>勘验事由:</span>
+                    <div class="tp-wrap scene-text-tp fl">
+                        <div class="tp-header" tpsource="#text-tp-content">
+                            <div class="tp-tabs-wrap">
+                                <i class="icon-file-alt" data-num="1" tpname="未使用模板" tpcontent=""></i>
+                            </div>
+                            <em>当前模板:</em><em class="current-tp">未使用模板</em>
+                            <i class="icon-trash"></i>
+                        </div>
+                        <textarea class="tp-text" data-options="required:true{assignReasonm.exNum}"></textarea>
+                    </div>
+                </div>
+                <div class="type-in-group form-field hide{criminalFlag}" data-field="criminalFlag">
+                    <span class="type-in-label-m"><em class="asterisk hide{criminalFlagm}">*</em>是否刑案:</span>
+                    <input type="radio" name="sfxa" id="sfxa-s" value="1" checked="checked"><label for="sfxa-s" class="active">是</label>
+                    <input type="radio" name="sfxa" id="sfxa-f" value="0"><label for="sfxa-f">否</label>
+                </div>
+                <div class="type-in-group form-field hide{murderFlag}" data-field="murderFlag">
+                    <span class="type-in-label-m"><em class="asterisk hide{murderFlagm}">*</em>是否命案:</span>
+                    <input type="radio" name="sfma" id="sfma-s" checked="checked" value="1"><label for="sfma-s" class="active">是</label>
+                    <input type="radio" name="sfma" id="sfma-f" value="0"><label for="sfma-f">否</label>
+                </div>
+                <div class="type-in-group form-field hide{woundedAmount}" data-field="woundedAmount">
+                    <span class="type-in-label-m"><em class="asterisk hide{woundedAmountm}">*</em>受伤人数:</span><i class="icon-minus minus-num"></i><input type="text" class="cm-input-xs validate" data-options="required:true{woundedAmountm.exNum},validType:'number'"><i class="icon-plus plus-num"></i>
+                    人
+                </div>
+                <div class="type-in-group form-field hide{deadAmount}" data-field="deadAmount">
+                    <span class="type-in-label-m"><em class="asterisk hide{deadAmountm}">*</em>死亡人数:</span><i class="icon-minus minus-num"></i><input type="text" class="cm-input-xs validate" data-options="required:true{deadAmountm.exNum},validType:'number'"><i class="icon-plus plus-num"></i>
+                    人
+                </div>
+                <div class="form-field hide{caseBrief} overhide clear mt10 mb10" data-field="caseBrief">
+                    <span class="type-in-label-m fl"><em class="asterisk hide{caseBriefm}">*</em>案件发现过程:</span>
+                    <div class="tp-wrap scene-text-tp fl">
+                        <div class="tp-header" tpsource="#text-tp-content">
+                            <div class="tp-tabs-wrap">
+                                <i class="icon-file-alt" data-num="1" tpname="未使用模板" tpcontent=""></i>
+                            </div>
+                            <em>当前模板:</em><em class="current-tp">未使用模板</em>
+                            <i class="icon-trash"></i>
+                        </div>
+                        <textarea class="tp-text" data-options="required:true{caseBriefm.exNum}"></textarea>
+                    </div>
+                </div>
+                <div class="overhide mt10 mb10 hide{sceneOffender}">
+                    <span class="type-in-label-m fl"><em class="asterisk hide{sceneOffenderm}">*</em>报案人/被害人:</span>
+                    <div class="type-in-tb-wrap overhide fl">
+                        <b class="fr cur-p ajxx-add-tr"><i class="icon-plus orange fs16"></i> 添加</b>
+                        <table class="type-in-tb form-field clear" data-field="sceneOffender" data-index="1">
+                            <thead>
+                            <tr>
+                                <th>类型</th>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>年龄</th>
+                                <th>身份证号</th>
+                                <th>电话</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--隐藏覆盖层-->
+                <div class="over-div"></div>
+            </div>
+            <div class="mcb-footer">
+                <div class="next-page-btn" title="下一页"></div>
+            </div>
+        </div>
+        <div id="add-scene-ckxx" data-bigfield="sceneHandleInfo" titles="出勘信息" class="main-content-block">
+            <div class="mcb-header">
+                <h2 class="fl">出勘信息</h2>
+                <b class="edit add-scene-fr-btn hider"><i class="icon-edit"></i>编辑</b>
+                <b class="save add-scene-fr-btn hider"><i class="icon-edit"></i>保存</b>
+            </div>
+            <div class="mcb-form ckxx-mcb-form pr">
+                <div class="type-in-group form-field hide{investigationDateFrom}" data-field="investigationDateFrom">
+                    <span class="type-in-label-m"><em class="asterisk hide{investigationDateFromm}">*</em>勘验开始时间:</span><input type="text" class="cm-input cm-input-date" data-options="required:true{investigationDateFromm.exNum}">
+                </div>
+                <div class="type-in-group form-field hide{investigationDateTo}" data-field="investigationDateTo"><span class="type-in-label-m"><em class="asterisk hide{investigationDateTom}">*</em>勘验结束时间:</span><input type="text" class="cm-input cm-input-date" data-options="required:true{investigationDateTom.exNum}"></div>
+                <div class="form-field hide{investigationPlace}" data-field="investigationPlace"><span class="type-in-label-m"><em class="asterisk hide{investigationPlacem}">*</em>勘验地点:</span><input type="text" class="cm-input" data-options="required:true{investigationPlacem.exNum}"></div>
+                <div class="hide{caseLon}{caseLat}">
+                    <span class="hide{caseLon}">
+                        <span class="type-in-label-m"><em class="asterisk hide{caseLonm}">*</em>经度:</span><input type="text" id="lng-ipt" class="cm-input-m form-field validate" data-field="caseLon" data-options="required:true{caseLonm.exNum},validType:'longitude'">
+                    </span>
+                    <span class="hide{caseLat}">
+                        <span class="type-in-label-m"><em class="asterisk hide{caseLatm}">*</em>纬度:</span>
+                        <input type="text" id="lat-ipt" class="cm-input-m form-field validate" data-field="caseLat" data-options="required:true{caseLatm.exNum},validType:'latitude'">
+                        <a href="javascript:;" class="icon-map-marker btn btn-primary map-btn">&nbsp;地图选点</a>
+                    </span>
+                </div>
+
+                <div class="type-in-group form-field options hide{commander}" data-field="sceneInvestigator" data-duty="1" >
+                    <span class="type-in-label-m"><em class="asterisk hide{commanderm}">*</em>指挥人员:</span>
+                    <dict dict-type="tree" dict-name="sceneInvestigator1" dict-multiple="true" dict-id="sceneInvestigator1" dict-default="false" id="zhry-dict" class="unready pzcy-line dict-validate{commanderm.exNum}"></dict>
+                    <i class="icon-cog"><span id="zxry-setting" class="zxry-setting">常用人配置</span></i>
+                </div>
+                <div class="type-in-group options hide{sceneInvestigator}">
+                    <span class="type-in-label-m"><em class="asterisk hide{sceneInvestigatorm}">*</em>勘验人员:</span>
+                    <dict dict-type="tree" dict-name="sceneInvestigator2" dict-multiple="true" dict-id="sceneInvestigator2" dict-default="false" id="kyry-dict" class="unready pzcy-line dict-validate{sceneInvestigatorm.exNum}"></dict>
+                    <!--<ul class="clearfix xtp-hide" id="ckxx-kyry">
+                        <li data-id="{investigatorId}" data-duty="{duty}" data-name="{investigatorName}">{investigatorName}</li>
+                    </ul>-->
+                    <!--<span class="type-in-group-more multi-select">更多 <i class="icon-caret-down"></i></span>-->
+                    <i class="icon-cog"><span id="kyry-setting" class="kyry-setting">勘查组配置</span></i>
+                </div>
+                <div class="deploy-table hide{sceneInvestigator}">
+                    <table class="table table-striped table-bordered form-field" id="ckxx-kyryzz" data-field="sceneInvestigator" data-index="1" data-inobj="false">
+                        <thead><tr></tr></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="form-field hide{otherPersons}" data-field="otherPersons"><span class="type-in-label-m"><em class="asterisk hide{otherPersonsm}">*</em>其他到达现场人员:</span><input type="text" class="cm-input" placeholder="填写其他到场人员，人员之间用“;”隔开" data-options="required:true{otherPersonsm.exNum}"></div>
+                <!--隐藏覆盖层-->
+                <div class="over-div"></div>
+            </div>
+            <div class="mcb-footer">
+                <div class="next-page-btn" title="下一页"></div>
+            </div>
+        </div>
+        <div id="add-scene-xctj" data-bigfield="sceneCondition" titles="现场条件" class="main-content-block">
+            <div class="mcb-header">
+                <h2 class="fl">现场条件</h2>
+                <b class="edit add-scene-fr-btn hider"><i class="icon-edit"></i>编辑</b>
+                <b class="save add-scene-fr-btn hider"><i class="icon-edit"></i>保存</b>
+            </div>
+            <div class="mcb-form pr">
+                <div class="type-in-group form-field hide{protector}" data-field="protector"><span class="type-in-label-m"><em class="asterisk hide{protectorm}">*</em>保护人姓名:</span><input type="text" class="cm-input" data-options="required:true{protectorm.exNum}"></div>
+                <div class="type-in-group form-field hide{protectorOrgan}" data-field="protectorOrgan"><span class="type-in-label-m"><em class="asterisk hide{protectorOrganm}">*</em>单位:</span><input type="text" class="cm-input" data-options="required:true{protectorOrganm.exNum}"></div>
+                <div class="type-in-group form-field hide{protectionDate}" data-field="protectionDate"><span class="type-in-label-m"><em class="asterisk hide{protectionDatem}">*</em>保护时间:</span><input type="text" class="cm-input cm-input-date" data-options="required:true{protectionDatem.exNum}"></div>
+                <div class="type-in-group form-field hide{protectorDuty}" data-field="protectorDuty"><span class="type-in-label-m"><em class="asterisk hide{protectorDutym}">*</em>职务:</span>
+                    <input type="text" class="cm-input" data-options="required:true{protectorDutym.exNum}">
+                </div>
+                <div class="type-in-group form-field hide{overturnDegree} stir" data-field="overturnDegree">
+                    <span class="type-in-label-m"><em class="asterisk hide{overturnDegreem}">*</em>现场翻动情况:</span>
+                    <dict dict-type="radio" dict-root="FDWPCDDM" dict-name="overturnDegree" class="unready dict dict-validate{overturnDegreem.exNum}"></dict>
+                </div>
+                <div class="type-in-group form-field hide{protectionMeasure} stir" data-field="protectionMeasure">
+                    <span class="type-in-label-m"><em class="asterisk hide{protectionMeasurem}">*</em>保护措施:</span>
+                    <dict dict-type="radio" dict-root="BHCSDM" dict-name="protectionMeasure" class="unready dict dict-validate{protectionMeasurem.exNum}"></dict>
+                </div>
+                <div class="type-in-group form-field hide{weather}" style="min-width: 460px" data-field="weather">
+                    <span class="type-in-label-m"><em class="asterisk hide{weatherm}">*</em>天气情况:</span>
+                    <dict dict-type="radio" dict-root="XCKYTQQKDM" dict-name="weather" class="unready dict dict-validate{weatherm.exNum}"></dict>
+                </div>
+                <div class="type-in-group form-field hide{envTemperature} temperature" style="min-width: 220px" data-field="envTemperature"><span class="type-in-label-m"><em class="asterisk hide{envTemperaturem}">*</em>温度:</span><input type="text" class="cm-input humidity validate" data-options="required:true{envTemperaturem.exNum},validType:'nDecimals'"><span> °C</span></div>
+                <div class="type-in-group form-field hide{envMoistness} temperature" style="min-width: 220px" data-field="envMoistness"><span class="type-in-label-m"><em class="asterisk hide{envMoistnessm}">*</em>湿度:</span><input type="text" class="cm-input humidity validate" data-options="required:true{envMoistnessm.exNum},validType:'decimals'"><span> %</span></div>
+                <div class="type-in-group form-field hide{wind} protect-step" data-field="wind">
+                    <span class="type-in-label-m"><em class="asterisk hide{windm}">*</em>风向:</span>
+                    <dict dict-type="radio" dict-root="XCFXDM" dict-name="wind" class="unready dict dict-validate{windm.exNum}"></dict>
+                </div>
+                <div class="type-in-group form-field hide{sceneCondition} protect-step" data-field="sceneCondition">
+                    <span class="type-in-label-m"><em class="asterisk hide{sceneConditionm}">*</em>现场条件:</span>
+                    <dict dict-type="radio" dict-root="XCTJDM" dict-name="sceneCondition" class="unready dict dict-validate{sceneConditionm.exNum}"></dict>
+                </div>
+                <div class="type-in-group form-field hide{lighting} stir" data-field="lighting">
+                    <span class="type-in-label-m"><em class="asterisk hide{lightingm}">*</em>光照条件:</span>
+                    <dict dict-type="radio" dict-root="XCKYGZTJDM" dict-name="lighting" class="unready dict dict-validate{lightingm.exNum}"></dict>
+                </div>
+                <!--隐藏覆盖层-->
+                <div class="over-div"></div>
+            </div>
+            <div class="mcb-footer">
+                <div class="next-page-btn" title="下一页"></div>
+            </div>
+        </div>
+        <div id="add-scene-xct" data-bigfield="scenePicture" titles="现场图" class="main-content-block">
+            <div class="mcb-header">
+                <h2 class="fl">现场图</h2>
+                <b class="edit add-scene-fr-btn hider"><i class="icon-edit"></i>编辑</b>
+                <b class="save add-scene-fr-btn hider"><i class="icon-edit"></i>保存</b>
+                <b class="add-scene-fr-btn hider isedit"><i class="icon-pencil blue"></i> 画图</b>
+                <b class="fr isedit mr10 hider into-batch-import"><i class="icon-signin orange"></i> 批量导入</b>
+            </div>
+            <div class="mcb-form">
+                <div class="type-in-group form-field pr" data-field="bigfield">
+                    <ul class="clearfix mt30 h180" id="add-scene-xct-ul">
+                        <li>
+                            <!--<input type="file" id="add-pic" class="hide-plus" multiple="true">-->
+                            <div class="add-pic"><label>+</label></div>
+                            <p>&nbsp;</p>
+                        </li>
+                        <!--<li>
+                            <div>
+                                <img src="../img/add-scene/xct/syt1.png" alt="">
+                                <div class="add-pic-cover">
+                                    <i class="icon-edit"></i><i class="icon-remove"></i>
+                                </div>
+                            </div>
+                            <p>地面平面示意图1 <br> <span>2016-10-29</span></p>
+                        </li>
+                        <li>
+                            <div><img src="../img/add-scene/xct/syt2.png" alt=""><div class="add-pic-cover"></div></div>
+                            <p>地面平面示意图1 <br> <span>2016-10-29</span></p>
+                        </li>
+                        <li>
+                            <div><img src="../img/add-scene/xct/syt3.png" alt=""><div class="add-pic-cover"></div></div>
+                            <p>地面平面示意图1 <br> <span>2016-10-29</span></p>
+                        </li>
+                        <li>
+                            <div><img src="../img/add-scene/xct/syt1.png" alt=""><div class="add-pic-cover"></div></div>
+                            <p>地面平面示意图1 <br> <span>2016-10-29</span></p>
+                        </li>-->
+                    </ul>
+                    <!--隐藏覆盖层-->
+                    <div class="over-div"></div>
+                </div>
+                <div class="type-in-cut mt20 mb20">
+                    <hr>
+                    <span class="pic-more">更多 <i class="icon-caret-down"></i></span>
+                </div>
+            </div>
+            <div class="mcb-footer">
+                <div class="next-page-btn" title="下一页"></div>
+            </div>
+        </div>
+        <div id="add-scene-xczp" data-bigfield="scenePhoto" titles="现场照片" class="main-content-block">
+            <div class="mcb-header">
+                <h2 class="fl">现场照片</h2>
+                <b class="edit add-scene-fr-btn hider"><i class="icon-edit"></i>编辑</b>
+                <b class="save add-scene-fr-btn hider"><i class="icon-edit"></i>保存</b>
+                <b class="add-scene-fr-btn isedit hider"><i class="icon-link blue"></i> 关联照片</b>
+                <b class="fr isedit mr10 hider into-batch-import"><i class="icon-signin orange"></i> 批量导入</b>
+            </div>
+            <div class="mcb-form pr">
+                <div class="type-in-group mt20 clearfix form-field" data-field="bigfield" data-pictype="1">
+                    <div class="type-in-label-ms" style="line-height: 30px;padding-top: 10px;">概貌&方位 <span>0</span></div>
+                    <div class="cur-p add-pic" >+</div>
+                    <div class="pic-view">
+                        <div class="ul-img clearfix">
+                        </div>
+                    </div>
+                </div>
+                <div class="type-in-group mt10 clearfix form-field" data-field="bigfield" data-pictype="3">
+                    <div class="type-in-label-ms" style="padding-top: 10px">重点部位 <span>0</span></div>
+                    <div class="cur-p add-pic">+</div>
+                    <div class="pic-view">
+                        <div class="ul-img clearfix">
+                        </div>
+                    </div>
+                </div>
+                <div class="type-in-group mt10 clearfix form-field" data-field="bigfield" data-pictype="4">
+                    <div class="type-in-label-ms">细目 <span>0</span></div>
+                    <div class="cur-p add-pic">+</div>
+                    <div class="pic-view">
+                        <div class="ul-img clearfix">
+                        </div>
+                    </div>
+                </div>
+                <!--隐藏覆盖层-->
+                <div class="over-div"></div>
+            </div>
+            <div class="mcb-footer">
+                <div class="next-page-btn" title="下一页"></div>
+            </div>
+        </div>
+        <div id="add-scene-hjwz" data-bigfield="materialEvidence" titles="痕迹物证" class="main-content-block">
+            <div class="mcb-header">
+                <h2 class="fl">痕迹物证</h2>
+                <b class="edit add-scene-fr-btn hider finger"><i class="icon-edit"></i>编辑</b>
+                <b class="save add-scene-fr-btn hider finger"><i class="icon-edit"></i>保存</b>
+                <b class="into-batch-import fr hider finger"><i class="icon-signin orange"></i> 批量导入</b>
+            </div>
+            <div class="mcb-form pr">
+                <ul param="hjwz" class="hjwz-tabs clearfix">
+                    <li param="all" class="active"><span class="icon icon-th"></span><br>全部（<em>0</em>）</li>
+                    <li param="print"><span class="icon icon-hand-up"></span><br>手印（<em>0</em>）</li>
+                    <li param="foot"><span class="icon icon-map-marker"></span><br>足迹（<em>0</em>）</li>
+                    <li param="bio"><span class="icon icon-filter"></span><br>生物（<em>0</em>）</li>
+                    <li param="tool"><span class="icon icon-wrench"></span><br>工具（<em>0</em>）</li>
+                    <li param="gun"><span class="icon icon-screenshot"></span><br>枪弹（<em>0</em>）</li>
+                    <li param="special"><span class="icon icon-adjust"></span><br>特殊（<em>0</em>）</li>
+                    <li param="drug"><span class="icon icon-certificate"></span><br>毒化（<em>0</em>）</li>
+                    <li param="physic"><span class="icon icon-beaker"></span><br>理化（<em>0</em>）</li>
+                    <li param="doc"><span class="icon icon-file-alt"></span><br>文检（<em>0</em>）</li>
+                    <li param="elec"><span class="icon icon-lightbulb"></span><br>电子（<em>0</em>）</li>
+                    <li param="video"><span class="icon icon-facetime-video"></span><br>视频（<em>0</em>）</li>
+                    <li param="others"><span class="icon icon-lemon"></span><br>其他（<em>0</em>）</li>
+                </ul>
+                <div class="hjwz-content pr">
+                    <ul id="hjwz-all" param="all" class="hjwz-pics clearfix form-field" data-field="sceneMaterialEvidence"></ul>
+                    <ul id="hjwz-print" param="print" class="hjwz-pics clearfix hider">
+                        <li class="into-add-print add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-foot" param="foot" class="hjwz-pics clearfix hider">
+                        <li class="into-add-foot add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-bio" param="bio" class="hjwz-pics clearfix hider">
+                        <li class="into-add-bio add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-tool" param="tool" class="hjwz-pics clearfix hider">
+                        <li class="into-add-tool add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-gun" param="gun" class="hjwz-pics clearfix hider">
+                        <li class="into-add-gun add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-special" param="special" class="hjwz-pics clearfix hider">
+                        <li class="into-add-special add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-drug" param="drug" class="hjwz-pics clearfix hider">
+                        <li class="into-add-drug add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-physic" param="physic" class="hjwz-pics clearfix hider">
+                        <li class="into-add-physic add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-doc" param="doc" class="hjwz-pics clearfix hider">
+                        <li class="into-add-doc add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-elec" param="elec" class="hjwz-pics clearfix hider">
+                        <li class="into-add-elec add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-video" param="video" class="hjwz-pics clearfix hider">
+                        <li class="into-add-video add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <ul id="hjwz-others" param="others" class="hjwz-pics clearfix hider">
+                        <li class="into-add-others add">
+                            <div class="add-pic">+</div>
+                        </li>
+                    </ul>
+                    <!--隐藏覆盖层-->
+                    <div class="over-div"></div>
+                </div>
+                <ul param="dzwz" class="hjwz-tabs clearfix mb15">
+                    <li param="jz" class="active"><span class="icon icon-building"></span><br>基站（<em>0</em>）</li>
+                    <li param="camera"><span class="icon icon-camera"></span><br>摄像头（<em>0</em>）</li>
+                    <li param="wifi"><span class="icon icon-rss"></span><br>wifi（<em>0</em>）</li>
+                </ul>
+                <div class="dzwz-content pr">
+                    <div id="dzwz-jz" param="jz" class="one-dzwz type-in-group type-in-group-table">
+                        <b class="into-add-jz fr finger"><i class="icon-plus orange"></i> 导入</b>
+                        <table id="dzwz-jz-table" class="typical-tb form-field" data-field="baseStationInfo">
+                            <thead>
+                            <tr>
+                                <th width="60%">文件名</th>
+                                <th width="20">基站类型</th>
+                                <th width="20%">删除</th>
+                            </tr>
+                            </thead>
+                            <tbody tpsource="#dzwz-jz-tbody-tp"></tbody>
+                        </table>
+                    </div>
+                    <div id="dzwz-camera" param="camera" class="one-dzwz type-in-group type-in-group-table hider">
+                        <b class="into-add-camera fr finger"><i class="icon-plus orange"></i> 添加</b>
+                        <table id="dzwz-camera-table" class="typical-tb form-field" data-field="cameraInfo">
+                            <thead>
+                                <tr>
+                                    <th width="5%">序号</th>
+                                    <th width="20%">摄像头种类</th>
+                                    <th width="20%">摄像头经度</th>
+                                    <th width="20%">摄像头维度</th>
+                                    <th width="10%">摄像头朝向</th>
+                                    <th width="25%">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dzwz-camera-tbody" tpsource="#hjwz-camera-tbody-tp"></tbody>
+                        </table>
+                    </div>
+                    <div id="dzwz-wifi" param="wifi" class="one-dzwz type-in-group type-in-group-table hider">
+                        <b class="into-add-wifi fr finger"><i class="icon-plus orange"></i> 导入</b>
+                        <table id="dzwz-wifi-table" class="typical-tb form-field" data-field="baseStationInfo">
+                            <thead>
+                            <tr>
+                                <th width="80%">wifi名称</th>
+                                <th width="20%">删除</th>
+                            </tr>
+                            </thead>
+                            <tbody tpsource="#dzwz-wifi-tbody-tp"></tbody>
+                        </table>
+                    </div>
+                    <!--隐藏覆盖层-->
+                    <div class="over-div"></div>
+                </div>
+
+            </div>
+            <div class="mcb-footer">
+                <div class="next-page-btn" title="下一页"></div>
+            </div>
+        </div>
+        <div id="add-scene-tqwp" data-bigfield="sceneCollectedGoods" titles="提取物品" class="main-content-block">
+            <div class="mcb-header">
+                <h2 class="fl">提取物品</h2>
+                <b class="edit add-scene-fr-btn hider"><i class="icon-edit"></i>编辑</b>
+                <b class="save add-scene-fr-btn hider"><i class="icon-edit"></i>保存</b>
+                <b class="add-scene-fr-btn hider"><i class="icon-plus orange"></i> 添加</b>
+            </div>
+            <div class="mcb-form">
+                <div class="type-in-group pr form-field" data-field="bigfield">
+                    <ul class="clearfix mt30 h180">
+                        <li>
+                            <div class="add-pic">+</div>
+                            <p>&nbsp;</p>
+                        </li>
+                        <!--<li>
+                            <div>
+                                <img src="../img/add-scene/tqwp/u709.png" alt="">
+                                <div class="add-pic-cover">
+                                    <i class="icon-inbox"></i><i class="icon-edit"></i><i class="icon-remove"></i>
+                                </div>
+                            </div>
+                            <p>提取物品1</p>
+                        </li>
+                        <li>
+                            <div><img src="../img/add-scene/tqwp/u711.png" alt=""><div class="add-pic-cover"><i class="icon-inbox"></i><i class="icon-edit"></i><i class="icon-remove"></i></div></div>
+                            <p>提取物品2</p>
+                        </li>
+                        <li>
+                            <div><img src="../img/add-scene/tqwp/u731.png" alt=""><div class="add-pic-cover"><i class="icon-inbox"></i><i class="icon-edit"></i><i class="icon-remove"></i></div></div>
+                            <p>提取物品3</p>
+                        </li>
+                        <li>
+                            <div><img src="../img/add-scene/tqwp/u748.png" alt=""><div class="add-pic-cover"><i class="icon-inbox"></i><i class="icon-edit"></i><i class="icon-remove"></i></div></div>
+                            <p>提取物品4</p>
+                        </li>
+                        <li>
+                            <div><img src="../img/add-scene/tqwp/u709.png" alt=""><div class="add-pic-cover"><i class="icon-inbox"></i><i class="icon-edit"></i><i class="icon-remove"></i></div></div>
+                            <p>提取物品5</p>
+                        </li>
+                        <li>
+                            <div><img src="../img/add-scene/tqwp/u711.png" alt=""><div class="add-pic-cover"><i class="icon-inbox"></i><i class="icon-edit"></i><i class="icon-remove"></i></div></div>
+                            <p>提取物品6</p>
+                        </li>-->
+                    </ul>
+                    <!--隐藏覆盖层-->
+                    <div class="over-div"></div>
+                </div>
+                <div class="type-in-cut mt20 mb20">
+                    <hr>
+                    <span class="pic-more">更多 <i class="icon-caret-down"></i></span>
+                </div>
+                <div class="type-in-group pr">
+                    <b class="fr cur-p remove-pic"> <i class="icon-remove red fs16"></i> 删除</b>
+                    <b class="fr cur-p add-pic"><i class="icon-plus blue fs16"></i> 添加 | </b>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>序号</th>
+                            <th>物证名称</th>
+                            <th>提取部位</th>
+                            <th>数量</th>
+                            <th>提取人</th>
+                            <th>提取日期</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                       <!-- <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td>指纹痕迹</td>
+                            <td>瓶口</td>
+                            <td>1</td>
+                            <td>张三、赵四</td>
+                            <td>提取日期</td>
+                            <td>
+                                <i class="icon-inbox blue"></i>
+                                <i class="icon-edit blue"></i>
+                                <i class="icon-remove blue"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2</td>
+                            <td>指纹痕迹</td>
+                            <td>瓶口</td>
+                            <td>1</td>
+                            <td>张三、赵四</td>
+                            <td>提取日期</td>
+                            <td>
+                                <i class="icon-inbox blue"></i>
+                                <i class="icon-edit blue"></i>
+                                <i class="icon-remove blue"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>3</td>
+                            <td>指纹痕迹</td>
+                            <td>瓶口</td>
+                            <td>1</td>
+                            <td>张三、赵四</td>
+                            <td>提取日期</td>
+                            <td>
+                                <i class="icon-inbox blue"></i>
+                                <i class="icon-edit blue"></i>
+                                <i class="icon-remove blue"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>4</td>
+                            <td>指纹痕迹</td>
+                            <td>瓶口</td>
+                            <td>1</td>
+                            <td>张三、赵四</td>
+                            <td>提取日期</td>
+                            <td>
+                                <i class="icon-inbox blue"></i>
+                                <i class="icon-edit blue"></i>
+                                <i class="icon-remove blue"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>5</td>
+                            <td>指纹痕迹</td>
+                            <td>瓶口</td>
+                            <td>1</td>
+                            <td>张三、赵四</td>
+                            <td>提取日期</td>
+                            <td>
+                                <i class="icon-inbox blue"></i>
+                                <i class="icon-edit blue"></i>
+                                <i class="icon-remove blue"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>6</td>
+                            <td>指纹痕迹</td>
+                            <td>瓶口</td>
+                            <td>1</td>
+                            <td>张三、赵四</td>
+                            <td>提取日期</td>
+                            <td>
+                                <i class="icon-inbox blue"></i>
+                                <i class="icon-edit blue"></i>
+                                <i class="icon-remove blue"></i>
+                            </td>
+                        </tr>-->
+                        </tbody>
+                    </table>
+                    <!--隐藏覆盖层-->
+                    <div class="over-div"></div>
+                </div>
+
+            </div>
+            <div class="mcb-footer">
+                <div class="next-page-btn" title="下一页"></div>
+            </div>
+        </div>
+        <div id="add-scene-kyqk" data-bigfield="sceneInvestigation" titles="勘验情况" class="main-content-block">
+            <div class="mcb-header">
+                <h2 class="fl">勘验情况</h2>
+                <b class="edit add-scene-fr-btn hider"><i class="icon-edit"></i>编辑</b>
+                <b class="save add-scene-fr-btn hider"><i class="icon-edit"></i>保存</b>
+            </div>
+            <div class="mcb-form pr">
+                <div class="overhide mt10 mb10 hide{lostGood}">
+                    <span class="type-in-label-m fl">损失物品:</span>
+                    <div class="type-in-tb-wrap overhide fl">
+                        <b class="fr cur-p kyqk-sswp-add"><i class="icon-plus orange fs16"></i> 添加</b>
+                        <table class="type-in-tb clear form-field" data-field="sceneLostGoods" id="kyqk-sswp">
+                            <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>品名</th>
+                                <th>厂牌型号</th>
+                                <th>数量</th>
+                                <th>价值</th>
+                                <th>特征描述</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!--<tr>
+                                <td>
+                                    <span>1</span>
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-s" value="手机">
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-m" value="iphone6S Plus">
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-xs" value="1">
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-xs lost-price" value="7000">
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-m" value="白色，64G，9成新">
+                                </td>
+                                <td>
+                                    <a class="icon-remove fs16"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>2</span>
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-s" value="手机">
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-m" value="iphone6S Plus">
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-xs" value="1">
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-xs lost-price" value="7000">
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-m" value="白色，64G，9成新">
+                                </td>
+                                <td>
+                                    <a class="icon-remove fs16"></a>
+                                </td>
+                            </tr>-->
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="7">
+                                    <span class="total">损失物品总价值<input type="text" class="cm-input-xs money form-field validate" data-options="validType:'number'" data-field="lostTotalValue" value="0">元</span>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="overhide clear form-field hide{content} mt10 mb10 pr" data-field="content">
+                    <span class="type-in-label-m fl"><em class="asterisk hide{contentm}">*</em>勘验检查情况:</span>
+                    <div class="tp-wrap scene-text-tp fl">
+                        <div class="tp-header" tpsource="#text-tp-content">
+                            <div class="tp-tabs-wrap">
+                                <i class="icon-file-alt" data-num="1" tpname="未使用模板" tpcontent=""></i>
+                            </div>
+                            <em>当前模板:</em><em class="current-tp">未使用模板</em>
+                            <i class="icon-trash"></i>
+                        </div>
+                        <textarea class="tp-text" data-options="required:true{contentm.exNum}"></textarea>
+                    </div>
+                    <a href="javascript:void(0);" id="kyqk-check-record" class="hide-if-not-check">查看笔录</a>
+                </div>
+                <div class="type-in-group form-field hide{sceneDisposal}" style="min-width: 410px;" data-field="sceneDisposal">
+                    <span class="type-in-label-m"><em class="asterisk hide{sceneDisposalm}">*</em>现场处置意见:</span>
+                    <dict dict-type="radio" dict-root="XCCZYJDM" dict-name="sceneDisposal" class="unready dict dict-validate{sceneDisposalm.exNum}"></dict>
+                </div>
+                <div class="type-in-group form-field hide{videoTime} temperature" style="min-width: 240px;" data-field="videoTime"><span class="type-in-label-m"><em class="asterisk hide{videoTimem}">*</em>录像:</span><input type="text" class="cm-input humidity validate" data-options="required:true{videoTimem.exNum},validType:'number'"><span> 分钟</span></div>
+                <div class="type-in-group form-field hide{recordTime} temperature" style="min-width: 240px;" data-field="recordTime"><span class="type-in-label-m"><em class="asterisk hide{recordTimem}">*</em>录音:</span><input type="text" class="cm-input humidity validate" data-options="required:true{recordTimem.exNum},validType:'number'"><span> 分钟</span></div>
+                <div class="overhide mt10 mb10 clear hide{witness}">
+                    <span class="type-in-label-m fl">见证人:</span>
+                    <div class="type-in-tb-wrap overhide fl">
+                        <a href="javascript:;"><b class="fr kyqk-jzr-add"><i class="icon-plus orange fs16"></i> 添加</b></a>
+                        <span class="fr dividing">|</span>
+                        <a href="javascript:;"><b class="fr" id="add-scene-kyqk-jzr"><img src="./../img/pepo.png" class="icon-plus fs16 people"> 常用见证人</b></a>
+                        <span class="fr dividing">|</span>
+                        <a href="javascript:;"><b class="fr" id="add-scene-kyqk-wjzr">无见证人</b></a>
+                        <table class="type-in-tb form-field clear" data-field="sceneOffender">
+                            <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>出生日期</th>
+                                <th>单位地址</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!--<tr>
+                                <td>
+                                    <span>1</span>
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-xs" value="张三">
+                                </td>
+                                <td>
+                                    <select class="cm-select">
+                                        <option value="">男</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    &lt;!&ndash;<input type="text" class="cm-input-xs" value="1980-05-23">&ndash;&gt;
+                                    <input type="text" class="cm-input cm-input-date" value="1980-05-23">
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-m" value="">
+                                </td>
+                                <td>
+                                    <a class="fs16 people"><img src="./../img/pepo.png"></a>
+                                    <a class="fs16 people"><img src="./../img/finge.png"></a>
+                                    <a class="fs16 people"><img src="./../img/name.png"></a>
+                                    <a class="fs16 people"><img src="./../img/remove_03.png"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>2</span>
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-xs" value="张三">
+                                </td>
+                                <td>
+                                    <select class="cm-select">
+                                        <option value="">男</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    &lt;!&ndash;<input type="text" class="cm-input-xs" value="1980-05-23">&ndash;&gt;
+                                    <input type="text" class="cm-input cm-input-date" value="1980-05-23">
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-m" value="">
+                                </td>
+                                <td>
+                                    <a class="fs16 people"><img src="./../img/pepo.png"></a>
+                                    <a class="fs16 people"><img src="./../img/finge.png"></a>
+                                    <a class="fs16 people"><img src="./../img/name.png"></a>
+                                    <a class="fs16 people"><img src="./../img/remove_03.png"></a>
+                                </td>
+                            </tr>-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="type-in-group form-field hide" data-field="witnessRemark">
+                    <span class="type-in-label-m">见证人备注:</span>
+                    <input type="text" class="cm-input">
+                </div>
+                <!--隐藏覆盖层-->
+                <div class="over-div"></div>
+            </div>
+            <div class="mcb-footer">
+                <div class="next-page-btn" title="下一页"></div>
+            </div>
+        </div>
+        <div id="add-scene-fxyj" data-bigfield="sceneAnalysisSuggestion" titles="分析意见" class="main-content-block">
+            <div class="mcb-header">
+                <h2 class="fl">分析意见</h2>
+                <b class="edit add-scene-fr-btn hider"><i class="icon-edit"></i>编辑</b>
+                <b class="save add-scene-fr-btn hider"><i class="icon-edit"></i>保存</b>
+                <!--<b class="add-scene-fr-btn"><i class="icon-copy orange"></i></b>-->
+            </div>
+            <div class="mcb-form pr">
+                <div class="type-in-group form-field hide{chooseObject}" data-field="sceneAnalysisItem" data-dict="XZDXFLDM">
+                    <span class="type-in-label-m"><em class="asterisk hide{chooseObjectm}">*</em>选择对象:</span>
+                    <dict class="unready pzcy-line dict dict-validate{chooseObjectm.exNum}" dict-default="false" dict-root="XZDXFLDM" dict-type="tree" dict-multiple="true" dict-common="true" dict-name="sceneAnalysisItem1" dict-id="fxyj-xzdx"></dict>
+                    <i class="icon-cog"><span id="fxyj-setting" class="fxyj-setting">常用配置</span></i>
+                </div>
+                <div class="type-in-group form-field hide{choosePlace}" data-field="sceneAnalysisItem" data-dict="XZCSFLXLDM">
+                    <span class="type-in-label-m"><em class="asterisk hide{choosePlacem}">*</em>选择处所:</span>
+                    <dict class="unready pzcy-line dict dict-validate{choosePlacem.exNum}" dict-default="false" dict-root="XZCSFLXLDM" dict-type="tree" dict-multiple="true" dict-common="true" dict-name="sceneAnalysisItem2" dict-id="fxyj-xzcs"></dict>
+                </div>
+                <div class="type-in-group form-field hide{crimeTime}" data-field="sceneAnalysisItem" data-dict="ZASJDFLDM">
+                    <span class="type-in-label-m"><em class="asterisk hide{crimeTimem}">*</em>作案时机:</span>
+                    <dict class="unready pzcy-line dict dict-validate{crimeTimem.exNum}" dict-default="false" dict-root="ZASJDFLDM" dict-type="tree" dict-multiple="true" dict-common="true" dict-name="sceneAnalysisItem3" dict-id="fxyj-zasj"></dict>
+                </div>
+                <div class="type-in-group form-field hide{crimeIn}" data-field="sceneAnalysisItem" data-dict="ZACRKDM">
+                    <span class="type-in-label-m"><em class="asterisk hide{crimeInm}">*</em>作案入口:</span>
+                    <dict class="unready pzcy-line dict dict-validate{crimeInm.exNum}" dict-default="false" dict-root="ZACRKDM" dict-type="tree" dict-multiple="true" dict-common="true" dict-name="sceneAnalysisItem4" dict-id="fxyj-zark"></dict>
+                </div>
+                <div class="type-in-group form-field hide{crimeOut}" data-field="sceneAnalysisItem" data-dict="ZACKDM">
+                    <span class="type-in-label-m"><em class="asterisk hide{crimeOutm}">*</em>作案出口:</span>
+                    <dict class="unready pzcy-line dict dict-validate{crimeOutm.exNum}" dict-default="false" dict-root="ZACKDM" dict-type="tree" dict-multiple="true" dict-common="true" dict-name="sceneAnalysisItem5" dict-id="fxyj-zack"></dict>
+                </div>
+                <div class="type-in-group form-field hide{crimeMethod}" data-field="sceneAnalysisItem" data-dict="ZASDFLDM">
+                    <span class="type-in-label-m"><em class="asterisk hide{crimeMethodm}">*</em>作案手段:</span>
+                    <dict class="unready pzcy-line dict dict-validate{crimeMethodm.exNum}" dict-default="false" dict-root="ZASDFLDM" dict-type="tree" dict-multiple="true" dict-common="true" dict-name="sceneAnalysisItem6" dict-id="fxyj-zasd"></dict>
+                </div>
+                <div class="type-in-group form-field hide{crimeWay}" data-field="sceneAnalysisItem" data-dict="QRFSFLDM">
+                    <span class="type-in-label-m"><em class="asterisk hide{crimeWaym}">*</em>侵入方式:</span>
+                    <dict class="unready pzcy-line dict dict-validate{crimeWaym.exNum}" dict-default="false" dict-root="QRFSFLDM" dict-type="tree" dict-multiple="true" dict-common="true" dict-name="sceneAnalysisItem7" dict-id="fxyj-qrfs"></dict>
+                </div>
+                <div class="type-in-group form-field hide{crimeFeature}" data-field="sceneAnalysisItem" data-dict="ZATDFLDM">
+                    <span class="type-in-label-m"><em class="asterisk hide{crimeFeaturem}">*</em>作案特点:</span>
+                    <dict class="unready pzcy-line dict dict-validate{crimeFeaturem.exNum}" dict-default="false" dict-root="ZATDFLDM" dict-type="tree" dict-multiple="true" dict-common="true" dict-name="sceneAnalysisItem8" dict-id="fxyj-zatd"></dict>
+                </div>
+                <div class="type-in-group form-field hide{crimePurpose}" data-field="sceneAnalysisItem" data-dict="ZADJMDDM">
+                    <span class="type-in-label-m"><em class="asterisk hide{crimePurposem}">*</em>作案动机目的:</span>
+                    <dict class="unready pzcy-line dict dict-validate{crimePurposem.exNum}" dict-default="false" dict-root="ZADJMDDM" dict-type="tree" dict-multiple="true" dict-common="true" dict-name="sceneAnalysisItem9" dict-id="fxyj-zadjmd"></dict>
+                </div>
+                <div class="type-in-group form-field hide{crimeNums}" data-field="sceneAnalysisItem" data-dict="ZARSLDM">
+                    <span class="type-in-label-m"><em class="asterisk hide{crimeNumsm}">*</em>作案人数:</span>
+                    <dict class="unready pzcy-line dict dict-validate{crimeNumsm.exNum}" dict-type="radio" dict-root="ZARSLDM" dict-name="zars" id="fxyj-zars"></dict>
+                </div>
+                <div class="type-in-group">
+                    <span class="type-in-label-m fl">作案工具:</span>
+                    <div class="type-in-tb-wrap overhide fl">
+                        <b class="fr cur-p fxyj-zagj-add"><i class="icon-plus orange fs16"></i> 添加</b>
+                        <table class="type-in-tb form-field clear" data-field="sceneCrimeTools">
+                            <thead>
+                            <tr>
+                                <th width="5%" class="mem4">序号</th>
+                                <th width="15%">工具名称</th>
+                                <th width="15%">工具类别</th>
+                                <th width="15%">工具来源</th>
+                                <th width="45%">描述</th>
+                                <th class="mem4">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!--<tr>
+                                <td>1</td>
+                                <td><input type="text" class="cm-input-xs" value="撬棍"></td>
+                                <td>
+                                    <select class="cm-select">
+                                        <option value="">使用工具类</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="cm-select">
+                                        <option value="">随身携带</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="cm-input-m" value="忍不住">
+                                </td>
+                                <td><a class="icon-remove fs16"></a></td>
+                            </tr>-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="type-in-group form-field hide{commissionDesc} mt20" data-field="commissionDesc">
+                    <span class="type-in-label-m fl"><em class="asterisk hide{commissionDescm}">*</em>作案过程:</span>
+                    <div class="tp-wrap scene-text-tp fl">
+                        <div class="tp-header" tpsource="#text-tp-content">
+                            <div class="tp-tabs-wrap">
+                                <i class="icon-file-alt" data-num="1" tpname="未使用模板" tpcontent=""></i>
+                            </div>
+                            <em>当前模板:</em><em class="current-tp">未使用模板</em>
+                            <i class="icon-trash"></i>
+                        </div>
+                        <textarea class="tp-text" data-options="required:true{commissionDescm.exNum}"></textarea>
+                    </div>
+                </div>
+                <div class="type-in-group form-field mt20 hide{criminalPoints}" data-field="criminalPoints">
+                    <span class="type-in-label-m fl"><em class="asterisk hide{criminalPointsm}">*</em>作案人特点:</span>
+                    <div class="tp-wrap scene-text-tp fl">
+                        <div class="tp-header" tpsource="#text-tp-content">
+                            <div class="tp-tabs-wrap">
+                                <i class="icon-file-alt" data-num="1" tpname="未使用模板" tpcontent=""></i>
+                            </div>
+                            <em>当前模板:</em><em class="current-tp">未使用模板</em>
+                            <i class="icon-trash"></i>
+                        </div>
+                        <textarea class="tp-text" data-options="required:true{criminalPointsm.exNum}"></textarea>
+                    </div>
+                </div>
+                <div class="type-in-group form-field hide{bunchReason} mt20" data-field="bunchReason">
+                    <span class="type-in-label-m fl"><em class="asterisk hide{bunchReasonm}">*</em>串并意见与根据:</span>
+                    <div class="tp-wrap scene-text-tp fl">
+                        <div class="tp-header" tpsource="#text-tp-content">
+                            <div class="tp-tabs-wrap">
+                                <i class="icon-file-alt" data-num="1" tpname="未使用模板" tpcontent=""></i>
+                            </div>
+                            <em>当前模板:</em><em class="current-tp">未使用模板</em>
+                            <i class="icon-trash"></i>
+                        </div>
+                        <textarea class="tp-text" data-options="required:true{bunchReasonm.exNum}"></textarea>
+                    </div>
+                </div>
+                <div class="type-in-group form-field hide{suggestion1} mt20" data-field="suggestion1">
+                    <span class="type-in-label-m type-in-label-auto"><em class="asterisk hide{suggestion1m}">*</em>关于痕迹物证的保管、检验、应用、艰苦与查询意见:</span>
+                    <span class="type-in-label-m fl">&nbsp;</span>
+                    <div class="tp-wrap fl">
+                        <textarea class="tp-text tp-text100" data-options="required:true{suggestion1m.exNum}"></textarea>
+                    </div>
+                </div>
+                <div class="type-in-group form-field hide{suggestion2} mt20" data-field="suggestion2">
+                    <span class="type-in-label-m type-in-label-auto"><em class="asterisk hide{suggestion2m}">*</em>关于现场保留、现场复勘、尸体处理等意见:</span>
+                    <span class="type-in-label-m fl">&nbsp;</span><!--空标签-->
+                    <dict class="unready dict" dict-type="radio" dict-root="XCCZYJDM" dict-default="false" dict-name="xcclyj" id="fxyj-xcclyj"></dict>
+                    <span class="type-in-label-m fl" style="clear: both">&nbsp;</span><!--空标签-->
+                    <div class="tp-wrap fl">
+                        <textarea class="tp-text tp-text100" data-options="required:true{suggestion2m.exNum}"></textarea>
+                    </div>
+                </div>
+                <div class="type-in-group form-field hide{suggestion3} mt20" data-field="suggestion3">
+                    <span class="type-in-label-m type-in-label-auto"><em class="asterisk hide{suggestion3m}">*</em>关于侦查方向与范围、侦破措施及途径等意见:</span>
+                    <span class="type-in-label-m fl">&nbsp;</span><!--空标签-->
+                    <dict dict-type="checkbox" dict-root="ZCFXYFWDM" dict-name="zcfxyfw" dict-default="false" dict-multiple="true" class="unready dict" id="fxyj-zcfxyfw"></dict>
+                    <!--<ul class="clearfix" dict-type="checkbox" dict-root="ZCFXYFWDM" dict-name="zcfxyfw" id="fxyj-zcfxyfw"></ul>-->
+                    <span class="type-in-label-m fl" style="clear: both">&nbsp;</span><!--空标签-->
+                    <div class="tp-wrap fl">
+                        <textarea class="tp-text tp-text100" data-options="required:true{suggestion3m.exNum}"></textarea>
+                    </div>
+                </div>
+                <div class="type-in-group form-field hide{suggestion4} mt20" data-field="suggestion4">
+                    <span class="type-in-label-m fl"><em class="asterisk hide{suggestion4m}">*</em>关于技术防范对策:</span>
+                    <dict class="unready dict" dict-type="checkbox" dict-root="JSFFDCDM" dict-default="false" dict-name="jsffdc" id="fxyj-jsffdc"></dict>
+                    <span class="type-in-label-m fl" style="clear: both">&nbsp;</span><!--空标签-->
+                    <div class="tp-wrap fl">
+                        <textarea class="tp-text tp-text100" data-options="required:true{suggestion4m.exNum}"></textarea>
+                    </div>
+                </div>
+                <div class="type-in-group form-field hide{suggestion6} mt20" data-field="suggestion6">
+                    <span class="type-in-label-m type-in-label-auto"><em class="asterisk hide{suggestion6m}">*</em>其他:</span>
+                    <span class="type-in-label-m fl">&nbsp;</span>
+                    <div class="tp-wrap fl">
+                        <textarea class="tp-text tp-text100" data-options="required:true{suggestion6m.exNum}"></textarea>
+                    </div>
+                </div>
+                <!--隐藏覆盖层-->
+                <div class="over-div"></div>
+            </div>
+            <div class="mcb-footer">
+                <div class="next-page-btn" title="下一页"></div>
+            </div>
+        </div>
+        <div id="add-scene-stxx" data-bigfield="sceneBodyBasic" titles="尸体信息" class="main-content-block">
+            <div class="mcb-header">
+                <h2 class="fl">尸体信息</h2>
+                <b class="edit add-scene-fr-btn hider"><i class="icon-edit"></i>编辑</b>
+                <b class="save add-scene-fr-btn hider"><i class="icon-edit"></i>保存</b>
+            </div>
+            <div class="stxx-form mcb-form pr">
+                <b class="fr cur-p mb10"><i class="icon-plus orange fs16"></i>添加</b>
+                <table class="table table-striped table-bordered st-table form-field" data-field="bigfield">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>死者姓名</th>
+                            <th>死者性别</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <!--隐藏覆盖层-->
+                <div class="over-div"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-nav" refix>
+        <ul>
+            <li class="active">
+                <a href="#add-scene-aqxx">
+                    <i class="nav-circle icon-file-alt"></i>
+                    <u>案情信息</u>
+                    <i class="nav-mark"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#add-scene-ckxx">
+                    <i class="nav-circle icon-phone"></i>
+                    <u>出勘信息</u>
+                    <i class="nav-mark"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#add-scene-xctj">
+                    <i class="nav-circle icon-adjust"></i>
+                    <u>现场条件</u>
+                    <i class="nav-mark"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#add-scene-xct">
+                    <i class="nav-circle icon-picture"></i>
+                    <u>现场图</u>
+                    <i class="nav-mark"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#add-scene-xczp">
+                    <i class="nav-circle icon-camera"></i>
+                    <u>现场照片</u>
+                    <i class="nav-mark"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#add-scene-hjwz">
+                    <i class="nav-circle icon-inbox"></i>
+                    <u>痕迹物证</u>
+                    <i class="nav-mark"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#add-scene-tqwp">
+                    <i class="nav-circle icon-briefcase"></i>
+                    <u>提取物品</u>
+                    <i class="nav-mark"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#add-scene-kyqk">
+                    <i class="nav-circle icon-list-alt"></i>
+                    <u>勘验情况</u>
+                    <i class="nav-mark"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#add-scene-fxyj">
+                    <i class="nav-circle icon-bar-chart"></i>
+                    <u>分析意见</u>
+                    <i class="nav-mark"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#add-scene-stxx">
+                    <i class="nav-circle icon-group"></i>
+                    <u>尸体信息</u>
+                    <i class="nav-mark"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="form-box">
+            <button class="add-scene-save">暂存</button>
+            <button class="add-scene-sub">提交</button>
+        </div>
+    </div>
+</div>
+<!--现场图添加-->
+<div class="alert-window hider" id="xct-add">
+    <div class="mcb-form">
+        <div class="type-in-group width100 xh">
+            <span class="type-in-label-m">序号:</span>
+            <input type="text" class="cm-input" style="width: 280px" readonly>
+        </div>
+        <div class="type-in-group clear width100 form-field" data-field="attachmentId">
+            <span class="type-in-label-m">上传照片:</span>
+            <input type="text" class="cm-input xct-add-validate" style="width: 280px" readonly data-options="required:true">
+            <input class="hide-plus" id="xct-add-pic" type="file">
+            <label for="xct-add-pic" class="btn">上传</label>
+        </div>
+        <div class="batch-clone">
+        <div class="type-in-group clear width100 form-field" data-field="pictureType">
+            <span class="type-in-label-m">现场图类型:</span>
+            <dict dict-root="XCTZLDM" dict-type="tree" dict-name="pictureType" dict-id="pictureType" dict-num="2" class="unready dict"></dict>
+        </div>
+        </div>
+        <div class="save-btn clear" >
+            <button class="btn btn-save save">保存</button>
+            <button class="btn save-add">保存并新增</button>
+            <button class="btn cancel">取消</button>
+        </div>
+    </div>
+</div>
+<!--现场照片添加-->
+<div class="alert-window hider" id="xctp-add">
+    <div class="mcb-form">
+        <div class="type-in-group width100 xh">
+            <span class="type-in-label-m">序号:</span>
+            <input type="text" class="cm-input" style="width: 280px" readonly>
+        </div>
+        <div class="type-in-group clear width100 form-field" data-field="attachmentId">
+            <span class="type-in-label-m">上传照片:</span>
+            <input type="text" class="cm-input" style="width: 280px">
+            <label for="xczp-add-pic" class="btn">上传</label>
+            <input class="hide-plus" id="xczp-add-pic" type="file">
+        </div>
+        <div class="batch-clone">
+        <div class="type-in-group clear width100 form-field" data-field="pictureType">
+            <span class="type-in-label-m">现场照片类型:</span>
+            <dict dict-root="XCZPZLDM" dict-type="radio" dict-name="pictureType2" class="unready dict"></dict>
+        </div>
+        <div class="type-in-group clear width100 form-field" data-field="description">
+            <span class="type-in-label-m">现场照片说明:</span>
+            <input type="text" class="cm-input" style="width: 280px">
+        </div>
+        </div>
+        <div class="save-btn clear" >
+            <button class="btn btn-save save">保存</button>
+            <button class="btn save-add">保存并新增</button>
+            <button class="btn cancel">取消</button>
+        </div>
+    </div>
+</div>
+<!--提取物品添加-->
+<div class="alert-window hider" id="tqwp-add">
+    <div class="mcb-form">
+        <div class="type-in-group xh">
+            <span class="type-in-label-m unkonwn">序号:</span>
+            <input type="text" class="cm-input" readonly>
+        </div>
+        <div class="type-in-group form-field" data-field="name">
+            <span class="type-in-label-m unkonwn">物品名称:</span>
+            <input type="text" class="cm-input">
+        </div>
+        <div class="type-in-group form-field" data-field="collectedPosition">
+            <span class="type-in-label-m unkonwn">提取部位:</span>
+            <input type="text" class="cm-input">
+        </div>
+        <div class="type-in-group form-field" data-field="collectedMethod">
+            <span class="type-in-label-m unkonwn">提取方法:</span>
+            <input type="text" class="cm-input">
+        </div>
+        <div class="type-in-group form-field" data-field="attachmentId">
+            <span class="type-in-label-m unkonwn">上传照片:</span>
+            <input type="text" class="cm-input">
+            <label for="tqwp-add-pic" class="btn">上传</label>
+            <input class="hide-plus" id="tqwp-add-pic" type="file">
+        </div>
+        <div class="type-in-group form-field width100" data-field="sceneCollectedPerson">
+            <span class="type-in-label-m unkonwn">提取人:</span>
+            <ul class="clearfix checkbox-ul tqr-info-fill"></ul>
+        </div>
+        <div class="type-in-group form-field" data-field="amount">
+            <span class="type-in-label-m unkonwn">提取数量:</span>
+            <input type="text" class="cm-input">
+        </div>
+        <div class="type-in-group form-field" data-field="collectedTime">
+            <span class="type-in-label-m unkonwn">提取日期:</span>
+            <input type="text" class="cm-input cm-input-date">
+            <i class="icon-calendar"></i>
+        </div>
+        <div class="type-in-group form-field width100 mb20" data-field="feature">
+            <span class="type-in-label-m unkonwn">基本特征:</span>
+            <textarea class="cm-input" ></textarea>
+        </div>
+        <div class="type-in-group form-field width100 mb20" data-field="remark">
+            <span class="type-in-label-m unkonwn">备注:</span>
+            <textarea class="cm-input"></textarea>
+        </div>
+        <div class="save-btn clear" >
+            <button class="btn btn-save save">保存</button>
+            <button class="btn save-add">保存并新增</button>
+            <button class="btn cancel">取消</button>
+        </div>
+    </div>
+</div>
+<!--尸体信息添加-->
+<div class="alert-window hider" id="stxx-add">
+    <div class="mcb-form">
+        <div class="type-in-group form-field" data-field="sex">
+            <span class="type-in-label-m">性别:</span>
+            <dict dict-type="radio" dict-name="sex" dict-root="XBDM" class="unready dict"></dict>
+        </div>
+        <div class="type-in-group form-field" data-field="originStatus">
+            <span class="type-in-label-m unkonwn">是否为无名尸体:</span>
+            <dict dict-type="radio" dict-name="originStatus" dict-root="SFDM" data-field="originStatus" class="unready form-field dict" id="stxx-sfwm"></dict>
+            <span>姓名: </span><input type="text" name="" class="un-name hider form-field" data-field="name">
+        </div>
+        <div class="type-in-group form-field width100" data-field="specialSign">
+            <span class="type-in-label-m">体表特殊标记:</span>
+            <dict dict-root="TBTSBJDM" dict-type="tree" dict-name="specialSign" dict-multiple="true" dict-default="false" dict-common="true" dict-id="specialSign" class="unready dict"></dict>
+           <!-- <ul class="clearfix" id="stxx-tbbj"></ul>
+            <span class="type-in-group-more multi-select">更多 <i class="icon-caret-down"></i></span>-->
+            <div id="stxx-add-special-sign" class="fr deploy stxx-add-deploy"><i class="icon-cog"><span class="">配置常用项</span></i></div>
+        </div>
+        <div class="type-in-group form-field width100" data-field="deathReason">
+            <span class="type-in-label-m">致死原因:</span>
+            <dict dict-root="ZSYYFLDM" dict-type="tree" dict-name="deathReason" dict-multiple="true" dict-default="false" dict-common="true" dict-id="deathReason" class="unready dict"></dict>
+            <!--<ul class="clearfix" id="stxx-zsyy"></ul>
+            <span class="type-in-group-more multi-select">更多 <i class="icon-caret-down"></i></span>-->
+            <div id="stxx-add-death-reason" class="fr deploy stxx-add-deploy"><i class="icon-cog"><span class="">配置常用项</span></i></div>
+        </div>
+        <div class="type-in-group form-field dissect" data-field="familyComment">
+            <span class="type-in-label-m">家属是否同意解剖:</span>
+            <dict dict-type="radio" dict-name="familyComment" dict-root="SFDM" class="unready dict"></dict>
+        </div>
+        <div class="type-in-group form-field protect-step" data-field="deathProperty">
+            <span class="type-in-label-m">死亡性质:</span>
+            <dict dict-type="radio" dict-name="deathProperty" dict-root="SWXZDM" class="unready dict"></dict>
+        </div>
+        <div class="form-field" data-field="clothes"><span class="type-in-label-m">衣着情况:</span><input type="text" class="cm-input"></div>
+        <div class="form-field" data-field="gesture"><span class="type-in-label-m">尸体姿态:</span><input type="text" class="cm-input"></div>
+        <div class="form-field" data-field="reportAttachmentId">
+            <span class="type-in-label-m">尸体报告:</span>
+            <input type="text" class="cm-input-m">
+            <label class="browse cur-p" for="stxx-add-pic">浏览...</label>
+            <input type="file" class="hide-plus" id="stxx-add-pic"></div>
+        <div class="save-btn" >
+            <button class="btn btn-save save">保存</button>
+            <button class="btn save-and-add">保存并新增</button>
+            <button class="btn cancel">取消</button>
+        </div>
+    </div>
+</div>
+
+<!--新建现场 编辑案件类别弹窗-->
+<div id="edit-case-type-block" class="hider">
+    <div class="form-field" data-field="caseType">
+        <span class="type-in-label-xxs">案件类别:</span>
+        <dict dict-root="AJLBDM" dict-type="tree" dict-id="ectb-case-type" id="ectb-case-type-dict" dict-name="caseType" dict-common="true" class="unready pzcy-line pzcy-line-d"></dict>
+        <a id="ectb-ajlb-set-common-use" class="cm-item-set ectb-set-common-use" root="AJLB" href="javascript:void(0);"><i class="icon-cog"></i> 配置常用项</a>
+    </div>
+    <div class="form-field" data-field="caseNature">
+        <span class="type-in-label-xxs">案件性质:</span>
+        <dict dict-root="AJXZDM" dict-type="tree" dict-id="ectb-case-nature" id="ectb-case-nature-dict" dict-name="caseNature" dict-multiple="true" class="unready pzcy-line pzcy-line-d"></dict>
+        <a id="ectb-ajxz-set-common-use" class="cm-item-set ectb-set-common-use" root="AJXZ" href="javascript:void(0);"><i class="icon-cog"></i> 配置常用项</a>
+    </div>
+    <div class="win-fix-bar">
+        <b class="cm-query-btn" id="ectb-confirm-btn"></b>
+        <b class="cm-reset-btn" id="ectb-cancel-btn"></b>
+    </div>
+    <div class="transparent-mask hider"></div>
+</div>
+<!--编辑案件性质弹窗-->
+<div id="edit-case-nature-block" class="hider">
+    <div class="form-field" data-field="caseNature">
+        <span class="type-in-label-m">案件性质:</span>
+        <dict dict-root="AJXZDM" dict-type="tree" dict-id="ecnb-case-nature" dict-name="caseNature" dict-common="true" dict-multiple="true" class="unready dict pzcy-line"></dict>
+        <a id="ecnb-set-common-use" class="cm-item-set ecnb-set-common-use" href="javascript:void(0);"><i class="icon-cog"></i> 配置常用项</a>
+    </div>
+    <div class="win-fix-bar">
+        <b class="cm-query-btn" id="ecnb-confirm-btn"></b>
+        <b class="cm-reset-btn" id="ecnb-cancel-btn"></b>
+    </div>
+</div>
+<!--分析意见常用项选择弹窗-->
+<div id="analysis-cmuse-choose-block" class="hider" >
+    <div id="accb-sel" tpsource="#fxyj-usual-setting"></div>
+    <div class="win-fix-bar">
+        <b class="cm-query-btn" id="accb-confirm-btn"></b>
+        <b class="cm-reset-btn" id="accb-cancel-btn"></b>
+    </div>
+</div>
+<!--痕迹物证 添加手印痕迹-->
+<div id="hjwz-print-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <input type="text" name="modifyAttachmentId" value="" class="hide"/>
+    <input type="text" name="rawAttachmentId" value="" class="hide"/>
+    <input type="text" name="modifyFileMd5" value="" class="hide"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="print-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>痕迹照片：</span>
+        <input id="print-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="print-browse" class="hjwz-pic-browse cm-query-btn"><input id="print-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+        <b id="print-handle" class="hjwz-pic-handle cm-reset-btn"></b>
+    </div>
+    <div class="batch-clone">
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>手印类型：</span>
+        <div dict-id="add-print-type" dict-name="materialEvidenceType" dict-type="radio" dict-root="SYHJLXDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>提取方法：</span>
+        <div dict-name="collectionMode" dict-type="radio" dict-root="ZWTQFFDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取日期：</span>
+        <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date -w199 validate" data-options="required:true"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,200]'"/>
+    </div>
+    <div class="type-in-group -w60">
+        <span class="type-in-label-m">存入指纹系统：</span>
+        <input name="storageFlag" type="checkbox" value="1"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m w170 lh20">是否包含实体提取物品：</span>
+        <input name="collectedFlag" type="checkbox" value="1" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div>
+            <span class="type-in-label-m fl">物证类型：</span>
+            <div dict-name="tqwpType" dict-type="radio" dict-root="ZWTQFFDM" class="dict"></div>
+        </div>
+        <div>
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input -w199"/>
+        </div>
+    </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-print-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-print-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-print-save" paramNum="{number}" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="print-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加足迹-->
+<div id="hjwz-foot-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="foot-no" name="order" type="text" class="cm-input" value="{order}" readonly/>
+    </div>
+    <div  class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>痕迹照片：</span>
+        <input id="foot-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="foot-browse" class="hjwz-pic-browse cm-query-btn"><input id="foot-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="batch-clone">
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>足迹类型：</span>
+        <div dict-name="materialEvidenceType" dict-type="radio" dict-root="ZJHJLXDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>提取方法：</span>
+        <div dict-name="collectionMode" dict-type="radio" dict-root="ZJTQFFDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取日期：</span>
+        <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date -w199 validate" data-options="required:true"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div>
+        <span class="type-in-label-m">基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input"/>
+    </div>
+    <div class="type-in-group -w70">
+        <span class="type-in-label-m">存入足迹系统：</span>
+        <input name="storageFlag" value="1" type="checkbox"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m w170 lh20">是否列入现场提取登记表：</span>
+        <input name="collectedFlag" value="1" type="checkbox" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div>
+            <span class="type-in-label-m fl">物证类型：</span>
+            <div dict-name="tqwpType" dict-type="radio" dict-root="ZJTQFFDM" class="dict"></div>
+        </div>
+        <div>
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input -w199"/>
+        </div>
+    </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-foot-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-foot-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-foot-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="foot-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加生物-->
+<div id="hjwz-bio-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="bio-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div  class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>生物物证照片：</span>
+        <input id="bio-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="bio-browse" class="hjwz-pic-browse cm-query-btn"><input id="bio-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="batch-clone">
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>类型：</span>
+        <div dict-name="materialEvidenceType" dict-type="radio" dict-root="SWWZLBDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取方法：</span>
+        <input name="collectionModeDict" value="{collectionModeDict}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,100]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m">提取日期：</span>
+        <input name="{collectedTime}" value="{collectedTime}" type="text" class="cm-input cm-input-date"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group -w60">
+        <span class="type-in-label-m">存入DNA系统：</span>
+        <input name="storageFlag" value="1" type="checkbox"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m w170 lh20">是否列入现场提取登记表：</span>
+        <input name="collectedFlag" value="1" type="checkbox" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m fl">物证类型：</span>
+            <input name="tqwpType" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input"/>
+        </div>
+    </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-bio-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-bio-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-bio-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="bio-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加工具-->
+<div id="hjwz-tool-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="tool-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div  class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>痕迹照片：</span>
+        <input id="tool-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="tool-browse" class="hjwz-pic-browse cm-query-btn"><input id="tool-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="batch-clone">
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>工痕种类：</span>
+        <div dict-name="materialEvidenceType" dict-type="radio" dict-root="GJHJZLDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>工具推断：</span>
+        <div dict-name="materialEvidenceJudgement" dict-type="radio" dict-root="GJTDZLDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>提取方法：</span>
+        <div dict-name="collectionMode" dict-type="radio" dict-root="GJHJTQFFDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div>
+        <span class="type-in-label-m">提取日期：</span>
+        <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date -w199"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,200]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m lh20">是否列入现场提取登记表：</span>
+        <input name="collectedFlag" value="1" type="checkbox" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div>
+            <span class="type-in-label-m fl">物证类型：</span>
+            <div dict-name="tqwpType" dict-type="radio" dict-root="GJHJTQFFDM" class="dict"></div>
+        </div>
+        <div>
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input -w199"/>
+        </div>
+    </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-tool-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-tool-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-tool-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="tool-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加枪弹-->
+<div id="hjwz-gun-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="gun-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div  class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>痕迹照片：</span>
+        <input id="gun-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="gun-browse" class="hjwz-pic-browse cm-query-btn"><input id="gun-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>枪弹痕迹类型：</span>
+        <div dict-name="materialEvidenceType" dict-type="radio" dict-root="QDHJZLDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>枪弹制式：</span>
+        <div dict-name="bulletModel" dict-type="radio" dict-root="QDZSDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>枪弹种类：</span>
+        <div dict-name="bulletType" dict-type="tree" dict-root="QZDYZLDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>提取方法：</span>
+        <div dict-name="collectionMode" dict-type="radio" dict-root="QDHJTQFFDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div>
+        <span class="type-in-label-m">提取日期：</span>
+        <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date -w199"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div>
+        <span class="type-in-label-m">基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input"/>
+    </div>
+    <div class="type-in-group -w70">
+        <span class="type-in-label-m">存入枪弹系统：</span>
+        <input name="storageFlag" value="1" type="checkbox"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m w170">是否列入现场提取登记表：</span>
+        <input name="collectedFlag" value="1" type="checkbox" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div>
+            <span class="type-in-label-m fl">物证类型：</span>
+            <div dict-name="tqwpType" dict-type="radio" dict-root="QDHJTQFFDM" class="dict"></div>
+        </div>
+        <div>
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input -w199"/>
+        </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-gun-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-gun-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-gun-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="gun-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加特殊-->
+<div id="hjwz-special-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="special-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>痕迹照片：</span>
+        <input id="special-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="special-browse" class="hjwz-pic-browse cm-query-btn"><input id="special-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>类型：</span>
+        <div dict-name="materialEvidenceType" dict-type="radio" dict-root="TSHJLBDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取方法：</span>
+        <input name="collectionModeDict" value="{collectionModeDict}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,100]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取日期：</span>
+        <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date validate" data-options="required:true"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div class="clearfix">
+        <span class="type-in-label-m"><em class="asterisk">*</em>基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,200]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m lh20">是否列入现场提取登记表：</span>
+        <input name="collectedFlag" type="checkbox" value="1" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m fl">物证类型：</span>
+            <input name="tqwpType" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input"/>
+        </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-special-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-special-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-special-save" paramNum="{number}" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="special-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加毒化-->
+<div id="hjwz-drug-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="drug-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>毒化物证照片：</span>
+        <input id="drug-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="drug-browse" class="hjwz-pic-browse cm-query-btn"><input id="drug-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>类型：</span>
+        <div dict-name="materialEvidenceType" dict-type="radio" dict-root="SYHJLXDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取方法：</span>
+        <input name="collectionModeDict" value="{collectionModeDict}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,100]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m">提取日期：</span>
+        <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date validate" data-options="required:true"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div class="clearfix">
+        <span class="type-in-label-m"><em class="asterisk">*</em>基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,200]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m lh20">是否包含实体提取物品：</span>
+        <input name="collectedFlag" type="checkbox" value="1" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m fl">物证类型：</span>
+            <input name="tqwpType" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input"/>
+        </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-drug-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-drug-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-drug-save" paramNum="{number}" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="drug-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加理化-->
+<div id="hjwz-physic-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="physic-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>理化物证照片：</span>
+        <input id="physic-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="physic-browse" class="hjwz-pic-browse cm-query-btn"><input id="physic-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>类型：</span>
+        <div dict-name="materialEvidenceType" dict-type="radio" dict-root="LHWZLBDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取方法：</span>
+        <input name="collectionModeDict" value="{collectionModeDict}" type="text" class="cm-input"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m">提取日期：</span>
+        <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div class="clearfix">
+        <span class="type-in-label-m"><em class="asterisk">*</em>基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,200]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m lh20">是否列入现场提取登记表：</span>
+        <input name="collectedFlag" type="checkbox" value="1" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m fl">物证类型：</span>
+            <input name="tqwpType" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input"/>
+        </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-physic-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-physic-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-physic-save" paramNum="{number}" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="physic-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加文检-->
+<div id="hjwz-doc-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="doc-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>文检物证照片：</span>
+        <input id="doc-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="doc-browse" class="hjwz-pic-browse cm-query-btn"><input id="doc-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>类型：</span>
+        <div dict-name="materialEvidenceType" dict-type="radio" dict-root="WJWZLBDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取方法：</span>
+        <input name="collectionModeDict" value="{collectionModeDict}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,100]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m">提取日期：</span>
+        <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div class="clearfix">
+        <span class="type-in-label-m"><em class="asterisk">*</em>基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,200]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m lh20">是否列入现场提取登记表：</span>
+        <input name="collectedFlag" type="checkbox" value="1" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m fl">物证类型：</span>
+            <input name="tqwpType" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input"/>
+        </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-doc-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-doc-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-doc-save" paramNum="{number}" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="doc-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加电子-->
+<div id="hjwz-elec-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="elec-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>电子物证照片：</span>
+        <input id="elec-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="elec-browse" class="hjwz-pic-browse cm-query-btn"><input id="elec-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>类型：</span>
+        <div dict-name="materialEvidenceType" dict-type="radio" dict-root="DZWZLBDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取方法：</span>
+        <input name="collectionModeDict" value="{collectionModeDict}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,100]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m">提取日期：</span>
+        <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div class="clearfix">
+        <span class="type-in-label-m"><em class="asterisk">*</em>基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,200]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m lh20">是否列入现场提取登记表：</span>
+        <input name="collectedFlag" type="checkbox" value="1" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m fl">物证类型：</span>
+            <input name="tqwpType" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input"/>
+        </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-elec-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-elec-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-elec-save" paramNum="{number}" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="elec-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加视频-->
+<div id="hjwz-video-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="video-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>涉案视频照片：</span>
+        <input id="video-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="video-browse" class="hjwz-pic-browse cm-query-btn"><input id="video-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="batch-clone">
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+        <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+        <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl"><em class="asterisk">*</em>类型：</span>
+        <div dict-name="materialEvidenceType" dict-type="radio" dict-root="STWZLBDM" class="dict"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+        <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>提取方法：</span>
+        <input name="collectionModeDict" value="{collectionModeDict}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,100]'"/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m">提取日期：</span>
+        <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date"/>
+        <i class="icon-calendar"></i>
+    </div>
+    <div class="clearfix">
+        <span class="type-in-label-m"><em class="asterisk">*</em>基本特征：</span>
+        <input name="feature" value="{feature}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,200]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m lh20">是否列入现场提取登记表：</span>
+        <input name="collectedFlag" type="checkbox" value="1" class="take-goods-flag"/>
+    </div>
+    <div class="tqwp-info hide">
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取物名称：</span>
+            <input name="tqwpName" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证数量：</span>
+            <input name="tqwpAmount" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m fl">物证类型：</span>
+            <input name="tqwpType" type="text" class="cm-input"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">物证性状：</span>
+            <input name="tqwpProp" type="text" class="cm-input"/>
+        </div>
+    </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-video-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-video-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-video-save" paramNum="{number}" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="video-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 添加其他-->
+<div id="hjwz-others-block" class="hjwz-open-block hider pd20">
+    <input type="hidden" uuid="{uuid}"/>
+    <div class="type-in-group">
+        <span class="type-in-label-m">序号：</span>
+        <input id="others-no" name="order" value="{order}" type="text" class="cm-input" readonly/>
+    </div>
+    <div class="type-in-group">
+        <span class="type-in-label-m"><em class="asterisk">*</em>其他物证照片：</span>
+        <input id="others-pic-src" name="attachmentId" value="{attachmentId}" type="text" class="cm-input -w315 mr5 validate" data-options="required:true"/>
+        <b id="others-browse" class="hjwz-pic-browse cm-query-btn"><input id="others-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <div class="batch-clone">
+        <div class="type-in-group">
+            <span class="type-in-label-m"><em class="asterisk">*</em>物证名称：</span>
+            <input name="materialEvidenceName" value="{materialEvidenceName}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m"><em class="asterisk">*</em>遗留部位：</span>
+            <input name="leftPosition" value="{leftPosition}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+        </div>
+        <div>
+            <span class="type-in-label-m fl"><em class="asterisk">*</em>类型：</span>
+            <input name="materialEvidenceType" value="{materialEvidenceType}" type="text" class="cm-input validate" data-options="required:true, validType:'extLength[0,50]'"/>
+        </div>
+        <div>
+            <span class="type-in-label-m"><em class="asterisk">*</em>提取人：</span>
+            <ul class="tqr-info-fill checkbox-ul clearfix"></ul>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m"><em class="asterisk">*</em>提取方法：</span>
+            <input name="collectionModeDict" value="{collectionModeDict}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,100]'"/>
+        </div>
+        <div class="type-in-group">
+            <span class="type-in-label-m">提取日期：</span>
+            <input name="collectedTime" value="{collectedTime}" type="text" class="cm-input cm-input-date"/>
+            <i class="icon-calendar"></i>
+        </div>
+        <div class="clearfix">
+            <span class="type-in-label-m"><em class="asterisk">*</em>基本特征：</span>
+            <input name="feature" value="{feature}" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,200]'"/>
+        </div>
+        <div>
+            <span class="type-in-label-m lh20">是否列入现场提取登记表：</span>
+            <input name="collectedFlag" type="checkbox" value="1" class="take-goods-flag"/>
+        </div>
+        <div class="tqwp-info hide">
+            <div class="type-in-group">
+                <span class="type-in-label-m">提取物名称：</span>
+                <input name="tqwpName" type="text" class="cm-input"/>
+            </div>
+            <div class="type-in-group">
+                <span class="type-in-label-m">物证数量：</span>
+                <input name="tqwpAmount" type="text" class="cm-input"/>
+            </div>
+            <div class="type-in-group">
+                <span class="type-in-label-m fl">物证类型：</span>
+                <input name="tqwpType" type="text" class="cm-input"/>
+            </div>
+            <div class="type-in-group">
+                <span class="type-in-label-m">物证性状：</span>
+                <input name="tqwpProp" type="text" class="cm-input"/>
+            </div>
+        </div>
+    </div>
+    <p class="tcenter">
+        <b id="add-others-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="add-others-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>
+        <b id="edit-others-save" paramNum="{number}" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <b id="others-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 摄像头打点-->
+<div id="hjwz-camera-block" class="hjwz-open-block pr hider">
+    <div class="camera-map" id="map-getpoint-camera"></div>
+    <div class="camera-result-list">
+        <!--<h4>结果列表</h4>-->
+        <span id="menu-opt" class="menu icon-reorder"></span>
+        <table id="camera-result-tb" class="typical-tb">
+            <thead>
+            <th>序号</th>
+            <th>设备名称</th>
+            <th>设备类型</th>
+            <th>操作</th>
+            </thead>
+            <tbody id="camera-result-tp" class="xtp-hide">
+            <tr>
+                <td>{$rownum}</td>
+                <td>
+                    <a uuid="{uuid}" lng="{longitude}" lat="{latitude}" class="show-map-point" href="javascript:void(0);">{cameraName}</a>
+                </td>
+                <td>{cameraTypeDict}</td>
+                <td>
+                    <a uuid="{uuid}" class="del-camera icon-remove orangered fs15" href="javascript:void(0);"></a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--<span class="map-opt-btn icon-pushpin" href="javascript:void(0);"></span>-->
+    <span class="zoom-in map-opt-btn icon-plus" href="javascript:void(0);" title="放大"></span>
+    <span class="zoom-out map-opt-btn disabled icon-minus" href="javascript:void(0);" title="缩小"></span>
+</div>
+<!--痕迹物证 摄像头打点 新增摄像头-->
+<div id="hjwz-add-camera" class="hjwz-open-block hider pd20">
+    <div>
+        <span class="type-in-label-m"><em class="asterisk">*</em>名称：</span>
+        <input name="cameraName" type="text" class="cm-input validate" data-options="required:true,validType:'extLength[0,50]'"/>
+    </div>
+    <div>
+        <span class="type-in-label-m fl">类型：</span>
+        <div id="camera-type-option" dict-name="cameraType" dict-type="radio" dict-root="SXTLXDM" class="dict inline-block -w125"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m fl">朝向：</span>
+        <div id="camera-orient-option" dict-name="cameraOrientation" dict-type="radio" dict-root="SXTCXDM" class="dict inline-block -w125"></div>
+    </div>
+    <div>
+        <span class="type-in-label-m">经度：</span>
+        <input id="camera-lng" name="longitude" type="text" class="cm-input" readonly/>
+    </div>
+    <div>
+        <span class="type-in-label-m">维度：</span>
+        <input id="camera-lat" name="latitude" type="text" class="cm-input" readonly/>
+    </div>
+    <div>
+        <span class="type-in-label-m">导入照片：</span>
+        <input id="camera-pic-src" name="attachmentId" type="text" class="cm-input w177 mr5"/>
+        <b id="camera-browse" class="hjwz-pic-browse cm-query-btn"><input id="camera-pic-file" type="file" accept="image/jpeg,image/png,image/gif"/></b>
+    </div>
+    <p class="tcenter">
+        <b id="add-camera-save" class="hjwz-opt-save cm-save-btn mr15"></b>
+        <!--<b id="add-camera-save2" class="hjwz-opt-save2 cm-save-btn mr15"></b>-->
+        <b id="camera-cancel" class="hjwz-opt-cancel cm-cancel-btn"></b>
+    </p>
+</div>
+<!--痕迹物证 基站详情页面-->
+<div id="hjwz-jz-detail-block" class="hider pd20">
+    <ul class="jz-static clearfix hider">
+       {{valueOf && #<li param="{valueOf}">{valueOf}</li>#}}
+    </ul>
+    <div class="jz-tbs hider">{{data:#jz-detail-tp}}</div>
+    <table id="jz-dynamic" class="typical-tb hider">
+        <thead>
+        <th>当前基站</th>
+        <th>国家-移动网络</th>
+        <th>位置区域</th>
+        <th>小区</th>
+        <th>信道</th>
+        <th>基站</th>
+        <th>系统频段</th>
+        </thead>
+        <tbody class="xtp-hide">
+            <tr>
+                <td>{ifactive}</td>
+                <td>{mccMnc}</td>
+                <td>{lac}</td>
+                <td>{cellId}</td>
+                <td>{bcch}</td>
+                <td>{bsic}</td>
+                <td>{sysBand}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="win-fix-bar">
+        <b class="cm-close-btn"></b>
+    </p>
+</div>
+<!--批量导入-->
+<div id="batch-import-block" class="hider pd20">
+    <h5 class="mb20">请将要导入的的照片拖入各分类的虚线框中，最后点击确定完成导入</h5>
+    <div class="clearfix">
+        <div class="drag-box drag-area">
+            <h5 class="title">方位图 （<em>0</em>）<a class="into-batch-edit icon-edit ml10" param="fwt" href="javascript:void(0);" title="批量修改"></a></h5>
+            <div id="fwt-import-box" param="fwt" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+        <div class="drag-box drag-area">
+            <h5 class="title">平面图 （<em>0</em>）<a class="into-batch-edit icon-edit ml10" param="pmt" href="javascript:void(0);" title="批量修改"></a></h5>
+            <div id="pmt-import-box" param="pmt" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+        <div class="drag-box drag-area">
+            <h5 class="title">概貌&方位照片 （<em>0</em>）<a class="into-batch-edit icon-edit ml10" param="gmfwzp" href="javascript:void(0);" title="批量修改"></a></h5>
+            <div id="gmfwzp-import-box" param="gmfwzp" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+        <div class="drag-box drag-area">
+            <h5 class="title">重点部位照片 （<em>0</em>）<a class="into-batch-edit icon-edit ml10" param="zdbwzp" href="javascript:void(0);" title="批量修改"></a></h5>
+            <div id="zdbwzp-import-box" param="zdbwzp" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+        <div class="drag-box drag-area">
+            <h5 class="title">细目照片 （<em>0</em>）<a class="into-batch-edit icon-edit ml10" param="xmzp" href="javascript:void(0);" title="批量修改"></a></h5>
+            <div id="xmzp-import-box" param="xmzp" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+        <div class="drag-box drag-area">
+            <h5 class="title">手印照片 （<em>0</em>）<a class="into-batch-edit icon-edit ml10" param="print" href="javascript:void(0);" title="批量修改"></a></h5>
+            <div id="print-import-box" param="print" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+        <div class="drag-box drag-area">
+            <h5 class="title">足迹照片 （<em>0</em>）<a class="into-batch-edit icon-edit ml10" param="foot" href="javascript:void(0);" title="批量修改"></a></h5>
+            <div id="foot-import-box" param="foot" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+        <div class="drag-box drag-area">
+            <h5 class="title">生物照片 （<em>0</em>）<a class="into-batch-edit icon-edit ml10" param="bio" href="javascript:void(0);" title="批量修改"></a></h5>
+            <div id="bio-import-box" param="bio" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+        <div class="drag-box drag-area">
+            <h5 class="title">工具照片 （<em>0</em>）<a class="into-batch-edit icon-edit ml10" param="tool" href="javascript:void(0);" title="批量修改"></a></h5>
+            <div id="tool-import-box" param="tool" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+        <div class="drag-box drag-area">
+            <h5 class="title">视频关键帧 （<em>0</em>）<a class="into-batch-edit icon-edit ml10" param="video" href="javascript:void(0);" title="批量修改"></a></h5>
+            <div id="video-import-box" param="video" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+        <div class="drag-box drag-other-area pr">
+            <h5 class="title">其他 （<em>0</em>）</h5>
+            <div class="other hider">
+                <h6>请选择类型</h6>
+                <div class="type tcenter mt20">
+                    <u class="drag-area" param="gun">枪弹</u>
+                    <u class="drag-area" param="drug">毒化</u>
+                    <u class="drag-area" param="physic">理化</u>
+                    <u class="drag-area" param="doc">文检</u>
+                    <u class="drag-area" param="elec">电子</u>
+                    <u class="drag-area" param="qtxct">其他现场图</u>
+                </div>
+            </div>
+            <div id="other-import-box" param="other" class="pic-slide storage-area" tpsource="#batch-import-slide-tp"></div>
+        </div>
+    </div>
+    <p class="tcenter mt20">
+        <b id="batch-import-ok" class="cm-query-btn mr15"></b>
+        <b id="batch-import-close" class="cm-reset-btn"></b>
+    </p>
+</div>
+<!--批量导入页面 批量编辑-->
+<div id="batch-edit-block" class="hider pd20">
+    <div class="pic-box pic-slide" tpsource="#batch-edit-slide-tp"></div>
+    <div class="pic-info"></div>
+    <p class="win-fix-bar">
+        <b id="save-batch-edit" class="cm-save-btn"></b>
+        <b id="close-batch-edit" class="cm-close-btn"></b>
+    </p>
+</div>
+
+<!--模板start-->
+<!--批量导入照片模板-->
+<script type="text/template" id="batch-import-slide-tp">
+    <div class="slide">
+        <div class="slide-content pr">
+            <img src="{src}"/>
+            <em paramId="{batchImportId}" paramType="{type}" class="del-import-pic hideplus{batchImportId}" title="删除">&times;</em>
+        </div>
+    </div>
+</script>
+<!--批量修改照片轮播模板-->
+<script type="text/template" id="batch-edit-slide-tp">
+    <div paramId="{batchImportId}" paramType="{type}" class="slide">
+        <div class="slide-content">
+            <img src="{src}">
+        </div>
+    </div>
+</script>
+<!--勘验人员表格模板-->
+<script type="text/template" id="ckxx-kyryzz-tbody-tp">
+    <tr data-key="{id}">
+        <td>{name}</td>
+        {{arr: #<td><span class="{active.asActive}" data-key="{key}">✔</span></td>#}}
+        <td><a class="icon-remove fs16 remove-tr"></a></td>
+    </tr>
+</script>
+<!--现场图照片模板-->
+<script type="text/template" id="add-scene-xct-li">
+    <li>
+        <div>
+            <img src="{attachmentId.getFullPath}" alt="">
+            <div class="add-pic-cover">
+                <i class="icon-edit"></i>
+                <i class="icon-remove"></i>
+            </div>
+        </div>
+        <p>{pictureTypeCn}<br> <span>{date}</span></p>
+    </li>
+</script>
+<!--现场照片 模板-->
+<script type="text/template" id="add-scene-xctp-div">
+    <div>
+        <img src="{attachmentId.getFullPath}" alt="">
+        <div class="add-pic-cover">
+            <i class="icon-edit cur-p pic-edit"></i>
+            <i class="icon-remove cur-p pic-remove"></i>
+        </div>
+    </div>
+</script>
+<!--提取物品图片模板-->
+<script type="text/template" id="add-scene-tqwp-img">
+    <li data-imgid="{imgid}">
+        <div>
+            <img src="{attachmentId.getFullPath}" alt="">
+            <div class="add-pic-cover">
+                <i class="icon-inbox"></i><i class="icon-edit"></i><i class="icon-remove"></i>
+            </div>
+        </div>
+        <p>{name}</p>
+    </li>
+</script>
+<!--提取物品表格模板-->
+<script type="text/template" id="add-scene-tqwp-tr">
+    <tr data-imgid="{imgid}">
+        <td><input type="checkbox"></td>
+        <td>{index}</td>
+        <td>{name}</td>
+        <td>{collectedPosition}</td>
+        <td>{amount}</td>
+        <td>{tqr}</td>
+        <td>{collectedTime}</td>
+        <!--<td>{}</td>-->
+        <td>
+            <i class="icon-inbox blue"></i>
+            <i class="icon-edit blue"></i>
+            <i class="icon-remove blue"></i>
+        </td>
+    </tr>
+</script>
+<!--勘验情况损失物品 表格模板-->
+<script type="text/template" id="kyqk-sswp-tr">
+    <tr data-id="{id}">
+        <td>
+            <span>{index}</span>
+        </td>
+        <td data-key="name">
+            <input type="text" class="cm-input-s">
+        </td>
+        <td data-key="brand">
+            <input type="text" class="cm-input-m">
+        </td>
+        <td data-key="amount">
+            <input type="text" class="cm-input-xs validate" data-options="validType:'number'">
+        </td>
+        <td data-key="value">
+            <input type="text" class="cm-input-xs lost-price validate" data-options="validType:'number'">
+        </td>
+        <td data-key="feature">
+            <input type="text" class="cm-input-m">
+        </td>
+        <td>
+            <a class="icon-remove fs16"></a>
+        </td>
+    </tr>
+</script>
+<!--常用见证人弹出框模板-->
+<script type="text/template" id="add-scene-kyqk-jzr-ul">
+    <div class="dict-tree-xcky-block set-common-use-block">
+        <div class="scub-ztree-wrap">
+            <div class="outside-border">
+                <div class="scub-ztree-div">
+                    <!--<div class="scub-ztree-search">-->
+                        <!--<input type="text" id="scub-seek" class="seek">-->
+                        <!--<i class="icon-search icon-seek"></i>-->
+                    <!--</div>-->
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="icon-search icon-seek"></i></span>
+                        <input id="scub-seek" type="text" class="form-control">
+                    </div>
+                    <ul id="cyjzr-ztree" class="ztree scub-ztree">
+                        {{arr: #add-scene-kyqk-jzr-li}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="scub-btns clear"/>
+        <div class="type-in-group save-btn" >
+            <b id="close-cm-person" class="cm-reset-btn"></b>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="add-scene-kyqk-jzr-li">
+    <li data-id="{id}">{name}<div><i class="icon-ok"></i><i class="icon-remove"></i></div></li>
+</script>
+<!--见证人表格模板-->
+<script type="text/template" id="kyqk-jzr-tr">
+    <tr data-id="{id}">
+        <td>
+            <span>{index}</span>
+        </td>
+        <td data-key="name">
+            <input type="text" class="cm-input-xs" value="{name}">
+        </td>
+        <td data-key="gender">
+            <select class="cm-select">
+                <option value="1">男</option>
+                <option value="2">女</option>
+                <option value="0">未知</option>
+            </select>
+        </td>
+        <td data-key="birthday">
+            <input type="text" class="cm-input w-100 cm-input-date" value="{birthday}">
+        </td>
+        <td data-key="address">
+            <input type="text" class="cm-input-m" value="{organization}">
+        </td>
+        <td>
+            <a class="fs16 people add-people"><img src="./../img/pepo.png"></a>
+            <a class="fs16 people remove-people"><img src="./../img/remove_03.png"></a>
+        </td>
+    </tr>
+</script>
+<!--作案工具表格模板-->
+<script type="text/template" id="fxyj-zagj-tr">
+    <tr data-id="{id}">
+        <td>{index}</td>
+        <td data-key="name"><input type="text" class="cm-input-xs" value=""></td>
+        <td data-key="species">
+            <select class="cm-select">
+                {{gjlb: #<option value="{key}">{value}</option>#}}
+            </select>
+        </td>
+        <td data-key="origin">
+            <select class="cm-select">
+                {{gjly: #<option value="{key}">{value}</option>#}}
+            </select>
+        </td>
+        <td data-key="description">
+            <input type="text" class="cm-input-m" value="">
+        </td>
+        <td><a class="icon-remove fs16"></a></td>
+    </tr>
+</script>
+<!--分析意见常用配置下拉框模板-->
+<script type="text/template" id="fxyj-usual-setting">
+    <select name="" id="fxyj-usual-select">
+        {{arr :#<option value="{key}">{value}</option>#}}
+    </select>
+</script>
+<!--报案/被害人-->
+<script type="text/template" id="bar-bhr-tr-tp">
+    <tr data-id="{id}">
+        <td data-key="type">
+            <select class="cm-select">
+                {{arr :#<option value="{key}">{value}</option>#}}
+            </select>
+            <!--<dict dict-root="RYLBDM" dict-type="select" class="unready dict"></dict>-->
+            <!--<select class="cm-select">
+                <option value="">被害人</option>
+                <option value="">报案人</option>
+            </select>-->
+        </td>
+        <td data-key="name">
+            <input type="text" class="cm-input-xs">
+        </td>
+        <td data-key="gender">
+            <select class="cm-select">
+                <option value="1">男</option>
+                <option value="2">女</option>
+                <option value="0">未知</option>
+            </select>
+        </td>
+        <td data-key="age">
+            <input type="text" class="cm-input-xs validate" data-options="validType:'number'">
+        </td>
+        <td data-key="idCardNo">
+            <input type="text" class="cm-input-m validate" data-options="validType:'isChineseID'">
+        </td>
+        <td data-key="phone">
+            <input type="text" class="cm-input-s validate" data-options="validType:'contact'">
+        </td>
+        <td>
+            <a class="icon-globe fs16"></a>
+            <a class="icon-remove fs16 remove-tr"></a>
+        </td>
+    </tr>
+</script>
+<!--文本模板-->
+<script type="text/template" id="text-tp-content">
+    <div class="tp-tabs-wrap">
+        {{data:#<i class="icon-file-alt" data-num="{$rownum}" tpname="{templateName}" tpcontent="{content}"></i>#}}
+    </div>
+    <em>当前模板:</em><em class="current-tp">未使用模板</em>
+    <i class="icon-trash"></i>
+</script>
+<!--勘验人员责任-->
+<script type="text/template" id=""></script>
+<!--痕迹物证 原图li模板-->
+<script type="text/template" id="hjwz-li-tp">
+    <li>
+        <div class="pic-detail">
+            <img paramId="{uuid}" src="{attachmentId.getFullPath}"/>
+            <p class="opt hider">
+                <span class="icon-edit print-edit-pic hideplus{module}"></span>
+                <span class="into-del icon-remove"></span>
+            </p>
+            <p class="ellipsis pic-name" title="{materialEvidenceName}">
+                <span class="name">{materialEvidenceName}</span>（原图）
+                <span class="into-edit icon-pencil edit-info" title="修改信息"></span>
+            </p>
+        </div>
+    </li>
+</script>
+<!--痕迹物证 修改图div模板-->
+<script type="text/template" id="hjwz-div-tp">
+    <div class="pic-detail">
+        <img paramId="{uuid}" src="{modifyAttachmentId.getFullPath}"/>
+        <p class="opt hider">
+            <span class="icon-edit print-edit-pic hideplus{module}"></span>
+            <span class="into-del icon-remove"></span>
+        </p>
+        <p class="ellipsis pic-name" title="{materialEvidenceName}">
+            （修改图）
+        </p>
+    </div>
+</script>
+<!--痕迹物证 摄像头打点 详细信息模板-->
+<script type="text/template" id="hjwz-map-s-content-tp">
+    <div class="hjwz-camera-detail">
+        <h4>{cameraName}</h4>
+        <p class="clearfix"><span class="type fl">类型：{cameraTypeDict}</span><span class="orient fr">方向：{cameraOrientationDict}</span></p>
+        <p class="tcenter hideplus{attachmentId}">
+            <img src="{attachmentId.getFullPath}"/>
+        </p>
+    </div>
+</script>
+<!--痕迹物证 摄像头列表模板-->
+<script type="text/template" id="hjwz-camera-tbody-tp">
+    <tr>
+        <td>{$rownum}</td>
+        <td>{cameraTypeDict}</td>
+        <td>{longitude}</td>
+        <td>{latitude}</td>
+        <td>{cameraOrientationDict}</td>
+        <td>
+            <a class="dzwz-into-map icon-map-marker fs18 mr10" title="查看地图" href="javascript:void(0);"></a>
+            <a class="dzwz-into-add-pic icon-download-alt fs18 mr10" title="导入照片" uuid="{uuid}" href="javascript:void(0);">
+                <input type="file" accept="image/jpeg,image/png,image/gif"/>
+            </a>
+            <a class="dzwz-into-view-pic icon-picture fs18 only-hidden{attachmentId}" uuid="{uuid}" title="查看照片" picSrc="{attachmentId.getFullPath}" href="javascript:void(0);"></a>
+        </td>
+    </tr>
+</script>
+<!--电子物证 基站table模板-->
+<script type="text/template" id="dzwz-jz-tbody-tp">
+<tr>
+    <td class="tleft">
+        <a class="into-jz-view" attachmentId="{id}" fileName="{fileName}" href="javascript:void(0);">{fileName}</a>
+    </td>
+    <td>{fileTypeTxt}</td>
+    <td>
+        <a class="into-dzwz-jz-del icon-trash fs18" paramid="{id}" href="javascript:void(0);" title="删除"></a>
+    </td>
+</tr>
+</script>
+<!--电子物证 基站详情table模板-->
+<script type="text/template" id="jz-detail-tp">
+    <table param="{name}" class="typical-tb hider">
+        <thead>
+            <th>当前基站</th>
+            <th>国家-移动网络</th>
+            <th>位置区域</th>
+            <th>小区</th>
+            <th>信道</th>
+            <th>基站</th>
+            <th>系统频段</th>
+        </thead>
+        <tbody>{{list:#jz-detail-tbody-tp}}</tbody>
+    </table>
+</script>
+<!--电子物证 基站详情tbody模板-->
+<script type="text/template" id="jz-detail-tbody-tp">
+    <tr>
+        <td>{ifactive}</td>
+        <td>{mccMnc}</td>
+        <td>{lac}</td>
+        <td>{cellId}</td>
+        <td>{bcch}</td>
+        <td>{bsic}</td>
+        <td>{sysBand}</td>
+    </tr>
+</script>
+<!--电子物证 WiFi table 模板-->
+<script type="text/template" id="dzwz-wifi-tbody-tp">
+    <tr>
+        <td class="tleft">{fileName}</td>
+        <td>
+            <a class="into-dzwz-wifi-del icon-trash fs18" paramid="{id}" href="javascript:void(0);" title="删除"></a>
+        </td>
+    </tr>
+</script>
+<!--尸体信息表格模板-->
+<script type="text/template" id="add-scene-stxx-tr">
+    <tr>
+        <td>{index}</td>
+        <td>{name}</td>
+        <td>{sex}</td>
+        <td>
+            <i class="icon-edit blue"></i>
+            <i class="icon-remove red"></i>
+        </td>
+    </tr>
+</script>
+<!--模板 end-->
+</body>
+<script src="../js/base.js"></script>
+<script src="../js/scene-add.js"></script>
+<!--<script src="../js/kct.js"></script>-->
+<!--<script src="../plugin/sortable/jquery-ui.js"></script>-->
+</html>

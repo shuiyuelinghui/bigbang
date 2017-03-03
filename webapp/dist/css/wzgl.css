@@ -1,0 +1,33 @@
+.query-block-row u{
+    padding: 0 15px!important;
+}
+.query-block .dict-radio + label::before,
+.query-block .dict-radio:checked + label::after,
+.query-block input[type="radio"]:checked + label::after{
+    content: none!important;
+}
+.query-block .dict-radio+label{
+    margin-right: 0!important;
+    padding: 0 18px!important;
+}
+.text-time{display: inline-block;position: relative;}
+.input-time{display: inline-block;width: 258px;height: 28px;}
+.icon-time{width: 14px;color: #aeaeae;position: absolute;top:42%;right: 8px}
+
+#take-goods .bar-btn-div .cm-send-btn:after{
+    content: ' 批量入库';
+}
+#take-goods tr.white{
+    background: #ffffff!important;
+}
+#take-goods tr.f9{
+    background: #f9f9f9!important;
+}
+#take-goods .typical-tb > tbody tr:hover,
+#take-goods .typical-tb > tbody tr.hover-like,
+#take-goods .typical-tb > tbody tr:hover td.need-fix,
+#take-goods .typical-tb > tbody tr:hover td.need-fix-end,
+#take-goods .typical-tb > tbody tr td.need-fix.hover-like,
+#take-goods .typical-tb > tbody tr td.need-fix-end.hover-like{
+    background-color: transparent;
+}

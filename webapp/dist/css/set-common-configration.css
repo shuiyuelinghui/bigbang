@@ -1,0 +1,381 @@
+@charset "utf-8";
+body {
+    min-height: auto;
+}
+
+.set-common-use-block {
+    width: 780px;
+    /*height: 534px;*/
+    background: #f9f9f9;
+    padding: 10px 15px 13px 15px;
+}
+
+/*字典树弹窗样式*/
+.dict-tree-xcky-block.set-common-use-block {
+    width: 355px;
+    height: 480px;
+    padding: 10px 15px 0 15px;
+}
+
+.scub-ztree-wrap {
+    width: 325px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.scub-common-use {
+    overflow: auto;
+}
+
+.scub-ztree-wrap {
+    float: left;
+}
+
+.outside-border {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #cad0d4;
+    margin-top: 9px;
+    background-color: #ffffff
+}
+
+.scub-ztree-search {
+    position: relative;
+}
+
+.set-common-use-block {
+    position: relative
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #CCCCCC;
+    position: absolute;
+    left: 709px;
+    top: -10px;
+}
+
+.set-common-use-block .seek {
+    width: 278px;
+    height: 30px;
+    display: block;
+    margin: 9px;
+    padding-left: 10px;
+}
+
+.icon-seek {
+    /*position: absolute;*/
+    /*top: 5px;*/
+    /*left: 264px;*/
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+}
+
+.scub-ztree {
+    height: 340px;
+    /*border-top: 1px solid #cad0d4;*/
+    margin: 9px !important;
+    padding: 10px !important;
+    overflow: auto;
+}
+
+.scub-move-btn-wrap {
+    position: absolute;
+    top: 196px;
+    left: 354px;
+}
+
+.scub-right-btn {
+    background-color: #4a89dc;
+    color: #ffffff;
+    width: 60px;
+    height: 32px;
+    border-radius: 2%;
+    margin: 0 auto;
+    display: block;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer
+}
+
+.scub-left-btn {
+    background-color: #dc4a4a;
+    color: #ffffff;
+    width: 60px;
+    height: 32px;
+    border-radius: 2%;
+    margin: 0 auto;
+    display: block;
+    line-height: 32px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer
+}
+
+.scub-common-use-wrap {
+    width: 330px;
+    float: left;
+    margin: 0 0 20px 90px
+}
+
+.commonly {
+    padding: 12px;
+    background-color: #ffffff;
+}
+
+.commonly p {
+    line-height: 30px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.scub-common-use p.active, .scub-choose-default p.active {
+    background: #4a89dc;
+    color: #fff;
+}
+
+.scub-common-use-title-wrap {
+    height: 19px;
+    overflow: hidden;
+}
+
+.scub-common-use-title {
+    float: left
+}
+
+.scub-common-use-empty {
+    float: right;
+    margin-bottom: 9px;
+    cursor: hand;
+    color: #4A89DC;
+    cursor: pointer;
+}
+
+.scub-btns {
+    border: 1px dashed #cad0d4
+}
+
+.set-common-use-block .save-btn {
+    text-align: center;
+    width: 100%;
+}
+
+.save-btn > .cm-query-btn:before {
+    content: '';
+}
+
+.save-btn > .cm-query-btn:after {
+    content: '保存';
+}
+
+.save-btn > .cm-reset-btn:before {
+    content: '';
+}
+
+.save-btn > .cm-reset-btn:after {
+    content: '取消';
+}
+
+.scub-common-use > p:hover {
+    border: 1px solid #C5DEFF;
+}
+
+.set-common-use-block {
+    color: #838383;
+}
+
+.scub-common-use p {
+    text-align: right;
+}
+
+.scub-common-use p > u {
+    float: left;
+}
+
+.scub-common-use p > i {
+    margin-right: 10px;
+}
+
+.scub-common-use > p > i {
+    font-size: 0;
+}
+
+.scub-choose-default > p > i {
+    font-size: 15px;
+}
+
+.scub-common-use p > .icon-remove {
+    color: #4A89DC;
+}
+
+.scub-choose-default > p > .icon-group {
+    color: #4A89DC;
+}
+
+.scub-common-use > p:hover > .icon-group {
+    color: #D6D6D6;
+}
+
+.scub-common-use p.active > .icon-remove, .scub-choose-default p.active > .icon-remove {
+    color: #fff;
+}
+
+.scub-common-use > p:hover > .icon-group:hover {
+    color: #4A89DC;
+}
+
+.scub-choose-default > p:hover > .icon-group:hover, .scub-choose-default > p.active:hover > .icon-group:hover {
+    color: #D6D6D6;
+}
+
+.scub-common-use > p.active:hover > .icon-group:hover, .scub-choose-default > p.active > i {
+    color: #fff;
+}
+
+.scub-common-use > p {
+    border: 1px solid transparent;
+}
+
+.scub-common-use p:hover > i {
+    font-size: 15px;
+}
+
+.scub-choose-default > p:hover {
+    background: #EBEFF7;
+}
+
+.scub-choose-default > p.active:hover {
+    background: #4a89dc;
+}
+
+.scub-choose-default {
+    border: 1px dotted #79AAFE;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.scub-choose-default > p > u {
+    color: #4D8BDD;
+}
+
+.scub-choose-default > p.active > u {
+    color: #fff;
+}
+
+.scub-common-use p {
+    overflow: hidden;
+}
+
+/* 用到ztree的模块自定义了ztree的样式，会影响字典的ztree样式，故重新设置*/
+.set-common-use-block .ztree * {
+    font-size: 14px !important;
+    font-family: "微软雅黑" !important;
+}
+
+.set-common-use-block .ztree li,
+.set-common-use-block .ztree li a.curSelectedNode,
+.set-common-use-block .ztree li span {
+    line-height: 22px !important;
+}
+
+.set-common-use-block .ztree li a.curSelectedNode,
+.set-common-use-block .ztree li span.button.chk.checkbox_true_full + a,
+.set-common-use-block .ztree li span.button.chk.radio_true_full + a {
+    height: 22px !important;
+}
+
+.set-common-use-block .ztree li span.level0.button.roots_open,
+.set-common-use-block .ztree li span.level0.button.roots_close,
+.set-common-use-block .ztree li span.level0.button.root_open,
+.set-common-use-block .ztree li span.level0.button.root_close,
+.set-common-use-block .ztree li span.level0.button.center_open,
+.set-common-use-block .ztree li span.level0.button.center_close, .set-common-use-block .ztree li span.level0.button.bottom_close {
+    vertical-align: middle;
+}
+
+.set-common-use-block .ztree li span.level0.button.center_open,
+.set-common-use-block .ztree li span.level1.button.center_open,
+.set-common-use-block .ztree li span.level0.button.roots_open {
+    /*background-position: 3px -68px;*/
+    background-position: -92px -1px;
+}
+
+.set-common-use-block .ztree li span.level0.button.center_close,
+.set-common-use-block .ztree li span.level0.button.bottom_close,
+.set-common-use-block .ztree li span.level1.button.center_close,
+.set-common-use-block .ztree li span.level0.button.roots_close {
+    /*background-position: -14px -68px;*/
+    background-position: -74px -1px;
+}
+
+/*.set-common-use-block .ztree li span.level0.button.root_open{*/
+/*background-position: -92px -54px;*/
+/*}*/
+.set-common-use-block .ztree li span.button.ico_open {
+    background-position: 3px -70px;
+    vertical-align: middle;
+}
+
+.set-common-use-block .ztree li span.button.ico_close {
+    background-position: -14px -70px;
+    vertical-align: middle;
+}
+
+.set-common-use-block .ztree li span.button.ico_docu {
+    width: 15px;
+    background-position: -32px -69px;
+    vertical-align: middle;
+}
+
+.set-common-use-block .ztree li .forbidden-set span.button.ico_docu {
+    width: 15px;
+    background-position: -46px -69px;
+    vertical-align: middle;
+}
+
+.set-common-use-block .forbidden-set {
+    color: #999;
+}
+
+.ztree li span.button.chk {
+    display: none !important;
+}
+
+.ztree li span.button.chk.checkbox_true_full + a,
+.ztree li span.button.chk.radio_true_full + a,
+.set-common-use-block .ztree li a.curSelectedNode.curSelectedNodeBack {
+    background-color: #4A89DC;
+    color: #fff;
+    /*height: 16px;*/
+    border: 1px solid transparent;
+    opacity: 1;
+}
+
+.set-common-use-block .ztree li a.curSelectedNode {
+    /*padding-top: 0px;*/
+    background-color: transparent;
+    /*color: #fff;*/
+    /*!*height: 16px;*!*/
+    border: 1px solid transparent;
+    /*opacity: 1;*/
+}
+
+.set-common-use-block .ztree li span.button.chk.checkbox_true_full + a > span.ico_docu,
+.set-common-use-block .ztree li span.button.chk.radio_true_full + a > span.ico_docu,
+.set-common-use-block .ztree li a.curSelectedNode.curSelectedNodeBack > span.ico_docu {
+    background-position: -61px -69px;
+}
+
+.input-group-addon {
+    border-left: 0px;
+    border-top: 0px;
+}
+
+.form-control {
+    border-top: 0;
+    border-right: 0;
+}

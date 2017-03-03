@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>现勘-十类案件统计</title>
+    <link rel="stylesheet" type="text/css" href="../css/base-plus.css?version=0.92">
+    <link rel="stylesheet" type="text/css" href="../css/scene-query.css?version=0.92">
+</head>
+<body>
+<div class="stat-ten-cases body-agent">
+    <div class="query-block-tabs">
+        <div widget="common-panel-heading"></div>
+        <div class="query-block cq-condition">
+            <div class="query-condition-hide hider">
+                <div class="query-block-row">
+                    <div widget="inline-select" id="query-sjlx" data-name="dateType" data-label="统计时间项" data-ops="勘验时间:1,录入时间:2,提交时间:3" data-default="1"></div>
+                    <!--<div>-->
+                        <!--<span class="qc-label-m">统计时间项：</span>-->
+                        <!--<span id="query-sjlx" data-name="dateType" class="option">-->
+                            <!--<u val="1" class="active default">勘验时间</u>-->
+                            <!--<u val="2">录入时间</u>-->
+                            <!--<u val="3">提交时间</u>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                </div>
+                <div widget="date-options"  data-label="统计时间" data-labelcls="qc-label-m" data-input="query-filterDate" data-name="filterDate" data-bname="filterDateFrom" data-ename="filterDateTo" data-select="query-tjsj" data-default="month"></div>
+                <div class="query-block-row">
+                    <div>
+                        <span class="qc-label-m fl">统计单位：</span>
+                        <div id="query-dict-tjdw" dict-id="query-tjdw" dict-name="unit" data-name="unit" dict-type="tree" dict-common="true" empty="true" class="dict unready option inline-block -w125 ml5"></div>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div widget="inline-select" id="query-xj" class="fl qc-group-l" data-name="isIncludeLowerLevel" data-label="是否统计下级" data-labelcls="qc-label-m" data-ops="是:1,否:0" data-default="1"></div>
+                    <div widget="inline-select" id="query-dylr" class="fl" data-name="isSameMonInvAndInp" data-label="是否当月勘查当月录入" data-labelcls="qc-label-xxxl" data-ops="是:1,否:0" data-default="1"></div>
+                </div>
+            </div>
+            <p widget="query-btns" data-cls="query-reset"></p>
+        </div>
+        <div widget="more-condition"></div>
+    </div>
+    <div widget="query-result"
+         id="stat-ten-cases-q-r"
+         data-title="十类案件录入数统计"
+         data-emcls="hide"
+         data-table="stat-ten-cases-tb"
+         data-btns="excel,color,full">
+    </div>
+</div>
+</body>
+<script src="../js/base.js?version=0.91"></script>
+<script src="../js/manage-stat-ten-cases.js?version=0.91"></script>
+<script>
+    typeof tenCaseFn == 'function' && tenCaseFn();
+</script>
+</html>

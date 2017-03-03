@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>现勘-提取物品查询列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/base-plus.css?version=0.92">
+    <link rel="stylesheet" href="../css/wzgl.css?version=0.92">
+</head>
+<body>
+<div id="take-goods" class="body-agent">
+    <div class="query-block-tabs">
+        <div widget="common-panel-heading" data-saved="hide"></div>
+        <div class="query-block cq-condition">
+            <div class="query-condition-hide hider">
+                <div class="query-block-row">
+                    <div>
+                        <label class="qc-label-m">处理状态：</label>
+                        <div dict-id="query-clzt" dict-name="storageStatus" data-name="storageStatus" dict-type="radio"
+                             dict-root="ZYXTZTFKDM" empty="true" class="dict unready option inline-block ml5"></div>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div>
+                        <label class="qc-label-m fl">案件类别：</label>
+                        <div dict-id="query-ajlb" dict-name="caseType" dict-type="tree" dict-root="AJLBDM"
+                             dict-common="true" empty="true" class="dict unready option inline-block ml5"></div>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div>
+                        <label class="qc-label-m fl">发案区划：</label>
+                        <div id="query-dict-faqh" dict-id="query-faqh" dict-name="caseRegionalism"
+                             data-name="caseRegionalism" dict-type="tree" dict-common="true" empty="true"
+                             class="unready option inline-block ml5"></div>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div>
+                        <label class="qc-label-m">勘验地点：</label>
+                        <input id="query-kydd" data-name="investigationPlace" type="text" class="cm-input"/>
+                    </div>
+                </div>
+                <div widget="date-options2" data-label="勘验时间" data-input="query-investigationDate"
+                     data-name="investigationDate" data-select="query-kysj" data-default="week"></div>
+                <div widget="date-options2" data-label="发案时间" data-input="query-crimeTime" data-name="crimeTime"
+                     data-select="query-fasj" data-default="week"></div>
+                <div class="query-block-row">
+                    <div>
+                        <label class="qc-label-m">现场勘验号：</label>
+                        <input id="query-kybh" data-name="investigationNo" type="text" class="cm-input"/>
+                    </div>
+                </div>
+            </div>
+            <p widget="query-btns"></p>
+        </div>
+        <div widget="more-condition"></div>
+    </div>
+    <div widget="query-result"
+         id="take-goods-r-q"
+         data-title="提取物品查询列表"
+         data-table="take-goods-tb"
+         data-tablecls="qr-tb"
+         data-btns="color,full,send"
+         data-tablehtml="#take-goods-tb-html"></div>
+    <!--<div id="take-goods-r-q" class="query-result">
+        <div class="new-color-bar">
+            <span class="title"><i class="icon-search pr10 fs14"></i>提取物品查询列表<span class="result-count-desc">共找到<span class="total-count"></span>条符合的记录</span></span>
+            <div class="bar-btn-div">
+                <b id="into-batch-rk" class="cm-send-btn"></b>
+            </div>
+        </div>
+        <table id="take-goods-tb" class="typical-tb qr-tb">
+            <thead class="need-fix">
+            <tr>
+                <th class="need-fix mem4">序号</th>
+                <th class="need-fix mem18">现场勘验号</th>
+                <th cs class="mem18">提取物品编号</th>
+                <th cs class="mem8">物证名称</th>
+                <th cs class="mem8">物证类别</th>
+                <th cs class="mem8">遗留部位</th>
+                <th cs class="mem8">提取方法</th>
+                <th cs class="mem8">案件类别</th>
+                <th cs class="mem16">发案区划</th>
+                <th cs class="mem10">勘验时间</th>
+                <th cs class="mem16">勘验地点</th>
+                <th cs class="mem8">勘验人</th>
+                <th cs class="mem8">提取人</th>
+                <th class="mem8">处理状态</th>
+                <th class="need-fix-end mem6">操作</th>
+            </tr>
+            </thead>
+            <tbody tpsource="#take-goods-tbody-tp"></tbody>
+        </table>
+        <div class="paging"></div>
+    </div>-->
+</div>
+</body>
+<script type="text/html" id="take-goods-tb-html">
+    <thead class="need-fix">
+    <tr>
+        <th class="need-fix mem4">序号</th>
+        <th class="need-fix mem18">现场勘验号</th>
+        <th cs class="mem18">提取物品编号</th>
+        <th cs class="mem8">物证名称</th>
+        <th cs class="mem8">物证类别</th>
+        <th cs class="mem8">遗留部位</th>
+        <th cs class="mem8">提取方法</th>
+        <th cs class="mem8">案件类别</th>
+        <th cs class="mem16">发案区划</th>
+        <th cs class="mem10">勘验时间</th>
+        <th cs class="mem16">勘验地点</th>
+        <th cs class="mem8">勘验人</th>
+        <th cs class="mem8">提取人</th>
+        <th class="mem8">处理状态</th>
+        <th class="need-fix-end mem6">操作</th>
+    </tr>
+    </thead>
+    <tbody tpsource="#take-goods-tbody-tp"></tbody>
+</script>
+<script type="text/template" id="take-goods-tbody-tp">
+    <tr class="white f9{bg}">
+        <td rowspan="{rowspan}" class="hide{rowspan}">
+            {{rowspan && #{rowNum}#}}
+        </td>
+        <td rowspan="{rowspan}" class="hide{rowspan}">
+            {{rowspan && #<input name="{investigationId}" type="checkbox" class="check-all"/>{investigationNo}#}}
+        </td>
+        <td>
+            <input name="{investigationId}" collectedGoodsId="{collectedGoodsId}" serialNo="{serialNo}"
+                   storageStatusDict="{storageStatusDict}" type="checkbox"/>{serialNo}
+        </td>
+        <td>{name}</td>
+        <td>{category}</td>
+        <td>{collectionPosition}</td>
+        <td>{collectionMethod}</td>
+        <td>{caseType}</td>
+        <td>{caseRegionalism}</td>
+        <td>{investigationDateFrom}</td>
+        <td>{investigationPlace}</td>
+        <td>{sceneInvestigator}</td>
+        <td>{collectedPerson}</td>
+        <td>{storageStatus}</td>
+        <td rowspan="{rowspan}" class="hide{rowspan}">
+            {{rowspan &&
+            <a class="into-sj" investigationId="{investigationId}" href="javascript:void(0);">送检</a><br/>
+            <a class="into-rk" investigationId="{investigationId}" href="javascript:void(0);">入库</a><br/>
+            <a class="into-gh" investigationId="{investigationId}" href="javascript:void(0);">归还</a><br/>
+            <a class="into-dq" investigationId="{investigationId}" href="javascript:void(0);">丢弃</a>
+            }}
+        </td>
+    </tr>
+</script>
+<script src="../js/base.js?version=0.91"></script>
+<script src="../js/evidence-mng.js?version=0.91"></script>
+<script>
+    typeof takeGoodsFn == 'function' && takeGoodsFn();
+</script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>现勘-全文检索</title>
+    <link rel="stylesheet" type="text/css" href="../css/base-plus.css?version=0.92">
+    <link rel="stylesheet" type="text/css" href="../css/info-query.css?version=0.92">
+</head>
+<body>
+<div class="body-agent">
+    <!------------搜索框--------------->
+    <h1 class="fts-title">全文检索</h1>
+    <div class="input-group fts-search">
+        <input id="fts-input-box" type="text" class="form-control" placeholder="请输入关键字进行全文检索">
+        <span class="input-group-addon fts-query-btn">查询</span>
+    </div>
+    <!------------查询条件--------------->
+    <div class="result-page-content hider">
+        <div widget="common-panel-heading"></div>
+        <div class="query-block ifs-cq-condition hider query-condition-hide">
+            <div class="hide">
+                <div class="fl qc-group-full">
+                    <span class="qc-label-xs">全文检索：</span>
+                    <input id="queryItem" type="hidden" data-name="queryItem" x-name="queryItem">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-full">
+                    <!--<span class="qc-label-xs hider">查询内容：</span>-->
+                    <!--<input id="ifs-query-content" type="hidden" data-name="queryContent">-->
+                    <span class="qc-label-xs">全国地址：</span>
+                    <span id="nation-addr" data-name="nationAddr" x-name="nationAddr" class="option">
+                            <!--<u class="active">本地</u>-->
+                            <span class="xtp-hide"><span class="fts-province-wrap"><u
+                                    class="fts-province fts-province-disabled{solrAddress.length} active{$index} query-block-init{$index}"
+                                    val="{solrAddress}" data-code="{unitCode}" data-addr="{solrAddress}"
+                                    data-url="{xckyUrl}">{unitName}</u></span></span>
+                        </span>
+                    <!--<em>(可多选)</em>-->
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-full">
+                    <span class="qc-label-xs">勘验时间：</span>
+                    <span id="invest-date" data-name="investigationDate" x-name="investigationDate" class="option"></span>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-full">
+                    <span class="qc-label-xs">案件类别：</span>
+                    <span id="case-type-facet" data-name="caseTypeFacet" x-name="caseTypeFacet" class="option"></span>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-full">
+                    <span class="qc-label-xs">发案区划：</span>
+                    <span id="case-regionalism-facet" data-name="caseRegionalismFacet" x-name="caseRegionalismFacet" class="option"></span>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-full">
+                    <span class="qc-label-xs">录入单位：</span>
+                    <span id="organ-name-facet" data-name="organNameFacet" x-name="organNameFacet" class="option"></span>
+                </div>
+            </div>
+        </div>
+        <p widget="more-condition" data-default="open"></p>
+    </div>
+    <!------------查询结果--------------->
+    <div id="fts-query-result" class="query-result result-page-content hider">
+        <div widget="query-title"></div>
+        <div id="fts-qr-content" tpsource="#fts-qr-content-tp"></div>
+        <div class="paging"></div>
+    </div>
+</div>
+<!------------物证列表弹窗---------------->
+<ul id="fts-pic-ul" class="pic-ul clearfix hider" tpsource="#fts-pic-li"></ul>
+<!----------物证列表图片模板--------------->
+<script type="text/template" id="fts-pic-li">
+    <li>
+        <a href="javascript:void(0);" class="fts-img-link" data-id="{id}">
+            <img src="{fileServerAddr}{attachmentId}" alt="{materialEvidenceName}">
+        </a>
+        <p class="file-name">{materialEvidenceName}</p>
+        <p class="xcky-num"><a href="javascript:;" data-id="{investigationId}" data-caseTypeCn="{caseTypeCn}" data-caseNatureCn="{caseNatureCn}"></a></p>
+    </li>
+</script>
+<!------------查询结果 模板--------------->
+<script type="text/template" id="fts-qr-content-tp">
+    <div class="pb15">
+        <a href="javascript:void(0);" class="fts-qr-title-link" investId="{id}" investNo="{investigationNo}" caseType="{caseType.html2txt}"
+           caseNature="{caseNature.html2txt}">{crimeTimeBegin}&nbsp;{caseRegionalism}&nbsp;{caseType}</a>
+        <p class="fts-qr-text">{text}</p> <a
+            class="fts-qr-text-link">{investigationNo}</a><u>指挥人:{commandName}</u><u>勘验人:{investigatorName}</u>
+        <span class="fts-qr-text-link-wrap" investId="{id}"> <a type="1">现场图:[{scenePictureAmount.toString}]</a> <a type="2">现场照片:[{scenePhotoAmount.toString}]</a> <a category="1">指纹:[{handprintAmount.toString}]</a> <a category="2">足迹:[{footprintAmount.toString}]</a> <a category="6">生物:[{bioEvidenceAmount.toString}]</a> <a category="3">工具:[{toolmarkAmount.toString}]</a> <a category="10">电子:[{electroEvidenceAmount.toString}]</a> <a category="11">视频:[{videoEvidenceAmount.toString}]</a> <a category="4">枪弹:[{bulletprintAmount.toString}]</a> <a category="5">特殊:[{specialprintAmount.toString}]</a> <a category="7">毒化:[{toxicEvidenceAmount.toString}]</a> <a category="8">理化:[{toxicEvidenceAmount.toString}]</a> <a category="9">文检:[{fileEvidenceAmount.toString}]</a> <a category="12">其他:[{otherEvidenceAmount.toString}]</a> </span>
+    </div>
+</script>
+<!------------现场图/照片 模板--------------->
+<script type="text/template" id="fts-scene-pic-tp">
+    <label>照片名称：</label><span>{materialEvidenceName}</span><br><label>照片类型：</label><span>{pictureTypeCn}</span><br><label>照片说明：</label><span>{description}</span>
+</script>
+<!------------其他物证 模板--------------->
+<script type="text/template" id="fts-evidence-tp">
+    <div class="fts-preview-pro">
+        <label>物证名称：</label><span>{materialEvidenceName}</span><br><label>提取方法：</label><span>{collectionModeDict}</span><br><label>基本特征：</label><span>{feature}</span>
+    </div>
+    <div class="fts-preview-pro">
+        <label>遗留部位：</label><span>{leftPosition}</span><br>
+        <label>提取人：</label><span>{{sceneCollectedPerson:#<i class="hider{$index}">,</i>{collectedPerson}#}}</span>
+    </div>
+    <div class="fts-preview-pro">
+        <label>物证类型：</label><span>{materialEvidenceTypeDict}</span><br><label>提取日期：</label><span>{collectedTime}</span>
+    </div>
+</script>
+<!--地级市选中项模板-->
+<script type="text/template" id="fts-city-li">
+    <li>
+        <u class="hider" data-cityid="{code}">{code}</u>
+        <span>{value}</span>
+        <em></em>
+    </li>
+</script>
+</body>
+<script src="../js/base.js"></script>
+<script src="../js/info-query.js"></script>
+<script>
+    typeof infoFulltextSearch == 'function' && infoFulltextSearch();
+</script>
+</html>

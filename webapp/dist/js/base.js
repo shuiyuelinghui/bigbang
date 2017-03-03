@@ -20122,6 +20122,7 @@ module.exports={
 
         //for mock
         if(typeof url=='string' && url.match(/\/mock\/.+\.json/i)){
+
             type='GET';
         }
 
@@ -20202,7 +20203,7 @@ module.exports={
         var baseRestPath=window.config.restfuls[0]+'/'+window.getPrjName()+'/'+concat+'/';
         act=act.replace(/^\//,'').replace(/\?.+/,'');
         if(!acts[act]){
-            acts[act]=window.config.mock?window.getDistPath('mock/{0}.json'.format(act.replace(/\/|\./g,'-'))):act;
+            acts[act]=window.config.mock?window.getDistPath('mock/{0}.json'.format(act.replace(/\/$/,'').replace(/\/|\./g,'-'))):act;
         }
         //console.log(act);
         //arguments.caller && console.info(arguments.caller.toString());

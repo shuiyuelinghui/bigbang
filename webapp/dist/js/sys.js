@@ -617,7 +617,7 @@ window.MODULE={
             moduleId,
             treeObj,
             moduleAction = makeAct('sys/sysModule/list'),
-            moduleViewAction = makeAct('sys/sysModule'),
+            moduleViewAction = makeAct('sys/sysModule/'),
             moduleDelAct = makeAct('sys/sysModule/del'),
             moduleEditAct = makeAct('sys/sysModule/upd'),
             moduleAddAct = makeAct('sys/sysModule/add'),
@@ -681,7 +681,7 @@ window.MODULE={
         }
         //点击树节点加载数据
         function loadModuleInfo(treeNode){
-            $get(moduleViewAction+"/"+treeNode.id,[],function(res){
+            $get(moduleViewAction,treeNode.id,function(res){
                 var data = res.data,
                     subRights = [];
 

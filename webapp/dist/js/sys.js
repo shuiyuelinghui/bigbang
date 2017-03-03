@@ -691,10 +691,10 @@ window.MODULE={
                     return false;
                 }
                 $('#sub-rights-table').hide().find('tbody').html('');
-                $template('#main-rights', data);
+                $('#main-rights').template(data);
                 moduleId = data.resourceId;
                 $('#open-flag').dictSelect(data.visibleState);
-                document.getElementById('open-flag').disabled="disabled";
+                byid('open-flag').disabled="disabled";
 
                 var children=data.children;
                 if(children){

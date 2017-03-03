@@ -20145,6 +20145,19 @@ module.exports={
         //}
         var requestHead={'token':window.token||(window.token=localData.get('token'))};
         window.config && window.config.exToken && (requestHead.exToken=window.config.exToken);
+
+        //处理参数集合在路径中的恶心情况
+        if(type=='GET'){
+            if(typeof params=='string' && url.lastIndexOf('/')==url.length-1){
+                url=url+params;
+                params=null;
+            }
+            else if(url.indexOf('{')>-1 && url.indexOf('}')>0){
+                url=url.format(params);
+                params=null;
+            }
+        }
+
         return $.ajax($.extend({
             type: type || "POST",
             url: url,
@@ -22371,22 +22384,24 @@ var $template=(function($){
     return function (container,data,arg2,arg3,arg4){
         var args=arguments;
         var $container=$(container);
+        var tpsource='';
 
-        //未设置tpspource表示template存储于自身innerHTML, 需要钩子来做cache, 否则执行一次template后,保存在自身内的模板会丢失
-        var tpsource=$container.attr('tpsource')||'';
-        var id=$container.attr('id')||'';
-        var selector=$container.selector||'';
-        var tpcache=$container.attr('tpcache')||$container.attr('tpcache',$.random()).attr('tpcache');  //未设tpsource,未设id,未通过选择器,那就需要随意赋值一个唯一值给tpcahce属性
+        if(typeof data!='string'){
+            //未设置tpspource表示template存储于自身innerHTML, 需要钩子来做cache, 否则执行一次template后,保存在自身内的模板会丢失
+            tpsource=$container.attr('tpsource')||'';
+            var id=$container.attr('id')||'';
+            var selector=$container.selector||'';
+            var tpcache=$container.attr('tpcache')||$container.attr('tpcache',$.random()).attr('tpcache');  //未设tpsource,未设id,未通过选择器,那就需要随意赋值一个唯一值给tpcahce属性
 
-        //依次尝试钩子,如果都没有,报错  改为自动加上钩子
-        (!tpsource && id && byid(id+'-tp')) && (tpsource='#{0}-tp'.format(id));
-        tpsource=tpsource || ( id ? ('#'+id) : selector );
-        tpsource=tpsource || (tpcache ? '[tpcache={0}]'.format(tpcache) : '' );
+            //依次尝试钩子,如果都没有,报错  改为自动加上钩子
+            (!tpsource && id && byid(id+'-tp')) && (tpsource='#{0}-tp'.format(id));
+            tpsource=tpsource || ( id ? ('#'+id) : selector );
+            tpsource=tpsource || (tpcache ? '[tpcache={0}]'.format(tpcache) : '' );
 
-        if(!tpsource){
-            throw new Error('The template tpsource was not found! check the container selector or id or attr:tpcache');
+            if(!tpsource){
+                throw new Error('The template tpsource was not found! check the container selector or id or attr:tpcache');
+            }
         }
-
 
 
         var initIt=function(){

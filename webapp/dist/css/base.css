@@ -4306,7 +4306,7 @@ body .icon-remove-btn:before {
   padding-right: 5px;
   padding-top: 1px;
 }
-.stp-hide {
+.xtp-hide {
   visibility: hidden!important;
   opacity: 0!important;
   background: transparent!important;
@@ -4322,11 +4322,11 @@ body .icon-remove-btn:before {
 thead.bt1 {
   border-top: 1px solid #ccc;
 }
-body table.stp-table th:first-child {
+body table.xtp-table th:first-child {
   padding-left: 7px;
 }
-[type=checkbox].stp-check-tr,
-[type=checkbox].stp-check-tr-all {
+[type=checkbox].xtp-check-tr,
+[type=checkbox].xtp-check-tr-all {
   left: 5px;
   margin-left: 8%;
   margin-right: 6px;

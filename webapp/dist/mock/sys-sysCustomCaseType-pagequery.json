@@ -1,0 +1,41 @@
+{
+  "flag": 1,
+  "totalCount": 3,
+  "msg": null,
+  "data": [
+    {
+      "createTime": "2017-01-18 00:00:00",
+      "updateTime": "2017-01-18 00:00:00",
+      "rowNum": 1,
+      "groupId": "2c91809759b07b930159b0a5262b0545",
+      "groupName": "b ",
+      "groupDesc": "b",
+      "caseType": "010000",
+      "caseTypeCN": "危害国家安全案",
+      "systemFlag": "1"
+    },
+    {
+      "createTime": "2017-01-18 00:00:00",
+      "updateTime": "2017-01-18 00:00:00",
+      "rowNum": 2,
+      "groupId": "2c91809759b07b930159b0b5f4d10770",
+      "groupName": "a",
+      "groupDesc": "a",
+      "caseType": "050201",
+      "caseTypeCN": "入室盗窃案",
+      "systemFlag": "0"
+    },
+    {
+      "createTime": "2017-01-18 00:00:00",
+      "updateTime": "2017-01-18 00:00:00",
+      "rowNum": 3,
+      "groupId": "2c91809759b0c1160159b0c1d57c0011",
+      "groupName": "c",
+      "groupDesc": "cgg",
+      "caseType": "050000,020000,010000,050201",
+      "caseTypeCN": "侵犯财产案,危害公共安全案,危害国家安全案,入室盗窃案",
+      "systemFlag": "0"
+    }
+  ],
+  "extraRes": null
+}

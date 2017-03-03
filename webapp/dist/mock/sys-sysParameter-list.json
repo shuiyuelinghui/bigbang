@@ -1,0 +1,166 @@
+{
+  "flag": 1,
+  "totalCount": 2,
+  "msg": null,
+  "data": [
+    {
+      "id": "4028a8aa58e7502f0158e7502fab000b",
+      "rootKey": "XTCSLBDM",
+      "dictKey": "000001",
+      "parentKey": "XTCSLBDM",
+      "dictValue": "系统配置",
+      "dictSort": 2,
+      "data": [
+        {
+          "id": "4028a8975a3f9648015a3fb4a2da002e",
+          "sort": "-1",
+          "name": "省份编码",
+          "type": "000001",
+          "key": "provinceAddress",
+          "value": "310000",
+          "remark": "solr查询时涉及本地匹配",
+          "showFlag": "0",
+          "allowModify": "1",
+          "paramType": "0"
+        },
+        {
+          "id": "2c91809b5a368010015a3c2f1fdd06a3",
+          "sort": "-1",
+          "name": "solr地址",
+          "type": "000001",
+          "key": "solrAddress",
+          "value": "http://192.168.1.169:8983/solr",
+          "showFlag": "0",
+          "allowModify": "1",
+          "paramType": "0"
+        },
+        {
+          "id": "4028a89759441afb0159443715da00b5",
+          "sort": "1",
+          "name": "导出Excel文件存储路径",
+          "type": "000001",
+          "key": "fileExcelPath",
+          "value": "http://192.168.1.143:8888/xcky3/tempFile",
+          "showFlag": "0",
+          "allowModify": "0",
+          "paramType": "0"
+        },
+        {
+          "id": "4028a8aa594987f0015949ae6f390262",
+          "sort": "1",
+          "name": "警综关联类型",
+          "type": "000001",
+          "key": "alarmRelateType",
+          "value": "1",
+          "remark": "警综关联类型",
+          "showFlag": "0",
+          "allowModify": "1",
+          "paramType": "3",
+          "dictType": "JZGLLXDM"
+        },
+        {
+          "id": "A8A41F2B148340559BF75A623BEFDA67",
+          "sort": "1",
+          "name": "系统名称设置",
+          "type": "000001",
+          "key": "deploy_place",
+          "value": "全国公安机关现场勘验信息系统",
+          "showFlag": "1",
+          "allowModify": "1",
+          "paramType": "0"
+        },
+        {
+          "id": "4028a89759441afb0159443715da00b8",
+          "sort": "1",
+          "name": "后台临时文件储存路径",
+          "type": "000001",
+          "key": "tempFilePath",
+          "value": "D:/tempFile/fileExcelPath",
+          "showFlag": "0",
+          "allowModify": "0",
+          "paramType": "0"
+        },
+        {
+          "id": "A8A41F2B148340559BF75A623BEFDA68",
+          "sort": "1",
+          "name": "文件服务器访问地址",
+          "type": "000001",
+          "key": "fileServerPath",
+          "value": "http://192.168.1.211:7777/",
+          "remark": "undefined",
+          "showFlag": "1",
+          "allowModify": "1",
+          "paramType": "0"
+        },
+        {
+          "id": "A8A41F2B148340559BF75A623BEFDA69",
+          "sort": "1",
+          "name": "系统版本号",
+          "type": "000001",
+          "key": "system-version",
+          "value": "V1.0.0",
+          "showFlag": "0",
+          "allowModify": "0",
+          "paramType": "0"
+        },
+        {
+          "id": "4028a8aa59298fb8015929b9d179014f",
+          "sort": "1",
+          "name": "文件服务器上传地址",
+          "type": "000001",
+          "key": "fileUploadPath",
+          "value": "http://192.168.1.211:8888/fdfs/api/file/upload",
+          "remark": "undefined",
+          "showFlag": "0",
+          "allowModify": "1",
+          "paramType": "0"
+        },
+        {
+          "id": "2c91809759b5cd350159b5d48e2a0090",
+          "sort": "1",
+          "name": "solr全国服务地址",
+          "type": "000001",
+          "key": "solrGabAddress",
+          "value": "http://172.16.0.108:9080/xcky",
+          "remark": "solr全国服务地址",
+          "showFlag": "0",
+          "allowModify": "1",
+          "paramType": "0"
+        }
+      ]
+    },
+    {
+      "id": "4028a8aa58e7502f0158e7502fab000c",
+      "rootKey": "XTCSLBDM",
+      "dictKey": "000002",
+      "parentKey": "XTCSLBDM",
+      "dictValue": "链接地址",
+      "dictSort": 3,
+      "data": [
+        {
+          "id": "4028a8aa5861a4da015861a672d20001",
+          "sort": "1",
+          "name": "ssssssss",
+          "type": "000002",
+          "key": "sssssssss",
+          "value": "ssssssssssssss",
+          "showFlag": "0",
+          "allowModify": "0",
+          "paramType": "0"
+        },
+        {
+          "id": "4028a8aa5861a4da015861bb58c60002",
+          "sort": "1",
+          "name": "ssssssssss",
+          "type": "000002",
+          "key": "sssssssssssssssss",
+          "value": "sssssssssssssss",
+          "showFlag": "0",
+          "allowModify": "0",
+          "paramType": "0"
+        }
+      ]
+    }
+  ],
+  "extraRes": null
+}

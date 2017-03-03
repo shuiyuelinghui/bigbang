@@ -1,0 +1,23 @@
+{
+  "flag": 1,
+  "totalCount": 0,
+  "msg": null,
+  "data": {
+    "systemId": "XCKY",
+    "resourceId": "2c918092596c974101596cc63a7503d8",
+    "resourceName": "首页",
+    "resourceEnName": "fst-page",
+    "superId": "-1",
+    "name": "首页",
+    "url": "fst-page.html",
+    "state": "fst-page.html",
+    "icon": null,
+    "visibleState": 1,
+    "orderNum": 1,
+    "note": "首页",
+    "menuType": 0,
+    "appType": 0,
+    "children": []
+  },
+  "extraRes": null
+}

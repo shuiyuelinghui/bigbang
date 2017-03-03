@@ -90,14 +90,14 @@
                 </div>
             </div>
         </header>
-        <ul id="root-menu" class="nav sidebar-menu stp-hide">
+        <ul id="root-menu" class="nav sidebar-menu xtp-hide">
             <li sec-count="{items.length}"  default-into="{defaultInto}"  mol-no="{molNo}" page-no="{pageNo}"  title="{name}" class="{name.fixOffsetClass}">
                 <a class="accordion-toggle" href="#"  direct="{direct}">
                     <span class="{name.iconClass}"></span>
                     <span class="sidebar-title">{name}</span>
-                    <span class="caret stp-hide{items.length}"></span>
+                    <span class="caret xtp-hide{items.length}"></span>
                 </a>
-                <ul class="nav sub-nav stp-hide{items.length}">
+                <ul class="nav sub-nav xtp-hide{items.length}">
                     {{items:#main-sidemenu-sec-tp}}
                 </ul>
             </li>
@@ -153,9 +153,9 @@
         <a href="javascript:;"  direct="{direct}" class="accordion-toggle">
             <span class="fa fa-dot-circle-o"></span>
             <span class="sidebar-sub-title">{name}</span>
-            <span class="caret stp-hide{items.length}"></span>
+            <span class="caret xtp-hide{items.length}"></span>
         </a>
-        <ul class="nav sub-nav stp-hide{items.length}">
+        <ul class="nav sub-nav xtp-hide{items.length}">
             {{items:#<li mol-no="{molNo}" page-no="{pageNo}" title="{name}" class="grade3"><a href="javascript:;" direct="{direct}">{name}</a></li>#}}
         </ul>
     </li>

@@ -759,3 +759,4 @@ importing('adminDesign.main','fullscreen','socket', 'dict','previewPro','state.j
         // });
     }
 });
+//byid('main-frame').src='http://localhost:3000/test.html'

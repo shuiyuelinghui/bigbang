@@ -2,22 +2,22 @@
 module.exports=
 {
   //配置部分
-  "prjName":"bigbang",
-    "subPrj":{
-        "wz":{
-            "prjName":"wzgl",
-            "restfuls":["http://192.168.1.211:8888"]
-        },
-        "xk":{
-            "prjName":"xcky3",
-            "restfuls":["http://192.168.1.211:8888"]
-        },
-        "lib":{
-            "prjName":"lib",
-            "restfuls":["http://192.168.1.211:8888"]
-        },
+  "prjName":"xcky3",
+  "subPrj":{
+    "wz":{
+      "prjName":"wzgl",
+      "restfuls":["http://192.168.1.211:8888"]
     },
-  "version":"0.9.9",
+    "xk":{
+      "prjName":"xcky3",
+      "restfuls":["http://192.168.1.211:8888"]
+    },
+    "lib":{
+      "prjName":"lib",
+      "restfuls":["http://192.168.1.211:8888"]
+    }
+  },
+  "version":"0.9.2",
   "maxTabCount":9,
   "scrollBarWidth":5,
   "indexStyle":"adds",
@@ -30,7 +30,7 @@ module.exports=
   "mock":1,//设置为0关闭模拟接口
   "test":0,//设置为test模式时info和log输出,否则不输出
   "useLocalAgent":1,
-  "defaultImports":["xtp","xTable","fixTable","customTable","scope","filter","widget"],
+  "defaultImports":["xtp","xTable","fixTable","customCol","scope","filter","widget"],
   "plugins":{
     "hsmap":"hsmap/hsmap.js",
     "fullscreen":"fullscreen/jquery.fullscreen.js",
@@ -74,6 +74,7 @@ module.exports=
     "tooltips":"tooltips/tooltipster.bundle.min.js",
     "jui":"jui/jquery-ui.js",
     "popover":"popover/jquery.webui-popover.min.js",
+    "previewBox":"preview/previewbox.js",
     "previewPro":{
       "path":"preview/previewpro.js",
       "depending":["plugin/preview/previewpro.htm","jui"]
@@ -252,31 +253,45 @@ if(typeof module === "object" && typeof module.exports === "object" ){
 },{}],3:[function(require,module,exports){
 /**
  * Created by evans on 17/2/25.
+ *
+ *
+ * extractor和x-getter结合了,
+ * 传入queryObj时, 赋值给queryObj,  就是被用在x-from中取值
+ * 没有传queryObj, 则直接返回一个值, 用在自身与scope建立联系,直接往外供值
+ *
+ *
+ * so, 必须提供一种return, 用于getFn时使用
+ *
  */
 
 //自动拆分range picker
 window.$extractor
-('rangeDate', function (obj,$this){
-        var data=$this.data();
-        var name=$this.attr('x-name');
-        var val=$this.val().split(',');
-        var bname=data['bname']||(name+'Begin');
-        var ename=data['ename']||(name+'End');
-        //if(bname && ename){
-        obj[bname]=val[0].trim();
-        obj[ename]=(val[1]||'').trim();
-        //}
-        //else{
-        //obj[$this[0].name]=val[0];
-        //}
-        //return {[bname]:val[0],[ename]:val[1]};
+('rangeDate', function (queryObj){
+    var $this=$(this);
+    var data=$this.data();
+    var name=$this.attr('x-name');
+    var val=$this.val().split(',');
+    var bname=data['bname']||(name+'Begin');
+    var ename=data['ename']||(name+'End');
+
+    if(!queryObj){
+        return $this.val();
+    }else{
+        queryObj[bname]=val[0].trim();
+        queryObj[ename]=(val[1]||'').trim();
+    }
 })
 (
-    'dict', function(obj,$this){
+    'dict', function(queryObj){
+        var $this=$(this);
         var key=$this.attr('dict-name');
         var dictInputId=$this.attr('dict-id');
         var dictVal=$this.find('#'+dictInputId).val();
-        obj[key]=dictVal;
+        if(queryObj){
+            queryObj[key]=dictVal;
+        }else{
+            return dictVal;
+        }
     }
 )
 },{}],4:[function(require,module,exports){
@@ -289,7 +304,15 @@ window.$extractor
     config.isLocal=config.isClient || config.useLocalAgent && location.href.indexOf('webapp/dist/')>-1;
 
 
-    window.extending({config:config});
+    window.extending({
+        config:config,
+        setSubPrj:function(key){
+            var subPrj=config.subPrj[key];
+            config.prjName=subPrj.prjName;
+            config.restfuls=subPrj.restfuls||config.restfuls;
+        }
+    });
+
 
     var locals=require('./lib/locals');
     window.extending(locals,true);
@@ -331,8 +354,8 @@ window.$extractor
 
     require('./lib/proto');
 
-    var stp=require('./lib/stp');
-    window.extending(stp);
+    var xtp=require('./lib/xtp');
+    window.extending(xtp);
 
     var pub=require('./lib/pub');
     window.extending(pub,true);
@@ -354,6 +377,8 @@ window.$extractor
     require('./filter.js');
 
     require('./extractor.js');
+
+    require('./injector.js');
 
     require('./widget.js');
 
@@ -422,7 +447,7 @@ window.$extractor
 
 
 
-},{"../data/config.json":1,"./business/pub-business":2,"./extractor.js":3,"./filter.js":5,"./lib/defineding.js":6,"./lib/eui":7,"./lib/exy":8,"./lib/jquery":13,"./lib/jquery.cookie":11,"./lib/jquery.extend":12,"./lib/locals":15,"./lib/mock-register.js":16,"./lib/naving.state.js":17,"./lib/paging.js":18,"./lib/patch.js":19,"./lib/path.js":20,"./lib/proto":22,"./lib/pub":23,"./lib/stp":28,"./lib/validate.js":31,"./widget.js":33}],5:[function(require,module,exports){
+},{"../data/config.json":1,"./business/pub-business":2,"./extractor.js":3,"./filter.js":5,"./injector.js":6,"./lib/defineding.js":7,"./lib/eui":8,"./lib/exy":9,"./lib/jquery":14,"./lib/jquery.cookie":12,"./lib/jquery.extend":13,"./lib/locals":16,"./lib/mock-register.js":17,"./lib/naving.state.js":18,"./lib/paging.js":19,"./lib/patch.js":20,"./lib/path.js":21,"./lib/proto":22,"./lib/pub":23,"./lib/validate.js":25,"./lib/xtp":30,"./widget.js":33}],5:[function(require,module,exports){
 /**
  * Created by evan on 2017/1/3.
  * todo filter也和widget一样, 将手动匿名闭包包裹后,移出去用importing加载
@@ -504,6 +529,26 @@ window.$filter('html2txt',function () {
 });
 },{}],6:[function(require,module,exports){
 /**
+ * Created by evans on 17/3/2.
+ */
+//自动合并range picker
+window.$injector
+('rangeDate', function (val,queryObj){
+    var $this=$(this);
+    var data=$this.data();
+    var name=$this.attr('x-name');
+    var bname=data['bname']||(name+'Begin');
+    var ename=data['ename']||(name+'End');
+
+    if(!queryObj){
+        return $this.val(queryObj[bname]+','+queryObj[ename]);
+    }else{
+        return $this.val(val);
+    }
+})
+
+},{}],7:[function(require,module,exports){
+/**
  * Created by evans on 16/11/27.
  */
 (function(context){
@@ -572,7 +617,7 @@ window.extending('getPrjName',function(){
     // return prjName;
     return window.config.prjName;
 });
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 var _eui=function(jQuery) {
     //parser
     (function ($) {
@@ -8103,7 +8148,7 @@ if ( typeof module === "object" && typeof module.exports === "object" ){
     _eui(window.jQuery);
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 var scrollFunc=function (evt) {
     evt = evt || window.event;
     if(evt.preventDefault) {
@@ -8336,25 +8381,25 @@ module.exports={
 
         importing:require('./importing.js')
     };
-},{"./importing.js":9}],9:[function(require,module,exports){
+},{"./importing.js":10}],10:[function(require,module,exports){
 /**
  * Created by evans on 17/1/22.
  * TODO 在config中配置importing的默认加载项, 各模块脱离base, 且避免频繁手动importing常用项
  */
-
+var mark='auto-bind';
 var $scope=require('./scope')();
-var stpWidget=require('./stp.widget');
+var xtpWidget=require('./xtp.widget');
 
-//准备一个手动方法以供动态加载html后,再次生成其中组件
-window.$widget.regInit=function(doc){
-    window.importing.call(doc);
-};
+////准备一个手动方法以供动态加载html后,再次生成其中组件
+//window.$widget.regInit=function(doc){
+//    window.importing.call(doc);
+//};
 
 if(typeof module === "object" && typeof module.exports === "object"){
     module.exports=function(){
         var ags=arguments;
         var ag=ags[0];
-        var type=typeof ag;
+        var type=typeOf(ag);
 
         //var str=[].slice.apply(ags).toString(); console.log('进入importing({0}...)'.format(str.slice(0,str.indexOf('function')+8)));
 
@@ -8364,30 +8409,38 @@ if(typeof module === "object" && typeof module.exports === "object"){
             //console.info('importing走到最后');
 
 
-            var cb=stpWidget.reg.call(this,[].slice.call(ags));
+            var cb=xtpWidget.reg.call(this,[].slice.call(ags));
 
             if(cb){
                 //console.info('有额外调用importing')
                 return cb();
             }
+
+            //把init挪出$(fn),这样在所有imports依赖已经准备好的情况下,可以避免异步
+            xtpWidget.init();
+
             $(function(){
                 //delete window.importing['_widgetRegDone'];
                 //delete window.importing['_widgetInitDone'];
 
-                stpWidget.init();
-
                 $('body,body>.body-agent').removeClass('unready');
 
                 if(type=='function'){
-                    var mark='auto-bind';
                     //var bindArea=$('[auto-bind]');
                     //bindArea.length && $scope.bind(bindArea) && bindArea.removeAttr('auto-bind');//处理完后就去掉,避免再次被扫描
-                    document.documentElement.hasAttribute(mark) && $scope.scan() && document.documentElement.removeAttribute(mark);
+
+                    window.doc.hasAttribute(mark) && $scope.scan(document,window.doc.getAttribute(mark)=='true') && window.doc.removeAttribute(mark);
+
                     ag($scope);
                 }
             });
 
             return false;
+        }
+
+        //是一组,通常用作常用引入系列
+        if(type=='array'){
+            return  window.importing.apply(this,ag.concat([].slice.call(ags,1)));
         }
 
         //log('走到识别插件开始')
@@ -8403,7 +8456,7 @@ if(typeof module === "object" && typeof module.exports === "object"){
                 ag=window.getDistPath('plugin/'+plugins[ag]);
             }
         }
-        //空字符串会被跳过,适用于三目运算,条件选择加载,如: importing('panels', config.doTest:'test.js':'',.........
+        //空字符串会被跳过,适用于三目运算,条件选择加载,如: importing('panels', config.doTest?'test.js':null,.........
         else if(ag=='' || String(ag)=='null'){
             return  window.importing.apply(this,[].slice.call(ags,1));
         }
@@ -8438,12 +8491,26 @@ if(typeof module === "object" && typeof module.exports === "object"){
         },ags[ags.length-1]===true);
     };
 }
-},{"./scope":24,"./stp.widget":30}],10:[function(require,module,exports){
+},{"./scope":24,"./xtp.widget":32}],11:[function(require,module,exports){
 /**
  * Created by evans on 17/2/25.
  */
 var xInjectors=Object.create(null);
 var xExtractors=Object.create(null);
+
+var $injector=function(injectorName,fn){
+    Object.defineProperty(xInjectors,injectorName,{
+        value:fn, writable:false, enumerable:true, configurable:false
+    });
+    return $injector;
+};
+
+var $extractor=function(extractorName,fn){
+    Object.defineProperty(xExtractors,extractorName,{
+        value:fn, writable:false, enumerable:true, configurable:false
+    });
+    return $extractor;
+};
 
 $.fn.injector=function(fn){
     return arguments.length?this.data('x-injector',typeof fn=='string'?xInjectors[fn]:fn):this.data('x-injector');
@@ -8453,20 +8520,9 @@ $.fn.extractor=function(fn){
 };
 
 window.extending({
-    $injector:function(injectorName,fn){
-        Object.defineProperty(xInjectors,injectorName,{
-            value:fn, writable:false, enumerable:true, configurable:false
-        });
-        return window.$injector;
-    },
-    $extractor:function(extractorName,fn){
-        Object.defineProperty(xExtractors,extractorName,{
-            value:fn, writable:false, enumerable:true, configurable:false
-        });
-        return window.$extractor;
-    },
+    $injector:$injector,
+    $extractor:$extractor
 });
-
 
 if(typeof module === "object" && typeof module.exports === "object" ){
     module.exports={
@@ -8474,7 +8530,7 @@ if(typeof module === "object" && typeof module.exports === "object" ){
         xExtractors:xExtractors
     };
 }
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /*!
  * jQuery Cookie Plugin v1.4.1
  * https://github.com/carhartl/jquery-cookie
@@ -8596,7 +8652,7 @@ if(typeof module === "object" && typeof module.exports === "object" ){
 
 }));
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 /**
  * Created by EvanYao on 2016/9/21.
  */
@@ -8662,7 +8718,7 @@ $.random=function(){
     //222222222222223+0.23
     return (''+$.now()+ Math.random()).replace('.','').slice(8);
 }
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.2.0
  * http://jquery.com/
@@ -18495,7 +18551,7 @@ if ( !noGlobal ) {
 return jQuery;
 }));
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 
     //lambda临时委托方法工厂
     var $lambda=window.$lambda=function(foo){
@@ -18505,7 +18561,7 @@ return jQuery;
         }else if(typeof foo=='function'){
             return foo;
         }else if(foo.source){
-            str=foo.source.replace(/^\s+|\s+$/g,'');;
+            str=foo.source.replace(/^\s+|\s+$/g,'');
         }else{
             str=foo.replace(/^\s+|\s+$/g,'');
         }
@@ -18610,6 +18666,9 @@ return jQuery;
                         }
                         return this.where('x => typeof x !="undefined" ');
                 },
+
+
+
         orderby:function(func,desc){
                     var orderFn, arr=this.slice();
                     
@@ -18747,7 +18806,7 @@ return jQuery;
 
 
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 /**
  * Created by evans on 16/5/22.
  **/
@@ -18880,7 +18939,7 @@ module.exports=({
 });
 
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 (function(){
     var basePath=window.getDistPath()+'mock/';
     //var mockActions={
@@ -18919,7 +18978,7 @@ module.exports=({
 })();
 
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 /**
  * Created by yao on 2017/1/17.
  */
@@ -18974,7 +19033,7 @@ var $state={
 if(typeof module === "object" && typeof module.exports === "object" ){
     module.exports=$state;
 }
-},{"./scope":24}],18:[function(require,module,exports){
+},{"./scope":24}],19:[function(require,module,exports){
  (function($){
     //计算器 计算页数和各页的begin和end
 	$.PaginationCalculator = function(maxentries, opts) {
@@ -19530,7 +19589,7 @@ if(typeof module === "object" && typeof module.exports === "object" ){
     
     
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 /**
  * Created by Evany Yao on 2016/9/27.
  */
@@ -19592,7 +19651,7 @@ if(typeof module === "object" && typeof module.exports === "object" ){
 })();
 
 
-},{}],20:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 //window.path=typeof top.path=='string'? top.path:location.href.replace(/index2?\.(html|jsp)/,'').replace(/\/dist\/view\/.*/,'');
 window.path=window.path||localData.get('path')||''; //top.path:location.href.replace(/index2?\.(html|jsp)/,'').replace(/\/dist\/view\/.*/,'');
 
@@ -19665,66 +19724,6 @@ window.getMap_server= function () {
         throw new Error('the mapServerPath is empty or undefined!');
     }
     return p;
-};
-},{}],21:[function(require,module,exports){
-/**
- * Created by EvanYao on 2016/9/21.
- */
-var previewWrap;
-window.$.fn.previewBox=function(orgSrcAttr,eveType,hasWrap){
-    previewWrap||(previewWrap=$('<div class="preview-wrap"><img/><a class="icon-remove"></a></div>').appendTo('body'));
-    var previewImg=previewWrap.children('img');
-    this.each(function(){
-        var $this=$(this);
-        if($this.attr('preview-reged')){
-            return false;
-        }
-        $this.attr('preview-reged',true).on(eveType||'click',function(){
-            var $this=$(this);
-            var i=$this.index();
-            var prev=$(this.parentNode).prev().children('img')[0];
-            var next=$(this.parentNode).next().children('img')[0];
-            //console.log(prev),console.info(next);
-            var keyHandle;
-            var canceler=function(){
-                window.hideMask();
-                previewWrap.fadeOut(150);
-                $('body').off('keyup',keyHandle);
-            };
-            window.showMask();
-            //调整图片大小
-            previewImg.attr('src',this.getAttribute(orgSrcAttr||'src')).on('load',function(){
-                var ratio=this.naturalHeight/this.naturalWidth;
-                (this.naturalWidth<window.width*0.5 ||  this.naturalHeight> window.height*0.5 )&& previewWrap.addClass('preview-s');
-                if(this.naturalWidth>this.naturalHeight && window.height/window.width>ratio ){
-                    $(this).css({width:'100%',height:'auto'});
-                }else{
-                    $(this).css({width:'auto',height:'100%'});
-                }
-            });
-            //监听键盘事件
-            $('body').on('keyup',(keyHandle=function(event){
-                if(event.keyCode==37 && prev){
-                    previewImg.attr('src',prev.getAttribute(orgSrcAttr||'src'));//可以把大图地址记录在自定义属性上
-                    if(prev){
-                        next=$(prev.parentNode).next().children('img')[0];
-                        prev=$(prev.parentNode).prev().children('img')[0];
-                    }
-                } else if(event.keyCode==39 && next){
-                    previewImg.attr('src',next.getAttribute(orgSrcAttr||'src'));
-                    if(next) {
-                        prev=$(next.parentNode).prev().children('img')[0];
-                        next=$(next.parentNode).next().children('img')[0];
-                    }
-                } else if(event.keyCode==13 || event.keyCode==27){
-                    canceler();
-                }
-            }));
-            //显示并注册关闭事件
-            previewWrap.show().css({display:'flex'}).click(canceler);
-        });
-    });
-
 };
 },{}],22:[function(require,module,exports){
 //JSON扩展
@@ -19860,10 +19859,10 @@ Array.prototype.extending(lambda).extending('fire',function(holder){
 if(typeof module === "object" && typeof module.exports === "object" ){
     //module.exports=lambda;
 }
-},{"./lambda":14}],23:[function(require,module,exports){
+},{"./lambda":15}],23:[function(require,module,exports){
 
 //require('./treemenu');
-require('./previewbox');
+//require('./previewbox');
 
 top._rootTabUrls=top._rootTabUrls||Object.create(null);
 
@@ -20263,12 +20262,13 @@ module.exports={
 
 
 
-},{"./previewbox":21,"./win":32}],24:[function(require,module,exports){
+},{"./win":26}],24:[function(require,module,exports){
 /**
  * Created by yao on 2017/1/18.
  */
 
 require('./injector-extractor');
+
 
 //todo 类似ng的直接绑定考虑放弃支持
 var bindAttr='x-bind';
@@ -20276,21 +20276,38 @@ var bindAttr2='s-bind';
 var overlook= $.random();
 var getSelf=function(v){return v};
 
-//todo setEleData暂未用到这个key
-var setEleData=function(key,val,always){
+
+
+/*
+* 注意
+* extractor和x-getter合并了,
+* 传入queryObj时,给queryObj添加指定的属性和值
+* 否则就是x-getter,直接返回一个值
+*
+* injector和x-setter合并了,
+* 传入queryObj时, 除了val,还可能参照queryObj的其他属性来赋值
+* 否则就是x-setter,直接根据val赋值
+*
+*
+* 在setEleData和getEleData中,injector和extractor不再是x-form中x-name控件的使用方式
+*
+* */
+
+
+//设置元素数据
+var setEleData=function(val,always){
     // console.log([key,val,always])
     var ele=this;
     var $ele=$(ele);
     var tempData=$ele.data('current-data');
-    var tableConfig=$ele.data('table-config');
-    var setFn=$ele.data('x-setter');
+    var setFn=$ele.injector();//.data('x-setter');
 
+    //1,自定义setFn (有injector的x-name控件在x-form的inject过程中就调用了injector,不会走这里)
     if(typeof setFn=='function'){
-        return setFn(val,$ele);
+        return setFn.apply($ele,[val,null,always]);
     }
-    else if(tableConfig){ //$ele.is('.x-table')
-        $ele.table(val);
-    }
+
+    //2,普通原生元素
     else if( $ele.is(':checkbox') ||  $ele.is(':radio') ){
         $ele[0].checked=val===true;
     }
@@ -20300,28 +20317,43 @@ var setEleData=function(key,val,always){
     else if( $ele.is('img')){
         $ele[0].src=val;
     }
-    else if( $ele.is('[x-form]') ){ //|| $ele.find('[x-name]').length ||  $ele.find('[x-map]').length){
-        $ele.checkIn(val)
+
+
+    //3,x-from不会挂载tempData, 每次都是即时提供/即时注入
+    else if( $ele.is('[x-form]') ){
+        $ele.inject(val)
     }
 
+    //4,template系列,x-temp,x-table
     else if(tempData && tempData===val && !always){
         //or JSON.equal(val,tempData)?
-        //clean
+        //do nothing, tempData没被整个引用替换就无需更新,除非显式声明对象值已经变了
+    }
+    else if($ele.is('[x-temp]')){
+        $ele.inject(val,true);
+    }
+    else if($ele.is('[x-table]')){
+        $ele.table(val);
     }
     else{
         $ele.template(val,$ele.data('helper'),$ele.data('allow-html'),val);
     }
 
 };
-//TODO DICT字典的赋值和取值
+
+
+//获取元素数据
 var getEleData=function(){
     var $ele=$(this);
     var tempData=$ele.data('current-data');
-    var getFn=$ele.data('x-getter');
+    var getFn=$ele.extractor();//.data('x-getter');
 
+    //1,自定义getFn (有extractor的x-name控件在x-form的extract过程中就调用了extractor,不会走这里)
     if(typeof getFn=='function'){
-        return getFn($ele);
+        return getFn.call($ele,null);
     }
+
+    //2,普通原生元素
     else if( $ele.is(':checkbox') || $ele.is(':radio')){
         return $ele[0].checked;
     }
@@ -20331,8 +20363,18 @@ var getEleData=function(){
     else if( $ele.is('img')){
         return $ele[0].src;
     }
-    else if( $ele.is('[x-form]') ){ //|| $ele.find('[x-name]').length ||  $ele.find('[x-map]').length){
-        return $ele.checkOut();
+
+    //3,x-from不会挂载tempData, 每次都是即时提供/即时注入
+    else if( $ele.is('[x-form]') ){
+        return $ele.extract();
+    }
+
+    //4,template系列,x-temp,x-table
+    else if( $ele.is('[x-temp]') ){
+        return tempData;
+    }
+    else if( $ele.is('[x-table]') ){
+        return tempData;
     }
     else if(tempData){
         return tempData;
@@ -20341,35 +20383,21 @@ var getEleData=function(){
         return $ele.html();
     }
 };
-//单个属性值解析器 todo 使用引入stp $getVal,$format或直接调用$compile? 目前是$getVal的简化版
+
+
+
+
+//按属性取值
 var getObjVal=function (key,obj,allowHTML,filter){
-    //var val=obj;
-    //var arr=key.split('.');
-    //for(var i=0;i<arr.length;i++){
-    //        if(typeof val[arr[i]]=='function'){
-    //            val=val[arr[i]].toString().indexOf('[native code]')>-1?val[arr[i]]():val[arr[i]].apply(val,[obj]);
-    //        }else{
-    //            val=val[arr[i]];
-    //        }
-    //    if(!getNativeVal && (val==null||val=='null' || val=='NULL') && typeof arr[i+1]!='undefined'){
-    //        val='';
-    //    }
-    //}
-    //return val;
     //x-map使用stp机制的$encode, x-name返回原始值
     return typeof filter=='function' ? key.valueAt(obj,filter) : key.valueAt(obj,allowHTML);
 };
 
-//todo 目前支持反向多级赋值,有无必要? x-map不可使用,只有x-name可以,因为后者赋值不可包括filter和属性方法
+//按属性赋值 (支持反向多级赋值 x-map不可使用,只有x-name可以,因为后者赋值不可包括filter和属性方法)
 var setObjVal=function (key,obj,val){
     var arr=key.split('.');
     var len=arr.length;
     var sub=obj;
-
-    //if(len==1 && obj.hasOwnProperty(key) && typeof obj[key]!='function'){
-    //    return obj[key]=val;
-    //}
-
 
     for(var i=0;i<len;i++){
         var k=arr[i];
@@ -20396,96 +20424,27 @@ var setObjVal=function (key,obj,val){
             sub[k]=val;
         }
 
-
-        //if(typeof sub.hasOwnProperty!='function'){
-        //    if(typeof sub[k]=='undefined'){
-        //        sub[k]=Object.create(null);
-        //    }
-        //    else if(typeof sub[k]!='object'){
-        //        throw new Error('can not set a prefix property is typeof Number,Boolean,Function');
-        //    }
-        //}
-        //else{
-        //    if(typeof sub[k]=='undefined'){
-        //        sub[k]=Object.create(null);
-        //    }
-        //    else if(typeof sub[k]!='object' || sub[k]===null){
-        //        throw new Error('can not set a prefix property is null or typeof Number,Boolean,Function');
-        //    }
-        //}
-
-        ////前提是自有属性
-        //if(typeof sub.hasOwnProperty!='function' || sub.hasOwnProperty(k)){ //create(null)生成的没有hasOwnProperty方法
-        //    //未到最后一个,先保证本身以对象存在
-        //    if(i!=len-1){
-        //        typeof sub[k]=='object' || (sub[key]=Object.create(null));
-        //    }
-        //}
-        //
-        //else{
-        //    throw new Error('can not set a prefix property is not ownProperty or object');
-        //}
-
-        ////原型继承属性不可赋值, x-name中不可出现,如filter,原生toString,原生length
-        //if(typeof sub[k]!='undefined' && !sub.hasOwnProperty(k)){
-        //    throw new Error('can not set a property is not ownProperty');
-        //}
-        ////未到最后一个,先检测本身是否存在
-        //else if(i!=arr.length-1){
-        //
-        //}
-
-        //if(obj.hasOwnProperty(k) && obj[k]!='function'){
-
-
-            //if(i!=arr.length-1){
-            //    //如果没有上级属性,需要创建(两层判断,包括检查原型继承属性及不可枚举属性)
-            //    if(!(k in sub) && !sub.hasOwnProperty(k)){
-            //        sub[k]={};
-            //    }
-            //    //原型继承属性不可赋值,非对象不可作为中间键
-            //    else if(((k in sub) && !sub.hasOwnProperty(k)) || typeof sub[k]!='object'){
-            //        throw new Error('can not set a prefix property is not ownProperty or object');
-            //    }
-            //    //sub指向下一级
-            //    sub=sub[k];
-            //}
-            //else{
-            //    //原型继承属性不可赋值
-            //    if((k in sub) && !sub.hasOwnProperty(k)){
-            //        throw new Error('can not set a property is not ownProperty');
-            //    }
-            //    sub.hasOwnProperty(k) && typeof sub[k]!='function' && (sub[k]=val);
-            //}
-        //}
     }
     return obj;
 };
 
-//var ckSelector='[name],[x-name],[x-map]';
-//var ckSelector2='[name],[x-name]';
+
+
 
 var ckSelector='[x-name],[x-map]';
 var ckSelector2='[x-name]';
 
-//todo checkIn和template的结合与区分, 全部改为x-name还是沿用name? 是否与x-bind合并?  是否允许属性书写于内部?
-//注入数据
-// x-temp和x-form都可以使用,
-// 注入的时候name,x-name,x-map都可以注入,
-// 提取的时候[x-form]是提取name或x-name控件的当前值, x-temp是返回注入的原始数据
-// [x-temp]{visibility:hidden!important;}  [x-temp].compiled{visibility:visible!important;}
+
+//x-temp和x-from注入数据
 $.fn.checkIn=$.fn.inject=function (data,allowHTML){
-    if(this.filter('[x-form],[x-temp]').length==0){
-        console.info(this);
-        throw new Error('the selector has no [x-form] or [x-temp]');
-    }
 
-    //typeof arguments[1]=='string' && (attr=arguments[1]) && (allowHTML=arguments[2]);
+    //if(this.filter('[x-form],[x-temp]').length==0){
+    //    console.info(this);
+    //    throw new Error('the selector has no [x-form] or [x-temp]');
+    //}
 
-    //attr=attr||'name';
-    //var selector='[{0}]'.format(attr)+',[x-name]';
-
-    this.each(function (i,ct) {
+    //限定了只给x-form 和 x-temp使用
+    this.filter('[x-form],[x-temp]').each(function (i,ct) {
         var $ct=$(ct);
         var eles=$ct.find(ckSelector);
         //加入内部表达式支持
@@ -20512,34 +20471,50 @@ $.fn.checkIn=$.fn.inject=function (data,allowHTML){
             var attr=$ele.attr('x-name')||$ele.attr('x-map')//||$ele.attr('name');
             var ifHide=$ele.attr('x-hide');
             var ifShow=$ele.attr('x-show');
+            if(ifHide){
+                getObjVal(ifHide,data) && $ele.hide().addClass('hide-plus');
+            }
+            if(ifShow){
+                $ele.addClass('hide-plus');
+                getObjVal(ifShow,data) && $ele.show().removeClass('hide-plus');
+            }
             var val;
             if(attr=='x-map'){
-                if(ifHide){
-                    getObjVal(ifHide,data) && $ele.hide().addClass('hide-plus');
-                }
-                if(ifShow){
-                    $ele.addClass('hide-plus');
-                    getObjVal(ifShow,data) && $ele.show().removeClass('hide-plus');
-                }
                 val=getObjVal(attr,data,allowHTML);
             }
+            //x-name是返回原始值的(有业务要求,可定义getSelf对null和undefined做空值处理)
             else{
                 val=getObjVal(attr,data,allowHTML,getSelf);
             }
 
-            //如果是x-if,将其用注释节点replace切换
+            //todo 如果是x-if,将其用注释节点replace切换
 
             //todo 是否对x-hide的元素不做数据更新?
-            setEleData.apply(ele,[attr,val]);
-        });
-    });
-    return this.data('x-extract-data',data);
-};
 
-//为x-form或x-area也设置一个currentData,每次checkOut出来在此对象上重设key值,而非返回一个全新对象,以避免绑定丢失
-//todo 为该form指定同name处理规则 或 把同name放在一个容器里,该容器通过behavior设定extractor
-//非[x-form]是无法使用此方法萃取数据的, 返回绑定数据的时候, 走不进checkOut, 被认为是普通容器,去尝试读它的template数据或html
-//todo加入x-outsides=selector来获取外部绑定
+            var injector=$ele.injector();
+            //自定义的注入键值的方式
+            if(typeof injector=='function'){
+                injector.apply($ele,[val,data]);
+            }
+            else{
+                setEleData.call(ele,val);
+            }
+
+        });
+        $ct.is('[x-temp]') && $ct.data('current-data',data);
+    });
+    return this;
+};
+/*
+ * x-temp和x-form都可以使用
+ * 注入的时候x-name,x-map都可以注入,
+ * 提取的时候[x-form]是集合x-name控件的当前值, x-temp是返回注入的原始数据
+ */
+
+
+
+
+//x-form数据提取
 $.fn.checkOut=$.fn.extract=function (reduce4names) {
     if(this.filter('[x-form]').length==0){
         console.info(['the selector has no elements',this]);
@@ -20549,19 +20524,19 @@ $.fn.checkOut=$.fn.extract=function (reduce4names) {
         console.info(this);
         throw new Error('the element is not a [x-form]');
     }
-    var $ele=this;
+    var $ele=this.eq(0);
     var outside=$ele.attr('x-outside');
-    var obj=$ele.data('x-extract-data');
+    var queryObj=$ele.data('x-query-obj');
     var eles=$ele.find(ckSelector2);
 
-    if(!obj){
-        obj={};//Object.create(null);
-        $ele.data('x-extract-data',obj);
+    if(!queryObj){
+        queryObj={};//Object.create(null);
+        $ele.data('x-query-obj',queryObj);
     }
     else{
-        for(var n in obj){
+        for(var n in queryObj){
             //清空各值,设定为指定标示符,避免在set中触发绑定更新
-            obj.hasOwnProperty(n) && (obj[n]=overlook);
+            queryObj.hasOwnProperty(n) && (queryObj[n]=overlook);
         }
     }
 
@@ -20569,29 +20544,36 @@ $.fn.checkOut=$.fn.extract=function (reduce4names) {
     (outside?eles.add($(outside)):eles).each(function(j,ele){
         var $ele=$(ele);
         var extractor=$ele.extractor();
-        //自定义的被checkOut方式做特殊处理
+        //自定义的提供键值的方式
         if(typeof extractor=='function'){
-            extractor(obj,$ele);
+            extractor.call($ele,queryObj);
         }
         else{
             var attr=$ele.attr('x-name')//||$ele.attr('name')//||$ele.attr('x-map')
             var val=getEleData.call($ele);
-            setObjVal(attr,obj,val);
+            setObjVal(attr,queryObj,val);
         }
 
     });
-    for(var n in obj){
+    for(var n in queryObj){
         //对空值做处理(包括没在set中设置为空的标示)
-        if( obj.hasOwnProperty(n)  &&  (obj[n]==null || obj[n]==overlook) ){
-            obj[n]='';
+        if( queryObj.hasOwnProperty(n)  &&  (queryObj[n]==null || queryObj[n]==overlook) ){
+            queryObj[n]='';
         }
     }
-    return obj;
+    return queryObj;
 };
+/*
+ * 非[x-form]是无法使用此方法萃取数据的,被认为是普通容器,去尝试读它的template数据或html
+ * 固定了一个queryObj,每次提取在此对象上操作,而非返回一个全新对象,以避免绑定丢失
+ * 加入了x-outsides=selector来获取外部绑定
+ * 设计了name处理规则:把同name放在一个x-name组件里,该容器通过behavior设定extractor
+ */
 
 
 
 
+//子属性监听
 var subWatcher=function(n,key,val,root,$scope,nested,safeguard){
     if(nested>5 || safeguard>99887766){
         return false;
@@ -20602,7 +20584,7 @@ var subWatcher=function(n,key,val,root,$scope,nested,safeguard){
         Object.defineProperty(val, shadow , {
             value:val[n],
             writable:true,
-            enumerable:false,configurable:false,
+            enumerable:false,configurable:false
         });
 
         Object.defineProperty(val, n , {
@@ -20645,6 +20627,7 @@ var deepWatcher=function(key,val,$scope){
 }
 
 
+//绑定组合
 function initCoupleClass($scope) {
     var Couple=function (key,selector){
         this.selector=selector;
@@ -20668,67 +20651,63 @@ function initCoupleClass($scope) {
 }
 
 
-$.fn.bind2=function(){
-    var the=this;
-    var s,ops,k;
-    if(arguments[0].isScope){
-        s=arguments[0];
-        k=arguments[1];
-    }
-    else{
-        ops=arguments[0];
-        s=ops.scope;
-    }
-    the.each(function(){
-        var $this=$(this);
-        var id=$this.prop('id');
-        var key=k||('x-binder#'+ id ? id:$.random());
-        var couple=s.bind(key,$this);
-        $this.data('x-couple',couple);
-        //$this.data('x-scope',s);
-        //$this.data('x-key',key);
-    });
-    return this;
-};
+//绑定声明
+function bindFactory(mode){
+    return function(){
+        var the=this;
+        var s,ops,k,helper,allowHTML;
+        if(arguments[0].isScope){
+            s=arguments[0];
+            k=arguments[1];
+            helper=arguments[2];
+            allowHTML=arguments[3];
+        }
+        else{
+            ops=arguments[0];
+            s=ops.scope;
+            k=ops.key;
+            helper=ops.helper;
+            allowHTML=ops.allowHTML;
+        }
+        the.each(function(){
+            var $this=$(this);
+            var id=$this.prop('id');
+            var key=k||('x-binder#'+ id ? id:$.random());
+            var couple=s[mode](key,$this,helper,allowHTML);
+            $this.data('x-couple',couple);
+        });
+        return this;
+    };
+}
 
-$.fn.binding=function(){
-    var the=this;
-    var s,ops,k;
-    if(arguments[0].isScope){
-        s=arguments[0];
-        k=arguments[1];
-    }
-    else{
-        ops=arguments[0];
-        s=ops.scope;
-    }
-    the.each(function(){
-        var $this=$(this);
-        var id=$this.prop('id');
-        var key=k||('x-binder#'+ id ? id:$.random());
-        var couple=s.binding(key,$this);
-        $this.data('x-couple',couple);
-        //$this.data('x-scope',s);
-        //$this.data('x-key',key);
-    });
-    return this;
-};
+$.fn.bind2=bindFactory('bind');
 
+$.fn.binding=bindFactory('binding');
+
+
+//设置/获取 绑定或装载 的数据
 $.fn.getData=$.fn.Get=function(){
     var couple=this.data('x-couple');
-    return couple?couple.get():console.warn('the ele is not in a couple');
+    if(couple){
+        return couple.get();
+    }
+    else{
+       //console.warn('the ele is not in a couple');
+        return getEleData.call(this);
+    }
 
 };
 
-$.fn.setData=$.fn.Set=function(data){
-    //var s=this.data('x-scope');
-    //var key=this.data('x-key');
-    //s.set(key,data);
-    //console.log('set data');
+$.fn.setData=$.fn.Set=function(data,always){
     this.each(function(){
         var $this=$(this);
         var couple=$this.data('x-couple');
-        couple && couple.set(data);
+        if(couple){
+            couple.set(data,always);
+        }
+        else{
+            setEleData.apply($this,[data,always])
+        }
     });
     return this;
 };
@@ -20737,68 +20716,60 @@ $.fn.upData=$.fn.update=function(fn,eachItem){
     this.each(function(){
         var $this=$(this);
         var couple=$this.data('x-couple');
-        couple && couple.update(fn,eachItem);
+        if(couple){
+            couple.update(fn,eachItem);
+        }
+        else{
+            var data=this.getData();
+            var newData;
+            if(eachItem){
+                data && data.each(fn);
+            }else{
+                newData=fn(data);
+                data=typeof newData=='undefined'?data:newData;
+            }
+            this.setData(data);
+        }
     });
     return this;
 };
 
-// $.fn.Data=function(){
-//     var ags=arguments;
-//     if(ags.length==0){
-//         return this.getData();
-//     }
-//     else if(typeof ags[0]=='function'){
-//         return this.update(ags[0],ags[1]);
-//     }
-//     else{
-//         return this.setData(ags[0]);
-//     }
-// }
+$.fn.xData=function(){
+     var ags=arguments;
+     if(ags.length==0){
+         return this.getData();
+     }
+     else if(typeof ags[0]=='function'){
+         return this.update(ags[0],ags[1]);
+     }
+     else{
+         return this.setData(ags[0],ags[1]);
+     }
+ }
 
 
-$.fn.dataBind=function(){
-    var key,data,keyIsData,helper,allowHTML,$scope,ops;
-    if(arguments.length==1){
-        ops=arguments[0];
-        key=ops.key;
-        data=ops.data;
-        helper=ops.helper;
-        allowHTML=ops.allowHTML;
-        $scope=ops.scope;
-        keyIsData=typeof key=='undefined' ;
-        return $scope.bind(keyIsData?data:key,this,keyIsData,helper,allowHTML);
-    }
-    else{
-        $scope=arguments[0];
-        key=arguments[1];
-        keyIsData=arguments[2];
-        helper=arguments[3];
-        allowHTML=arguments[4];
-        return $scope.bind(key,this,keyIsData,helper,allowHTML)
-    }
-}
+//$.fn.dataBind=function(){
+//    var key,data,keyIsData,helper,allowHTML,$scope,ops;
+//    if(arguments.length==1){
+//        ops=arguments[0];
+//        key=ops.key;
+//        data=ops.data;
+//        helper=ops.helper;
+//        allowHTML=ops.allowHTML;
+//        $scope=ops.scope;
+//        keyIsData=typeof key=='undefined' ;
+//        return $scope.bind(keyIsData?data:key,this,keyIsData,helper,allowHTML);
+//    }
+//    else{
+//        $scope=arguments[0];
+//        key=arguments[1];
+//        keyIsData=arguments[2];
+//        helper=arguments[3];
+//        allowHTML=arguments[4];
+//        return $scope.bind(key,this,keyIsData,helper,allowHTML)
+//    }
+//}
 
-$.fn.dataBinding=function(){
-    var key,helper,allowHTML,$scope,ops;
-    if(arguments.length==1){
-        ops=arguments[0];
-
-        $scope=ops.scope;
-        key=ops.key;
-        helper=ops.helper;
-        allowHTML=ops.allowHTML;
-
-        return $scope.binding(key,this,helper,allowHTML);
-    }
-    else{
-        $scope=arguments[0];
-        key=arguments[1];
-        helper=arguments[2];
-        allowHTML=arguments[3];
-
-        return $scope.bind(key,this,helper,allowHTML)
-    }
-}
 
 if(typeof module === "object" && typeof module.exports === "object" ){
     module.exports=function(){
@@ -20826,7 +20797,7 @@ if(typeof module === "object" && typeof module.exports === "object" ){
             check:function(key,val,always){
                 var selector=_dict[key];
                 selector && $(selector).each(function(i,ele){
-                    setEleData.apply(ele,[key,val,always]);
+                    setEleData.apply(ele,[val,always]);
                 });
                 return $scope;
             },
@@ -21002,19 +20973,450 @@ if(typeof module === "object" && typeof module.exports === "object" ){
         return $scope;
     };
 }
-},{"./injector-extractor":10}],25:[function(require,module,exports){
+},{"./injector-extractor":11}],25:[function(require,module,exports){
+/**
+ * Created by yao on 2016/7/26.
+ */
+$.extend($.fn.validatebox.defaults.rules, {
+    ip: {
+        validator: function (val) {
+            return /((?:(?:25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.){3}(?:25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d))))/.test(val);
+        },
+        message: '请输入正确的IP地址'
+    },
+    //手机或座机号正则
+    contact: {
+        validator: function (val) {
+            return /^1\d{10}$|^0\d{2,3}-?\d{7,8}$/.test(val);
+        },
+        message: '请输入正确的固定电话或手机号码'
+    },
+    //端口号正则
+    port: {
+        validator: function (val) {
+            return /^([1-9]|[1-9]\d|[1-9]\d{2}|[1-9]\d{3}|[1-5]\d{4}|6[0-4]\d{3}|65[0-4]\d{2}|655[0-2]\d|6553[0-5])$/.test(val);
+        },
+        message: '端口号必须在1-65535之间'
+    },
+    //账号密码非中文正则
+    noChinese: {
+        validator: function (val) {
+            return !/^[\u0391-\uFFE5]+$/.test(val);
+        },
+        message: '账号密码不能包含中文'
+    },
+    extLength:{
+        validator:function (val,arr) {
+            val = val.trim();
+            var regCh = /[\u0391-\uFFE5]+/gm,//中文
+                regNoCh = /[^\u0391-\uFFE5]+/gm,//非中文
+                chArr = val.match(regCh),
+                noChArr = val.match(regNoCh),
+                valLen = (chArr?chArr.join('').length*2:0) + (noChArr?noChArr.join('').length:0);
+            arr[2] = Math.ceil((valLen - arr[1])/2);
+            return valLen >= arr[0] && valLen<=arr[1];
+        },
+        message:'已超出{2}字'
+    },
+    longitude: {
+        validator: function (val) {
+            var numVal = parseFloat(val);
+            return /^-?\d\d?\d?(\.\d\d?\d?\d?)?$/.test(val) && numVal<=180 && numVal>=-180;
+        },
+        message: '请输入-180到180之间的数字，可包括四位小数'
+    },
+    latitude:{
+        validator: function (val) {
+            var numVal = parseFloat(val);
+            return /^-?\d\d?(\.\d\d?\d?\d?)?$/.test(val) && numVal<=90 && numVal>=-90;
+        },
+        message: '请输入-90到90之间的数字，可包括四位小数'
+    },
+    isChineseID:{
+        validator:function(str){
+            // aCity={11:"北京",12:"天津",13:"河北",14:"山西",15:"内蒙古",21:"辽宁",22:"吉林",23:"黑龙江",
+            //     31:"上海",32:"江苏",33:"浙江",34:"安徽",35:"福建",36:"江西",37:"山东",41:"河南",42:"湖北",
+            //     43:"湖南",44:"广东",45:"广西",46:"海南",50:"重庆",51:"四川",52:"贵州",53:"云南",54:"西藏",
+            //     61:"陕西",62:"甘肃",63:"青海",64:"宁夏",65:"新疆",71:"台湾",81:"香港",82:"澳门",91:"国外"};
+            var aCity = "11,12,13,14,15,21,22,23,31,32,33,34,35,36,37,41,42,43,44,45,46,50,51,52,53,54,61,62,63,64,65,71,81,82,91";
+            var iSum = 0;
+            var idCardLength = str.length;
+            var sBirthday = '';
+            var d = 0;
+            if(!/^\d{17}(\d|x)$/i.test(str)&&!/^\d{15}$/i.test(str))
+            {
+                return false;
+            }
+            //在后面的运算中x相当于数字10,所以转换成a
+            str = str.replace(/x$/i,"a");
+            var curCity = str.substr(0,2);
+            if(!(aCity.indexOf(curCity) > 0) )
+            {
+                return false;
+            }
+            if (idCardLength==18)
+            {
+                sBirthday=str.substr(6,4)+"-"+Number(str.substr(10,2))+"-"+Number(str.substr(12,2));
+                d = new Date(sBirthday.replace(/-/g,"/"));
+                if(sBirthday!=(d.getFullYear()+"-"+ (d.getMonth()+1) + "-" + d.getDate()))
+                {
+                    return false;
+                }
+
+                for(var i = 17;i>=0;i --)
+                    iSum += (Math.pow(2,i) % 11) * parseInt(str.charAt(17 - i),11);
+                if(iSum%11!=1)
+                {
+                    return false;
+                }
+            }
+            else if (idCardLength==15)
+            {
+                sBirthday = "19" + str.substr(6,2) + "-" + Number(str.substr(8,2)) + "-" +
+                    Number(str.substr(10,2));
+                d = new Date(sBirthday.replace(/-/g,"/"));
+                var dd = d.getFullYear().toString() + "-" + (d.getMonth()+1) + "-" + d.getDate();
+                if(sBirthday != dd)
+                {
+                    return false;
+                }
+            }
+            return true;
+        },
+        message:'请输入正确的身份证号'
+    }
+});
+},{}],26:[function(require,module,exports){
+/**
+ * Created by evans on 16/12/15.
+ */
+module.exports= {
+    $open: function (str, params, isAjax, cb) {
+        var ele;
+        var body=document.body;
+        var innerMaxCss={}, outerMaxCss={},maxHeight,maxWidth;
+        var rootSlideMenu = top.byid('root-menu') || {};
+        //var fixBarHeight = window.config.winFixBarHeight||params.fixBarHeight||48;
+
+        //固定底部按钮
+        var fitLayout = function (ele) {
+
+            var win=ele.closest('.window');
+            var panelHead=win.children('.epanel-header');
+            var fixBar=ele.children('.win-fix-bar');
+
+            win.addClass('hidden');
+
+            outerMaxCss = {maxHeight:maxHeight};
+            innerMaxCss = {maxHeight:maxHeight,overflowY:'auto'};
+
+            outerMaxCss.maxHeight=outerMaxCss.maxHeight-5;
+            innerMaxCss.maxHeight=innerMaxCss.maxHeight-5;
+
+            if(panelHead.length){
+                var headHeight=getRect(panelHead[0]).height;
+                innerMaxCss.maxHeight=innerMaxCss.maxHeight-headHeight;
+            }
+
+            if(fixBar.length){
+                //win.addClass('has-fix-bar');
+                var barHeight=getRect(fixBar[0]).height;
+                innerMaxCss.maxHeight=innerMaxCss.maxHeight-barHeight;
+                outerMaxCss.paddingBottom=barHeight;
+            }
+
+            win.css(outerMaxCss);
+            ele.css(innerMaxCss);
+
+            //info([params.height,innerMaxCss.maxHeight,outerMaxCss.maxHeight,outerMaxCss.maxHeight-])
+
+            win.removeClass('hidden');
+            ele.on('click', '.cm-cancel-btn,.win-close-btn', function () {
+                $(this).closest('.window-body').$close();
+            });
+        };
+
+        var calcSize=function(win){
+
+            if(params.width == 'max'){
+                params.width=win.width-20;
+            }
+            else if(params.width == 'full'){
+                params.width=win.width;
+            }
+
+            if(params.height == 'max'){
+                params.height=win.height-20;
+                params.top=10;
+            }
+            else if(params.height == 'full' || parseInt(params.height) > win.height){
+                params.height=win.height;
+                params.top=0;
+            }
+            else{
+                params.top=params.top||Math.min((win.height-~~params.height)/2,win==top?60:0);
+            }
+            maxHeight=win.height-params.top;
+            //outerMaxCss = {maxHeight:maxHeight,overflowY:'auto'}
+            //innerMaxCss = {visibility:'visible',maxHeight:maxHeight-36};//-fixBarHeight};//36+48=84,36为弹窗自带的title条的高度,48为底部固定按钮的高度
+
+        };
+
+        //tab弹窗转用$append
+        if (typeof params == 'string') {
+            return window.$append.apply(this, [].slice.call(arguments));
+        }
+
+        //默认不可缩小拉伸,模态显示,允许滚动条,空白标题
+        ('maximizable' in params) || (params.maximizable = false);
+        ('minimizable' in params) || (params.minimizable = false);
+        ('collapsible' in params) || (params.collapsible = false);
+        ('resizable' in params) || (params._resizable = false);
+        ('scroll' in params) || (params.scroll = true);
+        ('modal' in params) || (params.modal = true);
+        ('cache' in params) || (params.cache = false);
+        ('doSize' in params) || (params.doSize = true);
+        ('shadow' in params) || (params.shadow = false);
+        ('title' in params) || (params.title = ' ');
+        ('height' in params) || (params.height = 'auto');
+        ('mask' in params) || (params.mask = 'global');
+        ('style' in params) || (params.style = {});//'max-height':window.height-20+'px', 'max-width':window.width-20+'px'});
+        ('center' in params) || (params.center = 'global');
+
+
+        //小于921的完全可以用辅助遮罩模式
+        //if(parseInt(params.width)<921 && params.mode=='full-wrap'){
+        //    params.mode=='help-mask';
+        //}
+
+        //var fn = function(ele){
+        //    (params.onClose||window.voidFn)();
+        //    ele[0].id=ele[0].id||('eui-win-'+new Date().getTime());
+        //    $(body).data('open-params', params); //目前只有原有元素的弹窗可以缓存参数,用于直接发动 $('#mydiv').open();
+        //}
+        var fn = params.onClose||window.voidFn;
+
+
+        //三种模态方
+        if (window != top) {
+            var topMain=top.$('#admin-design-main');//top.$('body>div:first-child');
+            var topMainWrap=top.$('#main-wrap');
+            var bodyAgent=$(body).children('.body-agent')[0]||$(body).children(':first-child')[0];
+
+
+            //避免引发重绘
+            window._cancelGlobalReFixTbTime=new Date().getTime();
+
+            //延续上一个弹窗的模式
+            if(topMain.hasClass('full-win-mode')){
+                params.mode='full-win';
+            }
+            else if(topMain.hasClass('help-mask-mode')){
+                params.mode='help-mask';
+            }
+            else{
+                params.mode=params.mode||'trans-agent';
+            }
+
+            topMain.addClass(params.mode+'-mode');
+
+            //辅助遮罩方案
+            if(params.mode=='help-mask'){
+
+                calcSize(window);
+
+                var scrollTop=body.scrollTop;
+                var disabledScroll=function(){body.scrollTop=scrollTop};
+                $(window).on('scroll',disabledScroll);
+
+                //废弃,改用addClass控制help-mask显示/隐藏
+                //topMainWrap.hasClass('full-wrap')||top.showHelpMask(window.width+30>top.width);
+
+                //暗化滚动条(仍然可滚)
+                //$(body).addClass('darken-scroll');
+
+                //彻底禁用滚轮会影响弹窗自身滚动
+                //window.disabledMouseWheel(bodyAgent);
+
+                //使用overflow:hidden
+                //var completedCSS=getComputedStyle(body);
+                //var scrollDis=body.scrollHeight-window.height-parseInt(completedCSS['margin-top'])-parseInt(completedCSS['margin-bottom']);
+                //$(body).addClass(scrollDis>0 ? 'holdScrollWidth overflowHidden':'overflowHidden');
+
+                params.onClose = function () {
+                    if($(body).children('.window-mask:visible').length==0){
+
+                        $(window).off('scroll',disabledScroll);
+                        topMain.removeClass('trans-agent-mode help-mask-mode full-win-mode');
+
+                        //以上对应的四种返回方式
+                        //top.hideHelpMask();
+                        //$(body).removeClass('darken-scroll');
+                        //window.enabledMouseWheel(bodyAgent);
+                        //$(body).removeClass('overflowHidden holdScrollWidth');
+                    }
+                    fn(ele);
+                };
+
+                var slideWidth=getRect(rootSlideMenu).width;
+                var residue=window.innerWidth-parseInt(params.width);
+                var maxLeft=params.width ? residue/-2 : -Infinity;//log(window.innerWidth)
+                var marginLeft=Math.max(slideWidth/-2, residue<slideWidth ? 0:Math.min(maxLeft,0) );
+                //如果不够调整为全局居中就放弃,让eui自动在内部居中即可
+                //正数的marginLeft是因为 弹窗宽度大于窗口宽度了, 导致eui生成的left为负值往左缩入. 这个时候即使用marginLeft正值右移也是没用的. 因为弹窗宽度太大, 左边显示了,右边也是放不下的.info(marginLeft)
+                ('margin-left' in params.style) || (params.style['margin-left']=marginLeft);//Math.min(0,marginLeft);
+
+
+
+            }
+            //最大化frame方案
+            else if(params.mode=='full-win'){
+
+                calcSize(top);
+
+                topMainWrap.addClass('full-wrap');
+                params.top=params.top||50;
+                params.onClose = function () {
+
+                    topMain.removeClass('trans-agent-mode help-mask-mode full-win-mode');
+                    topMainWrap.removeClass('full-wrap');
+                    $(body).removeClass('overflowHidden').removeClass('holdScrollWidth');
+                    fn(ele);
+                };
+
+            }
+
+            //移形换影方案 mock-agent
+            else{
+                calcSize(top);
+
+                var scrollY = body.scrollTop;
+                var scrollX = body.scrollLeft;
+                $(body).addClass(top.$('body').hasClass('sb-l-m') ?'in-sb-l-m-full-wrap':'in-full-wrap');
+                topMainWrap.addClass('full-wrap mock-agent');
+                bodyAgent.scrollTop=scrollY;
+
+                $('[refix]').each(function(){
+                    var $this=$(this);
+                    var cls=$this.attr('refix');
+                    cls=cls||'y';
+                    cls=='x' && (cls='refix-x');
+                    cls=='y' && (cls='refix-y');
+                    cls=='x,y' && (cls='refix-x refix-y');
+                    $this.attr('refix',cls);
+                    $this.addClass(cls);
+                });
+
+                params.onClose = function () {
+                    //所有弹窗都关闭了,才恢复
+                    if ($(body).children('.window.animated').length == 0) {
+                        topMain.removeClass('trans-agent-mode help-mask-mode full-win-mode');
+
+                        topMainWrap.removeClass('full-wrap');
+                        $(body).removeClass('in-full-wrap in-sb-l-m-full-wrap');
+                        body.scrollTop = scrollY;
+                        body.scrollLeft = scrollX;
+
+                        $('[refix]').each(function(){
+                            var $this=$(this);
+                            var cls=$this.attr('refix');
+                            $this.removeClass(cls);
+                        });
+                    }
+                    fn(ele);
+                };
+            }
+
+        }else{
+            //calcSize(window);
+        }
+
+
+        //三种加载方式
+        ele = arguments[0].jquery ? arguments[0] : null;
+
+
+        if (ele || str.indexOf('#') == 0) {
+
+
+            ele = $(str).addClass('e-win-wrap');
+            //innerMaxCss.overflowY = 'auto';
+            ele.show().window(params).window('hcenter')
+                .parent().addClass('animated fadeInDown').end();
+            fitLayout(ele);
+
+
+        }
+        else if (isAjax) {
+
+
+            ele = $('<div class="e-win-wrap" dynamic>').css({overflow: params.scroll ? 'auto' : 'hidden'});
+
+            if (window.$cache(str)) {
+
+                ele.window(params).css(outerMaxCss).html(window.$cache(str))
+                    .parent().addClass('animated fadeInDown').css(innerMaxCss).end();
+
+                setTimeout(function () {
+                    cb && cb();
+                }, 0);
+
+                fitLayout(ele);
+
+            } else {
+
+                ele.window(params).css(outerMaxCss).load(getViewPath(str), function (res) {
+
+                    window.$cache(str,res);
+                    cb && cb();
+                    fitLayout(ele);
+
+                }).parent().addClass('animated fadeInDown').css(innerMaxCss).end();
+            }
+
+
+        }
+        else {
+
+
+            str = getViewPath(str);
+
+            var id = '' + Date.format('MMDDhhmmssS');
+
+            ele = $('<div class="e-win-wrap overhide" dynamic win-id="{1}"><iframe scrolling="{0}" win-id="{1}"></iframe></div>'.format(params.scroll ? 'auto' : 'no', id));
+
+            //setTimeout(function(){
+            top._mol_wins[id] = ele.window(params).css(outerMaxCss)
+                                    .find('iframe').attr('src', str).end()
+                                    .parent().addClass('animated fadeInDown').css(innerMaxCss).end();
+            //},0);
+
+
+        }
+
+        ele.data('open-params', params); //目前只有原有元素的弹窗可以缓存参数,用于直接发动 $('#mydiv').open();
+
+        //hasMask && $('.window-mask').last().css('background-color','transparent');
+
+
+        return ele;
+    }
+}
+},{}],27:[function(require,module,exports){
 /**
  * Created by yao on 2016/11/21.
+ *
+ * depending:lambda,String.prototype.format,$open,importing,jui
  */
 //方法如下
 var hideClass='custom-col-hide';
-var arr=[];
+var slice=[].slice;
 //var reg=/\<\/?[^\<\>]+\>/g;
 //window.extending({html2txt:function(html){return html.replace(reg,'').trim();}});
 var isFix=function($ele){
     return $ele.hasClass('need-fix')|| $ele.hasClass('need-fix-end');
 
-}
+};
 //列排序方法
 var customSortFn=function(cells,isTh){
     //避免引发重绘
@@ -21024,7 +21426,7 @@ var customSortFn=function(cells,isTh){
         return false;
     }
     var parent=$(cells[0].parentNode);
-    var cellsArr=arr.slice.call(cells).orderby('o => +o.getAttribute("sort-index")');
+    var cellsArr=slice.call(cells).orderby('o => +o.getAttribute("sort-index")');
 
     //位置不变的不替换,性能会好点,但算法复杂,容易出bug,可靠性差
     //$cells.each(function(j,cell){
@@ -21082,7 +21484,7 @@ var customFn=function(table,rs){
         $th.add(tds)[act](hideClass).attr('sort-index',sortIndex);
     });
 
-    //console.info(['sort-index处理后的ths',arr.slice.call(ths).select('td => td.outerHTML')]);
+    //console.info(['sort-index处理后的ths',slice.call(ths).select('td => td.outerHTML')]);
     //每行进行每个单元格位置的检测和替换
     customSortFn(ths,true);
     table.find('>tbody>tr').each(function(i,tr){
@@ -21106,7 +21508,7 @@ var winHtml='<div id="{0}" class="custom-setting-modal">'+
 var tp='<li class="{2}"><input type="checkbox" id="{1}"/><label for="{1}"></label><u>{0}</u><label for="{1}" class="custom-col-switch" data-on="显示" data-off="隐藏"></label></li>';//checked={1} readOnly={2}
 
 $.fn.customCol=function(attr){
-    //log('\ncustom col in'),log(this.html())
+
     //防止空table过来跑一遍customCol
     if(!this.children().length){
         return this;
@@ -21114,9 +21516,10 @@ $.fn.customCol=function(attr){
     if(this.hasClass('no-custom')){
         return this;
     }
+
+    attr=attr||'custom';//指令属性也可以自定义
     var table=this;
     var wrap=table.closest('.query-result');
-    var attr=attr||'custom';//指令属性也可以自定义
     var key='cs-'+(window.iframe?window.iframe.getAttribute('page-no'):($('.spa-view')[0]||{}.id))+(table.prop('id')||'table');
     var thead=table.children('thead');
     var ths=thead.children('tr').children('th');
@@ -21134,7 +21537,7 @@ $.fn.customCol=function(attr){
             rs=null;
         }else{
             rs=rs.orderby('r => r.cn');
-            var thsArr=arr.slice.call(ths).orderby('th => $(th).text()');
+            var thsArr=slice.call(ths).orderby('th => $(th).text()');
             var msg='列名改变? {0},  自定义项改变?{1} , 自定义固定列改变?{2}';
 
             var needUp=rs.some(function(r,i){
@@ -21205,9 +21608,9 @@ $.fn.customCol=function(attr){
             window.$open('#'+tempID,{width:350,title:'自定义列'}).focus();//$open接受元素传参
 
 
-            win.find(':checkbox').each(function(i){
-                this.checked=rs[i].custom!=0;
-                this.disabled=rs[i].custom==null;
+            win.find(':checkbox').each(function(i,checkbox){
+                checkbox.checked=rs[i].custom!=0;
+                checkbox.disabled=rs[i].custom==null;
             });
 
             //保存按钮
@@ -21288,11 +21691,11 @@ $.fn.customCol=function(attr){
 $(function(){
     if(config.autoCustomCol){
         //console.log('domreay $.fn.customCol, 主要是为了处理静态写在页面上的表头');
-        $('.query-result table:has("tbody"):not(".stp-table")').eq(0).customCol('cs');
+        $('.query-result table:has("tbody"):not("[xtp-table]")').eq(0).customCol('cs');
     }
     //config.autoCustomCol && alert(config.autoCustomCol==true) && window!=top && $('.query-result table').eq(0).customCol('cs');//:has("th[custom]:first")
 });
-},{}],26:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 /**
  * Created by yao on 2016/11/21.
  */
@@ -21306,7 +21709,7 @@ window.extending('$filter',function(filterName,fn,theType){
     }
 });
 
-},{}],27:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 /**
  * Created by yao on 2016/11/15.
  */
@@ -21727,7 +22130,7 @@ window.$.fn.fixTable=function fixTable(mode,cb){//,wraped,cb){
 
 //typeof module === "object" && typeof module.exports === "object"  && (module.exports=);
 
-},{}],28:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 //todo 若将STP应用于后端node渲染的话,需要解除几个jquery的依赖,或手写一个轻量的jqLite即可
 
 //空值及转义处理 for null,undefined,number,xss and others
@@ -21948,7 +22351,7 @@ function $compile(source,data,arg2,arg3) {
     var i=0,j=data.length,sb=[];
 
     for(;i<j;i++){
-        typeof helper=='function' && !data[i]._stp_helper_done_ && helper(data[i],i) && (data[i].extending({_stp_helper_done_:true}));
+        typeof helper=='function' && !data[i]._xtp_helper_done_ && helper(data[i],i) && (data[i].extending({_xtp_helper_done_:true}));
         //console.info(allowHTML)
         sb.push($format.apply(the,[source,data[i],i,allowHTML]));
         //sb.push($format(source,data[i],i).replace(/\{\$rownum\}/g,i+1).replace(/\{\$index\}/g,$encode(i)).replace(/\{\$nth2\}/g,i%2==1?'nth-even':'nth-odd'));
@@ -22014,7 +22417,7 @@ var $template=(function($){
             //普通情况
             else{
                 curData=data;
-                $container.html($compile.apply(this,[cache[tpsource],data,arg2,arg3])).removeClass('stp-hide');
+                $container.html($compile.apply(this,[cache[tpsource],data,arg2,arg3])).removeClass('xtp-hide');
             }
 
             if($container.is('tbody')){
@@ -22060,7 +22463,7 @@ var $template=(function($){
                 $(this).data('current-data',curData[i]);
             });
 
-            return $container.find('[stp-behavior]').behavior();
+            return $container.find('[xtp-behavior]').behavior();
 
         };
 
@@ -22105,12 +22508,12 @@ window.$.fn.tpsource=function(tps){
     return arguments.length==0 ? this[0].getAttribute('tpsource') : this.each(function(){$(this).attr('tpsource',typeof tps=='function'?tps($(this)):tps);});
 };
 
-require('./stp.filter');
-require('./stp.table');
-require('./stp.fixtable');
-require('./stp.customcols');
+require('./xtp.filter');
+require('./xtp.table');
+require('./xtp.fixtable');
+require('./xtp.customcols');
 
-var stp={
+var xtp={
     $encode:$encode,
     $compile:$compile,
     $template:$template
@@ -22121,8 +22524,8 @@ String.prototype.extending('valueAt',function(obj,allowHTML,$index){
     return $getVal(this.valueOf(),obj,allowHTML,$index);
 });
 //window.extending(obj);
-typeof module === "object" && typeof module.exports === "object"  && (module.exports=stp);
-},{"./stp.customcols":25,"./stp.filter":26,"./stp.fixtable":27,"./stp.table":29}],29:[function(require,module,exports){
+typeof module === "object" && typeof module.exports === "object"  && (module.exports=xtp);
+},{"./xtp.customcols":27,"./xtp.filter":28,"./xtp.fixtable":29,"./xtp.table":31}],31:[function(require,module,exports){
 /**
  * Created by yao on 2016/11/15.
  */
@@ -22152,7 +22555,7 @@ $.fn.table=function(config){
 
     //传入不带数据的配置项
     if(config && !config.hasOwnProperty('data')){
-        return the.data('table-config',config);
+        return the.data('table-config',config).attr('x-table','');
     }
 
     //数据为空,利用template形成空内容
@@ -22163,8 +22566,8 @@ $.fn.table=function(config){
 
 
     var len=columns.length;
-    var thstr='<th class="stp-{0}-th-{1} {2} {3}" {4} {6} {8}>{7}{5}</th>';//'<th class="stp-{pid}-th-{key} {hide}" sort-name={sort}>{title}</th>'
-    var tdstr='<td class="stp-{0}-td-{1} {2} {3} {6}" rowspan="{7}">{5}{{4}}</td>';//'<td class="stp-{pid}-td-{key} {hide}">{{value}}</td>'
+    var thstr='<th class="xtp-{0}-th-{1} {2} {3}" {4} {6} {8}>{7}{5}</th>';//'<th class="xtp-{pid}-th-{key} {hide}" sort-name={sort}>{title}</th>'
+    var tdstr='<td class="xtp-{0}-td-{1} {2} {3} {6}" rowspan="{7}">{5}{{4}}</td>';//'<td class="xtp-{pid}-td-{key} {hide}">{{value}}</td>'
     if(typeof columns[0]=='string'){
         columns=columns.select('r => {title:r,map:r}');
     }
@@ -22217,7 +22620,7 @@ $.fn.table=function(config){
                 col.sort ? 'sort-name="{0}"'.format(col.sort):'',
                 col.title,
                 col.custom!==false?(typeof col.custom=='string'?col.custom:'cs'):'',
-                config.check && i==0 ?'<input type="checkbox" class="stp-check-tr-all"/>':'',
+                config.check && i==0 ?'<input type="checkbox" class="xtp-check-tr-all"/>':'',
                 col.customInit===false?'cs-init="false"':''
             );
             str2=tdstr.format(
@@ -22226,7 +22629,7 @@ $.fn.table=function(config){
                 col.fix ? (col.fix=='left'?'need-fix':'need-fix-end') : '',
                 col.cls||'',
                 (col.key||col.map)+(col.filter ? '.'+col.filter:''),
-                config.check && i==0 ?'<input type="checkbox" class="stp-check-tr" tr-param="{{0}}" tr-index="{$index.toString}" tr-rownum="{{1}}" stp-checked="{_trChecked}"/>'.format(typeof config.check=='string'?config.check:'',col.map):'',
+                config.check && i==0 ?'<input type="checkbox" class="xtp-check-tr" tr-param="{{0}}" tr-index="{$index.toString}" tr-rownum="{{1}}" xtp-checked="{_trChecked}"/>'.format(typeof config.check=='string'?config.check:'',col.map):'',
                 col.rowspan?'hideplus{rowspan}':'',
                 col.rowspan?'{rowspan}':''
             );
@@ -22240,24 +22643,26 @@ $.fn.table=function(config){
     var table;
     var html='<thead class="{0}">{1}</thead><tbody>{2}</tbody>'.format(config.fixHead!==false?'need-fix':'',thtp,$compile(tdtp,data,helper,allowHTML));
     if(the.is('table')){
-        table=the.addClass('typical-tb stp-table '+ (config.cls||'')).template(html,null,null,data).data('table-config',config);
-    }else{
-        table=the.html('<table class="typical-tb stp-table {1}">{0}</table>'.format(html,config.cls||'')).children();
+        table=the.attr('x-table','').addClass('typical-tb '+ (config.cls||'')).template(html,null,null,data).data('table-config',config);
+    }
+    else{
+        throw new Error('the element is not a table!');
+        //table=the.html('<table x-table class="typical-tb {1}">{0}</table>'.format(html,config.cls||'')).children();
     }
     if(table.hasClass('has-checkbox')){
-        table.find('[stp-checked]').each(function () {
-            this.checked=$(this).attr('stp-checked');
+        table.find('[xtp-checked]').each(function () {
+            this.checked=$(this).attr('xtp-checked');
         });
     }
     var wrap=table.closest('.query-result');//.all-fix-wrap是会被replace掉的
     wrap.length>0 || (wrap=$('body'));
-    wrap.on('click','.stp-check-tr-all',function(){
+    wrap.on('click','.xtp-check-tr-all',function(){
         var checked=this.checked;
-        wrap.find('.stp-check-tr').prop('checked',checked?true:false);
+        wrap.find('.xtp-check-tr').prop('checked',checked?true:false);
         wrap.find('tbody:not("td>tbale>tbody")').children().each(function(){
             $(this)[checked===false?'removeClass':'addClass']('checked');
         });
-    }).on('click','.stp-check-tr',function () {
+    }).on('click','.xtp-check-tr',function () {
         var i=$(this).closest('tr').index();
         wrap.checkRow(i,this.checked);
     });
@@ -22334,7 +22739,7 @@ $('body').table({
 
  columnsSetting.each('r => r.hide=0');
 
- var table=$('<table class="stp-table">').appendTo($('body').html(''));
+ var table=$('<table class="xtp-table">').appendTo($('body').html(''));
 
  table.table({
     columns:columnsSetting,
@@ -22389,119 +22794,265 @@ setTimeout(function(){
  });
 
 */
-},{}],30:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 /**
  * Created by yao on 2016/12/12.
  * todo widget加入递归查找importing和template依赖,支持嵌套widget
  * todo behavior 支持inherit继承行为
  */
 var voidFn=function(){};
+
 var nullObj={_null_:''};//'just for make a no-empty data for template'};
+
 var getData=function(data){
     return $.extend(data,nullObj);//注意顺序,会产生意外的同一引用
 };
+
 var templateFn=function(html,data){
-    //var $this=$(this);
     return $($compile(html,data));
 };
-//function getWigetParams(ele){
-//    var obj={};
-//    var attrs=[].slice.call(ele.attributes).where('a=>a.name.slice(0,2)=="w-"');
-//    attrs.each(function(a) {
-//        obj[a.name.slice(2)] = a.value;
-//    });
-//    return obj;
-//}
+
 window.extending({_widgets_:Object.create(null)});
+
+window._widgets_=window._widgets_;
 
 window.$widget=window.$widget||function(name,defineder) {
     window._widgets_[name]= window._widgets_[name]||defineder();
+    return window.$widget;
 };
 
 window.$behavior=window.$behavior||window.$widget;
 
-//todo $.fn.widget
-$.fn.behavior=function(key){
-    var cb=typeof arguments[0]=='function' ? arguments[0] : arguments[1];
-    var exImports=[];
-    var initFnArr=[];
-    this.each(function(i,item){
-        var $this=$(item);
-        var data=getData($this.data());
-        var bKey=key||$this.attr('behavior')||$this.attr('stp-behavior');
-        if(bKey){
-            var behaviors=bKey.split(',');
-            behaviors.each(function (b) {
-                var behavior=window._widgets_[b];
-                exImports.push(behavior.importing||[]);
-                initFnArr.push((function(behavior,$this,data,_b){
-                    return function(){
-                        behavior.init.call($this,data)
-                    };
-                })(behavior,$this,data,b));
-            });
+
+var regFnPack={
+    behavior:function(bKey,$this,exImports){
+        var behaviors=bKey.trim().split(' ');
+        behaviors.each(function (b) {
+            b=b.trim();
+            var behavior=window._widgets_[b];
+            if(!behavior){
+                throw new Error('there is not such behavior: '+b);
+            }
+            exImports=exImports.concat(behavior.importing||[]);
+        });
+
+        return exImports;
+    },
+
+    widget:function(wKey,$this,exImports){
+        var widget=window._widgets_[wKey];
+
+        if(typeof widget.template=='string' && widget.template.indexOf('<')!=0 ){
+            exImports.push(widget.template);
         }
-        $this.removeAttr('behavior');
-    });
-    window.importing.apply(window,exImports.concat(function () {
-        initFnArr.fire();
-        cb && cb();
-    }));
-    return this;
+
+        return exImports.concat(widget.importing||[]);
+    },
+
+    includeOrReplace:function(src,$this,exImports){
+        exImports.push(src);
+
+        return exImports.concat(($this.attr('importing')||'').split(','));
+    },
+    include:function(src,$this,exImports){return regFnPack.includeOrReplace(src,$this,exImports);},
+    replace:function(src,$this,exImports){return regFnPack.includeOrReplace(src,$this,exImports);}
 }
 
-$.fn.widget=function(key){
-    var cb=typeof arguments[0]=='function' ? arguments[0] : arguments[1];
-    var exImports=[];
-    var initFnArr=[];
-    this.each(function(i,item){
-        var $this=$(item);
-        var data=getData($this.data());
-        var wKey=key||$this.attr('widget')||$this.attr('stp-widget');
-        if(wKey){
+var initFnPack={
+
+    behavior:function(bKey,$this,data,initFnArr){
+        var behaviors=bKey.trim().split(' ');
+        behaviors.each(function (b) {
+            b=b.trim();
+            var behavior=window._widgets_[b];
+            if(!behavior){
+                throw new Error('there has not behavior: '+b);
+            }
+            //exImports && exImports.push(behavior.importing||[]);
+
+            //initFnArr.push((function(behavior,$this,data,_b){
+            //    return function(){
+            //        behavior.init.call($this,data);
+            //    };
+            //})(behavior,$this,data,b));
+
+            initFnArr.push(function(){
+                behavior.init.call($this,data);
+            });
+        });
+
+        return $this;
+    },
+
+    widget:function(wKey,$this,data,initFnArr){
             var widget=window._widgets_[wKey];
-
-            exImports=exImports.concat(widget.importing||[]);
-
-            if(typeof widget.template=='string' && widget.template.indexOf('<')!=0 ){
-                exImports.push(widget.template);
+            if(!widget){
+                throw new Error('can not find the widget/behavior:'+ wKey);
             }
 
-            initFnArr.push((function(widget,newEle,data,_wKey){
+            var bKey=$this.attr('behavior');
+            var id = $this[0].id;
+            var cls=$this[0].className;
+            var boot=widget.boot||templateFn;
 
-                return function(){
-                    var html=window.$cache(widget.template)||widget.template;
-                    var boot=widget.boot||templateFn;
-                    var newEle= boot.apply(item,[html,data]);
 
-                    if($this.hasAttribute('delay')){
-                        $this.replaceWith(newEle);
-                        //template等importing完成后手动定义data再进行, 之后手动trigger('x-init')
-                        newEle.on('x-init',function (e,ele,triggerData) {
-                            widget.init.call($this,triggerData);
-                        });
-                    }
+            initFnArr.push(function(){
 
-                    else{
-                        $this.replaceWith(newEle);
-                        widget.init.call(newEle,data)
-                    }
-                };
-            })(widget,$this,data,wKey));
+                //生成新结构
+                var html=window.$cache(widget.template)||widget.template;
+                var newEle= boot.apply($this[0],[html,data]).addClass(cls).prop('id', id);
+
+                $this.replaceWith(newEle);
+
+                widget.init.call(newEle,data);
+
+                newEle.scanSubWidget(), newEle.behavior(bKey);
+            })
+            //正常初始化
+            //else{
+            //    initFnArr.push((function(widget,newEle,data,_wKey){
+            //        return function(){
+            //            //生成新结构
+            //            var html=window.$cache(widget.template)||widget.template;
+            //            var newEle= boot.apply($this[0],[html,data]).addClass(cls).prop('id', id);
+            //            $this.replaceWith(newEle);
+            //
+            //            widget.init.call(newEle,data);
+            //        };
+            //    })(widget,newEle,data,wKey));
+            //}
+
+            //return newEle;
+    },
+    includeOrReplace:function(attr,src,$this,data,initFnArr){
+        initFnArr.push(function(){
+
+            var bKey=$this.attr('behavior');
+            var html=window.$cache(src);
+            var newEle;
+
+            if(!html){
+                throw new Error('the replace/include source is undefined in cahe');
+            }
+
+            if(attr=='replace'){
+                newEle=$($compile(html,data,true));
+                $this.replaceWith(newEle);
+            }
+
+            else{
+                $this.html($compile(html, data, true)).removeAttr('include');
+                newEle = $this;
+            }
+
+            newEle.scanSubWidget(), newEle.behavior(bKey);
+
+        });
+        //return newEle;
+    },
+    replace:function(replaceSrc,$this,data,initFnArr){
+        return initFnPack.includeOrReplace('replace',replaceSrc,$this,data,initFnArr);
+    },
+
+    include:function(includeSrc,$this,data,initFnArr){
+        return initFnPack.includeOrReplace('include',includeSrc,$this,data,initFnArr);
+    }
+};
+
+/* ⚠注意!
+ * behavior可以更改元素的内容结构——如加上简单的包裹层, 但不要去产生新的组件元素widget等复杂变化
+ * behavior的最佳实践, 是给元素添加指定的事件,行为, 增加通用的配置属性
+ * 因此,behavior完成之后,不去扫描是否有新产生的widget需要初始化
+ */
+var pubScanFn=function(attr,arg0,arg1){
+
+    var key=typeof arg0=='string'? arg0 : null; //可以传一个key, 即使元素一开始没有定义behavior, 也可以按传入的key进行behavior初始化
+    var cb=typeof arg0=='function' ? arg0 : arg1; //可以传一个回调, 确保在behavior异步解析之后, 可以做什么
+
+    var dtd = $.Deferred();
+
+    var exImports=[];
+    var initFnArr=[];
+
+
+    this.each(function(i,item){
+        var $this=$(item);
+        var data=getData($this.data());
+        var wKey=key||$this.attr(attr)||$this.attr('xtp-'+attr);
+
+        if(wKey){
+            exImports=regFnPack[attr](wKey,$this,exImports);
+            initFnPack[attr](wKey,$this,data,initFnArr);
         }
-        $this.removeAttr('widget');
+
+        $this.removeAttr(attr);
     });
 
     window.importing.apply(window,exImports.concat(function () {
         initFnArr.fire();
-        cb && cb();
+        if(typeof cb=='function'){
+            cb();
+        }
+        else{
+            dtd.resolve();
+        }
     }));
-    return this;
-}
+
+    return dtd;
+};
+
+
+//$.fn.widget => pubScanFn => regFnPack/initFnPack => scnSubWidget => $.fn.widget
+//exports.reg => regFnPack => .... => exports.init => initFnPack  => scnSubWidget => $.fn.widget
+
+['replace','include','behavior','widget'].forEach(function(attr){
+    $.fn[attr]=function(){
+        return pubScanFn.apply(this,[attr,arguments[0],arguments[1]]);
+    };
+});
+
+
+//use promise for callback subReplace or subInclude
+$.fn.scanSubWidget=function(cb){
+    //var cb,regSelfBehavior;
+    //if(typeof arguments[0]=='function'){
+    //    cb=arguments[0];
+    //    regSelfBehavior=arguments[1];
+    //}else{
+    //    regSelfBehavior=arguments[0];
+    //}
+    var $this=this;
+    //$this.find('[replace]').replace(function(){
+    //    $this.find('[include]').include(function(){
+    //        $this.find('[widget]').widget(function(){
+    //            $this.find('[behavior]').behavior(function(){
+    //                typeof cb=='function' && cb();
+    //            });
+    //        });
+    //    });
+    //});
+    //console.log($('.all-fix-wrap').length)
+    //regSelfBehavior && $this.behavior();
+    //console.info($('.all-fix-wrap').length)
+
+    return $this.find('[replace]').replace()
+        .done(function(){
+            return $this.find('[include]').include();
+        }).done(function(){
+            return $this.find('[widget]').widget();
+        }).done(function(){
+            return $this.find('[behavior]').behavior();
+        }).done(function(){
+            return typeof cb=='function' && cb();
+        });
+};
+
+
 
 if(typeof module === "object" && typeof module.exports === "object" ){
     module.exports={
 
+        //收集依赖
         reg:function(ags){
             if(window.importing['_widgetRegDone']){
                     //console.log('避开reg');
@@ -22527,6 +23078,7 @@ if(typeof module === "object" && typeof module.exports === "object" ){
                 //console.info('进入 reg')
 
                 window._widgetElements.each(function(i,item){
+
                     var $this=$(item);
                     var wKey=$this.attr('widget');
                     var bKey=$this.attr('behavior');
@@ -22535,25 +23087,17 @@ if(typeof module === "object" && typeof module.exports === "object" ){
 
                     if($this.attr('widget-reg-done')){  return false;  }
 
+                    //四大组件导入依赖的方式
                     if(replaceSrc || includeSrc){
-                        exImports.push($this.attr('include')||$this.attr('replace')||'');
+                        exImports=regFnPack.includeOrReplace(replaceSrc || includeSrc, $this, exImports);
                     }
 
                     else if(wKey){
-                        var widget=window._widgets_[wKey];
-                        exImports=exImports.concat(widget.importing||[]);
-
-                        if(typeof widget.template=='string' && widget.template.indexOf('<')!=0 ){
-                            exImports.push(widget.template);
-                        }
+                        exImports=regFnPack.widget(wKey,$this,exImports);
                     }
 
                     if(bKey){
-                        var behaviors=bKey.split(',');
-                        behaviors.each(function (b) {
-                            var behavior=window._widgets_[b];
-                            exImports=exImports.concat(behavior.importing||[]);
-                        });
+                        exImports=regFnPack.behavior(bKey,$this,exImports);
                     }
 
                     //throw new Error('these attr:include or replace, widget can not be empty');
@@ -22563,538 +23107,99 @@ if(typeof module === "object" && typeof module.exports === "object" ){
 
                 window.importing['_widgetRegDone']=true;
 
+
+                //依赖全部加完,递归重启importing
                 if(exImports.where(' v => v ').length){
-                    var newArgs=exImports.concat(ags).distinct();
                     //console.info('widgets add new imports, 将运行importing.apply(null,newArgs)')
+                    var newArgs=exImports.concat(ags).distinct();
                     return function(){
                         window.importing.apply(null,newArgs);
                     };
-                }else{
+                }
+                else{
                     return null;
                 }
             }
         },
 
-
+        //依赖已经载入完毕
         init:function(){
+
             var initFnArr=[];
-            var len=window._widgetElements.not('[widget-init-done]').length
+            var len=window._widgetElements.not('[widget-init-done]').length;
+
             if(window.importing['_widgetInitDone']||!len){
                 //console.log('避开init')
                 return false;
             }
             //console.info('进入 init, len:'+len)
             window._widgetElements.each(function(i,item){
+
                 var $this=$(item);
+                var newEle;
                 var data=getData($this.data());
                 var html;
                 var wKey=$this.attr('widget');
                 var bKey=$this.attr('behavior');
                 var replaceSrc=$this.attr('replace');
                 var includeSrc=$this.attr('include');
-                if($this.attr('widget-init-done')){  return false;  }
 
-                if(replaceSrc){
-                    html=window.$cache(replaceSrc);
-                    $this.replaceWith($compile(html,data,true));
-                    $this.find('[behavior]').behavior();
+
+                if($this.attr('widget-init-done')){
+                    return false;
                 }
 
-                else if(includeSrc){
-                    html=window.$cache(includeSrc);
-                    //template在此莫名产生异步问题, importing回调中元素已经生成, 可以获取html, 但无法注册事件, 可能页面标签未闭合
-                    //$this.template($compile(html,data,true)).removeAttr('include');
-                    $this.html($compile(html,data,true)).removeAttr('include');
-                    $this.find('[behavior]').behavior();
+
+
+                if(wKey){
+                    initFnPack.widget(wKey,$this,data,initFnArr);
                 }
 
-                else if(wKey){
-                    var widget=window._widgets_[wKey];
-                    if(!widget){
-                        console.warn('can not find the widget/behavior:'+ wKey);
-                        return false;
-                    }
-
-                    var id = item.id;
-                    var cls=item.className;
-                    var html=window.$cache(widget.template)||widget.template;
-                    var boot=widget.boot||templateFn;
-                    var newEle= boot.apply(item,[html,data]).addClass(cls).prop('id', id);
-
-
-                    //延迟手动初始化
-                    if(item.hasAttribute('delay')){
-                        $this.replaceWith(newEle);
-                        //template等importing完成后手动定义data再进行, 之后手动trigger('x-init')
-                        newEle.on('x-init',function (e,ele,triggerData) {
-                            widget.init.call($this,triggerData);
-                        });
-                    }
-                    //正常初始化
-                    else{
-                        $this.replaceWith(newEle);
-                        initFnArr.push((function(widget,newEle,data,_wKey){
-                            return function(){
-                                //console.info(_wKey)
-                                widget.init.call(newEle,data);
-                                newEle.find('[behavior]').behavior();
-                            };
-                        })(widget,newEle,data,wKey));
-                    }
-
+                else if(replaceSrc){
+                    initFnPack.replace(replaceSrc,$this,data,initFnArr);
                 }
 
-                //behavior
-                if(bKey){
-                    var behaviors=bKey.split(',');
-                    behaviors.each(function (b) {
-                        var behavior=window._widgets_[b];
-                        initFnArr.push((function(behavior,$this,data,_b){
-                            return function(){
-                                //console.info(b)
-                                behavior.init.call($this,data);
-                                $this.find('[behavior]').behavior();
-                            };
-                        })(behavior,$this,data,b));
-                    });
+                else if(includeSrc) {
+                    initFnPack.include(includeSrc,$this,data,initFnArr);
                 }
+
+                //⚠ replace,include,widget任意两者不可能同时存在, 但它们都可以同时拥有behavior,  但因为replace和widget创建了newEle, 因此不能同步加上去, 需要在initFn中处理
+                else if(bKey){
+                    initFnPack.behavior(bKey,$this,data,initFnArr);
+                }
+
+                /*
+                 *
+                 * widget,replace,include都可能产生新的widget
+                 *
+                 * 因为在收集依赖中未做递归查找, 所以组件中包含组件时, 需要在根组件中登记其所有子依赖(todo 收集依赖有待自动递归)
+                 *
+                 * 否则也可以走通, 但会在主importing中产生子组件的生成的异步问题, 需要注意
+                 *
+                 * */
+
+
+                ////扫描replace,include,widget内部的widget,behavior , 移到initFn中完成
+                //newEle && initFnArr.push((function(newEle){
+                //    return function(){
+                //        newEle.scanSubWidget();
+                //    };
+                //})(newEle));
+
 
                 $this.removeAttr('widget').removeAttr('behavior').removeAttr('include').removeAttr('replace').attr('widget-init-done',true);
+
                 //window._widgetElements[i]=null;
+
             });
+
+
             //window._widgetElements=window._widgetElements.where('v=>v!=null');
+
             window.importing['_widgetInitDone']=true;
+
             initFnArr.fire();
         }
-    }
-}
-},{}],31:[function(require,module,exports){
-/**
- * Created by yao on 2016/7/26.
- */
-$.extend($.fn.validatebox.defaults.rules, {
-    ip: {
-        validator: function (val) {
-            return /((?:(?:25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.){3}(?:25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d))))/.test(val);
-        },
-        message: '请输入正确的IP地址'
-    },
-    //手机或座机号正则
-    contact: {
-        validator: function (val) {
-            return /^1\d{10}$|^0\d{2,3}-?\d{7,8}$/.test(val);
-        },
-        message: '请输入正确的固定电话或手机号码'
-    },
-    //端口号正则
-    port: {
-        validator: function (val) {
-            return /^([1-9]|[1-9]\d|[1-9]\d{2}|[1-9]\d{3}|[1-5]\d{4}|6[0-4]\d{3}|65[0-4]\d{2}|655[0-2]\d|6553[0-5])$/.test(val);
-        },
-        message: '端口号必须在1-65535之间'
-    },
-    //账号密码非中文正则
-    noChinese: {
-        validator: function (val) {
-            return !/^[\u0391-\uFFE5]+$/.test(val);
-        },
-        message: '账号密码不能包含中文'
-    },
-    extLength:{
-        validator:function (val,arr) {
-            val = val.trim();
-            var regCh = /[\u0391-\uFFE5]+/gm,//中文
-                regNoCh = /[^\u0391-\uFFE5]+/gm,//非中文
-                chArr = val.match(regCh),
-                noChArr = val.match(regNoCh),
-                valLen = (chArr?chArr.join('').length*2:0) + (noChArr?noChArr.join('').length:0);
-            arr[2] = Math.ceil((valLen - arr[1])/2);
-            return valLen >= arr[0] && valLen<=arr[1];
-        },
-        message:'已超出{2}字'
-    },
-    longitude: {
-        validator: function (val) {
-            var numVal = parseFloat(val);
-            return /^-?\d\d?\d?(\.\d\d?\d?\d?)?$/.test(val) && numVal<=180 && numVal>=-180;
-        },
-        message: '请输入-180到180之间的数字，可包括四位小数'
-    },
-    latitude:{
-        validator: function (val) {
-            var numVal = parseFloat(val);
-            return /^-?\d\d?(\.\d\d?\d?\d?)?$/.test(val) && numVal<=90 && numVal>=-90;
-        },
-        message: '请输入-90到90之间的数字，可包括四位小数'
-    },
-    isChineseID:{
-        validator:function(str){
-            // aCity={11:"北京",12:"天津",13:"河北",14:"山西",15:"内蒙古",21:"辽宁",22:"吉林",23:"黑龙江",
-            //     31:"上海",32:"江苏",33:"浙江",34:"安徽",35:"福建",36:"江西",37:"山东",41:"河南",42:"湖北",
-            //     43:"湖南",44:"广东",45:"广西",46:"海南",50:"重庆",51:"四川",52:"贵州",53:"云南",54:"西藏",
-            //     61:"陕西",62:"甘肃",63:"青海",64:"宁夏",65:"新疆",71:"台湾",81:"香港",82:"澳门",91:"国外"};
-            var aCity = "11,12,13,14,15,21,22,23,31,32,33,34,35,36,37,41,42,43,44,45,46,50,51,52,53,54,61,62,63,64,65,71,81,82,91";
-            var iSum = 0;
-            var idCardLength = str.length;
-            var sBirthday = '';
-            var d = 0;
-            if(!/^\d{17}(\d|x)$/i.test(str)&&!/^\d{15}$/i.test(str))
-            {
-                return false;
-            }
-            //在后面的运算中x相当于数字10,所以转换成a
-            str = str.replace(/x$/i,"a");
-            var curCity = str.substr(0,2);
-            if(!(aCity.indexOf(curCity) > 0) )
-            {
-                return false;
-            }
-            if (idCardLength==18)
-            {
-                sBirthday=str.substr(6,4)+"-"+Number(str.substr(10,2))+"-"+Number(str.substr(12,2));
-                d = new Date(sBirthday.replace(/-/g,"/"));
-                if(sBirthday!=(d.getFullYear()+"-"+ (d.getMonth()+1) + "-" + d.getDate()))
-                {
-                    return false;
-                }
-
-                for(var i = 17;i>=0;i --)
-                    iSum += (Math.pow(2,i) % 11) * parseInt(str.charAt(17 - i),11);
-                if(iSum%11!=1)
-                {
-                    return false;
-                }
-            }
-            else if (idCardLength==15)
-            {
-                sBirthday = "19" + str.substr(6,2) + "-" + Number(str.substr(8,2)) + "-" +
-                    Number(str.substr(10,2));
-                d = new Date(sBirthday.replace(/-/g,"/"));
-                var dd = d.getFullYear().toString() + "-" + (d.getMonth()+1) + "-" + d.getDate();
-                if(sBirthday != dd)
-                {
-                    return false;
-                }
-            }
-            return true;
-        },
-        message:'请输入正确的身份证号'
-    }
-});
-},{}],32:[function(require,module,exports){
-/**
- * Created by evans on 16/12/15.
- */
-module.exports= {
-    $open: function (str, params, isAjax, cb) {
-        var ele;
-        var body=document.body;
-        var innerMaxCss={}, outerMaxCss={},maxHeight,maxWidth;
-        var rootSlideMenu = top.byid('root-menu') || {};
-        //var fixBarHeight = window.config.winFixBarHeight||params.fixBarHeight||48;
-
-        //固定底部按钮
-        var fitLayout = function (ele) {
-
-            var win=ele.closest('.window');
-            var panelHead=win.children('.epanel-header');
-            var fixBar=ele.children('.win-fix-bar');
-
-            win.addClass('hidden');
-
-            outerMaxCss = {maxHeight:maxHeight};
-            innerMaxCss = {maxHeight:maxHeight,overflowY:'auto'};
-
-            outerMaxCss.maxHeight=outerMaxCss.maxHeight-5;
-            innerMaxCss.maxHeight=innerMaxCss.maxHeight-5;
-
-            if(panelHead.length){
-                var headHeight=getRect(panelHead[0]).height;
-                innerMaxCss.maxHeight=innerMaxCss.maxHeight-headHeight;
-            }
-
-            if(fixBar.length){
-                //win.addClass('has-fix-bar');
-                var barHeight=getRect(fixBar[0]).height;
-                innerMaxCss.maxHeight=innerMaxCss.maxHeight-barHeight;
-                outerMaxCss.paddingBottom=barHeight;
-            }
-
-            win.css(outerMaxCss);
-            ele.css(innerMaxCss);
-
-            //info([params.height,innerMaxCss.maxHeight,outerMaxCss.maxHeight,outerMaxCss.maxHeight-])
-
-            win.removeClass('hidden');
-            ele.on('click', '.cm-cancel-btn,.win-close-btn', function () {
-                $(this).closest('.window-body').$close();
-            });
-        };
-
-        var calcSize=function(win){
-
-            if(params.width == 'max'){
-                params.width=win.width-20;
-            }
-            else if(params.width == 'full'){
-                params.width=win.width;
-            }
-
-            if(params.height == 'max'){
-                params.height=win.height-20;
-                params.top=10;
-            }
-            else if(params.height == 'full' || parseInt(params.height) > win.height){
-                params.height=win.height;
-                params.top=0;
-            }
-            else{
-                params.top=params.top||Math.min((win.height-~~params.height)/2,win==top?60:0);
-            }
-            maxHeight=win.height-params.top;
-            //outerMaxCss = {maxHeight:maxHeight,overflowY:'auto'}
-            //innerMaxCss = {visibility:'visible',maxHeight:maxHeight-36};//-fixBarHeight};//36+48=84,36为弹窗自带的title条的高度,48为底部固定按钮的高度
-
-        };
-
-        //tab弹窗转用$append
-        if (typeof params == 'string') {
-            return window.$append.apply(this, [].slice.call(arguments));
-        }
-
-        //默认不可缩小拉伸,模态显示,允许滚动条,空白标题
-        ('maximizable' in params) || (params.maximizable = false);
-        ('minimizable' in params) || (params.minimizable = false);
-        ('collapsible' in params) || (params.collapsible = false);
-        ('resizable' in params) || (params._resizable = false);
-        ('scroll' in params) || (params.scroll = true);
-        ('modal' in params) || (params.modal = true);
-        ('cache' in params) || (params.cache = false);
-        ('doSize' in params) || (params.doSize = true);
-        ('shadow' in params) || (params.shadow = false);
-        ('title' in params) || (params.title = ' ');
-        ('height' in params) || (params.height = 'auto');
-        ('mask' in params) || (params.mask = 'global');
-        ('style' in params) || (params.style = {});//'max-height':window.height-20+'px', 'max-width':window.width-20+'px'});
-        ('center' in params) || (params.center = 'global');
-
-
-        //小于921的完全可以用辅助遮罩模式
-        //if(parseInt(params.width)<921 && params.mode=='full-wrap'){
-        //    params.mode=='help-mask';
-        //}
-
-        //var fn = function(ele){
-        //    (params.onClose||window.voidFn)();
-        //    ele[0].id=ele[0].id||('eui-win-'+new Date().getTime());
-        //    $(body).data('open-params', params); //目前只有原有元素的弹窗可以缓存参数,用于直接发动 $('#mydiv').open();
-        //}
-        var fn = params.onClose||window.voidFn;
-
-
-        //三种模态方
-        if (window != top) {
-            var topMain=top.$('#admin-design-main');//top.$('body>div:first-child');
-            var topMainWrap=top.$('#main-wrap');
-            var bodyAgent=$(body).children('.body-agent')[0]||$(body).children(':first-child')[0];
-
-
-            //避免引发重绘
-            window._cancelGlobalReFixTbTime=new Date().getTime();
-
-            //延续上一个弹窗的模式
-            if(topMain.hasClass('full-win-mode')){
-                params.mode='full-win';
-            }
-            else if(topMain.hasClass('help-mask-mode')){
-                params.mode='help-mask';
-            }
-            else{
-                params.mode=params.mode||'trans-agent';
-            }
-
-            topMain.addClass(params.mode+'-mode');
-
-            //辅助遮罩方案
-            if(params.mode=='help-mask'){
-
-                calcSize(window);
-
-                var scrollTop=body.scrollTop;
-                var disabledScroll=function(){body.scrollTop=scrollTop};
-                $(window).on('scroll',disabledScroll);
-
-                //废弃,改用addClass控制help-mask显示/隐藏
-                //topMainWrap.hasClass('full-wrap')||top.showHelpMask(window.width+30>top.width);
-
-                //暗化滚动条(仍然可滚)
-                //$(body).addClass('darken-scroll');
-
-                //彻底禁用滚轮会影响弹窗自身滚动
-                //window.disabledMouseWheel(bodyAgent);
-
-                //使用overflow:hidden
-                //var completedCSS=getComputedStyle(body);
-                //var scrollDis=body.scrollHeight-window.height-parseInt(completedCSS['margin-top'])-parseInt(completedCSS['margin-bottom']);
-                //$(body).addClass(scrollDis>0 ? 'holdScrollWidth overflowHidden':'overflowHidden');
-
-                params.onClose = function () {
-                    if($(body).children('.window-mask:visible').length==0){
-
-                        $(window).off('scroll',disabledScroll);
-                        topMain.removeClass('trans-agent-mode help-mask-mode full-win-mode');
-
-                        //以上对应的四种返回方式
-                        //top.hideHelpMask();
-                        //$(body).removeClass('darken-scroll');
-                        //window.enabledMouseWheel(bodyAgent);
-                        //$(body).removeClass('overflowHidden holdScrollWidth');
-                    }
-                    fn(ele);
-                };
-
-                var slideWidth=getRect(rootSlideMenu).width;
-                var residue=window.innerWidth-parseInt(params.width);
-                var maxLeft=params.width ? residue/-2 : -Infinity;//log(window.innerWidth)
-                var marginLeft=Math.max(slideWidth/-2, residue<slideWidth ? 0:Math.min(maxLeft,0) );
-                //如果不够调整为全局居中就放弃,让eui自动在内部居中即可
-                //正数的marginLeft是因为 弹窗宽度大于窗口宽度了, 导致eui生成的left为负值往左缩入. 这个时候即使用marginLeft正值右移也是没用的. 因为弹窗宽度太大, 左边显示了,右边也是放不下的.info(marginLeft)
-                ('margin-left' in params.style) || (params.style['margin-left']=marginLeft);//Math.min(0,marginLeft);
-
-
-
-            }
-            //最大化frame方案
-            else if(params.mode=='full-win'){
-
-                calcSize(top);
-
-                topMainWrap.addClass('full-wrap');
-                params.top=params.top||50;
-                params.onClose = function () {
-
-                    topMain.removeClass('trans-agent-mode help-mask-mode full-win-mode');
-                    topMainWrap.removeClass('full-wrap');
-                    $(body).removeClass('overflowHidden').removeClass('holdScrollWidth');
-                    fn(ele);
-                };
-
-            }
-
-            //移形换影方案 mock-agent
-            else{
-                calcSize(top);
-
-                var scrollY = body.scrollTop;
-                var scrollX = body.scrollLeft;
-                $(body).addClass(top.$('body').hasClass('sb-l-m') ?'in-sb-l-m-full-wrap':'in-full-wrap');
-                topMainWrap.addClass('full-wrap mock-agent');
-                bodyAgent.scrollTop=scrollY;
-
-                $('[refix]').each(function(){
-                    var $this=$(this);
-                    var cls=$this.attr('refix');
-                    cls=cls||'y';
-                    cls=='x' && (cls='refix-x');
-                    cls=='y' && (cls='refix-y');
-                    cls=='x,y' && (cls='refix-x refix-y');
-                    $this.attr('refix',cls);
-                    $this.addClass(cls);
-                });
-
-                params.onClose = function () {
-                    //所有弹窗都关闭了,才恢复
-                    if ($(body).children('.window.animated').length == 0) {
-                        topMain.removeClass('trans-agent-mode help-mask-mode full-win-mode');
-
-                        topMainWrap.removeClass('full-wrap');
-                        $(body).removeClass('in-full-wrap in-sb-l-m-full-wrap');
-                        body.scrollTop = scrollY;
-                        body.scrollLeft = scrollX;
-
-                        $('[refix]').each(function(){
-                            var $this=$(this);
-                            var cls=$this.attr('refix');
-                            $this.removeClass(cls);
-                        });
-                    }
-                    fn(ele);
-                };
-            }
-
-        }else{
-            //calcSize(window);
-        }
-
-
-        //三种加载方式
-        ele = arguments[0].jquery ? arguments[0] : null;
-
-
-        if (ele || str.indexOf('#') == 0) {
-
-
-            ele = $(str).addClass('e-win-wrap');
-            //innerMaxCss.overflowY = 'auto';
-            ele.show().window(params).window('hcenter')
-                .parent().addClass('animated fadeInDown').end();
-            fitLayout(ele);
-
-
-        }
-        else if (isAjax) {
-
-
-            ele = $('<div class="e-win-wrap" dynamic>').css({overflow: params.scroll ? 'auto' : 'hidden'});
-
-            if (window.$cache(str)) {
-
-                ele.window(params).css(outerMaxCss).html(window.$cache(str))
-                    .parent().addClass('animated fadeInDown').css(innerMaxCss).end();
-
-                setTimeout(function () {
-                    cb && cb();
-                }, 0);
-
-                fitLayout(ele);
-
-            } else {
-
-                ele.window(params).css(outerMaxCss).load(getViewPath(str), function (res) {
-
-                    window.$cache(str,res);
-                    cb && cb();
-                    fitLayout(ele);
-
-                }).parent().addClass('animated fadeInDown').css(innerMaxCss).end();
-            }
-
-
-        }
-        else {
-
-
-            str = getViewPath(str);
-
-            var id = '' + Date.format('MMDDhhmmssS');
-
-            ele = $('<div class="e-win-wrap overhide" dynamic win-id="{1}"><iframe scrolling="{0}" win-id="{1}"></iframe></div>'.format(params.scroll ? 'auto' : 'no', id));
-
-            //setTimeout(function(){
-            top._mol_wins[id] = ele.window(params).css(outerMaxCss)
-                                    .find('iframe').attr('src', str).end()
-                                    .parent().addClass('animated fadeInDown').css(innerMaxCss).end();
-            //},0);
-
-
-        }
-
-        ele.data('open-params', params); //目前只有原有元素的弹窗可以缓存参数,用于直接发动 $('#mydiv').open();
-
-        //hasMask && $('.window-mask').last().css('background-color','transparent');
-
-
-        return ele;
     }
 }
 },{}],33:[function(require,module,exports){
@@ -23139,7 +23244,6 @@ var dateSelects={
     'season':'本季度',
     'year':'本年'
 };
-
 var dateOptionsInit = function(data){
     var $this=$(this);
     //var selected=defaults.indexOf(data.default);
@@ -23208,6 +23312,7 @@ window.$widget('date-options2',function(){
         init:dateOptionsInit
     };
 });
+
 //行内选择组件
 window.$widget('inline-select',function(){
     return {
@@ -23338,7 +23443,7 @@ window.$widget('query-btns',function(){
         template:'_temp/query-btns.htm',
         init:function(data){
             var $this=$(this);
-            queryRestInit.call($this.find('.cm-query-btn'),'x-query',data)
+            queryRestInit.call($this.find('.cm-query-btn'),'x-query',data);
             queryRestInit.call($this.find('.cm-reset-btn'),'x-reset',data);
         }
     };
@@ -23472,7 +23577,7 @@ window.$behavior('dict',function(){
     return {
         importing:['dict'],
         init:function(data){
-            var $this=$(this).addClass('dict');
+            var $this=$(this).addClass('dict').attr('x-dict','');
             var dictName=$this.attr('dict-name');
             var xName=$this.attr('x-name');
             if(!dictName && !xName){
@@ -23514,13 +23619,18 @@ window.$behavior('kyjcry-picker',function(){
     return {
         importing: ['dict'],
         init: function (data) {
-            var $this = $(this);
-            $this.extractor(function(obj){
+            var $this = $(this).attr('x-dict','');
+            $this.extractor(function(queryObj){
                 var key=$this.attr('dict-name');
                 var dictInputId=$this.attr('dict-id');
                 var dictVal=$this.find('#'+dictInputId).val();
                 var searchVal=$this.find('#query-kyjcry-input-hidden').val();
-                obj[key] = dictVal || searchVal;
+                var result=dictVal || searchVal;
+                if(queryObj){
+                    queryObj[key] = result;
+                }else{
+                    return result;
+                }
             });
         }
     }
@@ -23537,14 +23647,6 @@ window.$behavior('in-wrap',function(){
     }
 });
 
-
-    window.extending({
-        setSubPrj:function(key){
-            var subPrj=config.subPrj[key];
-            config.prjName=subPrj.prjName;
-            config.restfuls=subPrj.restfuls||config.restfuls;
-        }
-    });
 
 
 },{}]},{},[4])

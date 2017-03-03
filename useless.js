@@ -8,4 +8,4 @@
  * zhang mengjia
  * you peidan
  */
-window.importing=function(){};
+window.importing=window.setSubPrj=window.byid=function(){};

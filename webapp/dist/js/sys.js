@@ -1,4 +1,4 @@
-
+setSubPrj('xk');
 //公用方法
 function trimAll(selector) {
     $(selector+' input,'+selector+' textarea').each(function (i,el) {

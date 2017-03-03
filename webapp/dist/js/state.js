@@ -1,7 +1,7 @@
 /**
  * Created by yao on 2017/1/17.
  */
-
+setSubPrj('xk');
 $state
 .on('spa-t01',{
     importing:['sys.js'],

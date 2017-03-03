@@ -1,0 +1,62 @@
+{
+  "flag": 1,
+  "totalCount": 6,
+  "msg": null,
+  "data": [
+    {
+      "id": "2c9180985a8418c9015a937a59e20f4e",
+      "rowNum": 1,
+      "loginToken": "abe0f702365e1c3d0111afe36ab4c679",
+      "loginUser": "admin",
+      "loginUserId": "1d202a556d9d413f9f61bb777eb3c345",
+      "loginUserIp": "127.0.0.1",
+      "loginTime": "2017-03-03 17:22:33"
+    },
+    {
+      "id": "2c9180985a8418c9015a9374c5b10d69",
+      "rowNum": 2,
+      "loginToken": "56167506cf07deba8acf47b96d8c115d",
+      "loginUser": "admin",
+      "loginUserId": "1d202a556d9d413f9f61bb777eb3c345",
+      "loginUserIp": "0:0:0:0:0:0:0:1",
+      "loginTime": "2017-03-03 17:16:27"
+    },
+    {
+      "id": "2c9180985a8418c9015a9374069c0d68",
+      "rowNum": 3,
+      "loginToken": "13b27fdca776627653b345a94b491a83",
+      "loginUser": "admin",
+      "loginUserId": "1d202a556d9d413f9f61bb777eb3c345",
+      "loginUserIp": "0:0:0:0:0:0:0:1",
+      "loginTime": "2017-03-03 17:15:39"
+    },
+    {
+      "id": "2c9180985a8418c9015a9373af330d67",
+      "rowNum": 4,
+      "loginToken": "aa9c05afcb0e40372c0cb5a1f06c7188",
+      "loginUser": "admin",
+      "loginUserId": "1d202a556d9d413f9f61bb777eb3c345",
+      "loginUserIp": "0:0:0:0:0:0:0:1",
+      "loginTime": "2017-03-03 17:15:16"
+    },
+    {
+      "id": "2c9180985a8418c9015a92d803d30d62",
+      "rowNum": 5,
+      "loginToken": "61c661c68e69e139da4702c3e0885336",
+      "loginUser": "admin",
+      "loginUserId": "1d202a556d9d413f9f61bb777eb3c345",
+      "loginUserIp": "0:0:0:0:0:0:0:1",
+      "loginTime": "2017-03-03 14:25:14"
+    },
+    {
+      "id": "2c9180985a8418c9015a9207faf40cfa",
+      "rowNum": 6,
+      "loginToken": "40d9699abf71623cbae348d236027361",
+      "loginUser": "sys",
+      "loginUserId": "f6a0f963d2e84a6eb4ce61d2879b5333",
+      "loginUserIp": "0:0:0:0:0:0:0:1",
+      "loginTime": "2017-03-03 10:38:00"
+    }
+  ],
+  "extraRes": null
+}

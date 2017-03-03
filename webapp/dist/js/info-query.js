@@ -2,6 +2,7 @@
  * Created by XiongYing on 2017/2/10.
  * 现勘-信息查询模块
  */
+setSubPrj('xk');
 //全文检索
 function infoFulltextSearch() {
 

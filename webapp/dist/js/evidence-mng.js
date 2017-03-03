@@ -2,7 +2,7 @@
  * Created by XiongYing on 2017/2/10.
  * 现勘-物证管理模块
  */
-
+setSubPrj('xk');
 /*提取物品查询列表action*/
 var takeGoodsFaqhAct = makeAct('sys/sysOrganization/dict_unit'),//查询发案区划字典
     takeGoodsListAct = makeAct('sceneQuery/sceneCollectedGoods/query');//查询列表

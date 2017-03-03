@@ -2,7 +2,7 @@
  * Created by XiongYing on 2017/2/10.
  * 现勘-模板管理模块
  */
-
+setSubPrj('xk');
 /*录入项模板管理action*/
 var sysInputTempLateListAct = makeAct('sceneCollecting/inputTemplate/query'),
     editInputTemplateAct = makeAct('sceneCollecting/inputTemplate/upd'),

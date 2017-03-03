@@ -2,6 +2,7 @@
  * Created by XiongYing on 2017/2/10.
  * 现勘-管理统计模块
  */
+setSubPrj('xk');
 
 /*十类案件统计action*/
 var tenCasesQueryAct = makeAct('statistics/tenSceneInputAmount/query'), //统计

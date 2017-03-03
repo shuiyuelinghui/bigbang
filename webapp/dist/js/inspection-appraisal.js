@@ -2,6 +2,7 @@
  * Created by XiongYing on 2017/2/10.
  * 现勘-检验鉴定模块
  */
+setSubPrj('xk');
 //痕迹物证查询列表
 function traceEvidenceQuery() {
     importing('dict',function (scope) {

@@ -20349,6 +20349,9 @@ var setEleData=function(val,always){
     else if($ele.is('[x-table]')){
         $ele.table(val);
     }
+    else if(typeof val=='string'){
+        $ele.html(val);
+    }
     else{
         $ele.template(val,$ele.data('helper'),$ele.data('allow-html'),val);
     }
@@ -23511,7 +23514,7 @@ function showMoreCondition(){
 }
 window.$widget('more-condition',function(){
     return {
-        template:'<div class="more-condition" title="展开查询条件栏"><span>展开查询条件</span><i class="toggle-icon icon-angle-up icon-angle-down"></i></div>',
+        template:'<div class="more-condition" title="展开查询条件"><span>展开查询条件</span><i class="toggle-icon icon-angle-up icon-angle-down"></i></div>',
         init:function(data){
             toggleMoreCondition.call(this,data)
         }

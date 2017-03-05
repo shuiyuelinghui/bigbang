@@ -23017,7 +23017,7 @@ var pubScanFn=function(attr,arg0,arg1){
         }
     }));
 
-    return dtd;
+    return dtd.promise();
 };
 
 
@@ -23033,34 +23033,17 @@ var pubScanFn=function(attr,arg0,arg1){
 
 //use promise for callback subReplace or subInclude
 $.fn.scanSubWidget=function(cb){
-    //var cb,regSelfBehavior;
-    //if(typeof arguments[0]=='function'){
-    //    cb=arguments[0];
-    //    regSelfBehavior=arguments[1];
-    //}else{
-    //    regSelfBehavior=arguments[0];
-    //}
-    var $this=this;
-    //$this.find('[replace]').replace(function(){
-    //    $this.find('[include]').include(function(){
-    //        $this.find('[widget]').widget(function(){
-    //            $this.find('[behavior]').behavior(function(){
-    //                typeof cb=='function' && cb();
-    //            });
-    //        });
-    //    });
-    //});
-    //console.log($('.all-fix-wrap').length)
-    //regSelfBehavior && $this.behavior();
-    //console.info($('.all-fix-wrap').length)
 
-    return $this.find('[replace]').replace()
+    var $this=this;
+
+    //if the newEle is not only one-wrap, it's newEles, so, need add them self back
+    return $this.find('[replace]').addBack().replace()
         .done(function(){
-            return $this.find('[include]').include();
+            return $this.find('[include]').addBack().include();
         }).done(function(){
-            return $this.find('[widget]').widget();
+            return $this.find('[widget]').addBack().widget();
         }).done(function(){
-            return $this.find('[behavior]').behavior();
+            return $this.find('[behavior]').addBack().behavior();
         }).done(function(){
             return typeof cb=='function' && cb();
         });

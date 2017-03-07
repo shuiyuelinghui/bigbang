@@ -4629,6 +4629,9 @@ function sysUserManagement(){
             }
             organ.attr('organIdValue',selectedNode.id);
             $open('#'+id,{width:800,title:'新增模块'});
+            $('#'+id).find(':password')
+                .attr('data-options','required:true')
+                .attr('placeholder','');//add-by zmj 新增、修改同一个页面，修改页面密码不是必填
             $('.process-permissions').on('click','p',function(){
                 //取消别的选项的高亮
                 $('.process-permissions').find('p').removeClass('active');
@@ -4656,6 +4659,9 @@ function sysUserManagement(){
             $('#'+id).find('input[name="organName"]').addClass('hide');
             $('#'+id).find('.drop-down-box').addClass('hide');
 
+            $('#'+id).find(':password').val('')
+                .attr('data-options','')
+                .attr('placeholder','不输入新密码，原始密码不变');//add-by zmj 新增、修改同一个页面，修改页面密码不是必填
             if(userType==2) {//保管单位修改
                 $('#bus-permissions').html('');
                 //权限角色
@@ -4705,6 +4711,9 @@ function sysUserManagement(){
             }else{
                 //修改
                 act = managementSysUserEditAct;
+            }
+            if(dataObj.password == ''){
+                delete dataObj['password'];
             }
             $post(act,dataObj,function (res) {
                 $('#'+id).$close();

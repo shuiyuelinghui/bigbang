@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" x-app>
+<head>
+    <meta charset="UTF-8">
+    <title>实验室委托机构查询</title>
+    <link rel="stylesheet" type="text/css" href="../../css/base-plus.css?version=0.92">
+    <!--<link rel="stylesheet" type="text/css" href="../../css/lib-sys.css?version=0.92">-->
+</head>
+<body>
+<div class="body-agent">
+
+
+<div class="query-block" x-form="queryData">
+
+    <div class="query-block-row">
+        <div>
+            <label class="qc-label-m">鉴定机构代码：</label>
+            <input x-name="deptNo"  class="cm-input">
+        </div>
+    </div>
+
+    <div class="query-block-row">
+        <div widget="inline-select" id="query-xczt" data-name="deptCode" data-label="鉴定机构代码" data-ops="不限:,暂存:0,已提交:1,不合格:2,关注:3" data-default=""></div>
+    </div>
+
+    <p widget="query-btns"></p>
+</div>
+
+
+
+
+
+<p widget="more-condition"></p>
+<div class="query-result">
+
+    <div>
+        <ul id="treeDemo" class="ztree"></ul>
+    </div>
+
+
+
+    <div widget="query-title"></div>
+    <table id="dtb" x-table="listData"></table>
+    <div class="paging"></div>
+</div>
+
+
+
+
+
+</div>
+</body>
+<script src="../../js/base.js?version=0.91"></script>
+<!--<script src="../../js/lib-sys-dept.js?version=0.91"></script>-->
+
+
+<script>
+
+
+   importing('ztree',function(scope){
+
+       var deptAct = makeAct('login');
+
+       var tableSetting={
+           cols:[
+               {title:'序号',map:'$rownum'},
+               {title:'名称',map:'name'},
+               {title:'类别',map:'pid'}
+           ],
+           check:true
+       };
+
+       var treeSetting = {
+           data: {
+               simpleData: {
+                   enable:'pid',		//扁平数据，pid表示父节点的ID
+                   idKey:'id',
+                   pIdKey:'pid'		//默认的pId改为pid，注意默认I为大写
+               }
+           },
+       };
+
+       var $form= $('[x-form]')//.bind2(scope,'queryData')
+
+       var $tree=$("#treeDemo");
+
+       var $tb = $('#dtb').table(tableSetting);
+
+       var listData = [{rownum:1,dname:'测试一',dtype:'大队'},{rownum:1,dname:'测试二',dtype:'测试机构'},{rownum:1,dname:'测试三',dtype:'侦查机构'}];
+
+       var nodes = [
+           {id:1,  pid:0, name: "测试机构"},
+           {id:11, pid:1, name: "大队"},
+           {id:12, pid:1, name: "大队2"},
+           {id:111, pid:11, name: "中队sdf"},
+           {id:112, pid:11, name: "中队子节点ert"}
+       ];
+
+
+
+       $form.on('x-query',function(){
+
+           //log('我被查询了');
+
+           $post(deptAct,scope.get('queryData'),function(res){
+
+               //后台数据实例化树
+               res.data=nodes;
+
+               $tree.ztree(treeSetting, res.data);
+
+
+               //后台数据实例化表格
+               res.data=listData
+               scope.set('listData',res.data);
+           })
+
+       });
+
+
+
+
+
+
+
+
+
+   });
+
+
+
+</script>
+</html>

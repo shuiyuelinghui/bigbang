@@ -177,6 +177,23 @@
               "menuType": 0,
               "appType": 0,
               "children": null
+            },
+            {
+              "systemId": "lib",
+              "resourceId": "2c918092598137cb015981fe11614242",
+              "resourceName": "机构查询列表",
+              "resourceEnName": "lib-sys-dept",
+              "superId": "2c918092598137cb015981fb6be31235",
+              "name": "机构查询列表",
+              "url": "lib/lib-sys-dept.html",
+              "state": "lib/lib-sys-dept.html",
+              "icon": null,
+              "visibleState": 0,
+              "orderNum": 1,
+              "note": "机构查询列表",
+              "menuType": 0,
+              "appType": 0,
+              "children": null
             }
           ]
         },

@@ -2,8 +2,8 @@
  * Created by XiongYing on 2017/2/10.
  * 现勘-信息查询模块
  */
-setSubPrj('xk');
 //全文检索
+setSubPrj('xk');
 function infoFulltextSearch() {
 
     importing('popover','saved-condition.js','previewPro',function () {
@@ -987,9 +987,9 @@ function infoSimpleQuery() {
          //提取值
          $('#test-form').checkOut();
          */
+        window.s=scope;
 
         /*
-         window.s=scope;
          //绑定
          /*s.bind('queryData','.query-block');
          //设置

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编号规则设置</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="number-rules-set" class="common-style body-agent">
+    <div class="query-result">
+        <div class="content-folder treeTableType clearfix">
+            <div class="result-left">
+                <div class="save-title">
+                    <p>用户列表</p>
+                </div>
+                <div class="clear input-search">
+                    <input type="text" class="in-search"/>
+                    <i class="icon-search ico-search"></i>
+                    <a class="icon-remove-sign ico-error"></a>
+                </div>
+                <div id="folder" class="ztree">
+                    <ul class="ztree" id="approval-tree"></ul>
+                </div>
+            </div>
+            <div class="result-right right-table">
+                <p widget="query-result" id="number-rules-result" data-btns="add,remove" data-table="number-rules-tb"></p>
+            </div>
+        </div>
+    </div>
+    <!--新增/编辑页面-->
+    <div id="ruleNumberPage" class="hider">
+        <div class="query-block-row mt10">
+            <div class="fl qc-group-l">
+                <label class="qc-label-xl">编号规则大类：</label>
+                <select name="proofNumType" id="proofNumType" class="common-select" tpsource="#proofNumType-tp" value="{proofNumType}"></select>
+            </div>
+            <div class="fl qc-group-l">
+                <label class="qc-label-xl">编号规则小类：</label>
+                <select name="proofNumSmallType" id="proofNumSmallType" class="common-select" tpsource="#proofNumType-tp" value="{proofNumSmallType}"></select>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="pr clearfix valRuleWrapper">
+                <label class="qc-label-xl fl mr5">取值规则：</label>
+                <!--日期-->
+                <select name="valueRule" id="valueRule" class="common-select ruleOption" tpsource="#proofNumType-tp" value="{valueRule}"></select>
+                <!--数据项-->
+                <ul id="sjx-more" class="fl hider ruleOption">
+                    <li class="noCutOut">
+                        <input type="radio" name="jqfs" checked nType="0">
+                        <span class="epanel-title">不截取</span>
+                        <input name="cutRule" type="hidden" value="0">
+                    </li>
+                    <li class="before">
+                        <input type="radio" name="jqfs" nType="1">
+                        <label>前</label>
+                        <a class="icon-minus"></a>
+                        <input name="cutRule" type="text" class="num" value="1">
+                        <a class=" icon-plus plus-btn"></a>
+                        <label>位</label>
+                    </li>
+                    <li class="after">
+                        <input type="radio" name="jqfs" nType="2">
+                        <label>后</label>
+                        <a class="icon-minus"></a>
+                        <input name="cutRule" type="text" class="num" value="1">
+                        <a class=" icon-plus plus-btn"></a>
+                        <label>位</label>
+                    </li>
+                    <li class="between">
+                        <input type="radio" name="jqfs" nType="3">
+                        <label>从</label>
+                        <a class="icon-minus"></a>
+                        <input name="cutRule" type="text" class="num" value="0">
+                        <a class=" icon-plus plus-btn"></a>
+                        <label>到</label>
+                        <a class="icon-minus"></a>
+                        <input name="cutRule" type="text" class="num" value="1">
+                        <a class=" icon-plus plus-btn"></a>
+                        <label>位</label>
+                    </li>
+                </ul>
+                <!--流水号-->
+                <ul id="lsh-more" class="fl hider ruleOption">
+                    <li>
+                        <label>初始值：</label>
+                        <a class="icon-minus"></a>
+                        <input name="intinalValue" type="text" class="num" value="1">
+                        <a class="icon-plus plus-btn"></a>
+                    </li>
+                    <li>
+                        <label>增量：</label>
+                        <a class="icon-minus"></a>
+                        <input name="incermentValue" type="text" class="num" value="1">
+                        <a class="icon-plus plus-btn"></a>
+                    </li>
+                    <li>
+                        <label>长度：</label>
+                        <a class="icon-minus"></a>
+                        <input name="maxValue" type="text" class="num" value="9999">
+                        <a class="icon-plus plus-btn"></a>
+                    </li>
+                </ul>
+                <b class="cm-ok-btn ok-butt hider"></b>
+            </div>
+        </div>
+        <hr class="cm-dash hider cutOfRule">
+        <div class="query-block-row valPosition hider">
+            <div class="fl">
+                <label class="qc-label-xl">取值起始位置：</label>
+                <input name="stratPosition" type="text" class="common-input" value="{stratPosition}">
+            </div>
+            <div class="fl qc-group-l">
+                <label class="qc-label-xl">取值长度：</label>
+                <input name="valueLength" type="text" class="common-input" value="{valueLength}">
+            </div>
+        </div>
+        <div class="query-block-row rulePreview hider">
+            <h4 class="qc-label-xl">编号规则效果预览</h4>
+            <input name="proofNumValue" type="text" class="common-input" value="{proofNumValue}">
+            <span>=></span>
+            <input name="resultValue" type="text" class="common-input" value="{resultValue}">
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn hider">保存</button>
+            <button class="query-reset-btn query-btn call-off">取消</button>
+        </div>
+    </div>
+</div>
+</body>
+<!--编号规则大类、取值规则--template-->
+<script type="text/template" id="proofNumType-tp">
+    <option value="{dictKey}">{dictValue}</option>
+</script>
+
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysNumRuleSet == 'function' && sysNumRuleSet();</script>
+</html>

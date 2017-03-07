@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书签设置</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="bookmarks-set" class="common-style body-agent">
+    <!--<div class="query-condition-hide mt15">-->
+        <!--<div class="common-panel-heading">-->
+            <!--<ul class="clearfix">-->
+                <!--<li class="active">查询条件</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="query-block cq-condition">-->
+            <!--<div class="query-block-row">-->
+                <!--<div class="fl qc-group scope">-->
+                    <!--<span name="sfzp" class="qc-label-m">保管单位名称：</span>-->
+                    <!--<span class="option">-->
+							<!--<u class="query-block-active query-block-init">不限</u>-->
+							<!--<u val="0" class="">XXX公安局刑事侦查大队</u>-->
+							<!--<u val="1">XXX公安局刑事侦查大队</u>-->
+                            <!--<u val="1">XXX公安局刑事侦查大队</u>-->
+                            <!--<u val="1">XXX公安局刑事侦查大队</u>-->
+                            <!--<u val="1">XXX公安局刑事侦查大队</u>-->
+						<!--</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="query-block-row">-->
+                <!--<div class="fl qc-group scope">-->
+                    <!--<span name="sfzp" class="qc-label-m">模板类型：</span>-->
+                    <!--<span class="option">-->
+							<!--<u class="query-block-active query-block-init">不限</u>-->
+							<!--<u val="0" class="">保管申请单</u>-->
+							<!--<u val="1">借出申请单</u>-->
+                            <!--<u val="1">归还申请单</u>-->
+                            <!--<u val="1">销毁申请单</u>-->
+                            <!--<u val="1">保管确认单</u>-->
+                    <!--</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="query-block-row">-->
+                <!--<div class="fl qc-group scope">-->
+                    <!--<span name="sfzp" class="qc-label-m">书签名称：</span>-->
+                    <!--<input name="sljjry" type="text" class="cm-input">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr class="cm-dash" />-->
+            <!--<div class="demand-btn">-->
+                <!--<button class="query-reset-btn query-btn">查询</button>-->
+                <!--<button class="query-reset-btn reset-btn">重置</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="query-result">
+        <!--<h4 class="query-title">查询结果-->
+            <!--<span>共找到<b>15条</b>符合的记录</span>-->
+        <!--</h4>-->
+        <div class="content-folder treeTableType clearfix">
+            <div class="result-left">
+                <div class="save-title">
+                    <p>书签设置列表</p>
+                </div>
+                <div class="clear input-search">
+                    <input type="text" class="in-search"/>
+                    <i class="icon-search ico-search"></i>
+                    <a class="icon-remove-sign ico-error"></a>
+                </div>
+                <!--<div class="tree-iconBox">-->
+                    <!--<button class=" icon-plus ico-add"> 添加</button>-->
+                    <!--<button class=" icon-trash ico-remove"> 删除</button>-->
+                <!--</div>-->
+                <!--<div class="clear input-search">-->
+                    <!--<input type="text" class="in-search"/>-->
+                    <!--<i class="icon-search ico-search"></i>-->
+                    <!--<a class="icon-remove-sign ico-error"></a>-->
+                <!--</div>-->
+                <div id="folder" class="ztree">
+                    <ul class="ztree" id="approval-tree"></ul>
+                </div>
+            </div>
+            <div class="result-right">
+                <div class="query-condition-hide clear query-condition-right">
+                    <div class="common-panel-heading">
+                        <h5 class="query-title">
+                            <i class="icon-search ico-ser"></i>
+                            查询结果
+                            <span>共找到<b>15条</b>符合的记录</span>
+                        </h5>
+                    </div>
+                    <div class="tree-iconBox icon-outside">
+                        <button class=" icon-plus ico-add"> 添加</button>
+                        <button class=" icon-trash ico-remove"> 删除</button>
+                    </div>
+                    <div class="right-table">
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th><input type="checkbox"> 序号</th>
+                                <th></th>
+                                <th>模板名称</th>
+                                <th>模板类型</th>
+                                <th>所属单位</th>
+                                <th>顺序</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><input type="checkbox"> 1</td>
+                                <td><a class="icon-minus subtract"></a></td>
+                                <td>保管申请单V2.0</td>
+                                <td>保管申请单</td>
+                                <td>XXXX公安刑事侦查大队</td>
+                                <td>1</td>
+                                <td><a class="icon-pencil"></a><a class="icon-trash trash"></a><a class=" icon-circle-arrow-down down-icon"></a><a class=" icon-circle-arrow-up up-icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"> 2</td>
+                                <td><a class="icon-minus subtract"></a></td>
+                                <td>借出申请单V1.0</td>
+                                <td>借出申请单</td>
+                                <td>XXXX公安刑事侦查大队</td>
+                                <td>2</td>
+                                <td><a class="icon-pencil"></a><a class="icon-trash trash"></a><a class=" icon-circle-arrow-down down-icon"></a><a class=" icon-circle-arrow-up up-icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"> 3</td>
+                                <td><a class="icon-minus subtract"></a></td>
+                                <td>归还申请单V1.0</td>
+                                <td>归还申请单</td>
+                                <td>XXXX公安刑事侦查大队</td>
+                                <td>3</td>
+                                <td><a class="icon-pencil"></a><a class="icon-trash trash"></a><a class=" icon-circle-arrow-down down-icon"></a><a class=" icon-circle-arrow-up up-icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"> 4</td>
+                                <td><a class="icon-minus subtract"></a></td>
+                                <td>销毁申请单V1.0</td>
+                                <td>销毁申请单</td>
+                                <td>XXXX公安刑事侦查大队</td>
+                                <td>4</td>
+                                <td><a class="icon-pencil"></a><a class="icon-trash trash"></a><a class=" icon-circle-arrow-down down-icon"></a><a class=" icon-circle-arrow-up up-icon"></a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"> 5</td>
+                                <td><a class="icon-minus subtract"></a></td>
+                                <td>保管确认单V1.0</td>
+                                <td>保管确认单</td>
+                                <td>XXXX公安刑事侦查大队</td>
+                                <td>5</td>
+                                <td><a class="icon-pencil"></a><a class="icon-trash trash"></a><a class=" icon-circle-arrow-down down-icon"></a><a class=" icon-circle-arrow-up up-icon"></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="footer">
+                            <div class="foot-show">
+                                每页显示
+                                <select>
+                                    <option></option>
+                                </select>
+                                条
+                            </div>
+                            <div class="foot-right">
+                                共5页
+                                到第<input type="text" class="text-page">页
+                                <span class="go">确定</span>
+                            </div>
+                        </div>
+                        <div class="paging"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>
+    setSubPrj('wz');
+    importing('ztree',function () {
+        //var queryOrganTree = 'sys/sysOrganization/queryOrganTree';//单位树
+        //$post(makeAct(queryOrganTree),{officeType:'1'},function(res){
+        //var data = res.data;
+
+        var treeObj,setting = {
+            view: {
+                selectedMulti: false
+            }
+        },zTreeNodes = [
+            {"name":"网站导航", open:true, children: [
+                { "name":"google", "url":"http://g.cn", "target":"_blank"},
+                { "name":"baidu", "url":"http://baidu.com", "target":"_blank"},
+                { "name":"sina", "url":"http://www.sina.com.cn", "target":"_blank"}
+            ]
+            }
+        ];
+        zTreeObj = $('#approval-tree').ztree(setting, zTreeNodes);
+        treeObj = $.fn.zTree.getZTreeObj("approval-tree");
+        treeObj.expandAll(true);
+        //});
+    })
+</script>
+</html>

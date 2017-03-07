@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据字典设置</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="number-dictionary-set" class="common-style body-agent">
+    <!--<div class="query-condition-hide mt15">-->
+        <!--<div class="common-panel-heading">-->
+            <!--<ul class="clearfix">-->
+                <!--<li class="active">查询条件</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="query-block cq-condition">-->
+            <!--<div class="query-block-row">-->
+                <!--<div class="fl qc-group scope">-->
+                    <!--<span name="sfzp" class="qc-label-m">字典项：</span>-->
+                    <!--<input name="sljjry" type="text" class="cm-input" placeholder="请填写字典项">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="query-block-row">-->
+                <!--<div class="fl qc-group scope">-->
+                    <!--<span name="sfzp" class="qc-label-m">字典名称：</span>-->
+                    <!--<input name="sljjry" type="text" class="cm-input" placeholder="请填写字典名称">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="query-block-row">-->
+                <!--<div class="fl qc-group scope">-->
+                    <!--<span name="sfzp" class="qc-label-m">字典值：</span>-->
+                    <!--<input name="sljjry" type="text" class="cm-input" placeholder="请填写字典值">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr class="cm-dash" />-->
+            <!--<div class="demand-btn">-->
+                <!--<button class="query-reset-btn query-btn">查询</button>-->
+                <!--<button class="query-reset-btn reset-btn">重置</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="query-result">
+        <!--<h4 class="query-title">查询结果-->
+            <!--<span>共找到<b>15条</b>符合的记录</span>-->
+        <!--</h4>-->
+        <div class="content-folder treeTableType clearfix">
+            <div class="result-left">
+                <div class="save-title">
+                    <p>数据字典设置项</p>
+                </div>
+                <div class="tree-iconBox">
+                    <button class="icon-plus ico-add"> 添加</button>
+                    <!--<button class=" icon-trash ico-remove"> 删除</button>-->
+                </div>
+                <div class="clear input-search">
+                    <input type="text" class="in-search"/>
+                    <i class="icon-search ico-search"></i>
+                    <a class="icon-remove-sign ico-error"></a>
+                </div>
+                <!--<div class="clear input-search">-->
+                    <!--<input type="text" class="in-search"/>-->
+                    <!--<i class="icon-search ico-search"></i>-->
+                    <!--<a class="icon-remove-sign ico-error"></a>-->
+                <!--</div>-->
+                <div id="folder" class="ztree">
+                    <ul class="ztree" id="dict-tree"></ul>
+                </div>
+            </div>
+            <p widget="query-result" id="dict-result" data-btns="add,remove" data-table="dict-tb"></p>
+        </div>
+    </div>
+</div>
+
+<div class="hide">
+    <div id="editor">
+        <input name="id" value="{id}" class="hide">
+        <input name="dictLevel" value="{dictLevel}" class="hide">
+        <div class="query-block-row">
+            <div class="qc-group-f">
+                <span class="qc-label-l">上级目录：</span>
+                <input name="parentKey" type="text" class="cm-input gray-input" value="{parentKey}" readonly>
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">字典类型：</span>
+                <input name="rootKey" type="text" class="cm-input add-valid gray-input" data-options="required:true" value="{rootKey}" readonly>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-f">
+                <span class="qc-label-l">字典名称：</span>
+                <input name="dictValue" type="text" class="cm-input add-valid" data-options="required:true" value="{dictValue}">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">字典代码：</span>
+                <input name="dictKey" type="text" class="cm-input add-valid" data-options="required:true" value="{dictKey}">
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-f">
+                <span class="qc-label-l">字典拼音：</span>
+                <input name="dictSpell" type="text" class="cm-input add-valid" data-options="required:true" value="{dictSpell}" {dictSpell}>
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">是否启用：</span>
+                <div class="choose">
+                    <input type="radio" name="openFlag" value="1" ><span>是</span>
+                    <input type="radio" name="openFlag" value="0" ><span>否</span>
+                </div>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-f">
+                <span class="qc-label-l">显示顺序：</span>
+                <input name="dictSort" type="text" class="cm-input add-valid" data-options="required:true" value="{dictSort}">
+            </div>
+        </div>
+        <div class="Physical-btn">
+            <hr class="cm-dash" />
+            <div class="query-reset">
+                <button class="approval-save query-reset-btn query-btn basic-btn">保存</button>
+                <button class="approval-cancel query-reset-btn query-btn call-off">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysNumDictionarySet == 'function' && sysNumDictionarySet();</script>
+</html>

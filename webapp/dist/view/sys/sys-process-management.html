@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流程管理</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="process-management" class="common-style body-agent">
+    <div class="query-result">
+        <div class="content-folder clearfix">
+            <div id="folder" class="result-left">
+                <div class="save-title">
+                    <p>保管单位列表</p>
+                </div>
+                <div class="clear input-search">
+                    <input type="text" class="in-search"/>
+                    <i class="icon-search ico-search"></i>
+                    <a class="icon-remove-sign ico-error"></a>
+                </div>
+                <div class="ztree">
+                    <ul id="bgdw-tree" class="ztree"></ul>
+                </div>
+            </div>
+            <div class="result-right">
+
+                <div class="query-condition-hide clear">
+                    <div class="common-panel-heading">
+                        <ul class="clearfix">
+                            <li class="active elementary-information"  tab-direct="#bsic-information">保管流程</li>
+                            <li class="profession-set tab-direct"  tab-direct="#business-set">借出流程</li>
+                            <li class="port-set tab-direct"  tab-direct="#interface-set">移交流程</li>
+                            <li class=" tab-direct"  tab-direct="#destruction-process">销毁流程</li>
+                            <li class=" tab-direct"  tab-direct="#return-process">归还流程</li>
+                        </ul>
+                    </div>
+                    <div class="query-block tab-block" id="bsic-information">
+                        <div class="pro-pic">
+                            <div class="foreground-picture">
+                                <img src="../../img/lcgl.png">
+                                <button class="butn begin">开始</button>
+                                <button class="butn save-apply">保管申请</button>
+                                <button class="butn audit">审核</button>
+                                <button class="butn accept">受理</button>
+                                <button class="butn save-task">保管任务编制</button>
+                                <button class="butn perform">执行</button>
+                                <button class="butn refer">提交</button>
+                                <button class="butn staging">暂存</button>
+                                <button class="butn approved ">审核通过</button>
+                                <button class="butn review-return">审核退回</button>
+                                <button class="butn accept-ed">受理通过</button>
+                                <button class="butn accept-return">受理退回</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="query-block tab-block hide" id="business-set">
+                        <div class="pro-pic">
+                            <div class="foreground-picture">
+                                <img src="../../img/jclc.png">
+                                <button class="butn begin">开始</button>
+                                <button class="butn save-apply">借出申请</button>
+                                <button class="butn audit">审核</button>
+                                <button class="butn accept">审批</button>
+                                <button class="butn save-task">受理</button>
+                                <button class="butn perform">执行</button>
+                                <button class="butn refer">提交</button>
+                                <button class="butn staging">暂存</button>
+                                <button class="butn approved ">审核通过</button>
+                                <button class="butn review-return">审核退回</button>
+                                <button class="butn accept-ed">受理通过</button>
+                                <button class="butn accept-return">受理退回</button>
+                                <button class="butn agreement-to">同意受理意见</button>
+                                <button class="butn disagree">不同意受理意见</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="query-block tab-block hide" id="interface-set">
+                        <div class="pro-pic">
+                            <div class="foreground-picture">
+                                <img src="../../img/jclc.png">
+                                <button class="butn begin">开始</button>
+                                <button class="butn save-apply">借出申请</button>
+                                <button class="butn audit">审核</button>
+                                <button class="butn accept">审批</button>
+                                <button class="butn save-task">受理</button>
+                                <button class="butn perform">执行</button>
+                                <button class="butn refer">提交</button>
+                                <button class="butn staging">暂存</button>
+                                <button class="butn approved ">审核通过</button>
+                                <button class="butn review-return">审核退回</button>
+                                <button class="butn accept-ed">受理通过</button>
+                                <button class="butn accept-return">受理退回</button>
+                                <button class="butn agreement-to">同意受理意见</button>
+                                <button class="butn disagree">不同意受理意见</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="query-block tab-block hide" id="destruction-process">
+                        <div class="pro-pic">
+                            <div class="foreground-picture">
+                                <img src="../../img/jclc.png">
+                                <button class="butn begin">开始</button>
+                                <button class="butn save-apply">借出申请</button>
+                                <button class="butn audit">审核</button>
+                                <button class="butn accept">审批</button>
+                                <button class="butn save-task">受理</button>
+                                <button class="butn perform">执行</button>
+                                <button class="butn refer">提交</button>
+                                <button class="butn staging">暂存</button>
+                                <button class="butn approved ">审核通过</button>
+                                <button class="butn review-return">审核退回</button>
+                                <button class="butn accept-ed">受理通过</button>
+                                <button class="butn accept-return">受理退回</button>
+                                <button class="butn agreement-to">同意受理意见</button>
+                                <button class="butn disagree">不同意受理意见</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="query-block tab-block hide" id="return-process">
+                        <div class="pro-pic">
+                            <div class="foreground-picture">
+                                <img src="../../img/jclc.png">
+                                <button class="butn begin">开始</button>
+                                <button class="butn save-apply">借出申请</button>
+                                <button class="butn audit">审核</button>
+                                <button class="butn accept">审批</button>
+                                <button class="butn save-task">受理</button>
+                                <button class="butn perform">执行</button>
+                                <button class="butn refer">提交</button>
+                                <button class="butn staging">暂存</button>
+                                <button class="butn approved ">审核通过</button>
+                                <button class="butn review-return">审核退回</button>
+                                <button class="butn accept-ed">受理通过</button>
+                                <button class="butn accept-return">受理退回</button>
+                                <button class="butn agreement-to">同意受理意见</button>
+                                <button class="butn disagree">不同意受理意见</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="editor ">
+        <h4>编辑</h4>
+        <div class="query-block tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l overstriking">动作名称设置</span>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">标准名称：</span>
+                    <input name="" type="text" class="cm-input">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">自定义名称：</span>
+                    <input name="" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l overstriking">动作留痕名称</span>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">标准名称：</span>
+                    <input name="" type="text" class="cm-input">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">自定义名称：</span>
+                    <input name="" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l overstriking">节点外部状态设置</span>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">标准名称：</span>
+                    <input name="" type="text" class="cm-input">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">自定义名称：</span>
+                    <input name="" type="text" class="cm-input">
+                </div>
+            </div>
+            <hr class="cm-dash" />
+            <div class="query-reset">
+                <button class="query-reset-btn query-btn basic-btn">保存</button>
+                <button class="query-reset-btn query-btn call-off">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>
+    setSubPrj('wz');
+    importing('ztree',function () {
+        var treeObj,selectedNode = [];
+
+        //初始化树
+        initBgdwTree(selectedNode.id,zTreeOnClick,true);
+        //点击tree搜索单位
+        cmQueryTreeFn(initBgdwTreeFun);
+
+        function initBgdwTreeFun(){
+            initBgdwTree(selectedNode.id,zTreeOnClick,true);
+        }
+
+        //节点点击事件
+        function zTreeOnClick(event, treeId, treeNode) {
+            selectedNode = treeNode;
+            //querySysOrganization({id:treeNode.id});
+        };
+
+        //准备数据源
+        var sysmodifydata = makeAct('sys/sysProcessControl/upd',''),//根据id修改数据
+            sysqueryingflow = makeAct('sys/sysProcessControl/queryByOrganId','')//根据单位id查询数据
+
+
+    })
+</script>
+</html>

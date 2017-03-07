@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设备设置</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="equipment-set" class="common-style body-agent">
+    <div class="query-block">
+        <div class="common-panel-heading">
+            <ul class="clearfix">
+                <li class="active">设备设置</li>
+            </ul>
+        </div>
+        <div class="query-result">
+            <div class="content-folder treeTableType clearfix">
+                <div class="result-left">
+                    <div class="save-title">
+                        <p>设备列表</p>
+                    </div>
+                    <div class="input-search mt5">
+                        <input type="text" class="in-search" placeholder="请输入物证室名称"/>
+                        <i class="icon-search ico-search"></i>
+                        <a class="icon-remove-sign ico-error"></a>
+                    </div>
+                    <div id="folder" class="ztree">
+                        <ul class="ztree" id="approval-tree"></ul>
+                    </div>
+                </div>
+                <div class="result-right">
+                    <div widget="query-result"
+                         id="module-result"
+                         data-table="sys-devSetting-tb"
+                         data-btns="dropDown,remove,color">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--恒湿消毒净化一体机60新增-->
+    <div id="all-in-one-add" class="cm-addPage hider" type="1001" title="恒湿消毒净化一体机60">
+        <input type="hidden" name="equipmentType" value="1001" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input validate" data-options="required:true">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1001">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1001">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1001">取消</button>
+        </div>
+    </div>
+    <!--恒湿消毒净化一体机60修改-->
+    <div id="all-in-one-edit" class="cm-editPage hider" type="1001" title="恒湿消毒净化一体机60" tpsource="#all-in-one-edit-tp"></div>
+    <!--恒湿消毒净化一体机120新增-->
+    <div id="all-in-two-add" class="cm-addPage hider" type="1002" title="恒湿消毒净化一体机120">
+        <input type="hidden" name="equipmentType" value="1002" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input" class="cm-input validate" data-options="required:true">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1002">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1002">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1002">取消</button>
+        </div>
+    </div>
+    <!--恒湿消毒净化一体机120修改-->
+    <div id="all-in-two-edit" class="cm-editPage hider" type="1002" title="恒湿消毒净化一体机120" tpsource="#all-in-two-edit-tp"></div>
+    <!--空气质量云测仪新增-->
+    <div id="air-quality-add" class="cm-addPage hider" type="1003" title="空气质量云测仪">
+        <input type="hidden" name="equipmentType" value="1003" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input" class="cm-input validate" data-options="required:true">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1003">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1003">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1003">取消</button>
+        </div>
+    </div>
+    <!--空气质量云测仪修改-->
+    <div id="air-quality-edit" class="cm-editPage hider" type="1003" title="空气质量云测仪" tpsource="#air-quality-edit-tp"></div>
+    <!--壁挂式直通风新风新增-->
+    <div id="hot-wind-add" class="cm-addPage hider" type="1004" title="壁挂式直通风新风">
+        <input type="hidden" name="equipmentType" value="1004" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input" class="cm-input validate" data-options="required:true">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1004">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1004">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1004">取消</button>
+        </div>
+    </div>
+    <!--壁挂式直通风新风修改-->
+    <div id="hot-wind-edit" class="cm-editPage hider" type="1004" title="壁挂式直通风新风" tpsource="#hot-wind-edit-tp"></div >
+    <!--壁挂式热交换新风新增-->
+    <div id="hot-air-add" class="cm-addPage hider" type="1005" title="壁挂式热交换新风">
+        <input type="hidden" name="equipmentType" value="1005" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input" class="cm-input validate" data-options="required:true">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1005">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1005">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1005">取消</button>
+        </div>
+    </div>
+    <!--壁挂式热交换新风修改-->
+    <div id="hot-air-edit" class="cm-editPage hider" type="1005" title="壁挂式热交换新风" tpsource="#hot-air-edit-tp"></div>
+    <!--空调新增-->
+    <div id="air-conditioning-add" class="cm-addPage hider" type="1006" title="空调">
+        <input type="hidden" name="equipmentType" value="1006" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input" class="cm-input validate" data-options="required:true">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1006">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1006">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1006">取消</button>
+        </div>
+    </div>
+    <!--空调修改-->
+    <div id="air-conditioning-edit" class="cm-editPage hider" type="1006" title="空调" tpsource="#air-conditioning-edit-tp"></div>
+    <!--区域控制器新增-->
+    <div id="zoneController-add" class="cm-addPage hider" type="1007" title="区域控制器">
+        <input type="hidden" name="equipmentType" value="1007" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">区域控制器名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">IP地址：</span>
+                    <input name="equipmentIp" type="text" class="cm-input">
+                </div>
+                <div class="qc-group-f mb15">
+                    <span class="qc-label-l">端口号：</span>
+                    <input name="equipmentPort" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1007">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1007">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1007">取消</button>
+        </div>
+    </div>
+    <!--区域控制器修改-->
+    <div id="zoneController-edit" class="cm-editPage hider" type="1007" title="区域控制器" tpsource="#zoneController-edit-tp"></div>
+    <!--智能柜大屏终端新增-->
+    <div id="intelligenceCabinet-add" class="cm-addPage hider" type="1008" title="智能柜大屏终端">
+        <input type="hidden" name="equipmentType" value="1008" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">选择物证柜：</span>
+                    <select class="cm-input" name="proofArkId">
+                        <option></option>
+                    </select>
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">终端名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">MAC地址：</span>
+                    <input name="equipmentMac" type="text" class="cm-input">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">IP地址：</span>
+                    <input name="equipmentIp" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row mb15">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">同步时间：</span>
+                    <input name="equipentSyncTime" type="text" class="cm-input input-date">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1008">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1008">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1008">取消</button>
+        </div>
+    </div>
+    <!--智能柜大屏终端修改-->
+    <div id="intelligenceCabinet-edit" class="cm-editPage hider" type="1008" title="智能柜大屏终端" tpsource="#intelligenceCabinet-edit-tp"></div>
+    <!--RFID打印机新增-->
+    <div id="rfidPrinter-add" class="rfidPrinter cm-addPage hider" type="1009" title="RFID打印机">
+        <input type="hidden" name="equipmentType" value="1009" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input" class="cm-input validate" data-options="required:true">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">IP地址：</span>
+                    <input name="equipmentIp" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row Using-personnel">
+                <div class="">
+                    <span class="qc-label-l ">使用人员：</span>
+                    <div class="sysUserList"></div>
+                    <ul id="sysUserListDetail" class="sysUserListDetail hider" tpsource="#sysUserListDetail-tp"></ul>
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1009">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1009">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1009">取消</button>
+        </div>
+    </div>
+    <!--RFID打印机修改-->
+    <div id="rfidPrinter-edit" class="rfidPrinter cm-editPage hider" type="1009" title="RFID打印机" tpsource="#rfidPrinter-edit-tp"></div>
+    <!--NVR硬盘录像机新增-->
+    <div id="nvrVcr-add" class="cm-addPage hider" type="1010" title="NVR硬盘录像机">
+        <input type="hidden" name="equipmentType" value="1010" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications mb15">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input" class="cm-input validate" data-options="required:true">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1010">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1010">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1010">取消</button>
+        </div>
+    </div>
+    <!--NVR硬盘录像机修改-->
+    <div id="nvrVcr-edit" class="cm-editPage hider" type="1010" title="NVR硬盘录像机" tpsource="#nvrVcr-edit-tp"></div>
+    <!--摄像机新增-->
+    <div id="vidicon-add" class="cm-addPage hider" type="1011" title="摄像机">
+        <input type="hidden" name="equipmentType" value="1011" />
+        <div class="tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备名称：</span>
+                    <input name="equipmentName" type="text" class="cm-input" class="cm-input validate" data-options="required:true">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">IP地址：</span>
+                    <input name="equipmentIp" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row mb15">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">设备编码：</span>
+                    <input name="equipmentCode" type="text" class="cm-input">
+                </div>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn" type="1011">保存</button>
+            <button class="query-reset-btn query-btn saveAdd-btn" type="1011">保存并新增</button>
+            <button class="query-reset-btn query-btn call-off" type="1011">取消</button>
+        </div>
+    </div>
+    <!--摄像机修改-->
+    <div id="vidicon-edit" class="cm-editPage hider" type="1011" title="摄像机" tpsource="#vidicon-edit-tp"></div>
+</div>
+<!--恒湿消毒净化一体机60---template-->
+<script type="text/template" id="all-in-one-edit-tp">
+    <input type="hidden" name="equipmentType" value="1001" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="{equipmentName}" class="cm-input validate" data-options="required:true">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1001">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1001">取消</button>
+    </div>
+</script>
+<!--恒湿消毒净化一体机120--template-->
+<script type="text/template" id="all-in-two-edit-tp">
+    <input type="hidden" name="equipmentType" value="1002" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="{equipmentName}" class="cm-input validate" data-options="required:true">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1002">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1002">取消</button>
+    </div>
+</script>
+<!--空气质量云测仪--template-->
+<script type="text/template" id="air-quality-edit-tp">
+    <input type="hidden" name="equipmentType" value="1003" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="{equipmentName}" class="cm-input validate" data-options="required:true">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1003">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1003">取消</button>
+    </div>
+</script>
+<!--壁挂式直通风新风--template-->
+<script type="text/template" id="hot-wind-edit-tp">
+    <input type="hidden" name="equipmentType" value="1004" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="{equipmentName}" class="cm-input validate" data-options="required:true">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1004">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1004">取消</button>
+    </div>
+</script>
+<!--壁挂式热交换新风--template-->
+<script type="text/template" id="hot-air-edit-tp">
+    <input type="hidden" name="equipmentType" value="1005" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="equipmentName" class="cm-input validate" data-options="required:true">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1005">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1005">取消</button>
+    </div>
+</script>
+<!--空调--template-->
+<script type="text/template" id="air-conditioning-edit-tp">
+    <input type="hidden" name="equipmentType" value="1006" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="{equipmentName}" class="cm-input validate" data-options="required:true">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1006">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1006">取消</button>
+    </div>
+</script>
+<!--区域控制器--template-->
+<script type="text/template" id="zoneController-edit-tp">
+    <input type="hidden" name="equipmentType" value="1007" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">区域控制器名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="{equipmentName}">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-f">
+                <span class="qc-label-l">IP地址：</span>
+                <input name="equipmentIp" type="text" class="cm-input" value="{equipmentIp}">
+            </div>
+            <div class="qc-group-f mb15">
+                <span class="qc-label-l">端口号：</span>
+                <input name="equipmentPort" type="text" class="cm-input" value="{equipmentPort}">
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1007">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1007">取消</button>
+    </div>
+</script>
+<!--智能柜大屏终端--template-->
+<script type="text/template" id="intelligenceCabinet-edit-tp">
+    <input type="hidden" name="equipmentType" value="1008" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">选择物证柜：</span>
+                <select class="cm-input" name="proofArkId">
+                    <option></option>
+                </select>
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">终端名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="{equipmentName}">
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-f">
+                <span class="qc-label-l">MAC地址：</span>
+                <input name="equipmentMac" type="text" class="cm-input" value="{equipmentMac}">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">IP地址：</span>
+                <input name="equipmentIp" type="text" class="cm-input" value="{equipmentIp}">
+            </div>
+        </div>
+        <div class="query-block-row mb15">
+            <div class="qc-group-f">
+                <span class="qc-label-l">同步时间：</span>
+                <input name="equipentSyncTime" type="text" class="cm-input input-date" value="{equipentSyncTime}">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1008">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1008">取消</button>
+    </div>
+</script>
+<!--RFID打印机--template-->
+<script type="text/template" id="rfidPrinter-edit-tp">
+    <input type="hidden" name="equipmentType" value="1009" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="{equipmentName}" class="cm-input validate" data-options="required:true">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">IP地址：</span>
+                <input name="equipmentIp" type="text" class="cm-input" value="{equipmentIp}">
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+        <div class="query-block-row mb15">
+            <div class="query-block-row Using-personnel">
+                <div class="">
+                    <span class="qc-label-l ">使用人员：</span>
+                    <div class="sysUserList"></div>
+                    <ul id="sysUserListDetailUpd" class="sysUserListDetail hider" tpsource="#sysUserListDetail-tp"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1009">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1009">取消</button>
+    </div>
+</script>
+<!--打印机关联人员--template-->
+<script type="text/template" id="sysUserListDetail-tp">
+    <li>
+        <input type="checkbox" id="{id}"/>
+        <span class="userName"><u>用户账号：</u><u>{userName}</u></span>
+        <span class="trueName"><u>真实姓名：</u><u>{trueName}</u></span>
+        <span class="print"><u>是否关联打印机：</u><u>{ifRFIDUser.isRelevancePrt}</u></span>
+        <span class="equipmentName hide{ifRFIDUser.asNumberType} pd0"><u title="{equipmentName}">( {equipmentName} )</u></span>
+    </li>
+</script>
+<!--NVR硬盘录像机--template-->
+<script type="text/template" id="nvrVcr-edit-tp">
+    <input type="hidden" name="equipmentType" value="1010" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications mb15">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="{equipmentName}" class="cm-input validate" data-options="required:true">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1010">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1010">取消</button>
+    </div>
+</script>
+<!--摄像机--template-->
+<script type="text/template" id="vidicon-edit-tp">
+    <input type="hidden" name="equipmentType" value="1011" />
+    <div class="tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备名称：</span>
+                <input name="equipmentName" type="text" class="cm-input" value="{equipmentName}" class="cm-input validate" data-options="required:true">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">IP地址：</span>
+                <input name="equipmentIp" type="text" class="cm-input" value="{equipmentIp}">
+            </div>
+        </div>
+        <div class="query-block-row mb15">
+            <div class="qc-group-f">
+                <span class="qc-label-l">设备编码：</span>
+                <input name="equipmentCode" type="text" class="cm-input" value="{equipmentCode}">
+            </div>
+        </div>
+    </div>
+    <hr class="cm-dash" />
+    <div class="query-reset">
+        <button class="query-reset-btn query-btn basic-btn" type="1011">保存</button>
+        <button class="query-reset-btn query-btn call-off" type="1011">取消</button>
+    </div>
+</script>
+</body>
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysEquipmentSet == 'function' && sysEquipmentSet();</script>
+</html>

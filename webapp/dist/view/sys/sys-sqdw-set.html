@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>申请单位设置</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+
+<body>
+<div id="sqdw-set" class="common-style body-agent">
+    <div class="query-block"></div>
+    <div class="query-result">
+        <div class="content-folder clearfix">
+            <div class="result-left">
+                <div class="save-title">
+                    <p>申请单位列表</p>
+                </div>
+                <div class="tree-iconBox">
+                    <button class=" icon-plus ico-add"> 添加</button>
+                    <button class=" icon-trash ico-remove"> 删除</button>
+                </div>
+                <div class="clear input-search">
+                    <input type="text" class="in-search"/>
+                    <i class="icon-search ico-search"></i>
+                    <a class="icon-remove-sign ico-error"></a>
+                </div>
+                <div id="folder" class="ztree">
+                    <ul class="ztree" id="approval-tree"></ul>
+                </div>
+            </div>
+            <div class="result-right">
+                <div class="query-condition-hide clear">
+                    <ul class="common-message-header clearfix">
+                        <li class="elementary-information">基本信息</li>
+                        <li></li>
+                    </ul>
+                    <div id="basic-information" class="query-block basic-information" tpsource="#basic-information-tp"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!--基本信息---template-->
+<script type="text/template" id="basic-information-tp">
+    <div class="query-block-row">
+        <div class="qc-group-xxxxl">
+            <span class="qc-label-xxxl"><span class="orangered">★ </span>申请单位名称：</span>
+            <input name="organName" type="text" class="cm-input validate" value="{organName}" data-options="required:true">
+        </div>
+        <div class="qc-group-xxxxl">
+            <span class="qc-label-xxxl"><span class="orangered">★ </span>申请单位代码：</span>
+            <input name="organCode" type="text" class="cm-input validate" value="{organCode}" data-options="required:true,validType:['extLength[12,12]','number']">
+        </div>
+    </div>
+    <div class="query-block-row">
+        <div class="qc-group-xxxxl">
+            <span class="qc-label-xxxl">上级申请单位：</span>
+            <select name="organParentId" value="{organParentId}" class="prevApplyUnit">
+                <option></option>
+            </select>
+        </div>
+    </div>
+    <div class="query-block-row">
+        <div class="fl qc-group-xl">
+            <span class="qc-label-xxxl"><span class="orangered">★ </span>单位简称：</span>
+            <input name="shortenedName" type="text" class="cm-input validate" value="{shortenedName}" data-options="required:true">
+        </div>
+        <div class="fl qc-group-xxxxl">
+            <span class="qc-label-xxxl"><span class="orangered">★ </span>所属保管单位：</span>
+            <select name="organStorageId" class="belongs-save validate" value="{organStorageId}" data-options="required:true">
+                <option></option>
+            </select>
+        </div>
+    </div>
+    <div class="query-block-row">
+        <div class="qc-group-xxxxl">
+            <span class="qc-label-xxxl">地址：</span>
+            <input name="organAdress" type="text" class="cm-input" value="{organAdress}">
+        </div>
+    </div>
+    <div class="query-block-row">
+        <div class="fl qc-group-xl">
+            <span class="qc-label-xxxl">电话：</span>
+            <input name="organTel" type="text" class="cm-input validate" value="{organTel}" data-options="validType:'number'">
+        </div>
+        <div class="fl qc-group-xl sequence">
+            <span class="qc-label-xxxl">顺序：</span>
+            <a class="icon-minus"></a>
+            <input name="organSort" type="text" class="cm-input number-order validate" value="{organSort}" data-options="validType:'number'">
+            <a class=" icon-plus plus-btn"></a>
+        </div>
+    </div>
+    <div class="query-block-row">{{sysUnitinterfaceList:#interface-add-tp}}</div>
+    <div class="win-wrapper-bar">
+        <hr class="cm-dash" />
+        <p class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn">保存</button>
+        </p>
+    </div>
+</script>
+
+
+<!--数据接口---template-->
+<script type="text/template" id="interface-add-tp">
+    <div class="qc-group-xxxxl">
+        <span class="qc-label-xxxl interfaceTypeName">{interfaceTypeName}：</span>
+        <input name="interfaceUrl" type="text" class="cm-input" value="{interfaceUrl}">
+    </div>
+</script>
+
+
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysSqdwSet == 'function' && sysSqdwSet();</script>
+</html>

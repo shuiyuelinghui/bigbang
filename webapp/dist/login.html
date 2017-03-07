@@ -90,6 +90,7 @@
         createLink(prefix+'css/login.css');
         createScript(prefix+'js/base.js',function(){
             //base.js加载好后就可以使用importing了
+            config.mock = 1;
             importing('login.js');
 
             //TODO 显示原来隐藏的图片,从login.html移到login.js中 传prefix

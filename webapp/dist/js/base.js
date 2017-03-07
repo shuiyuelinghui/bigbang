@@ -2,19 +2,19 @@
 module.exports=
 {
   //配置部分
-  "prjName":"xcky3",
+  "prjName":"wzgl",
   "subPrj":{
     "wz":{
       "prjName":"wzgl",
-      "restfuls":["http://192.168.1.211:8888"]
+      "restfuls":["http://192.168.40.231:28094"]
     },
     "xk":{
       "prjName":"xcky3",
-      "restfuls":["http://192.168.1.211:8888"]
+      "restfuls":["http://192.168.40.231:28094"]
     },
     "lib":{
       "prjName":"lib",
-      "restfuls":["http://192.168.1.211:8888"]
+      "restfuls":["http://192.168.40.231:28094"]
     }
   },
   "version":"0.9.2",
@@ -27,7 +27,7 @@ module.exports=
   "mapVersion":2.0,
   "autoCustomCol":1,
   "mapServerPath":"http://192.168.1.168:8101",
-  "mock":1,//设置为0关闭模拟接口
+  "mock":0,//设置为0关闭模拟接口
   "test":0,//设置为test模式时info和log输出,否则不输出
   "useLocalAgent":1,
   "defaultImports":["xtp","xTable","fixTable","customCol","scope","filter","widget"],
@@ -94,7 +94,7 @@ module.exports=
   //},
   //restful服务器根路径 目前只写一个,由nginx配置, 可以写一组, 前台多选一
   "restfuls":[
-    "http://192.168.1.211:8888"
+    "http://192.168.40.231:28094"
   ],
   "restDesc":"上方为restful服务器路径,会自动加上项目名对应到xcky3,下方为具体的业务action登记,登记后使用makeAct('login')就可以得到完整的服务url, 如未登记,则用makeAct('sys/login/login')也能生成全路径",
   //具体的业务action登记, 登记后使用makeAct('login')就可以得到完整的服务url, 如未登记,则用makeAct('sys/login/login')也能生成全路径

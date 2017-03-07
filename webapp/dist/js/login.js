@@ -84,7 +84,7 @@ importing('base.css','login.css','bowser','tooltips','slick',function(){
         if(!checker('#username','用户名不能为空！') || !checker('#password','密码不能为空！')){
             return false;
         }
-        $post(loginAction ,{username:byid('username').value,password:byid('password').value},function(res){
+        $post(loginAction ,{userName:byid('username').value,password:byid('password').value},function(res){
             // log(obj2str(res.data));
             // return false;
             // $post只处理flag==1成功的情况

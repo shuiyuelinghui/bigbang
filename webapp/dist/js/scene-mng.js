@@ -2,7 +2,6 @@
  * Created by XiongYing on 2017/2/10.
  * 现勘-现场管理模块
  */
-setSubPrj('xk');
 /*现场查询action*/
 var sceneQueryAct = makeAct('sceneCollecting/sceneInvestigation/query', ''), //列表查询
     sceneAddAttentionAct = makeAct('sceneCollecting/sceneFollow/add', ''), //关注
@@ -26,15 +25,15 @@ function sceneQueryFn(){
 
         log($('.all-fix-wrap').length)
         var columns = [
-            {title:'序号',       map:'rowNum',                          cls:'mem6 check-it'},
-            {title:'现场勘验号', map:'investigationNo.querySceneKLink', cls:'mem20 nowrap td-left'},
-            {title:'案件关联',   map:'caseNo.querySceneIfExist',        cls:'mem6 pr over-v'},
-            {title:'警情关联',   map:'alarmNo.querySceneIfExist',       cls:'mem6 pr over-v'},
+            {title:'序号',      map:'rowNum',                          cls:'mem6 check-it'},
+            {title:'现场勘验号', map:'investigationNo.querySceneKLink', cls:'mem16 nowrap td-left'},
             {title:'勘验时间',   map:'investigationDateFrom.asCnTime',  cls:'mem14'},
-            {title:'勘验单位',   map:'organName',                       cls:'mem18 td-left'},
+            {title:'勘验单位',   map:'organName',                       cls:'mem22 td-left'},
             {title:'案件类别',   map:'caseType',                        cls:'mem10 td-left'},
             {title:'发案地点',   map:'caseLocation',                    cls:'mem22 td-left'},
             {title:'勘验人',     map:'sceneInvestigator',               cls:'mem16 td-left'},
+            {title:'案件关联',   map:'caseNo.querySceneIfExist',        cls:'mem6 pr over-v'},
+            {title:'警情关联',   map:'alarmNo.querySceneIfExist',       cls:'mem6 pr over-v'},
             {title:'现场图',     map:'scenePicture',                    cls:'mem6'},
             {title:'操作',       map:'opt',                             cls:'mem12 opt td-left',  filter:'querySceneOpt'}
         ];

@@ -43,9 +43,10 @@
                 <div class="type-in-group form-field hide{alarmAcceptNo}" data-field="alarmAcceptNo">
                     <span class="type-in-label-m"><em class="asterisk hide{alarmAcceptNom}">*</em>案(事)件受理号:</span><input type="text" class="cm-input" data-options="required:true{alarmAcceptNom.exNum}">
                 </div>
-                <div class="form-field hide{caseNo}" data-field="caseNo">
+                <div class="type-in-group form-field hide{caseNo}" data-field="caseNo">
                     <span class="type-in-label-m"><em class="asterisk hide{caseNom}">*</em>案件编号:</span><input type="text" id="aqxx-case-no" class="cm-input" data-options="required:true{caseNom.exNum}">
                 </div>
+                <div class="clear"></div>
                 <div class="type-in-group form-field hide{crimeTimeBegin}" data-field="crimeTimeBegin">
                     <span class="type-in-label-m"><em class="asterisk hide{crimeTimeBeginm}">*</em>发案开始时间:</span><input type="text" class="cm-input cm-input-date" data-options="required:true{crimeTimeBeginm.exNum}"><i class="icon-calendar"></i>
                 </div>
@@ -125,7 +126,7 @@
                     </div>
                 </div>
                 <div class="overhide mt10 mb10 hide{sceneOffender}">
-                    <span class="type-in-label-m fl"><em class="asterisk hide{sceneOffenderm}">*</em>报案人/被害人:</span>
+                    <span class="type-in-label-m fl"><br><em class="asterisk hide{sceneOffenderm}">*</em>报案人/被害人:</span>
                     <div class="type-in-tb-wrap overhide fl">
                         <b class="fr cur-p ajxx-add-tr"><i class="icon-plus orange fs16"></i> 添加</b>
                         <table class="type-in-tb form-field clear" data-field="sceneOffender" data-index="1">
@@ -255,7 +256,7 @@
                 <b class="edit add-scene-fr-btn hider"><i class="icon-edit"></i>编辑</b>
                 <b class="save add-scene-fr-btn hider"><i class="icon-edit"></i>保存</b>
                 <b class="add-scene-fr-btn hider isedit"><i class="icon-pencil blue"></i> 画图</b>
-                <b class="fr isedit mr10 hider into-batch-import"><i class="icon-signin orange"></i> 批量导入</b>
+                <b class="fr isedit mr10 hider into-batch-import cur-p"><i class="icon-signin orange"></i> 批量导入</b>
             </div>
             <div class="mcb-form">
                 <div class="type-in-group form-field pr" data-field="bigfield">
@@ -654,7 +655,7 @@
             </div>
             <div class="mcb-form pr">
                 <div class="overhide mt10 mb10 hide{lostGood}">
-                    <span class="type-in-label-m fl">损失物品:</span>
+                    <span class="type-in-label-m fl"><br>损失物品:</span>
                     <div class="type-in-tb-wrap overhide fl">
                         <b class="fr cur-p kyqk-sswp-add"><i class="icon-plus orange fs16"></i> 添加</b>
                         <table class="type-in-tb clear form-field" data-field="sceneLostGoods" id="kyqk-sswp">
@@ -748,7 +749,7 @@
                 <div class="type-in-group form-field hide{videoTime} temperature" style="min-width: 240px;" data-field="videoTime"><span class="type-in-label-m"><em class="asterisk hide{videoTimem}">*</em>录像:</span><input type="text" class="cm-input humidity validate" data-options="required:true{videoTimem.exNum},validType:'number'"><span> 分钟</span></div>
                 <div class="type-in-group form-field hide{recordTime} temperature" style="min-width: 240px;" data-field="recordTime"><span class="type-in-label-m"><em class="asterisk hide{recordTimem}">*</em>录音:</span><input type="text" class="cm-input humidity validate" data-options="required:true{recordTimem.exNum},validType:'number'"><span> 分钟</span></div>
                 <div class="overhide mt10 mb10 clear hide{witness}">
-                    <span class="type-in-label-m fl">见证人:</span>
+                    <span class="type-in-label-m fl"><br>见证人:</span>
                     <div class="type-in-tb-wrap overhide fl">
                         <a href="javascript:;"><b class="fr kyqk-jzr-add"><i class="icon-plus orange fs16"></i> 添加</b></a>
                         <span class="fr dividing">|</span>
@@ -884,7 +885,7 @@
                     <dict class="unready pzcy-line dict dict-validate{crimeNumsm.exNum}" dict-type="radio" dict-root="ZARSLDM" dict-name="zars" id="fxyj-zars"></dict>
                 </div>
                 <div class="type-in-group">
-                    <span class="type-in-label-m fl">作案工具:</span>
+                    <span class="type-in-label-m fl"><br>作案工具:</span>
                     <div class="type-in-tb-wrap overhide fl">
                         <b class="fr cur-p fxyj-zagj-add"><i class="icon-plus orange fs16"></i> 添加</b>
                         <table class="type-in-tb form-field clear" data-field="sceneCrimeTools">
@@ -2592,7 +2593,7 @@
 <!--文本模板-->
 <script type="text/template" id="text-tp-content">
     <div class="tp-tabs-wrap">
-        {{data:#<i class="icon-file-alt" data-num="{$rownum}" tpname="{templateName}" tpcontent="{content}"></i>#}}
+        {{data:#<i class="icon-file-alt" title="{templateName}" data-num="{$rownum}" tpname="{templateName}" tpcontent="{content}"></i>#}}
     </div>
     <em>当前模板:</em><em class="current-tp">未使用模板</em>
     <i class="icon-trash"></i>

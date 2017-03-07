@@ -1,4 +1,3 @@
-setSubPrj('xk');
 //现勘-新增现场
 importing('dict','popover', 'slick','datepicker','mappicker','hsmap', 'jui',function () {
     var setCache = 60*1000;  //设置定时去缓存form表单的时间
@@ -42,6 +41,15 @@ importing('dict','popover', 'slick','datepicker','mappicker','hsmap', 'jui',func
 
     $filter('getFullPath', function () {
         return fileServerPath+'/'+this.valueOf();
+    });
+
+    //字符串过长截取前后字符中间以省略号代替
+    $filter('overStrEllipsis', function(){
+        if(this.length >= 30) {
+            return this.slice(0, 8) + '......' + this.slice(-8, this.length);
+        } else {
+            return this;
+        }
     });
 
     //生成32位的id
@@ -264,7 +272,8 @@ importing('dict','popover', 'slick','datepicker','mappicker','hsmap', 'jui',func
                 var $hideInput = $this.find('input[type="hidden"]');   //隐藏input
                 if($em.length) {       //存在纯文本时,跳出本次循环
                     $em.attr('data-val', data[field]);
-                    $em.html(data[field+'Cn'] || '');
+                    $em.prop('title', data[field+'Cn'] || '');
+                    $em.html(data[field+'Cn'] && data[field+'Cn'].overStrEllipsis() || '');
                     return;
                 }
                 if($text.length) {     //存在文本框时text,跳出本次循环
@@ -1771,7 +1780,7 @@ importing('dict','popover', 'slick','datepicker','mappicker','hsmap', 'jui',func
             if($em.length) {       //存在纯文本时,跳出本次循环
                 value = $em.attr('data-val');
                 if(needCh){
-                    return $em.text();
+                    return $em.prop('title');
                 }else{
                     return value;
                 }
@@ -1994,8 +2003,8 @@ importing('dict','popover', 'slick','datepicker','mappicker','hsmap', 'jui',func
         setTimeout(function () {
             var form = addScene.getFormAll();
             var act = makeAct('sceneCollecting/sceneInfo/saveToCache');
-            form.sceneInvestigationDispatch.caseTypeCn = $('[data-field="caseType"]').find('.form-txt').text();
-            form.sceneInvestigationDispatch.caseNatureCn = $('[data-field="caseNature"]').find('.form-txt').text();
+            form.sceneInvestigationDispatch.caseTypeCn = $('[data-field="caseType"]').find('.form-txt').prop('title');
+            form.sceneInvestigationDispatch.caseNatureCn = $('[data-field="caseNature"]').find('.form-txt').prop('title');
             $post(act, {inputContent: obj2str(form)}, function () {}, false);
             setTimeout(arguments.callee, setCache);
         }, setCache);
@@ -3934,7 +3943,7 @@ importing('dict','popover', 'slick','datepicker','mappicker','hsmap', 'jui',func
         var $ajxz = $('#aqxx-ajxz');
         var $ajxzSpan = $ajxz.closest('.cus-vl-invalid');
 
-        $ajxz.prev('em').attr('data-val',$caseNature.val()).html($caseNature.attr('data-chval'));
+        $ajxz.prev('em').prop('title', $caseNature.attr('data-chval')).attr('data-val',$caseNature.val()).html($caseNature.attr('data-chval').overStrEllipsis());
         $caseNature.val()?$ajxzSpan.removeClass('cus-vl-invalid'):$ajxzSpan.addClass('cus-vl-invalid');
         $('#edit-case-nature-block').$close();
     }).on('click','#ecnb-cancel-btn',function () {

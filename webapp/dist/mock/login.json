@@ -125,6 +125,23 @@
               "menuType": 0,
               "appType": 0,
               "children": null
+            },
+            {
+              "systemId": "wz",
+              "resourceId": "2c91809259830d9b01598605158201y5",
+              "resourceName": "入库申请",
+              "resourceEnName": "rk-apply",
+              "superId": "2c91809259830d9b01598603cfad01y0",
+              "name": "入库申请",
+              "url": "rk-apply.html",
+              "state": "rk-apply.html",
+              "icon": null,
+              "visibleState": 0,
+              "orderNum": 1,
+              "note": "入库申请",
+              "menuType": 0,
+              "appType": 0,
+              "children": null
             }
           ]
         },

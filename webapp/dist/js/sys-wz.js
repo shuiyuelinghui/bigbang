@@ -1,6 +1,7 @@
 /**
  * Created by admin on 2016/12/20.
  */
+setSubPrj('wz');
 //准备数据源
 var sysApprovalAct = 'sys/sysExamineAppOpption/',
     sysApprovalSearchAct = makeAct(sysApprovalAct + 'query'),//查询-----审批意见设置
@@ -2779,7 +2780,7 @@ function sysEvidenceLibraryManage(){
                 jsonObj:{
                     "queryType":type,//1:查询物证室信息，2:查询物证柜的信息
                     "id":$.trim(id),//物证室ID
-                    "organId":orgId?$.trim(orgId):id//所属单位ID
+                    "organId":orgId?$.trim(orgId):id //所属单位ID
                 },
                 method:datatype?datatype:'post',
                 callback:function(data){
@@ -2843,7 +2844,7 @@ function sysEvidenceLibraryManage(){
                 queryTableList(null,null,type,id,len,orgId,roomid)
             }else if(type!=1 && type!=2){//点击物证柜
                 orgId = nodesObj.getParentNode().getParentNode().id;//单位id
-                queryTableList(cliNodeAct,'GET',type,id,len,orgId)
+                queryTableList(cliNodeAct,'GET',type,id,len,orgId,'')
             }else if(type==2 && len==0){//点击没有物证柜的物证室
                 roomid = id;
                 id = '';
@@ -4117,10 +4118,11 @@ function sysTemplateSet(){
         });
         //添加展开图标
         $filter('setModulePage',function(item){
-            var html = '<a class="show-module-page icon-plus mr5" dictKey="{dictKey}" orgId="{orgId}" title="展开"></a>';
+            var html = '<a class="show-module-page icon-plus mr5" dictKey="{dictKey}" orgId="{orgId}" orgCode="{orgCode}" title="展开"></a>';
             return html.format({
                 dictKey:item.templateType,
-                orgId:item.organizationId
+                orgId:item.organizationId,
+                orgCode:item.organCode
             })
         });
         //是否开启模板
@@ -4150,7 +4152,7 @@ function sysTemplateSet(){
             callback:{
                 onClick:function(event,treeId,treeNode){//treeId:对应 zTree 的treeId, treeNode:被点击的节点 JSON 数据对象
                     selectedNode = treeObj.getSelectedNodes()[0];//赋值选中的节点
-                    loadTreeInfo(treeNode,treeNode.id,treeNode.organName);
+                    loadTreeInfo(treeNode,treeNode.id,treeNode.organName,treeNode.organCode);
                 }
             }
         };
@@ -4173,13 +4175,14 @@ function sysTemplateSet(){
         ];
 
         //查询table列表
-        function queryTableList(orgId,orgName){
+        function queryTableList(orgId,orgName,orgCode){
             allUintData.each(function(item){
-                item.organizationId = orgId;//单位id
+                item.organizationId = '';//单位id
                 item.organName = orgName;//单位名称
+                item.organCode = orgCode;//单位代码
             });
             $('#template-result').find('.total-count').html('5');
-            $('#template-result').find('.cm-add-btn').attr('orgName',orgName).attr('orgId',orgId);//单位名称
+            $('#template-result').find('.cm-add-btn').attr('orgName',orgName).attr('orgId',orgId).attr('orgCode',orgCode);//单位名称
             $('#template-tb').table({
                 data:allUintData,
                 cols:columns,
@@ -4193,7 +4196,8 @@ function sysTemplateSet(){
             $('#template-children-result').pagingList({
                 action:templateQueryAct,
                 jsonObj:{
-                    'organizationId':$('#saveDataInp').attr('orgId') //单位id
+                    // 'organizationId':$('#saveDataInp').attr('orgId') //单位id
+                    'organCode':$('#saveDataInp').attr('orgCode')
                 },
                 callback:function(data){
                     var newData,len;
@@ -4230,19 +4234,20 @@ function sysTemplateSet(){
                 //选中节点的id
                 initId = selectedNode ? selectedNode.id : treeObj.getNodes()[0].childrenNode[0].id;
                 organName = selectedNode ? selectedNode.organName : treeObj.getNodes()[0].childrenNode[0].organName;
+                organCode = selectedNode ? selectedNode.organCode : treeObj.getNodes()[0].childrenNode[0].organCode;
                 console.log(selectedNode)
                 if(!selectedNode){
                     treeObj.selectNode(treeObj.getNodes()[0].childrenNode[0]);//初始化赋
-                    loadTreeInfo(treeObj.getNodes()[0].childrenNode[0],initId,organName);
+                    loadTreeInfo(treeObj.getNodes()[0].childrenNode[0],initId,organName,organCode);
                 }else{
                     treeObj.selectNode(selectedNode);//初始化赋
-                    loadTreeInfo(selectedNode,initId,organName);
+                    loadTreeInfo(selectedNode,initId,organName,organCode);
                 }
             })
         }
         //点击树节点加载基本信息
-        function loadTreeInfo(treeNode,id,organName){
-            queryTableList(id,organName)
+        function loadTreeInfo(treeNode,id,organName,organCode){
+            queryTableList(id,organName,organCode)
         }
         //模板类型函数
         function moduleFormFn(id,cb){
@@ -4304,7 +4309,10 @@ function sysTemplateSet(){
         $('#template-tb').on('click','.show-module-page',function(){
             var $the = $(this);
             $open('#template-children-result',{'title':'子模板页面',width:800});
-            $('#saveDataInp').attr('orgId',$the.attr('orgId')).attr('param',$the.attr('param')).attr('dictKey',$the.attr('dictKey'));//单位id，模板类型
+            $('#saveDataInp').attr('orgId',$the.attr('orgId'))
+                .attr('param',$the.attr('param'))
+                .attr('dictKey',$the.attr('dictKey'))
+                .attr('orgCode',$the.attr('orgCode'));//单位id，模板类型
             queryChildrenTable()
         });
         //点击子模板修改
@@ -4346,7 +4354,6 @@ function sysTemplateSet(){
 
 //用户管理 sys-user-management.html
 function sysUserManagement(){
-    setSubPrj('wz');
     importing('ztree',function () {
         var userType = '2';//用户类别（保管用户2，1申请用户）
         var treeObj,sysModulData  = [];
@@ -4406,7 +4413,6 @@ function sysUserManagement(){
 
         //初始化数据
         function queryTableListSave(userType){
-            alert(config.restfuls)
             $('#module-result-save').pagingList({
                 action:managementSysModuleAct,
                 jsonObj:{
@@ -4785,10 +4791,10 @@ function sysUserManagement(){
 
             if(userType == '2'){
                 //保管单位
-                $('#'+unitBoxId).find('input[name="organName"]').val(treeNode.organName).attr('organIdValue',treeNode.id);
+                $('#'+unitBoxId).find('input[name="organName"]').val(treeNode.organName).attr('organIdValue',treeNode.organCode);
             }else{
                 //申请单位
-                $('#'+unitBoxId).find('input[name="organName"]').val(treeNode.nodeText).attr('organIdValue',treeNode.id);
+                $('#'+unitBoxId).find('input[name="organName"]').val(treeNode.nodeText).attr('organIdValue',treeNode.organCode);
             }
             closeOrganWin();
         }

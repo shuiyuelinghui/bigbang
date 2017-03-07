@@ -3536,7 +3536,7 @@ function sysCommonSet(){
                 return;
             }
         })
-        $('#sysIconImg').previewBox();
+        // $('#sysIconImg').previewBox();
     })
 }
 

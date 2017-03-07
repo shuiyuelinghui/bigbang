@@ -4406,6 +4406,7 @@ function sysUserManagement(){
 
         //初始化数据
         function queryTableListSave(userType){
+            alert(config.restfuls)
             $('#module-result-save').pagingList({
                 action:managementSysModuleAct,
                 jsonObj:{

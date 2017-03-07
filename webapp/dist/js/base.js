@@ -23,9 +23,9 @@
         t.exports = {
             //暂时借用现勘的登录
             prjName: "xcky3",
-            restfuls: ["192.168.40.22:52181"],
+            restfuls: ["http://192.168.40.22:52181"],
             subPrj: {
-                wz: {prjName: "wzgl", restfuls: ["http://192.168.1.211:8888"]},
+                wz: {prjName: "wzgl", restfuls: ["http://192.168.40.231:28094"]},
                 xk: {prjName: "xcky3", restfuls: ["http://192.168.1.211:8888"]},
                 lib: {prjName: "lib", restfuls: ["http://192.168.1.211:8888"]}
             },
@@ -39,7 +39,7 @@
             mapVersion: 2,
             autoCustomCol: 1,
             mapServerPath: "http://192.168.1.168:8101",
-            mock: 1,
+            mock: 0,
             test: 0,
             useLocalAgent: 1,
             defaultImports: ["xtp", "xTable", "fixTable", "customCol", "scope", "filter", "widget"],

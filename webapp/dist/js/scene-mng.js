@@ -2,6 +2,7 @@
  * Created by XiongYing on 2017/2/10.
  * 现勘-现场管理模块
  */
+setSubPrj('xk');
 /*现场查询action*/
 var sceneQueryAct = makeAct('sceneCollecting/sceneInvestigation/query', ''), //列表查询
     sceneAddAttentionAct = makeAct('sceneCollecting/sceneFollow/add', ''), //关注

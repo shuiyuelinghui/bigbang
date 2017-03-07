@@ -3,6 +3,7 @@
  * 现勘-信息查询模块
  */
 //全文检索
+setSubPrj('xk');
 function infoFulltextSearch() {
 
     importing('popover','saved-condition.js','previewPro',function () {

@@ -1,4 +1,5 @@
 //现勘-新增现场
+setSubPrj('xk');
 importing('dict','popover', 'slick','datepicker','mappicker','hsmap', 'jui',function () {
     var setCache = 60*1000;  //设置定时去缓存form表单的时间
     var fileUploadPath = top.sysParams.fileUploadPath; //'http://192.168.1.211:8888'; 图片上传地址

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>审批意见设置</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="app-opinion-set" class="common-style body-agent">
+    <!--<div class="query-condition-hide mt15">-->
+        <!--<div class="common-panel-heading">-->
+            <!--<ul class="clearfix">-->
+                <!--<li class="active">查询条件</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="query-block cq-condition">-->
+            <!--<div class="query-block-row">-->
+                <!--<div class="fl qc-group scope">-->
+                    <!--<span name="sfzp" class="qc-label-m">保管单位名称：</span>-->
+                    <!--<select id="bgdw-query">-->
+                        <!--<option></option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="query-block-row">-->
+                <!--<div class="fl qc-group scope">-->
+                    <!--<span name="sfzp" class="qc-label-m">业务流程节点：</span>-->
+                    <!--<span id="bus-pro-node-query" class="option">-->
+							<!--<u class="query-block-active query-block-init">不限</u>-->
+							<!--<u val="1001">保管受理</u>-->
+							<!--<u val="1002">借出受理</u>-->
+                    <!--</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr class="cm-dash" />-->
+            <!--<div class="demand-btn">-->
+                <!--<button class="approval-search query-reset-btn query-btn">查询</button>-->
+                <!--<button class="approval-reset query-reset-btn reset-btn">重置</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="query-result">
+
+        <div class="content-folder treeTableType clearfix">
+            <div class="result-left">
+                <div class="save-title">
+                    <p>审批意见设置列表</p>
+                </div>
+                <!--<div class="tree-iconBox">-->
+                    <!--<button class=" icon-plus ico-add"> 添加</button>-->
+                    <!--<button class=" icon-trash ico-remove"> 删除</button>-->
+                <!--</div>-->
+                <div class="clear input-search">
+                    <input type="text" class="in-search" placeholder="请输入申请单位名称"/>
+                    <i class="icon-search ico-search"></i>
+                    <a class="icon-remove-sign ico-error"></a>
+                </div>
+                <div id="folder">
+                    <ul id="opption-tree" class="ztree"></ul>
+                </div>
+            </div>
+            <p widget="query-result" id="approval-result" data-btns="add,remove" data-table="approval-tb"></p>
+        </div>
+    </div>
+
+    <div class="hide">
+        <div id="editor">
+            <div id="basic-information-id"  tpsource="#basic-information-tp"></div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/template" id="basic-information-tp">
+    <div class="query-block-row specifications">
+        <div class="qc-group-f">
+            <span class="qc-label-l">保管单位名称：</span>
+            <span name="organName" organIdValue="{organId}">{organName}</span>
+        </div>
+        <div class="qc-group-f">
+            <span class="qc-label-l">业务流程节点：</span>
+            <select id="bus-pro-node" class="common-select">
+                <option value="1001" {businessProcessNode.bgsl}>保管受理</option>
+                <option value="1002" {businessProcessNode.jcsl}>借出受理</option>
+            </select>
+        </div>
+    </div>
+    <div class="query-block-row">
+        <div class="qc-group-xxxxl" data-field="">
+            <span class="qc-label-l">意见分类：</span>
+            <div class="choose">
+                <input type="radio" name="opinion-type" value="1" {opinionType.istg}><span>通过</span>
+                <input type="radio" name="opinion-type" value="0" {opinionType.isbtg}><span>不通过</span>
+            </div>
+        </div>
+    </div>
+    <div class="query-block-row">
+        <div class="qc-group-xxxxl">
+            <span class="qc-label-l dis-able">意见内容：</span>
+            <textarea id="opinionContent-tp" class="approval-describe">{opinionContent}</textarea>
+        </div>
+    </div>
+    <div class="Physical-btn">
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="approval-save query-reset-btn query-btn basic-btn" param="{id}">保存</button>
+            <button class="approval-cancel query-reset-btn query-btn call-off">取消</button>
+        </div>
+    </div>
+</script>
+
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysApprovalOpinionSet == 'function' && sysApprovalOpinionSet();</script>
+</html>

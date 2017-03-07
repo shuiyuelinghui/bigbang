@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>位置管理</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="location-manage" class="common-style body-agent">
+    <div class="query-result">
+        <div class="content-folder treeTableType clearfix">
+            <div class="result-left">
+                <div class="save-title">
+                    <p>位置列表</p>
+                </div>
+                <div id="folder" class="ztree">
+                    <ul id="approval-tree" class="ztree"></ul>
+                </div>
+            </div>
+            <div class="result-right">
+                <div class="query-condition-hide ">
+                    <input type="checkbox" class="check-all"/><label>全选</label>
+                    <button class="icon-print ico-print fr"> 打印</button>
+                    <!--<button class="icon-fullscreen amplification fr"> 放大</button>-->
+                </div>
+                <div class="physicalEvidenceWrapper">
+                    <div id="physicalEvidenceMsg" class="clearfix" tpsource="#physicalEvidenceMsg-tp"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<!--每一节---template-->
+<script type="text/template" id="physicalEvidenceMsg-tp">
+    <ul>{{layerList:#layerList-tp}}</ul>
+</script>
+<!--每一层---template-->
+<script type="text/template" id="layerList-tp">
+    <li class="clearfix">{{boxList:#boxList-tp}}</li>
+</script>
+<!--每一个箱子---template-->
+<script type="text/template" id="boxList-tp">
+    <div class="msg">
+        <img class="barcode{proofLocationCode}">
+        <p>{proofLocationName}</p>
+    </div>
+</script>
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysLocationManage == 'function' && sysLocationManage();</script>
+</html>

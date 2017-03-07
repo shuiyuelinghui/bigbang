@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物证库管理</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="evidence-library-manage" class="common-style body-agent">
+    <!--<p class="bread">系统设置<span class="bread-xie"> >物证库管理</span></p>-->
+    <div class="query-condition-hide mt15">
+        <div class="common-panel-heading">
+            <ul class="clearfix">
+                <li class="active">查询条件</li>
+            </ul>
+        </div>
+        <div class="query-block cq-condition">
+            <div class="query-block-row mt10">
+                <div class="fl qc-group scope">
+                    <span class="qc-label-xl">物证区/室类型：</span>
+                    <select name="proofRoomType" class="cm-input">
+                        <option></option>
+                    </select>
+                </div>
+                <div class="fl qc-group scope">
+                    <span class="qc-label-xl">物证柜类型：</span>
+                    <select name="proofArkType" class="cm-input">
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+            <hr class="cm-dash" />
+            <div class="demand-btn">
+                <button class="query-reset-btn query-btn">查询</button>
+                <button class="query-reset-btn reset-btn">重置</button>
+            </div>
+        </div>
+    </div>
+    <div class="query-result">
+        <div class="content-folder treeTableType clearfix">
+            <div class="result-left">
+                <div class="save-title">
+                    <p>物证库列表</p>
+                </div>
+                <div class="clear input-search">
+                    <input type="text" class="in-search" placeholder="请输入物证室名称"/>
+                    <i class="icon-search ico-search"></i>
+                    <a class="icon-remove-sign ico-error"></a>
+                </div>
+                <div id="folder" class="ztree">
+                    <ul class="ztree" id="approval-tree"></ul>
+                </div>
+            </div>
+            <div class="result-right">
+                <div widget="query-result"
+                     data-id="module-result"
+                     data-table="sys-evidence-tb"
+                     data-btns="add,remove,color">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--新增物证室-->
+    <div id="proofRoomAdd" class="cm-addPage hider" type="1" title="物证室">
+        <div class="query-block tab-block" >
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-l"><span class="orangered">★ </span>物证区/室名称：</span>
+                    <input name="proofRoomName" type="text" class="cm-input validate" data-options="{required:true}">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l gen-re"><span class="orangered">★ </span>物证区/室类型：</span>
+                    <select name="proofRoomType" class="cm-input validate" data-options="{required:true}">
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-f">
+                    <span class="qc-label-l">温度上限：</span>
+                    <input name="temperatureUpperLimit" type="text" class="cm-input">
+                </div>
+                <div class="fl qc-group-f">
+                    <span class="qc-label-l">温度下限：</span>
+                    <input name="temperatureLowerLimit" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="qc-group-f">
+                    <span class="qc-label-l">湿度上限：</span>
+                    <input name="humidityUpperLimit" type="text" class="cm-input">
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">湿度下限：</span>
+                    <input name="humidityLowerLimit" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="qc-group-xxxxl remarkWrapper">
+                    <span class="qc-label-l dis-able">备注：</span>
+                    <textarea name="remark" class="note-re"></textarea>
+                </div>
+            </div>
+            <hr class="cm-dash" />
+            <div class="query-reset">
+                <button class="query-reset-btn query-btn basic-btn">保存</button>
+                <button class="query-reset-btn query-btn saveAdd-btn">保存并新增</button>
+                <button class="query-reset-btn query-btn call-off" type="1">取消</button>
+            </div>
+        </div>
+    </div>
+    <!--修改物证室-->
+    <div id="proofRoomEdit" class="cm-editPage hider" type="1" title="物证室" tpsource="#proofRoomEdit-tp"></div>
+    <!--新增物证柜-->
+    <div id="proofArkAdd" class="cm-addPage hider" type="2" title="物证柜">
+        <div class="query-block tab-block" >
+            <div id="createHeader" class="create createHeader">
+                <div class="title-fiset">
+                    <p>1</p>
+                    <span> 创建柜体</span>
+                    <div class="set-out">
+                        <b class="cm-add-btn createRoom" id="createRoom"></b>
+                        <b class="cm-remove-btn removeRoom hide" id="removeRoom"></b>
+                        <!--<input type="checkbox" id="createRoom"/><label for="createRoom">创建</label>-->
+                    </div>
+                </div>
+                <div class="query-block-row specifications">
+                    <div class="qc-group-f">
+                        <span class="qc-label-l"><span class="orangered">★ </span>物证柜名称：</span>
+                        <input name="arkName" type="text" class="cm-input validate" data-options="required:true" value="{arkName}">
+                    </div>
+                    <div class="qc-group-f">
+                        <span class="qc-label-l"><span class="orangered">★ </span>物证柜类型：</span>
+                        <select name="arkType" class="cm-input validate" data-options="required:true" value="{arkType}"></select>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div class="qc-group-f">
+                        <span class="qc-label-l"><span class="orangered">★ </span>列数：</span>
+                        <input name="arkColumnNo" type="text" class="cm-input validate" data-options="required:true,validType:['colNumRange','number']" value="{arkColumnNo}">
+                    </div>
+                    <div class="qc-group-f">
+                        <span class="qc-label-l"><span class="orangered">★ </span>节数：</span>
+                        <input name="arkSectionNo" type="text" class="cm-input validate" data-options="required:true,validType:['pitchNumRange','number']" value="{arkSectionNo}">
+                    </div>
+                </div>
+            </div>
+            <div class="create evidenceMsg hider">
+                <div class="title-fiset">
+                    <p>2</p>
+                    <span> 编辑物证柜信息</span>
+                </div>
+                <div class="rowNumber">
+                    <span class="border-left"></span>
+                    <ul id="rowNumberList" class="clearfix" tpsource="#rowNumberList-tp"></ul>
+                </div>
+                <ul id="proofArkList" class="proofArkList" tpsource="#proofArkList-tp"></ul>
+            </div>
+            <hr class="cm-dash" />
+            <div class="query-reset hider">
+                <button class="query-reset-btn query-btn basic-btn">保存</button>
+                <button class="query-reset-btn query-btn call-off">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<!--修改物证室--template-->
+<script type="text/template" id="proofRoomEdit-tp">
+    <div class="query-block tab-block" >
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-l">物证区/室名称：</span>
+                <input name="proofRoomName" type="text" class="cm-input validate " value="{proofRoomName}" data-options="{required:true}">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l gen-re">物证区/室类型：</span>
+                <select name="proofRoomType" class="cm-input validate" value="{proofRoomType}" data-options="{required:true}">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-f">
+                <span class="qc-label-l">温度上限：</span>
+                <input name="temperatureUpperLimit" type="text" class="cm-input" value="{temperatureUpperLimit}">
+            </div>
+            <div class="fl qc-group-f">
+                <span class="qc-label-l">温度下限：</span>
+                <input name="temperatureLowerLimit" type="text" class="cm-input" value="{temperatureLowerLimit}">
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-f">
+                <span class="qc-label-l">湿度上限：</span>
+                <input name="humidityUpperLimit" type="text" class="cm-input" value="{humidityUpperLimit}">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">湿度下限：</span>
+                <input name="humidityLowerLimit" type="text" class="cm-input" value="{humidityLowerLimit}">
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-xxxxl remarkWrapper">
+                <span class="qc-label-l dis-able">备注：</span>
+                <textarea name="remark" value="{remark}"></textarea>
+            </div>
+        </div>
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button class="query-reset-btn query-btn basic-btn">保存</button>
+            <button class="query-reset-btn query-btn call-off" type="1">取消</button>
+        </div>
+    </div>
+</script>
+<!--物证柜列---template-->
+<script type="text/template" id="rowNumberList-tp">
+    <li class="{active}" param="{id}">{index}</li>
+</script>
+<!--物证柜列表详细信息(有几个)--template-->
+<script type="text/template" id="proofArkList-tp">
+    <li class="hider{active}">
+        <div class="query-block-row header-query">
+            <div class="fl qc-group-m">
+                <label>列名称：</label>
+                <input name="name" type="text" class="cm-input" value="{index}">
+            </div>
+            <div class="fl qc-group-m">
+                <label>列类型：</label>
+                <select name="type" class="cm-input">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="query-block-row clearfix ">
+            <div class="fl query-left mt30">
+                <table class="typical-tb">
+                    <thead>
+                    <th>节名称</th>
+                    <th>节类型</th>
+                    <th>层数</th>
+                    <th>箱数</th>
+                    </thead>
+                    <tbody id="proofArkMsglf{$rownum}" class="proofArkMsglf" tpsource="#proofArkMsglf-tp"></tbody>
+                </table>
+            </div>
+            <div class="fl query-right ml30">
+                <div class="wzg">
+                    <div id="evidence-chest{$rownum}" class="evidence-chest clearfix" tpsource="#evidence-chest-tp"></div>
+                    <ul id="knobName{$rownum}" class="knobName clearfix" tpsource="#knobName-tp"></ul>
+                    <ul id="layerName{$rownum}" class="layerName" tpsource="#layerName-tp"></ul>
+                </div>
+            </div>
+        </div>
+    </li>
+</script>
+<!--物证柜信息left--template-->
+<script type="text/template" id="proofArkMsglf-tp">
+    <tr param="{id}">
+        <td><input name="name" type="text" class="cm-input knobName-input validate" value="{name}" data-options="required:true" /></td>
+        <td>
+            <select name="type" class="cm-input" value="{type}"></select>
+        </td>
+        <td>
+            <input name="layerTotal" type="text" class="cm-input" value="{arkNum}" readonly/>
+        </td>
+        <td>
+            <input name="boxTotal" type="text" class="cm-input boxNumber validate" value="{boxTotal.toString}" data-options="required:true,validType:['number','zeroToTwo']"/>
+        </td>
+    </tr>
+</script>
+<!--物证柜节数---template-->
+<script type="text/template" id="evidence-chest-tp">
+    <ul class="clearfix" id="proofArkLayerList{$rownum}" tpsource="#proofArkLayerList-tp">{{layerList:#proofArkLayerList-tp}}</ul>
+</script>
+<!--物证柜层数--template-->
+<script type="text/template" id="proofArkLayerList-tp">
+    <li param="{id}">{{boxTotalList:#proofArkSecLayerBoxList-tp}}</li>
+</script>
+<!--物证柜箱数--template-->
+<script type="text/template" id="proofArkSecLayerBoxList-tp">
+    <div class="chest-wrapper">
+        <div id="proofArkSecLayerBoxList{$rownum}" class="box-wrapper"></div>
+    </div>
+</script>
+<!--节名称--template-->
+<script type="text/template" id="knobName-tp">
+    <li><input type="text" class="cm-input noborder" value="{name}" readonly></li>
+</script>
+<!--层名称--template-->
+<script type="text/template" id="layerName-tp">
+    <li><input type="text" class="cm-input noborder" value="{layerindex}"></li>
+</script>
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysEvidenceLibraryManage == 'function' && sysEvidenceLibraryManage();</script>
+</html>

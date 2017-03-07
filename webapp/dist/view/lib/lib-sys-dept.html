@@ -34,13 +34,13 @@
 <div class="query-result">
 
     <div>
-        <ul id="treeDemo" class="ztree"></ul>
+        <ul x-tree="listData" id="treeDemo" class="ztree"></ul>
     </div>
 
-
-
     <div widget="query-title"></div>
+
     <table id="dtb" x-table="listData"></table>
+
     <div class="paging"></div>
 </div>
 
@@ -55,7 +55,9 @@
 
 
 <script>
+   setSubPrj('lib');
 
+   config.mock=1;
 
    importing('ztree',function(scope){
 
@@ -82,9 +84,9 @@
 
        var $form= $('[x-form]')//.bind2(scope,'queryData')
 
-       var $tree=$("#treeDemo");
+       var $tree=$('[x-tree]').xtree(treeSetting);
 
-       var $tb = $('#dtb').table(tableSetting);
+       var $tb = $('[x-table]').table(tableSetting);
 
        var listData = [{rownum:1,dname:'测试一',dtype:'大队'},{rownum:1,dname:'测试二',dtype:'测试机构'},{rownum:1,dname:'测试三',dtype:'侦查机构'}];
 
@@ -104,15 +106,15 @@
 
            $post(deptAct,scope.get('queryData'),function(res){
 
-               //后台数据实例化树
-               res.data=nodes;
+//               //后台数据实例化树
+//               res.data=nodes;
+//               $tree.ztree(treeSetting, res.data);
+//
+//               //后台数据实例化表格
+//               res.data=listData;
+//               scope.set('listData',res.data);
 
-               $tree.ztree(treeSetting, res.data);
-
-
-               //后台数据实例化表格
-               res.data=listData
-               scope.set('listData',res.data);
+               scope.set('listData',nodes);
            })
 
        });

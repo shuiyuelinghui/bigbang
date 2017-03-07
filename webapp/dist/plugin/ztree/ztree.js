@@ -1780,4 +1780,13 @@ $.ztree = $.fn.zTree;
 $.fn.ztree = function () {
     return $.fn.zTree.init.apply(null, [this].concat([].slice.call(arguments)));
 };
+$.fn.xtree=function(ag){
+    if(typeOf(ag)=='array'){
+        this.data('xtree-data',ag);
+        return this.ztree(this.data('tree-config'),ag);
+    }
+    else if(typeof ag=='object'){
+        return this.data('tree-config',ag);
+    }
+};
 

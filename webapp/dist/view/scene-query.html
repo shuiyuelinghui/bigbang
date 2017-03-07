@@ -15,32 +15,32 @@
 <body>
 <div class="query-scene body-agent">
 
-    <ul x-temp id="scene-tab-stat" behavior="hide-more-condition" data-selector=">li"  class="title-list clearfix">
+    <ul x-map id="scene-tab-stat" behavior="hide-more-condition" data-selector=">li"  class="title-list clearfix">
         <li>
-            <h5>全部 <em x-map="allCount.allCount.toString"></em></h5>
-            <p>单位：<em x-map="allCount.allOrganCount.toString"></em> 个人：<em x-map="allCount.allPersonCount.toString"></em></p>
+            <h5>全部 <em x-key="allCount.allCount.toString"></em></h5>
+            <p>单位：<em x-key="allCount.allOrganCount.toString"></em> 个人：<em x-key="allCount.allPersonCount.toString"></em></p>
         </li>
         <li val="1">
-            <h5>已提交 <em x-map="submitCount.allCount.toString"></em></h5>
-            <p>单位：<em x-map="submitCount.allOrganCount.toString"></em> 个人：<em x-map="submitCount.allPersonCount.toString"></em></p>
+            <h5>已提交 <em x-key="submitCount.allCount.toString"></em></h5>
+            <p>单位：<em x-key="submitCount.allOrganCount.toString"></em> 个人：<em x-key="submitCount.allPersonCount.toString"></em></p>
         </li>
         <li val="0">
-            <h5>暂存 <em x-map="saveCount.allCount.toString"></em></h5>
-            <p>单位：<em x-map="saveCount.allOrganCount.toString"></em> 个人：<em x-map="saveCount.allPersonCount.toString"></em></p>
+            <h5>暂存 <em x-key="saveCount.allCount.toString"></em></h5>
+            <p>单位：<em x-key="saveCount.allOrganCount.toString"></em> 个人：<em x-key="saveCount.allPersonCount.toString"></em></p>
         </li>
         <li val="2">
-            <h5>不合格 <em x-map="unQualityCount.allCount.toString"></em></h5>
-            <p>单位：<em x-map="unQualityCount.allOrganCount.toString"></em> 个人：<em x-map="unQualityCount.allPersonCount.toString"></em></p>
+            <h5>不合格 <em x-key="unQualityCount.allCount.toString"></em></h5>
+            <p>单位：<em x-key="unQualityCount.allOrganCount.toString"></em> 个人：<em x-key="unQualityCount.allPersonCount.toString"></em></p>
         </li>
         <li val="3">
-            <h5>关注 <em x-map="followCount.allCount.toString"></em></h5>
+            <h5>关注 <em x-key="followCount.allCount.toString"></em></h5>
         </li>
         <li val="wgl">
-            <h5>未关联 <em x-map="unConnectCount.allCount.toString"></em></h5>
-            <p>单位：<em x-map="unConnectCount.allOrganCount.toString"></em> 个人：<em x-map="unConnectCount.allPersonCount.toString"></em></p>
+            <h5>未关联 <em x-key="unConnectCount.allCount.toString"></em></h5>
+            <p>单位：<em x-key="unConnectCount.allOrganCount.toString"></em> 个人：<em x-key="unConnectCount.allPersonCount.toString"></em></p>
         </li>
     </ul>
-    <!--<ul id="scene-tab-stat" class="title-list clearfix x-temp">
+    <!--<ul id="scene-tab-stat" class="title-list clearfix x-map">
         <li behavior="hide-more-condition">
             <h5>全部 <em class="hider">{allCount.allCount.toString}</em></h5>
             <p>单位：<em class="hider">{allCount.allOrganCount.toString}</em> 个人：<em class="hider">{allCount.allPersonCount.toString}</em></p>

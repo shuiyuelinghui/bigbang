@@ -334,6 +334,58 @@
               "children": null
             }
           ]
+        },
+        {
+          "systemId": "XCKY",
+          "resourceId": "2c91809e596e3e9201596e5302751111",
+          "resourceName": "技术管理",
+          "resourceEnName": "technical",
+          "superId": "-1",
+          "name": "技术管理",
+          "url": null,
+          "state": null,
+          "icon": null,
+          "visibleState": 0,
+          "orderNum": 5,
+          "note": "技术管理",
+          "menuType": 0,
+          "appType": 0,
+          "children": [
+            {
+              "systemId": "XCKY",
+              "resourceId": "2c91809e596e3e9201596e53fdc61112",
+              "resourceName": "通知通告",
+              "resourceEnName": "notice-send",
+              "superId": "2c91809e596e3e9201596e5302751111",
+              "name": "通知通告",
+              "url": "technical/notice-send-manage.html",
+              "state": "technical/notice-send-manage.html",
+              "icon": null,
+              "visibleState": 0,
+              "orderNum": 1,
+              "note": "通知通告",
+              "menuType": 0,
+              "appType": 0,
+              "children": null
+            },
+            {
+              "systemId": "XCKY",
+              "resourceId": "2c91809e596e3e9201596e53fdc61113",
+              "resourceName": "短信平台",
+              "resourceEnName": "sms-platform",
+              "superId": "2c91809e596e3e9201596e5302751111",
+              "name": "短信平台",
+              "url": "sms-platform.html",
+              "state": "sms-platform.html",
+              "icon": null,
+              "visibleState": 0,
+              "orderNum": 2,
+              "note": "短信平台",
+              "menuType": 0,
+              "appType": 0,
+              "children": null
+            }
+          ]
         }
       ]
     },

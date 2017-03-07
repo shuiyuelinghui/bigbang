@@ -21,9 +21,9 @@
 }({
     1: [function (e, t, n) {
         t.exports = {
-            //暂时借用现勘或物证的登录
+            //暂时借用现勘的登录
             prjName: "xcky3",
-            restfuls: ["http://192.168.1.211:8888"],
+            restfuls: ["192.168.40.22:52181"],
             subPrj: {
                 wz: {prjName: "wzgl", restfuls: ["http://192.168.1.211:8888"]},
                 xk: {prjName: "xcky3", restfuls: ["http://192.168.1.211:8888"]},

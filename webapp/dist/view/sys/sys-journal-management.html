@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日志管理</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="journal-managment" class="common-style body-agent">
+    <!--<p class="bread">系统设置<span class="bread-xie"> >日志管理</span></p>-->
+    <div class="query-condition-hide mt15">
+        <div class="common-panel-heading">
+            <ul class="clearfix">
+                <li class="active">查询条件</li>
+            </ul>
+        </div>
+        <div class="query-block cq-condition">
+            <!--<div class="query-block-row">-->
+                <!--<div class="fl qc-group-m">-->
+                    <!--<span class="qc-label-m">操作名称：</span>-->
+                    <!--<input name="operate-name" type="text" class="cm-input">-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="query-block-row">
+                <div class="fl qc-group-m">
+                    <span class="qc-label-m">操作人：</span>
+                    <input name="operate-user" type="text" class="cm-input">
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-m">
+                    <span class="qc-label-m">操作时间：</span>
+                    <div class="text-time">
+                        <input name="operate-time" type="text" class="cm-input cm-input-time">
+                        <i class="icon-calendar icon-time"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-m">
+                    <span class="qc-label-m">操作描述：</span>
+                    <input name="operate-desc" type="text" class="cm-input">
+                </div>
+            </div>
+            <hr class="cm-dash" />
+            <div class="demand-btn">
+                <button id="query-btn" class="query-reset-btn query-btn">查询</button>
+                <button id="reset-btn" class="query-reset-btn reset-btn">重置</button>
+            </div>
+        </div>
+    </div>
+    <p widget="query-result" id="log-result" data-table="log-tb"></p>
+</div>
+</body>
+
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysJournalManagement == 'function' && sysJournalManagement();</script>
+</html>

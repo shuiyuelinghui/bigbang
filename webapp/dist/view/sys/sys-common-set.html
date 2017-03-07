@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通用设置</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="common-set" class="common-style body-agent common-set">
+    <!--<p class="bread">系统设置<span class="bread-xie"> >通用设置</span></p>-->
+    <div class="query-condition-hide mt15" id="loginPageSet">
+        <div class="query-block cq-condition">
+            <h4 class="query-title">登陆页面设置</h4>
+            <div class="query-block-row">
+                <div class="fl qc-group-m">
+                    <span class="qc-label-xxl">系统标题文字设置：</span>
+                    <input name="headlineSetsystem" type="text" class="cm-input textSet" readonly>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="qc-group-m">
+                    <span class="qc-label-xxl">系统页脚图标设置：</span>
+                    <img src="" class="dotted-line" id="sysIconImg">
+                    <span class="ico-size">图标大小为：长度150像素，宽度42像素。</span>
+                </div>
+                <div>
+                    <input name="systemFooterIconSet" type="text" class="cm-input choose" readonly>
+                    <a href="javascript:void(0);" class="cm-upload-img vasb">
+                        <input type="file" accept="image/*" class="cmHandleSet" id="fileChoose">选择
+                    </a>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-m">
+                    <span class="qc-label-xxl">系统页脚文字设置：</span>
+                    <input name="footerTextSystemSettings" type="text" class="cm-input textSet" readonly>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-m">
+                    <span class="qc-label-xxl">微信设置：</span>
+                    <label class="switch-btn">
+                        <input name="weChatSet" class="checked-switch cmHandleSet" type="checkbox"/>
+                        <span class="text-switch" data-yes="yes" data-no="no"></span>
+                        <span class="toggle-btn"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-m">
+                    <span class="qc-label-xxl">移动应用下载：</span>
+                    <label class="switch-btn">
+                        <input name="mobileApplicationDownload" class="checked-switch cmHandleSet" type="checkbox"/>
+                        <span class="text-switch" data-yes="yes" data-no="no"></span>
+                        <span class="toggle-btn"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-m apply-for ">
+                    <span class="qc-label-xxl">申请用户注册：</span>
+                    <label class="switch-btn">
+                        <input name="applyForUserRegistration" class="checked-switch cmHandleSet" type="checkbox"/>
+                        <span class="text-switch" data-yes="yes" data-no="no"></span>
+                        <span class="toggle-btn"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="query-result" id="queryItemSet">
+        <h4 class="query-title">通用项目设置</h4>
+        <div class="query-block-row">
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxxl qc-label-xxxxl">数据列表显示条数：</span>
+                <a class="icon-minus"></a>
+                <input name="theListOfDataArticleNumber" type="text" class="cm-input number-order validate cmHandleSet" value="6" data-options="required:true,dataType:'number'">
+                <a class=" icon-plus plus-btn"></a> 条
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxxl qc-label-xxxxl">历史查询条件最大保存数：</span>
+                <a class="icon-minus"></a>
+                <input name="historyQueryConditionsMaxSaveNumber" type="text" class="cm-input number-order validate cmHandleSet" value="25" data-options="required:true,dataType:'number'">
+                <a class=" icon-plus plus-btn"></a> 条
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxxl qc-label-xxxxl">结果页面自动跳转时间：</span>
+                <a class="icon-minus"></a>
+                <input name="resultsPageAutomaticallyJumpTime" type="text" class="cm-input number-order validate cmHandleSet" value="5">
+                <a class=" icon-plus plus-btn"></a> 秒
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxxl qc-label-xxxxl">页面数据自动保存周期：</span>
+                <a class="icon-minus"></a>
+                <input name="pageDataAutomaticallySaveCycle" type="text" class="cm-input number-order validate cmHandleSet" value="60" data-options="required:true,dataType:'number'">
+                <a class=" icon-plus plus-btn"></a> 秒 【设置为‘0’时，不启动自动保存】
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxxl qc-label-xxxxl">数据状态颜色：</span>
+                <button name="failureDataStateColor" class="btn failure textSet" >失效</button>
+                <button name="dueDataStateColor" class="btn expire textSet" >即将到期数据</button>
+                <button name="expectDataStateColor" class="btn anticipate textSet" >预期数据</button>
+                <button name="emergencyCaseDataStateColor" class="btn exigency textSet">紧急案件</button>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxxl qc-label-xxxxl">清空系统日志：</span>
+                <input name="emptySystemLog" type="hidden">
+                <a class="empty emptyLog">清空</a>
+            </div>
+        </div>
+        <div class="query-block-row base">
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxxl qc-label-xxxxl">缓存图片清空时间设定：</span>
+                <a class="icon-minus"></a>
+                <input name="cacheImagesEmptyTimeSetting" type="text" class="cm-input number-order validate" value="1" data-options="required:true,dataType:'number'">
+                <a class="icon-plus plus-btn"></a> 天
+                <a class="empty immediatelyEmpty">立即清空</a>
+            </div>
+        </div>
+    </div>
+    <!--系统标题/系统页脚/数据状态--$open-->
+    <div id="sysTextDataSet" class="sysTextSet hider" tpsource="#sysTextDataSet-tp"></div>
+</div>
+</body>
+<!--系统标题/系统页脚/数据状态---template-->
+<script type="text/template" id="sysTextDataSet-tp">
+    <div class="p15">
+        <div class="query-block-row">
+            <div class="fl qc-group-l">
+                <label class="qc-label-xl"><span class="orangered">★ </span>参数中文名称 ：</label>
+                <input name="name" type="text" class="common-input validate" data-options="required:true" value="{name}">
+            </div>
+            <div class="fl qc-group-l">
+                <label class="qc-label-xl">参数英文名称：</label>
+                <input name="key" type="text" class="common-input validate" data-options="required:true" value="{key}" readonly>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-l">
+                <label class="qc-label-xl"><span class="orangered">★ </span>参数值 ：</label>
+                <input name="value" type="text" class="common-input validate" data-options="required:true" value="{value}">
+            </div>
+            <div class="fl qc-group-l">
+                <label class="qc-label-xl">参数类型：</label>
+                <input name="type" type="text" class="common-input validate" data-options="required:true" value="{type}">
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-l">
+                <label class="qc-label-xl">是否隐藏 ：</label>
+                <select name="showFlag" type="text" class="common-input" value="{showFlag}">
+                    <option value="1">否</option>
+                    <option value="0">是</option>
+                </select>
+            </div>
+            <div class="fl qc-group-l">
+                <label class="qc-label-xl">排序：</label>
+                <input name="sort" type="text" class="common-input" value="{sort}">
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl remarkWrapper">
+                <label class="qc-label-xl">备注：</label>
+                <textarea name="remark" class="">{remark}</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="btn-div tcenter mb5">
+        <b class="cm-save-btn"></b>
+        <b class="cm-close-btn ml15"></b>
+    </div>
+</script>
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysCommonSet == 'function' && sysCommonSet();</script>
+</html>

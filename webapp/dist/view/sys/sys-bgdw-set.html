@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>保管单位设置</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+    <div id="bgdw-set" class="common-style body-agent">
+        <div class="query-result">
+            <div class="content-folder clearfix">
+                <div id="folder" class="result-left">
+                    <div class="save-title">
+                        <p>数据字典设置项</p>
+                    </div>
+                    <div class="tree-iconBox">
+                        <button id="add-org" class="icon-plus ico-add"> 添加</button>
+                        <button id="del-org" class=" icon-trash ico-remove"> 删除</button>
+                    </div>
+                    <div class="clear input-search">
+                        <input type="text" class="in-search"/>
+                        <i class="icon-search ico-search"></i>
+                        <a class="icon-remove-sign ico-error"></a>
+                    </div>
+                    <div class="ztree">
+                        <ul id="bgdw-tree" class="ztree"></ul>
+                    </div>
+                </div>
+                <div class="result-right">
+                    <div class="query-condition-hide clear query-condition-right">
+                        <div class="common-panel-heading">
+                            <ul id="basic-info-tab" class="clearfix">
+                                <li class="active elementary-information"  tab-direct="#basic-information">基本信息</li>
+                                <li class="profession-set tab-direct"  tab-direct="#business-set">业务设置</li>
+                                <li class="port-set tab-direct"  tab-direct="#interface-set">接口设置</li>
+                            </ul>
+                        </div>
+                        <div tpsource="#bgdw-info-tp" id="bgdw-info"></div>
+                        <div class="query-block tab-block hide" id="interface-set">
+                            <div tpsource="#interface-info-tp" id="interface-info"></div>
+                        </div>
+                        <hr class="cm-dash" />
+                        <div class="query-reset">
+                            <button id="save-btn" class="query-reset-btn query-btn basic-btn">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hide">
+        <div id="area-map">
+            <div class="outside-box-btn">
+                <button class="query-reset-btn query-btn basic-btn">保存</button>
+                <button class="query-reset-btn query-btn empty-btn">选择空值</button>
+                <button class="query-reset-btn query-btn call-off">取消</button>
+            </div>
+            <div class="tree-structure-area">
+                <ul id="area-map-tree" class="ztree"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" id="interface-info-tp">
+    <div class="query-block-row">
+        <div class="qc-group-xxxxl">
+            <span class="qc-label-xxxl" name="interfaceTypeName" dictkey="{dictKey}">{dictValue}</span>
+            <input name="interfaceUrl" type="text" class="cm-input" value="">
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="bgdw-info-tp">
+    <div class="query-block tab-block" id="basic-information">
+        <input name="id" type="text" class="hide" value="{id}">
+        <input name="openFlag" type="text" class="hide" value="1">
+        <input name="officeType" type="text" class="hide" value="2">
+        <input name="delFlag" type="text" class="hide" value="0">
+
+        <div class="query-block-row">
+            <div class="qc-group-xxxxl">
+                <span class="qc-label-l">区划关联地图：</span>
+                <input name="regionalism" type="text"  class="regionalism cm-input" value="{provinceName}{cityName}{countyName}"
+                       provinceRegionalism="{provinceRegionalism}" cityRegionalism="{cityRegionalism}"
+                       countyRegionalism="{countyRegionalism}" readonly>
+                <b id="drop-down-box" class="icon-circle-arrow-down drop-down-box"></b>
+            </div>
+            <div class="qc-group-xxxxl">
+                <span class="qc-label-l"><span class="orangered">★ </span>保管单位名称：</span>
+                <input name="organName" type="text" class="cm-input validate" value="{organName}" data-options="required:true">
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-xxxxl">
+                <span class="qc-label-l"><span class="orangered">★ </span>保管单位代码：</span>
+                <input name="organCode" type="text" class="cm-input validate" value="{organCode}" data-options="required:true,validType:['lengthTwelve']">
+            </div>
+            <div class="qc-group-xxxxl">
+                <span class="qc-label-l">上级保管单位：</span>
+                <select value="{organParentId}" class="prevBgdw">
+                    <option></option>
+                </select>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-m">
+                <span class="qc-label-l">单位简称：</span>
+                <input name="shortenedName" type="text" class="cm-input" value="{shortenedName}">
+            </div>
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-l">顺序：</span>
+                <a class="icon-minus"></a>
+                <input name="organSort" type="text" class="cm-input number- order validate" value="{organSort}" data-options="validType:'number'">
+                <a class=" icon-plus plus-btn"></a>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-xxxxl">
+                <span class="qc-label-l">地址：</span>
+                <input name="organAdress" type="text" class="cm-input" value="{organAdress}">
+            </div>
+            <div class="fl qc-group-l">
+                <span class="qc-label-l">电话：</span>
+                <input name="organTel" type="text" class="cm-input validate" value="{organTel}" data-options="validType:'number'">
+            </div>
+        </div>
+    </div>
+    <div class="query-block tab-block hide" id="business-set">
+        <input name="id" type="text" class="hide" value="{sysKeepUnitSet.id}">
+        <input name="delFlag" type="text" class="hide" value="0">
+        <input name="organId" type="text" class="hide" value="{sysKeepUnitSet.organId}">
+
+        <div class="query-block-row">
+            <div class="qc-group-xxxxl">
+                <span class="qc-label-xxl">保管申请承诺:</span>
+                <input name="keepAppCommitment" type="text" class="cm-input" value="{sysKeepUnitSet.keepAppCommitment}">
+            </div>
+            <div class="qc-group-xxxxl" data-field="caseRegionalism">
+                <span class="qc-label-xxl">保管申请打印规则:</span>
+                <div class="choose">
+                    <input type="radio" name="keepAppFormPrintFlag" id="wfj" value="0" {sysKeepUnitSet.keepAppFormPrintFlag.checkZero}><label for="wfj" class="active">保管申请审核后</label></div>
+                    <input type="radio" name="keepAppFormPrintFlag" id="dhm" value="1" {sysKeepUnitSet.keepAppFormPrintFlag.checkOne}><label for="dhm">无限制</label>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxl">保管申请失效天数:</span>
+                <a class="icon-minus"></a>
+                <input name="keepAppInvalidDay" type="text" class="cm-input number- order" value="{sysKeepUnitSet.keepAppInvalidDay}">
+                <a class=" icon-plus plus-btn"></a> 天
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxl">即将到期天数:</span>
+                <a class="icon-minus"></a>
+                <input name="keepAppDueToDay" type="text" class="cm-input number- order" value="{sysKeepUnitSet.keepAppDueToDay}">
+                <a class=" icon-plus plus-btn"></a> 天
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-xxxxl" data-field="caseRegionalism">
+                <span class="qc-label-xxl">审批流程意见填写规则:</span>
+                <div class="choose">
+                    <input type="radio" name="approvalProcessFillFlag" value="0" {sysKeepUnitSet.approvalProcessFillFlag.checkZero}><label class="active">必须填写</label>
+                </div>
+                <input type="radio" name="approvalProcessFillFlag" value="1" {sysKeepUnitSet.approvalProcessFillFlag.checkOne}><label>常规填写(审核不通过时，必须填写）</label>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-xxxxl" data-field="">
+                <span class="qc-label-xxl">申请单份数:</span>
+                <div class="choose">
+                    <input type="radio" value="1" name="applicationNumber" {sysKeepUnitSet.applicationNumber.checkOne}><label class="active">一份</label>
+                </div>
+                <input type="radio" value="2" name="applicationNumber" {sysKeepUnitSet.applicationNumber.checkTwo}><label>两份</label>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-xxxxl" data-field="">
+                <span class="qc-label-xxl">确认单份数:</span>
+                <div class="choose">
+                    <input type="radio" value="1" name="confirmationNumber" {sysKeepUnitSet.confirmationNumber.checkOne}><label class="active">一份</label>
+                </div>
+                <input type="radio" value="2" name="confirmationNumber" {sysKeepUnitSet.confirmationNumber.checkTwo}><label>两份</label>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-m">
+                <span class="qc-label-xxl">显示现勘信息复用:</span>
+                <label class="switch-btn">
+                    <input name="showSceneFlag" class="checked-switch" type="checkbox" {sysKeepUnitSet.showSceneFlag.checkOne} />
+                    <span class="text-switch"></span>
+                    <span class="toggle-btn"></span>
+                </label>
+            </div>
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxl">显示保管单位名称:</span>
+                <label class="switch-btn">
+                    <input name="showKeepUnitNameFlag" class="checked-switch" type="checkbox" {sysKeepUnitSet.showKeepUnitNameFlag.checkOne} />
+                    <span class="text-switch"></span>
+                    <span class="toggle-btn"></span>
+                </label>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-m">
+                <span class="qc-label-xxl">显示物证区/市名称:</span>
+                <label class="switch-btn">
+                    <input name="showProofArearoomNameFlag" class="checked-switch" type="checkbox" {sysKeepUnitSet.showProofArearoomNameFlag.checkOne} />
+                    <span class="text-switch"></span>
+                    <span class="toggle-btn"></span>
+                </label>
+            </div>
+            <div class="fl qc-group-xxl">
+                <span class="qc-label-xxl">显示节名称:</span>
+                <label class="switch-btn">
+                    <input name="showSectionFlag" class="checked-switch" type="checkbox" {sysKeepUnitSet.showSectionFlag.checkOne} />
+                    <span class="text-switch"></span>
+                    <span class="toggle-btn"></span>
+                </label>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="fl qc-group-m">
+                <span class="qc-label-xxl">显示层名称:</span>
+                <label class="switch-btn">
+                    <input name="showLayerFlag" class="checked-switch" type="checkbox" {sysKeepUnitSet.showLayerFlag.checkOne} />
+                    <span class="text-switch"></span>
+                    <span class="toggle-btn"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysBgdwSet == 'function' && sysBgdwSet();</script>
+</html>

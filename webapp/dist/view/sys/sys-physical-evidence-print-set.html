@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物证条码打印设置</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="physical-evidence-print" class="common-style body-agent">
+    <!--<div class="query-condition-hide mt15">-->
+        <!--<div class="common-panel-heading">-->
+            <!--<ul class="clearfix">-->
+                <!--<li class="active">查询条件</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="query-block cq-condition">-->
+            <!--<div class="query-block-row">-->
+                <!--<div class="fl qc-group scope">-->
+                    <!--<span  class="qc-label-m">保管单位名称：</span>-->
+                    <!--<input name="organId" type="text" class="cm-input">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<hr class="cm-dash" />-->
+            <!--<div class="demand-btn">-->
+                <!--<button id="bgdw-query" class="query-reset-btn query-btn">查询</button>-->
+                <!--<button id="bgdw-reset" class="query-reset-btn reset-btn">重置</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="query-result">
+        <div class="content-folder treeTableType clearfix">
+            <div id="folder" class="result-left">
+                <div class="save-title">
+                    <p>数据字典设置列表</p>
+                </div>
+                <!--<div class="tree-iconBox">-->
+                    <!--<button class=" icon-plus ico-add"> 添加</button>-->
+                    <!--<button class=" icon-trash ico-remove"> 删除</button>-->
+                <!--</div>-->
+                <div class="clear input-search">
+                    <input type="text" class="in-search"/>
+                    <i class="icon-search ico-search"></i>
+                    <a class="icon-remove-sign ico-error"></a>
+                </div>
+                <div class="ztree">
+                    <ul id="bgdw-tree" class="ztree"></ul>
+                </div>
+            </div>
+            <div class="result-right">
+                <p widget="query-result" id="evidence-result" data-btns="add,remove" data-table="evidence-tb"></p>
+                <!--<div class="icon-box icon-outside">-->
+                    <!--<button class=" icon-plus ico-add"> 添加</button>-->
+                    <!--<button class=" icon-trash ico-remove"> 删除</button>-->
+                    <!--<button class=" icon-print ico-print"> 打印</button>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+    <div class="hide">
+        <div id="edit-page" calss="editor">
+            <div class="common-panel-heading">
+                <ul class="clearfix">
+                    <li class="active elementary-information"  tab-direct="#basi-information">类型规格</li>
+                    <li class="profession-set tab-direct"  tab-direct="#business-set">条码</li>
+                    <li class="port-set tab-direct"  tab-direct="#interface-set">文字</li>
+                </ul>
+            </div>
+            <!--编辑页面-->
+            <div tpsource="#edit-evidence-tp"  id="edit-evidence" ></div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/template" id="edit-evidence-tp">
+    <input name="id" type="text" class="hide" value="{id}">
+    <input name="organId" type="text" class="hide" value="{organId}">
+    <input name="delFlag" type="text" class="hide" value="0">
+    <div class="query-block tab-block " id="basi-information">
+        <div class="query-block-row">
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-xs">类型：</span>
+                    <select column="barcodeType" class="cm-input barcode-type">
+                        {barcodeType.asTmlx}
+                    </select>
+                </div>
+                <div class="qc-group-f">
+                    <span class="qc-label-l">标签规格大小 ：</span>
+                    <input name="labelSize" type="text" class="cm-input" value="{labelSize}">
+                </div>
+            </div>
+            <div class="query-block-row specifications">
+                <div class="qc-group-f">
+                    <span class="qc-label-xs">状态：</span>
+                    <select column="openFlag" class="cm-input">
+                        <option value="1">启用</option>
+                        <option value="0">禁用</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="query-block tab-block hide" id="business-set">
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-xs">浓度：</span>
+                <input name="barcodeConcentration" type="text" class="cm-input" value="{barcodeConcentration}">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">条码高度：</span>
+                <div class="input-note">
+                    <input name="barcodeHeight" type="text" class="cm-input" value="{barcodeHeight}">
+                    <span class="note-value">取值范围[1-10]，增量为0.1。</span>
+                </div>
+            </div>
+        </div>
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-xs">左边距：</span>
+                <div class="input-note">
+                    <input name="leftMargin" type="text" class="cm-input" value="{leftMargin}">
+                    <span class="note-value">注意与上一条打印内容的距离，一般都需要修改。</span>
+                </div>
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">条码宽度：</span>
+                <div class="input-note">
+                    <input name="barcodeWidth" type="text" class="cm-input" value="{barcodeWidth}">
+                    <span class="note-value">取值范围[1-10]，增量为0.1。</span>
+                </div>
+            </div>
+        </div>
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-xs">上边距：</span>
+                <input name="topMargin" type="text" class="cm-input" value="{topMargin}">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">是否显示条码值：</span>
+                <label class="switch-btn">
+                    <input name="showBarcodeValueFlag" class="checked-switch" type="checkbox" {showBarcodeValueFlag.ifShowFlag} />
+                    <span class="text-switch"></span>
+                    <span class="toggle-btn"></span>
+                </label>
+            </div>
+        </div>
+        <div class="query-block-row">
+            <div class="qc-group-xxxxl">
+                <span class="qc-label-xs dis-able">备注：</span>
+                <textarea class="describe reamek-note" name="reamrk">{reamrk}</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="query-block tab-block hide" id="interface-set">
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-xs">书签：</span>
+                <input name="bookmarksKey" type="text" class="cm-input" value="{bookmarksKey}">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">字数：</span>
+                <div class="input-note">
+                    <input name="wordNum" type="text" class="cm-input" value="{wordNum}">
+                    <span class="note-value">当前行现实的文字数量。</span>
+                </div>
+            </div>
+        </div>
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-xs">左边距：</span>
+                <div class="input-note">
+                    <input name="textLeftMargin" type="text" class="cm-input" value="{textLeftMargin}">
+                    <span class="note-value">注意与上一条打印内容的距离，一般都需要修改。</span>
+                </div>
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">字体高度：</span>
+                <div class="input-note">
+                    <input name="fontHeight" type="text" class="cm-input" value="{fontHeight}">
+                    <span class="note-value">取值范围[10-3200]。</span>
+                </div>
+            </div>
+        </div>
+        <div class="query-block-row specifications">
+            <div class="qc-group-f">
+                <span class="qc-label-xs">上边距：</span>
+                <input name="textTopMargin" type="text" class="cm-input" value="{textTopMargin}">
+            </div>
+            <div class="qc-group-f">
+                <span class="qc-label-l">字体宽度：</span>
+                <div class="input-note">
+                    <input name="fontWidth" type="text" class="cm-input" value="{fontWidth}">
+                    <span class="note-value">取值范围[10-3200]。</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Physical-btn">
+        <hr class="cm-dash" />
+        <div class="query-reset">
+            <button id="save-btn" class="query-reset-btn query-btn basic-btn">保存</button>
+            <button id="cancel-btn" class="query-reset-btn query-btn call-off">取消</button>
+        </div>
+    </div>
+
+</script>
+
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysEvidencePrintSet == 'function' && sysEvidencePrintSet();</script>
+</html>

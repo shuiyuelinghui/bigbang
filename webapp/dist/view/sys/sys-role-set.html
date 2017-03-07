@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色设置</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="role-set" class="common-style body-agent">
+    <div class="query-condition-hide mt15">
+        <div class="common-panel-heading">
+            <ul class="clearfix">
+                <li class="active">查询条件</li>
+            </ul>
+        </div>
+        <div class="query-block cq-condition">
+            <div class="query-block-row">
+                <div class="fl qc-group scope">
+                    <span name="roleName" class="qc-label-m">角色名称：</span>
+                    <select id="role-name-query" class="cm-input">
+                    </select>
+                    <!--<span class="option">-->
+							<!--<u class="query-block-active query-block-init">不限</u>-->
+							<!--<u val="0" class="">申请人员</u>-->
+							<!--<u val="1">物证管理员</u>-->
+                            <!--<u val="">物证超级管理员</u>-->
+                            <!--<u val="">领导</u>-->
+                    <!--</span>-->
+                </div>
+            </div>
+            <div class="query-block-row">
+                <div class="fl qc-group-m">
+                    <span class="qc-label-m">角色描述：</span>
+                    <input name="roleDescQuery" type="text" class="cm-input">
+                </div>
+            </div>
+            <hr class="cm-dash" />
+            <div class="demand-btn">
+                <button class="query-reset-btn query-btn">查询</button>
+                <button class="query-reset-btn reset-btn">重置</button>
+            </div>
+        </div>
+    </div>
+
+    <p widget="query-result" id="role-result" data-btns="add,remove" data-table="role-tb"></p>
+
+    <div class="hide">
+        <div id="editor">
+            <div class="common-panel-heading" >
+                <ul class="clearfix">
+                    <li class="active elementary-information"  tab-direct="#basic-information">基本信息</li>
+                    <li class="profession-set tab-direct"  tab-direct="#business-set">角色菜单权限</li>
+                    <li class="port-set tab-direct"  tab-direct="#interface-set">业务流程权限</li>
+                    <li class="tab-direct" tab-direct="#index-parts">首页部件权限</li>
+                </ul>
+            </div>
+            <!--基本信息-->
+            <div class="query-block tab-block" id="basic-information">
+                <input name="id" type="text" class="hide">
+                <div class="query-block-row">
+                    <div class="qc-group-xxxxl">
+                        <span class="qc-label-l">名称：</span>
+                        <select name='roleName'></select>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div class="qc-group-xxxxl">
+                        <span class="qc-label-l dis-able">描述：</span>
+                        <textarea class="role-describe" name="roleDesc"></textarea>
+                    </div>
+                </div>
+            </div>
+            <!--角色菜单权限-->
+            <div class="query-block tab-block hide" id="business-set">
+                <div>
+                    <ul id="module-tree" class="ztree"></ul>
+                </div>
+            </div>
+            <!--业务流程权限-->
+            <div class="query-block tab-block hide" id="interface-set">
+                <div class="outside-box">
+                    <div class="process-permissions all-bus-permission">
+                    </div>
+                    <div class="process-permissions bus-permissions">
+                    </div>
+                    <a class="ion icon-arrow-right "></a>
+                    <a class="ion icon-arrow-left"></a>
+                </div>
+            </div>
+            <!--首页部件权限-->
+            <div class="query-block tab-block hide" id="index-parts">
+                <div class="outside-box">
+                    <div class="process-permissions">
+                    </div>
+                    <div class="process-permissions bus-permissions">
+                    </div>
+                    <a class="ion icon-arrow-right"></a>
+                    <a class="ion icon-arrow-left"></a>
+                </div>
+            </div>
+            <div class="Physical-btn">
+                <hr class="cm-dash" />
+                <div class="query-reset">
+                    <button class="query-reset-btn query-btn basic-btn">保存</button>
+                    <button class="query-reset-btn query-btn call-off">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysRoleSet == 'function' && sysRoleSet();</script>
+</html>

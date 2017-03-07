@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="../../css/base-plus.css?version=0.91">
+    <link rel="stylesheet" href="../../css/sys.css">
+</head>
+<body>
+<div id="user-management" class="common-style body-agent">
+    <!--<p class="bread">系统设置<span class="bread-xie"> >用户管理</span></p>-->
+    <!--<d class="query-condition-hide "></d>-->
+    <div class="mt15">
+        <div class="common-panel-heading roof">
+            <ul class="clearfix">
+                <li class="active tab-direct">保管用户</li>
+                <li class="tab-direct">申请用户</li>
+            </ul>
+        </div>
+        <!--查询条件-->
+        <div class="tab-block" id="keep-user">
+            <div class="query-block cq-condition roof">
+                <div class="query-block-row">
+                    <div class="fl qc-group-l">
+                        <span name="bgdw" class="qc-label-xl">保管单位名称：</span>
+                        <span name="sqdw" class="qc-label-xl hide">申请单位名称：</span>
+                        <input name="organName" organIdValue="" type="text" class="cm-input" readonly>
+                        <b class="icon-circle-arrow-down drop-down-box"></b>
+                    </div>
+                    <div class="fl qc-group scope">
+                        <span name="sfzp" class="qc-label-xl">指纹：</span>
+                        <span class="option state" >
+							<u class="default query-block-active query-block-init">不限</u>
+							<u val="1" class="">已采集</u>
+							<u val="0">未采集</u>
+						</span>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div class="fl qc-group-l">
+                        <span class="qc-label-xl">姓名：</span>
+                        <input name="pageName" type="text" class="cm-input">
+                    </div>
+                    <div class="fl qc-group-l" >
+                        <span class="qc-label-xl">账号：</span>
+                        <input name="userName" type="text" class="cm-input">
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div class="fl qc-group-l">
+                        <span class="qc-label-xl">警号：</span>
+                        <input name="policeNo" type="text" class="cm-input">
+                    </div>
+                    <div class="fl qc-group-l">
+                        <span class="qc-label-xl">身份证号：</span>
+                        <input name="idCardNo" type="text" class="cm-input">
+                    </div>
+                </div>
+                <hr class="cm-dash" />
+                <div class="demand-btn">
+                    <button class="query-reset-btn query-btn">查询</button>
+                    <button class="query-reset-btn reset-btn">重置</button>
+                </div>
+            </div>
+            <div class="">
+                <div class="clearfix">
+                    <div class="result-right consequence">
+                        <div widget="query-result"
+                             data-cls="module-table-result"
+                             id="module-result-save"
+                             data-table="sys-yhgl-tb-save"
+                             data-btns="add,remove,color">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--保管单位-->
+        <div class="hider editor" id="win-keep-unit" type="2">
+            <div class="query-block" id="basic-information">
+                <div class="editor-portrait">
+                    <!--<span class="icon-plus add-pic"></span>-->
+                    <!--<span class="icon-plus add-pic"></span>-->
+                    <span class="_box"><input type="file" name="userPhotoPath" id="keep-f" /><img id="keep-img" src="data:image/gif;base64,R0lGODlhAwADAIABAL6+vv///yH5BAEAAAEALAAAAAADAAMAAAIDjA9WADs=" />
+                    </span>
+                    <p>用户头像</p>
+                </div>
+                <div class="editor-top">
+                    <div class="query-block-row">
+                        <div class="qc-group-f nowrap">
+                            <span class="qc-label-m">所属单位：</span>
+                            <span name="organizationId" organIdValue="{organizationId}" data-options="required:true">{organName}</span>
+
+                            <input name="organName" organIdValue="" type="text" class="cm-input add-valid hide" readonly>
+                            <b class="icon-circle-arrow-down drop-down-box hide"></b>
+                        </div>
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">姓名：</span>
+                            <input name="trueName" type="text" class="cm-input add-valid" data-options="required:true" value="{trueName}">
+                        </div>
+                    </div>
+                    <div class="query-block-row">
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">账号：</span>
+                            <input name="userName" type="text" class="cm-input add-valid" data-options="required:true" value="{userName}">
+                        </div>
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">密码：</span>
+                            <input name="password" type="password" class="cm-input add-valid" value="{password}">
+                        </div>
+                    </div>
+                    <div class="query-block-row">
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">警员号：</span>
+                            <input name="policeNo" type="text" class="cm-input add-valid" data-options="required:true,validType:'sixjyh'" value="{policeNo}">
+                        </div>
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">身份证号：</span>
+                            <input name="idCardNo" type="text" class="cm-input add-valid" data-options="required:true" value="{idCardNo}">
+                        </div>
+                    </div>
+                    <div class="query-block-row">
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">联系电话：</span>
+                            <input name="mobileNo" type="text" class="cm-input add-valid" data-options="required:true" value="{mobileNo}">
+                        </div>
+                    </div>
+                    <div class="query-block-row">
+                        <div class="qc-group-xxxxl">
+                            <span class="qc-label-m dis-able">备注：</span>
+                            <textarea name="remark" class="describe add-valid remark" data-options="">{remark}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="query-block-row">
+                    <div class="qc-group-xxxxl">
+                        <span class="qc-label-xs permissions ">权限角色：</span>
+                        <div class="outside-box">
+                            <div class="process-permissions all-bus-permission"></div>
+                            <div id="bus-permissions" class="process-permissions bus-permissions"></div>
+                            <a class="ion icon-arrow-right "></a>
+                            <a class="ion icon-arrow-left"></a>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="query-block-row">-->
+                    <!--<div class="qc-group-xxxl">-->
+                        <!--<span class="qc-label-l">上传照片：</span>-->
+                        <!--<input name="userPhotoPath" type="text" class="cm-input add-valid">-->
+                        <!--<button class="upload">上传</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <hr class="cm-dash" />
+                <div class="query-reset win-query-reset">
+                    <button class="query-reset-btn query-btn basic-btn" type="2">保存</button>
+                    <button class="query-reset-btn query-btn call-off">取消</button>
+                </div>
+            </div>
+        </div>
+        <!--申请单位-->
+        <div class="hider editor" id="win-apply-unit">
+            <div class="query-block">
+                <div class="editor-portrait">
+                    <!--<span class="icon-plus add-pic"></span>-->
+                    <span class="_box"><input type="file" name="userPhotoPath" id="apply-f" /><img id="apply-img" src="data:image/gif;base64,R0lGODlhAwADAIABAL6+vv///yH5BAEAAAEALAAAAAADAAMAAAIDjA9WADs=" /></span>
+                    <p>用户头像</p>
+                </div>
+                <div class="editor-top">
+                    <div class="query-block-row">
+                        <div class="qc-group-f nowrap">
+                            <span class="qc-label-m">所属单位：</span>
+                            <span name="organizationId" organIdValue="{organizationId}" data-options="required:true">{organName}</span>
+
+                            <input name="organName" organIdValue="" type="text" class="cm-input add-valid hide" readonly>
+                            <b class="icon-circle-arrow-down drop-down-box  hide"></b>
+                        </div>
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">姓名：</span>
+                            <input name="trueName" type="text" class="cm-input add-valid" data-options="required:true" value="{trueName}">
+                        </div>
+                    </div>
+                    <div class="query-block-row">
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">账号：</span>
+                            <input name="userName" type="text" class="cm-input add-valid" data-options="required:true" value="{userName}">
+                        </div>
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">密码：</span>
+                            <input name="password" type="password" class="cm-input add-valid" value="{password}">
+                        </div>
+                    </div>
+                    <div class="query-block-row">
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">警员号：</span>
+                            <input name="policeNo" type="text" class="cm-input add-valid" data-options="required:true,validType:'sixjyh'" value="{policeNo}">
+                        </div>
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">身份证号：</span>
+                            <input name="idCardNo" type="text" class="cm-input add-valid" data-options="required:true" value="{idCardNo}">
+                        </div>
+                    </div>
+                    <div class="query-block-row">
+                        <div class="qc-group-f">
+                            <span class="qc-label-m">联系电话：</span>
+                            <input name="mobileNo" type="text" class="cm-input add-valid" data-options="required:true" value="{mobileNo}">
+                        </div>
+                    </div>
+                    <div class="query-block-row">
+                        <div class="qc-group-xxxxl">
+                            <span class="qc-label-m dis-able">备注：</span>
+                            <textarea name="remark" class="describe add-valid remark" data-options="required:true">{remark}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <hr class="cm-dash" />
+                <div class="query-reset">
+                    <button class="query-reset-btn query-btn basic-btn" type="1">保存</button>
+                    <button class="query-reset-btn query-btn win-close-btn call-off">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hide">
+    <div id="folder">
+        <div class="clear input-search input-search-fixed">
+            <input type="text" class="in-search"/>
+            <i class="icon-search ico-search"></i>
+            <a class="icon-remove-sign ico-error"></a>
+        </div>
+        <div class="outside-box-btn">
+            <button class="query-reset-btn query-btn basic-btn">保存</button>
+            <button class="query-reset-btn query-btn empty-btn">选择空值</button>
+            <button class="query-reset-btn query-btn call-off">取消</button>
+        </div>
+        <div class="tree-structure">
+            <ul id="bgdw-tree" class="ztree"></ul>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../../js/base.js"></script>
+<script src="../../js/sys-wz.js"></script>
+<script>typeof sysUserManagement == 'function' && sysUserManagement();</script>
+</html>
